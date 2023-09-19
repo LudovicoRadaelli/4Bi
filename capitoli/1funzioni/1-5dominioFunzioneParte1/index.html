@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <!-- <script src="https://www.geogebra.org/apps/deployggb.js"></script> -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="stylesheet" href="../../../css/style.css">
+    <title id="titleTag"></title>
+</head>
+
+<body>
+        <br>
+        <div id="chapterNumber" style="display: none;">1</div>
+        <div id="paragraphTitle" style="display: none;">Dominio di una funzione (1)</div>
+        
+        <div class="gray"> 
+            <div class="homeIconContainer">
+                <a href="../../indiceMateriale.html"><img class="homeIcon" src="../../../css/img/home.png"></a>
+            </div>
+            
+            <code><b id="bTagTitoloCapitolo"></b></code> 
+            <br>
+            <div class="select">
+                <div class="selected-option"><code><b id="bTagTitoloParagrafo"></b></code></div>
+                <div class="dropdown">
+                    <!-- Vengono inseriti i tag a sfruttando il file JSON -->
+                </div>
+            </div>
+        
+            
+            
+        </div>
+
+        <br>
+
+        <nav class="navigationBar">
+            <div onclick="changeParagraph(`previous`)" class="item prev">
+                <img class="icon" src="../../../css/img/leftArrow.png">
+            </div>
+            <div class="item explanationButton">
+                <div onclick="showExplanation()"><img class="icon" src="../../../css/img/presentation.png"></div>
+            </div>
+            <div class="item exerciseButton">
+                <div onclick="showExercise()"><img class="icon" src="../../../css/img/homework.png"></div>
+            </div>
+            <div onclick="changeParagraph(`next`)" class="item next">
+                <img class="icon" src="../../../css/img/rightArrow.png">
+            </div>
+        </nav>
+
+        <br>
+
+    
+
+        <section class="explanation">
+    
+            <div class="h3">
+                <span class="sub-par" id="paragraphCircledNumber"></span>
+                <h3 id="h3ParagraphTitle"></h3>
+            </div>
+            
+            <br>
+
+            <h3 class="blue">Breve introduzione</h3>
+            <br>
+            <div>
+                Negli esercizi dei paragrafi precedenti è capitato di incontrare <b>funzioni</b> che <b>non</b> sono <b>definite</b> per 
+                alcuni valori assunti dalla variabile \(x\).
+                <br>
+                In questo paragrafo analizziamo da vicino questa situazione, mettendo a punto una terminologia adatta a descriverla.
+                <br>
+                <br>
+                Inizialmente considereremo funzioni del tipo incontrato nel <a href="../1-4altriEsempi/index.html">paragrafo precedente</a>, quelle che avevamo inventato di sana pianta usando le varie operazioni a nostra disposizione.
+            </div>
+
+            <br>
+            <br>
+            <hr>
+            <br>
+            <br>
+
+            <h3 class="blue">Un primo esempio</h3>
+            <br>
+            <div>
+                Consideriamo la funzione
+                \[
+                    f(x) = \dfrac{1}{x + 3}
+                \]
+                C'è qualche valore della \(x\) per cui \(f\) non è definita? Per rispondere, poniamoci questa domanda: 
+                <br>
+                <br>
+                <div style="text-align: center;"><i>"quali sono le operazioni che intervengono nella definizione della funzione \(f\)?"</i></div>
+                <br>
+                <div>
+                    <nobr>
+                        Una <span style="color: blue">somma</span> \(\left(\dfrac{1}{x \color{blue}{+}\color{black}{} 3}\right)\) ed una <span style="color: red">divisione</span> 
+                        \(\left(\color{red}{\dfrac{\color{black}{1}}{\color{black}{x +3}}}\color{black}{}\right)\)
+                    </nobr>
+                </div>
+                <br>
+                La somma è un'operazione "innocua", nel senso che dati due numeri qualsiasi possiamo sempre sommarli tra di loro.
+                <br>
+                Lo stesso non si può dire della divisione. Come ci viene ripetuto fin dalle elementari 
+                <br>
+                <br>
+                <div style="text-align: center;"><u>non si può dividere un numero per \(0\)</u></div>
+                <br>
+                Quindi, se vogliamo che la divisione sia eseguibile, \(\color{red}{x + 3}\), il denominatore della frazione \(\dfrac{1}{\color{red}{}x +3}\), non deve valere \(0\).
+                In simboli:
+                \[
+                    \color{red}{x +3} \neq 0
+                \]
+                Risolvendo questa equazione scopriamo quali sono i valore di \(x\) per cui la funzione è definita:
+                \[
+                    x +3 \neq 0  \Longrightarrow x \neq -3 
+                \]
+                Morale della favola
+                <br>
+                <br>
+                <ul>
+                    <li>
+                        La funzione è <b>definita</b> per tutti i valori \(x \neq -3\).
+                    </li>
+                    <br>
+                    <li>
+                        La funzione <b>non è definita</b> se \(x = -3\). Infatti
+                        \[
+                            f(\color{blue}{-3}\color{black}{}) = \dfrac{1}{\color{blue}{-3}\color{black}{} + 3} =
+                            \underset{\text{impossibile}}{
+                                \color{gray}{\underbrace{\color{black}{\dfrac{1}{0}}}}
+                            }
+                        \]
+                    </li>
+                    
+                </ul>
+                <br>
+                <div class="grayBorder">
+                    L'insieme di tutti i valori per i quali la funzione è definita si dice <b>dominio</b>  della funzione
+                </div>
+
+                <br>
+                <br>
+                <hr>
+                <br>
+                <br>
+
+                <h3 class="blue">Operazioni innocue 😇</h3>
+                <br>
+                <div>
+                    Tra le operazioni che possiamo usare per definire una funzione (vedi l'elenco al <a href="../1-4altriEsempi/index.html">paragrafo 1.4</a>), ce ne sono molte "innocue", ovvero definite per ogni valore.
+                    <br>
+                    <br>
+                    <ul>
+                        <li>
+                            La <b>somma</b>, <b>sottrazione</b>, <b>moltiplicazione</b> possono essere eseguite per una qualsiasi coppia di numeri.
+                        </li>
+                        <br>
+                        <li>
+                            la <b>potenza</b>, il <b>seno</b>, <b>coseno</b> e <b>valore assoluto</b> possono essere svolte per qualsiasi 
+                            numero.
+                        </li>
+                        <br>
+                        <li>
+                            le <b>radici di indice dispari</b> possono essere svolte per qualsiasi numero.
+                        </li>
+                    </ul>
+                    <br>
+                    Se nella definizione di una funzione intevengono solo operazioni innocue, questa è definita per ogni valore di \(x\) (in simboli: \(\forall x \in \mathbb{R}\)).
+
+                    <br>
+                    <br>
+
+                    <h3 class="yellow">Esempi</h3>
+                    <div class="esempi-container">
+                        Nella definizione della funzione 
+                        \[
+                            q(x) = \sqrt[3]{cos(2x) + 5}
+                        \]
+                        intervengono
+                        <br>
+                        <br>
+                        <ul>
+                            <li>
+                                <nobr>
+                                    la <span style="color: red;">moltiplicazione</span>: \(\sqrt[3]{cos(2 \,\color{red}{\boldsymbol{\cdot}}\color{black}{}\,x) + 5}\)
+                                </nobr>
+                            </li>
+                            <br>
+                            <li>
+                                <nobr>
+                                    la <span style="color: red;">somma</span>: \(\sqrt[3]{cos(2x) \color{red}{\boldsymbol{+}}\color{black}{} 5}\)
+                                </nobr>
+                            </li>
+                            <br>
+                            <li>
+                                <nobr>
+                                    il <span style="color: red;">coseno</span>: \(\sqrt[3]{\color{red}{cos}(\color{black}{}2x\color{red}{})\color{black}{} + 5}\)
+                                </nobr>
+                            </li>
+                            <br>
+                            <li>
+                                <nobr>
+                                    la <span style="color: red;">radice di indice \(3\) (dispari)</span>: 
+                                    \[
+                                        \color{red}{}\sqrt[3]{\color{black}{}cos(2x) + 5}
+                                    \]
+                                </nobr>
+                            </li>                            
+                        </ul>
+                        Siccome sono tutte operazioni innocue, la funzione è definita per ogni valore di \(x\), ovvero il
+                        suo dominio è tutto \(\mathbb{R}\)
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <br>
+            <hr>
+            <br>
+            <br>
+
+            <h3 class="blue">Operazioni pericolose 💀</h3>
+            <br>
+            <div>
+                Analizziamo ciascuna delle operazioni "pericolose" contenute nel seguente elenco
+                <br>
+                <br>
+                <ul>
+                    <li>
+                        La <b>frazione (divisione)</b> può essere svolta solo se il denominatore è diverso da \(0\).
+                        <br>
+                        <br>
+                        <div class="grayBorder" style="text-align: center;">
+                            \(\dfrac{N}{\color{red}{}D}\,\,\,\) è definito \(\,\,\Longleftrightarrow\,\,\) \(\,\,\,\color{red}{D}\color{black}{} \neq 0\,\,\,\)
+                        </div>
+                        <br>
+                        <h3 class="yellow">Esempi</h3>
+                        <div class="esempi-container">
+                            Nel seguente video viene spiegato perché non è possibile dividere per \(0\), ovvero perché frazioni del tipo 
+                            \[
+                                \dfrac{1}{0} \quad \dfrac{-5}{0} \quad \dfrac{23}{0} \quad \dfrac{-37}{0} \quad \dfrac{0}{0} 
+                            \]
+                            non possono essere svolte.
+                            <br>
+                            <br>
+                            <div style="width: 100%; display: flex; flex-direction: row; justify-content: center; align-items: center;">
+                                <iframe style="width: 100%;" src="https://www.youtube.com/embed/BRRolKTlF6Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            </div>
+
+                            <br>
+                            <br>
+                            <hr>
+                            <br>
+
+                            Consideriamo la funzione 
+                            \[
+                                g(x) = \dfrac{2x^2 -3x + 1}{5x -2}
+                            \]
+                            Nella sua definizione intervengono somme, sottrazioni, moltiplicazioni, potenze (tutte innocue) e una <span style="color: red">frazione</span>
+                            \[
+                                g(x) = \color{red}{\dfrac{\color{black}{}2x^2 -3x + 1}{\color{black}{}5x -2}}
+                            \]
+                            La divisione può essere effettuata solo se il denominore è diverso da zero.
+                            \[
+                                \begin{align*}
+                                    \dfrac{2x^2 -3x + 1}{\underset{\color{gray}{}\text{vogliamo che sia diverso \(0\)}}{\color{gray}{}\underbrace{\color{red}{}5x +2}}} \color{black}{} &\Longrightarrow \color{red}{5x +2}\color{black}{} \neq 0 
+                                    \\\\
+                                    &\Longrightarrow 5x \neq -2 
+                                    \\\\
+                                    &\Longrightarrow x \neq -\dfrac{2}{5}
+                                \end{align*}
+                            \]
+                            Di conseguenza il <b>dominio</b> della funzione \(g\) è l'insieme dei valori diversi da \(x \neq -\dfrac{2}{5}\)
+                        </div>
+                    </li>
+                    <br>
+                    <br>
+                    <li>
+                        La <b>radice di indice pari</b> può essere svolta solo per numeri maggiori o uguali di \(0\).
+                        <br>
+                        <br>
+                        <div class="grayBorder" style="text-align: center;">
+                            \(\sqrt[\text{pari}]{\color{red}{}A\color{black}{}}\,\,\,\) è definito \(\,\,\Longleftrightarrow\,\,\) \(\,\,\,\color{red}{}A\color{black}{} \geq 0\,\,\,\)
+                        </div>
+                        <br>
+                        <h3 class="yellow">Esempi</h3>
+                        <div class="esempi-container">
+                            \(\sqrt[\color{green}{2}]{\color{red}{9}} \color{black}{}= \color{blue}{}3\,\,\,\) perché \(\,\,\,\color{blue}{3}^{\color{green}{2}} \color{black}{} = \color{red}{9}\)
+                            <br>
+                            <br>
+                            \(\sqrt[\color{green}{4}]{\color{red}{16}} \color{black}{}= \color{blue}{}2\,\,\,\) perché \(\,\,\,\color{blue}{2}^{\color{green}{4}} \color{black}{} = \color{red}{16}\)
+                            <br>
+                            <br>
+                            \(\sqrt[\color{green}{2}]{\color{red}{-4}}\,\,\,\) <b>non si può svolgere</b>, perché non esiste alcun numero che elevato alla \(\color{green}{2}\) dà come risultato \(\color{red}{-4}\)
+                            <br>
+                            <br>
+                            \(\sqrt[\color{green}{10}]{\color{red}{-1}}\,\,\,\) <b>non si può svolgere</b>, perché non esiste alcun numero che elevato alla \(\color{green}{10}\) dà come risultato \(\color{red}{-1}\)
+                            <br>
+                            <br>
+                            <hr>
+                            <br>
+                            Consideriamo la funzione 
+                            \[
+                                s(x) = \sqrt[4]{x^2 -9}    
+                            \]
+                            Nella definizione della funzione \(s\) sono presenti la potenza, la sottrazione (entrambe innocue) e la <span style="color: red">radice di indice \(4\)</span>
+                            \[
+                                s(x) = \color{red}{}\sqrt[4]{\color{black}{}x^2 -9}    
+                            \]
+                            Sappiamo che quest'operazione si può svolgere solo per numeri maggiori o uguali a \(0\).
+                            \[
+                                
+                                \underset{\color{gray}{\text{deve essere \(\geq0\)}}}{\color{black}{}\sqrt[4]{\color{gray}{}\underbrace{\color{red}{}x^2 -9}}} \,\,\,\Longrightarrow\,\,\, \color{red}{}x^2 - 9 \color{black}{} \geq 0
+                            \]
+                            Risolviamo questa disequazione di secondo grado con il metodo della parabola.
+                            \[
+                                \begin{align*}
+                                    x^2 - 9 = 0 \,\,\,&\Longrightarrow\,\,\, x^2 = 9 
+                                    \\\\
+                                    &\Longrightarrow\,\,\, x = \pm3
+                                \end{align*}
+                            \]
+                            Disegnamo la parabola associata a \(x^2 -9\)
+                            <br>
+                            <br>
+                            <img src="img/parabola.png" alt="" style="width: 60%;">
+                            <br>
+                            Dunque il <b>dominio</b> della funzione è l'insieme dei valori
+                            \[
+                                x \leq -3 \quad\text{oppure}\quad x \geq 3
+                            \]
+                            poiché per tali valori l'argomento della radice, \(x^2 - 9 \), è maggiore o uguale di \(0\).
+  
+                        
+                    </li>
+                    <br>
+                    <br>
+                    <li>
+                        Il <b>logaritmo</b> (a prescindere dalla sua base) può essere svolta solo per numeri maggiori di \(0\).
+                        <br>
+                        <br>
+                        <div class="grayBorder" style="text-align: center;">
+                            \(\log_{b}\left(\color{red}{A}\color{black}{}\right)\,\,\,\) è definito \(\,\,\Longleftrightarrow\,\,\) \(\,\,\,\color{red}{A}\color{black}{} \gt 0\,\,\,\)
+                        </div>
+                        <br>
+                        <h3 class="yellow">Esempi</h3>
+                        <div class="esempi-container">
+                            \(log_{\color{green}{_2}\color{black}{}}({\color{red}{32}}) \color{black}{}= \color{blue}{}5\,\,\,\) perché \(\,\,\,\color{green}{2}^{\color{blue}{5}} \color{black}{} = \color{red}{32}\)
+                            <br>
+                            <br>
+                            \(log_{\color{green}{_3}\color{black}{}}\left({\color{red}{\frac{1}{9}}}\right) \color{black}{}= \color{blue}{}-2\,\,\,\) perché \(\,\,\,\color{green}{3}^{\color{blue}{-2}} \color{black}{} = \color{red}{\frac{1}{9}}\)
+                            <br>
+                            <br>
+                            \(log_{_{\color{green}{10}}}(\color{red}{-2}\color{black}{})\,\,\,\) <b>non si può svolgere</b>, perché non esiste alcun numero che dato come esponente a \(\color{green}{10}\) dà come risultato \(\color{red}{-2}\)
+                            <br>
+                            <br>
+                            \(log_{_{\color{green}{5}}}(\color{red}{0}\color{black}{})\,\,\,\) <b>non si può svolgere</b>, perché non esiste alcun numero che dato come esponente a \(\color{green}{5}\) dà come risultato \(\color{red}{0}\)
+                            <br>
+                            <br>
+                            <hr>
+                            <br>
+                            Consideriamo la funzione 
+                            \[
+                                f(x) = ln(-3x +2)
+                            \]
+                            Nella definizione della funzione intervengono una moltiplicazione, una somma ed un <span style="color: red">logaritmo</span>.
+                            \[
+                                f(x) = \color{red}{}ln(\color{black}{}-3x +2\color{red}{})  
+                            \]
+                            Il logaritmo si può svolgere solo per numeri maggiori di \(0\).
+                            \[
+                                \begin{align*}
+                                \underset{\color{gray}{\text{vogliamo sia maggiore di \(0\)}}}{ln(\color{gray}{}\underbrace{\color{red}{}-3x +2}\color{black}{})} 
+                                &\Longrightarrow
+                                \color{red}{-3x + 2}\color{black}{} \gt 0
+                                \\\\
+                                &\Longrightarrow -3x \gt -2 
+                                \\\\
+                                &\Longrightarrow \dfrac{-3x}{-3} \lt \dfrac{-2}{-3}
+                                \\\\
+                                &\Longrightarrow x \lt \dfrac{2}{3}
+                                \end{align*}
+                            \]
+                            Il <b>dominio</b> della funzione \(f\) è l'insieme dei valori \(x \lt \dfrac{2}{3}\)
+                        </div>
+                    </li>
+                    <br>
+                    <br>
+                    <li>
+                        La <b>tangente</b> può essere svolta solo se il suo argomento è diverso da \(\dfrac{\pi}{2} + k\,\pi\), 
+                        <nobr>
+                            con \(k \in \mathbb{Z}\)
+                        </nobr>
+                        <br>
+                        <br>
+                        <div class="grayBorder" style="text-align: center;">
+                            <nobr>
+                                \(tan\left(\color{red}{A}\color{black}{}\right)\,\) è definito \(\,\Longleftrightarrow\,\) \(\,\,\color{red}{A}\color{black}{} \neq \dfrac{\pi}{2} + k\,\pi \)
+                            </nobr>
+                        </div>
+                        <br>
+                        <h3 class="yellow">Esempi</h3>
+                        <div class="esempi-container">
+                            Ricordando la seconda relazione fondamentale della goniometria, si ha 
+                            \[
+                                tan\left(\color{red}{A}\color{black}{}\right) = \dfrac{sin\left(\color{red}{A}\color{black}{}\right) }{cos\left(\color{red}{A}\color{black}{}\right)}
+                            \]
+                            Siccome siamo in presenza di una frazione, il denominatore deve essere diverso da \(0\),
+                            \[
+                                cos(\color{red}{}A\color{black}{}) \neq 0
+                            \]
+                            ovvero \(\color{red}{}A\color{black}{} \neq \dfrac{\pi}{2} + k\,\pi\).
+                            <br>
+                            <br>
+                            <hr>
+                            <br>
+                            Consideriamo la funzione
+                            \[
+                                h(x) = tan\left(x + \dfrac{\pi}{3}\right)
+                            \]
+                            Nella definizione di questa funzione sono presenti una divisione, una somma e la <span style="color: red">tangente</span>
+                            \[
+                                h(x) = \color{red}{}tan\left(\color{black}{}x + \dfrac{\pi}{3}\color{red}{}\right)
+                            \]
+                            Perché l'operazione tangente possa essere calcolata vogliamo che il suo argomento sia diverso da \(\dfrac{\pi}{2} + k\pi\), con \(\,k\in\mathbb{Z}\)
+                            \[
+                                \begin{align*}
+                                    tan\left(\color{red}{}x + \dfrac{\pi}{3}\color{black}{}\right) 
+                                    &\Longrightarrow
+                                    \color{red}{}x + \dfrac{\pi}{3} \color{black}{} \neq \dfrac{\pi}{2} + k\pi
+                                    \\\\
+                                    &\Longrightarrow x \neq \dfrac{\pi}{2}  - \dfrac{\pi}{3}+ k\pi
+                                    \\\\
+                                    &\Longrightarrow x \neq \dfrac{3 - 2}{6}\pi + k\pi
+                                    \\\\
+                                    &\Longrightarrow x \neq \dfrac{1}{6}\pi + k\pi
+                                \end{align*}
+                            \]
+                            Di conseguenza il <b>dominio</b> della funzione \(h\) è l'insieme dei valori \(x \neq \dfrac{1}{6}\pi + k\pi\), con \(k\in\mathbb{Z}\)
+                        </div>
+                    </li>
+                    
+                </ul>
+            </div>
+
+         </section>
+
+         <section class="exercise">
+            <div class="h3">
+                <span class="sub-par" id="exParagraphNumber"></span>
+                <h3>Esercizi</h3>
+            </div>
+            <br>
+
+            <!-- Esercizi -->
+
+                
+            <br>
+            <br>
+        
+            <h3 class="questionTitle">Domanda 1</h3>
+        
+            <div class="questionBox">
+                <p class="question">
+        
+                    Seleziona tra le seguenti tutte le operazioni "pericolose", ovvero quelle che non sono sempre definite.
+                </p>
+                <br>
+                
+                <div class="option">
+                    <input type="checkbox" name="domanda1" class="checkboxButton" value="1" onclick="enableSubmit(1)">
+                    <div class="optionText">
+                        Somma / sottrazione
+                    </div>
+                </div>
+                <br>
+                
+                <div class="option">
+                    <input type="checkbox" name="domanda1" class="checkboxButton" value="2" onclick="enableSubmit(1)">
+                    <div class="optionText">
+                        Moltiplicazione
+                    </div>
+                </div>
+                <br>
+                
+                <div class="option">
+                    <input type="checkbox" name="domanda1" class="checkboxButton" value="3" onclick="enableSubmit(1)">
+                    <div class="optionText">
+                        Frazione
+                    </div>
+                </div>
+                <br>
+                
+                <div class="option">
+                    <input type="checkbox" name="domanda1" class="checkboxButton" value="4" onclick="enableSubmit(1)">
+                    <div class="optionText">
+                        Radice di indice pari
+                    </div>
+                </div>
+                <br>
+                
+                <div class="option">
+                    <input type="checkbox" name="domanda1" class="checkboxButton" value="5" onclick="enableSubmit(1)">
+                    <div class="optionText">
+                        Radice di indice dispari
+                    </div>
+                </div>
+                <br>
+                
+                <div class="option">
+                    <input type="checkbox" name="domanda1" class="checkboxButton" value="6" onclick="enableSubmit(1)">
+                    <div class="optionText">
+                        Seno e coseno
+                    </div>
+                </div>
+                <br>
+                
+                <div class="option">
+                    <input type="checkbox" name="domanda1" class="checkboxButton" value="7" onclick="enableSubmit(1)">
+                    <div class="optionText">
+                        Tangente
+                    </div>
+                </div>
+                <br>
+                
+                <div class="option">
+                    <input type="checkbox" name="domanda1" class="checkboxButton" value="8" onclick="enableSubmit(1)">
+                    <div class="optionText">
+                        Logaritmo
+                    </div>
+                </div>  
+
+                <br>
+                
+                <div class="option">
+                    <input type="checkbox" name="domanda1" class="checkboxButton" value="8" onclick="enableSubmit(1)">
+                    <div class="optionText">
+                        Valore assoluto
+                    </div>
+                </div>  
+                <div class="whyAnswerIsWrong"></div>
+                <div class="numberOfTries">1/2 tentativi disponibili</div>
+        
+                <u class="showAnswer" onclick="showAnswer(1)">Mostra la risposta</u>
+        
+                <button type="button" class="submit" onclick="checkAnswer(1, 'rispostaMultipla', [3,4,7,8,], [], 3)" disabled>Invia risposta</button>
+        
+                <div class="answerContainer">
+                    <br>
+                    <b>Soluzione:</b>
+                    <br>    
+                    <div>
+                        Le operazioni pericolose sono
+                        <br>
+                        <br>
+                        <ul>
+                        <li>
+                            Frazione
+                        </li>
+                        <br>
+                        <li>
+                            Radice di indice pari
+                        </li>
+                        <br>
+                        <li>
+                            Logaritmo
+                        </li>
+                        <br>
+                        <li>
+                            Tangente
+                        </li>
+                        </ul>
+                    </div>
+                    <br>
+        
+                </div>
+            
+            </div>
+            
+            <br>
+            <br>
+
+            <h3 class="questionTitle">Domanda 2</h3>
+
+            <div class="questionBox">
+                <p class="question">
+
+                    Consideriamo la funzione 
+                    \[
+                        f(x) = \dfrac{1 + x^2}{4x + \left|cos(x)\right|}
+                    \]
+                    Selezionare tra le seguenti tutte le affermazioni corrette.
+                </p>
+                <br>
+                
+                <div class="option">
+                    <input type="checkbox" name="domanda2" class="checkboxButton" value="1" onclick="enableSubmit(2)">
+                    <div class="optionText">
+                        Nella definizione di \(f\) sono presenti due somme.
+                    </div>
+                </div>
+                <br>
+                
+                <div class="option">
+                    <input type="checkbox" name="domanda2" class="checkboxButton" value="2" onclick="enableSubmit(2)">
+                    <div class="optionText">
+                        Nella definizione di \(f\) sono presenti tre somme.
+                    </div>
+                </div>
+                <br>
+                
+                <div class="option">
+                    <input type="checkbox" name="domanda2" class="checkboxButton" value="3" onclick="enableSubmit(2)">
+                    <div class="optionText">
+                        Nella definizione di \(f\) è presente una potenza.
+                    </div>
+                </div>
+                <br>
+                
+                <div class="option">
+                    <input type="checkbox" name="domanda2" class="checkboxButton" value="4" onclick="enableSubmit(2)">
+                    <div class="optionText">
+                        Nella definizione di \(f\) è presente un modulo.
+                    </div>
+                </div>
+                <br>
+                
+                <div class="option">
+                    <input type="checkbox" name="domanda2" class="checkboxButton" value="5" onclick="enableSubmit(2)">
+                    <div class="optionText">
+                        Nella definizione di \(f\) sono presenti solo operazioni innocue, quindi il suo dominio è tutto \(\mathbb{R}\).
+                    </div>
+                </div>
+                <br>
+                
+                <div class="option">
+                    <input type="checkbox" name="domanda2" class="checkboxButton" value="6" onclick="enableSubmit(2)">
+                    <div class="optionText">
+                        Nella definizione di \(f\) è presente un'operazione pericolosa, il coseno.
+                    </div>
+                </div>   
+                <div class="whyAnswerIsWrong"></div>
+                <div class="numberOfTries">1/2 tentativi disponibili</div>
+
+                <u class="showAnswer" onclick="showAnswer(2)">Mostra la risposta</u>
+
+                <button type="button" class="submit" onclick="checkAnswer(2, 'rispostaMultipla', [1,3,4,], [], 3)" disabled>Invia risposta</button>
+
+                <div class="answerContainer">
+                    
+                    <br>    
+                    <div>
+                        Nella definizione della funzione \(f(x) = \dfrac{1 + x^2}{4x + \left|cos(x)\right|}\)
+                        sono coinvolte
+                        <br>
+                        <br>
+                        <ul>
+                            <li>
+                                Due somme: \(\dfrac{1 \color{red}{\boldsymbol{+}}\color{black}{} x^2}{4x \color{red}{\boldsymbol{+}}\color{black}{} \left|cos(x)\right|}\)
+                            </li>
+                            <br>
+                            <li>
+                                Una potenza: \(\dfrac{1 + x\color{red}{}^2}{4x + \left|cos(x)\right|}\)
+                            </li>
+                            <br>
+                            <li>
+                                Una moltiplicazione: \(\dfrac{1 + x^2}{4\,\color{red}{\boldsymbol{\cdot}}\color{black}{}\,x + \left|cos(x)\right|}\)
+                            </li>
+                            <br>
+                            <li>
+                                Un modulo (o valore assoluto) \(\dfrac{1 + x^2}{4x + \color{red}{}\left|\color{black}{}cos(x)\color{red}{}\right|\color{black}{}}\)
+                            </li>
+                            <br>
+                            <li>
+                                Un coseno: \(\dfrac{1 + x^2}{4x + \left|\color{red}{}cos(\color{black}{}x\color{red}{})\color{black}{}\right|}\)
+                            </li>
+                            <br>
+                            <li>
+                                Una frazione: \(\color{red}{}\dfrac{\color{black}{}1 + x^2}{\color{black}{}4x + \left|cos(x)\right|}\)
+                            </li>
+                        </ul>
+                        <br>
+                        Di queste, solo la frazione è un'operazione pericolosa (il denominatore non può essere \(0\))
+                    </div>
+                    <br>
+
+                </div>
+            
+            </div>
+
+            
+            
+            <br>
+            <br>
+        
+            <h3 class="questionTitle">Domanda 3</h3>
+            <div class="questionBox">
+                <p class="question gray">
+                    
+                </p>
+                <br>
+                <div class="textToFill grayBorder">
+                    Il logaritmo è definito se 
+                    <select class="selectOptionAnswer">
+                        <option class="optionChoiceAnswer" value="0"></option>
+                        <option class="optionChoiceAnswer" value="1">l'argomento è un numero maggiore di \(0\)</option>
+                        <option class="optionChoiceAnswer" value="2">l'argomento è un numero minore o uguale di \(0\)</option>
+                        <option class="optionChoiceAnswer" value="3">l'argomento è un numero maggiore o uguale di \(0\)</option>
+                        <option class="optionChoiceAnswer" value="4">l'argomento è un numero minore di \(0\)</option>
+                    </select>.
+                    <br>
+                    La radice di indice pari è definita se 
+                    <select class="selectOptionAnswer">
+                        <option class="optionChoiceAnswer" value="0"></option>
+                        <option class="optionChoiceAnswer" value="1">l'argomento è un numero maggiore di \(0\)</option>
+                        <option class="optionChoiceAnswer" value="2">l'argomento è un numero minore o uguale di \(0\)</option>
+                        <option class="optionChoiceAnswer" value="3">l'argomento è un numero maggiore o uguale di \(0\)</option>
+                        <option class="optionChoiceAnswer" value="4">l'argomento è un numero minore di \(0\)</option>
+                    </select>
+
+                </div>
+                
+                
+            <div class="whyAnswerIsWrong"></div>
+                
+                <div class="numberOfTries">1/2 tentativi disponibili</div>
+        
+                <u class="showAnswer" onclick="showAnswer(3)">Mostra la risposta</u>
+        
+                <button type="button" class="submit" onclick="checkAnswer(3, 'selezionaOpzioni', [1, 3] , [], 3)">Invia risposta</button>
+        
+                <div class="answerContainer">
+                    <br>
+                    <b>Soluzione:</b>
+                    <br>
+                    Il logaritmo è definito se l'argomento è un numero maggiore di \(0\).
+                    <br>
+                    La radice di indice pari è definita se l'argomento è un numero maggiore o uguale di \(0\).
+                </div>
+                
+            </div>
+
+            
+            
+            <br>
+            <br>
+        
+            <h3 class="questionTitle">Domanda 4</h3>
+            <div class="questionBox">
+                <p class="question gray">
+                    
+                </p>
+                <br>
+                <div class="textToFill grayBorder">
+                    Il valore assoluto \(|A|\) è definito se 
+                    <br>
+                    <div style="text-align: center;">
+                        <select class="selectOptionAnswer">
+                            <option class="optionChoiceAnswer" style="text-align: center;" value="0"></option>
+                            <option class="optionChoiceAnswer" style="text-align: center;" value="1">\( A \lt 0 \)</option>
+                            <option class="optionChoiceAnswer" style="text-align: center;" value="2">\( A = 0 \)</option>
+                            <option class="optionChoiceAnswer" style="text-align: center;" value="3">\( A \gt 0 \)</option>
+                            <option class="optionChoiceAnswer" style="text-align: center;" value="4">\( A \neq 0 \)</option>
+                            <option  class="optionChoiceAnswer" style="text-align: center;" value="5"> A è un numero qualsiasi.</option>s
+                        </select>.
+                    </div>
+                    <br>
+                    La frazione \(\dfrac{N}{D}\) è definita se  
+                    <br>
+                    <div style="text-align: center;">
+                        <select class="selectOptionAnswer">
+                            <option class="optionChoiceAnswer" value="0"></option>
+                            <option class="optionChoiceAnswer" value="1">\(N\)</option>
+                            <option class="optionChoiceAnswer" value="2">\(D\)</option>
+                        </select>
+                        <select class="selectOptionAnswer">
+                            <option class="optionChoiceAnswer" value="0"></option>
+                            <option class="optionChoiceAnswer" value="1">\(\lt 0 \)</option>
+                            <option class="optionChoiceAnswer" value="2">\(= 0 \)</option>
+                            <option class="optionChoiceAnswer" value="3">\(\gt 0 \)</option>
+                            <option class="optionChoiceAnswer" value="4">\(\neq 0 \)</option>
+                            <option class="optionChoiceAnswer" value="5">è un numero qualsiasi.</option>
+                        </select>
+                    </div>
+                </div>
+                
+                
+            <div class="whyAnswerIsWrong"></div>
+                
+                <div class="numberOfTries">1/2 tentativi disponibili</div>
+        
+                <u class="showAnswer" onclick="showAnswer(4)">Mostra la risposta</u>
+        
+                <button type="button" class="submit" onclick="checkAnswer(4, 'selezionaOpzioni', [5, 2, 4], [], 3)">Invia risposta</button>
+        
+                <div class="answerContainer">
+                    <br>
+                    <b>Soluzione:</b>
+                    <br>
+                    Il valore assoluto può avere come argomento un numero qualsiasi.
+                    <br>
+                    <br>
+                    Il denominatore di una frazione non può essere \(0\).
+                    <br>
+                </div>
+                
+            </div>
+
+            
+            <br>
+            <br>
+        
+            <h3 class="questionTitle">Domanda 5</h3>
+        
+            <div class="questionBox">
+                <p class="question">
+        
+                    Data la funzione
+                    \[
+                    j(x) = \dfrac{1 - x}{3 - ln(x +1)}
+                    \]
+                    selezionare tra tutte le seguenti affermazioni quelle corrette.
+                </p>
+                <br>
+                
+                <div class="option">
+                    <input type="checkbox" name="domanda5" class="checkboxButton" value="1" onclick="enableSubmit(5)">
+                    <div class="optionText">
+                        Nella definizione della funzione \(j\) interviene una frazione. 
+                        <br>
+                        Perché \(j\) sia definita il numeratore di tale frazione deve essere diverso da \(0\).
+                        <br>
+                        Di conseguenza 
+                        \[
+                            1 - x \neq  0
+                        \]
+                    </div>
+                </div>
+                <br>
+                
+                <div class="option">
+                    <input type="checkbox" name="domanda5" class="checkboxButton" value="2" onclick="enableSubmit(5)">
+                    <div class="optionText">
+                        Nella definizione della funzione \(j\) interviene una frazione. 
+                        <br>
+                        Perché \(j\) sia definita il denominatore di tale frazione deve essere diverso da \(0\).
+                        <br>
+                        Di conseguenza 
+                        \[
+                            3 - ln(x +1) \neq 0
+                        \]
+                    </div>
+                </div>
+                <br>
+                
+                <div class="option">
+                    <input type="checkbox" name="domanda5" class="checkboxButton" value="3" onclick="enableSubmit(5)">
+                    <div class="optionText">
+                        Nella definizione della funzione \(j\) interviene un logaritmo. 
+                        <br>
+                        Perché \(j\) sia definita l'argomento di tale logaritmo deve essere maggiore di \(0\).
+                        <br>
+                        Di conseguenza 
+                        \[
+                        x + 1 \gt 0
+                        \]
+                    </div>
+                </div>
+                <br>
+                
+                <div class="option">
+                    <input type="checkbox" name="domanda5" class="checkboxButton" value="4" onclick="enableSubmit(5)">
+                    <div class="optionText">
+                        Nella definizione della funzione \(j\) interviene un logaritmo. 
+                        <br>
+                        Perché \(j\) sia definita l'argomento di tale logaritmo deve essere maggiore di \(0\).
+                        <br>
+                        Di conseguenza 
+                        \[
+                        x \lt 0
+                        \]
+                    </div>
+                </div>
+                <br>
+                
+                <div class="option">
+                    <input type="checkbox" name="domanda5" class="checkboxButton" value="5" onclick="enableSubmit(5)">
+                    <div class="optionText">
+                        Nessuna delle precedenti affermazioni è vera.
+                    </div>
+                </div>   
+                <div class="whyAnswerIsWrong"></div>
+                <div class="numberOfTries">1/2 tentativi disponibili</div>
+        
+                <u class="showAnswer" onclick="showAnswer(5)">Mostra la risposta</u>
+        
+                <button type="button" class="submit" onclick="checkAnswer(5, 'rispostaMultipla', [2,3,], [], 3)" disabled>Invia risposta</button>
+        
+                <div class="answerContainer">
+                    
+                    <br>
+                    <b>Soluzione:</b>
+                    <br>
+                    Nella definizione della funzione \(j\) interviene 
+                    <br>
+                    <br>
+                    <ul>
+                        <li>
+                            una <span style="color: red">frazione</span>: \(\color{red}{}\dfrac{\color{black}{}1 - x}{\color{black}{}3 - ln(x +1)}\)
+                            <br>
+                            <br>
+                            Di conseguenza, perché \(j\) sia definita, il denominatore di tale frazione deve essere diverso da \(0\):
+                            \[
+                                    \dfrac{1 - x}{\underset{\color{gray}{\text{deve essere diverso da \(0\)}}}{\color{gray}{\underbrace{\color{red}{}3 - ln(x +1)}}}} 
+                            \]
+                            \[
+                                    \Longrightarrow 
+                                    \color{red}{}3 - ln(x +1) \color{black}{} \neq 0
+                            \]
+                        </li>
+                        <br>
+                        <li>
+                            un <span style="color: red">logaritmo</span>: \(\dfrac{1 - x}{3 - \color{red}{}ln(\color{black}{}x +1\color{red}{})}\)
+                            <br>
+                            <br>
+                            Di conseguenza, perché \(j\) sia definita, l'argomento di tale logaritmo deve essere maggiore di \(0\):
+                            \[
+                                        \dfrac{1 - x}{3 - ln(\color{red}{}x +1\color{black}{})}
+                            \]
+                            \[                                    
+                                        \Longrightarrow 
+                                        \color{red}{}x + 1 \color{black}{} \gt 0
+                            \]
+                        </li>
+                    </ul>
+                    
+                        
+                    <br>
+        
+                </div>
+            
+            </div>
+            
+            
+            
+        </section>
+    
+
+
+    <script>
+        
+    </script>
+    
+    
+    
+    
+    
+    
+    
+
+
+    <br>
+    <br>
+
+    <script src="../../../js/pageManagment.js"></script>
+    <script src="../../../js/exerciseManagment.js"></script>
+</body>

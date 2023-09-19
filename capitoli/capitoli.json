@@ -1,0 +1,73 @@
+{
+    "capitolo": [
+        {
+        "numero": 1,
+        "titolo": "Le funzioni",
+        "nomeCartella": "funzioni",
+        "paragrafo": [
+            {
+                "numero": "1.1",
+                "titolo": "Esempi di funzione",
+                "nomeCartella": "1-1primiEsempi"
+            },
+            {
+                "numero": "1.2",
+                "titolo": "Notazione",
+                "nomeCartella": "1-2notazione"
+            }
+        ]
+        }
+    ],
+
+    "daSvolgere": [
+        {
+        "numero": 1,
+        "titolo": "Le funzioni",
+        "paragrafo": [
+            
+            {
+                "numero": "1.3",
+                "titolo": "Rappresentazione grafica di una funzione",
+                "nomeCartella": "1-3graficoFunzione"
+            },
+            {
+                "numero": "1.4",
+                "titolo": "Altri esempi di funzione",
+                "nomeCartella": "1-4altriEsempi"
+            },
+            {
+                "numero": "1.5",
+                "titolo": "Dominio di una funzione (1)",
+                "nomeCartella": "1-5dominioFunzioneParte1"
+            },
+            {
+                "numero": "1.6",
+                "titolo": "Dominio di una funzione (2)",
+                "nomeCartella": "1-6dominioFunzioneParte2"
+            },
+            {
+                "numero": "1.7",
+                "titolo": "Notazione per il dominio",
+                "nomeCartella": "1-7notazioneDominio"
+            },
+            {
+                "numero": "1.8",
+                "titolo": "Dominio di una funzione (3)",
+                "nomeCartella": "1-8dominioFunzioneParte3"
+            },
+            {
+                "numero": "1.9",
+                "titolo": "Segno di una funzione",
+                "nomeCartella": "1-9segnoFunzione"
+            },
+            {
+                "numero": "1.10",
+                "titolo": "Traslazione del grafico di una funzione",
+                "nomeCartella": "1-10traslazioneGraficoFunzione"
+            }
+            
+        ]
+        }
+    ]
+  }
+  

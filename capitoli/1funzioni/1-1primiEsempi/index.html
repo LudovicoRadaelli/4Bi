@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="stylesheet" href="../../../css/style.css">
+    <title id="titleTag">1.1) Esempi di funzioni</title>
+</head>
+
+<body>
+        <br>
+        <!-- ATTENZIONE -->
+        <!-- In questi div nascosto è contenuta l'informazione del numero relativo al capitolo ed al pargrafo. Questa è necessaria 
+             perche si possa generare il menù dropown e funzionare i tasti previous e next-->
+        <div id="chapterNumber" style="display: none;">1</div>
+        <div id="paragraphTitle"style="display: none">Esempi di funzione</div>
+
+        <div class="gray"> 
+            <div class="homeIconContainer">
+                <a href="../5/derivata/index.html"><img class="homeIcon" src="../../../css/img/home.png"></a>
+            </div>
+            
+            <code><b id="bTagTitoloCapitolo"></b></code> 
+            <br>
+            <div class="select">
+                <div class="selected-option"><code><b id="bTagTitoloParagrafo"></b></code></div>
+                <div class="dropdown">
+                  <!-- Vengono inseriti i tag a sfruttando il file JSON -->
+                </div>
+            </div>
+        
+            
+            
+        </div>
+
+        <br>
+
+        <nav class="navigationBar">
+            <div onclick="changeParagraph(`previous`)" class="item prev">
+                <img class="icon" src="../../../css/img/leftArrow.png">
+            </div>
+            <div class="item explanationButton">
+                <div onclick="showExplanation()"><img class="icon" src="../../../css/img/presentation.png"></div>
+            </div>
+            <div class="item exerciseButton">
+                <div onclick="showExercise()"><img class="icon" src="../../../css/img/homework.png"></div>
+            </div>
+            <div onclick="changeParagraph(`next`)" class="item next">
+                <img class="icon" src="../../../css/img/rightArrow.png">
+            </div>
+        </nav>
+
+        <br>
+
+    
+
+        <section class="explanation">
+    
+            <div class="h3">
+                <span class="sub-par" id="paragraphCircledNumber"></span>
+                <h3 id="h3ParagraphTitle"></h3>
+            </div>
+            
+            <br>
+
+            <h3 class="yellow">Esempio 1</h3>
+            <div class="esempi-container">
+                <nobr>Un negozio vende sapone liquido sfuso a \(6\) &euro;</nobr> al litro più il costo del recipiente, pari a \(1\) &euro;. 
+                <br>
+                Indichiamo con 
+                <br>
+                <br>
+                <ul>
+                    <li>
+                        \(\color{blue}{x}\) il quantitativo di sapone acquistato (espresso in litri)
+                    </li>
+                    <br>
+                    <li>
+                        \(\color{red}{y}\) il prezzo che il cliente deve pagare.
+                    </li>
+                </ul>
+                    <br>
+                La relazione che lega \(\color{blue}{x}\) ed \(\color{red}{y}\) è la seguente:
+                \[
+                    \color{red}{y} \color{black}{} = 6 \cdot \color{blue}{x} \color{black}{}+ 1
+                \]
+                Saputo \(\color{blue}{x}\), il quantitativo di sapone acquistato, la formula ci permette di determinare l'importo \(\color{red}{y}\) dovuto 
+                dal cliente. In altre parole abbiamo espresso la quantità \(\color{red}{y}\,\,\) <b><u>in funzione</u></b> della quantità \(\color{blue}{x}\).
+                <br>
+                <br>
+                Ad esempio, se \(\color{blue}{x} \color{black}{} = \color{blue}{2}\), allora
+                \[
+                    \begin{align*}
+                        \color{red}{y} \color{black}{} &= 6 \cdot \color{blue}{2} \color{black}{} + 1 = \\
+                        &= 12 + 1 = \\
+                        &= \color{red}{13}
+                    \end{align*}
+                \]
+                ovvero per \(\color{blue}{2}\) litri di sapone il cliente paga \(\color{red}{13}\) &euro;                
+            </div>
+
+            <br>
+            <br>
+
+
+            <h3 class="yellow">Esempio 2</h3>
+            <div class="esempi-container">
+                Un palo alto \(3\) metri proietta un'ombra sul terreno nel quale è fissato. Indichiamo con
+                <br>
+                <br>
+                <ul>
+                    <li>
+                        \(\color{blue}{\alpha}\) l'angolo di inclinazione con cui i raggi solari colpiscono il palo (espressa in gradianti)
+                    </li>
+                    <br>
+                    <li>
+                        \(\color{red}{L}\) la lunghezza dell'ombra proiettata sul terreno (espressa in metri)
+                    </li>
+                </ul> 
+                <br>
+                <img src="img/palo(1).png" alt="">
+                <br>
+                Se varia l'angolo di inclinazione della luce, di conseguenza varierà la lunghezza dell'ombra proietta sul terreno.
+                <br>
+                Rispolverando la definizione di tangente di un anglo è possibile stabilire in che modo \(\color{red}{L}\)
+                dipende da \(\color{blue}{\alpha}\):
+                \[
+                    tan(\color{blue}{\alpha}\color{black}{})  = \dfrac{\text{cateto opposto}}{\text{cateto adiacente}} 
+                \]
+                \[
+                    tan(\color{blue}{\alpha}\color{black}{})  = \dfrac{\color{red}{L}}{3}
+                \]
+                Isolando \(\color{red}{L}\) nell'ultima equazione otteniamo 
+                \[
+                    \color{red}{L} \color{black}{}= 3 \cdot \tan(\color{blue}{\alpha}\color{black}{}) 
+                \]
+                Questa formula esprime la lunghezza \(\color{red}{L}\) dell'ombra <b><u>in funzione</u></b> dell'angolo 
+                di inclinazione \(\color{blue}{\alpha}\) della luce 
+                <br>
+                <br>
+                Se ad esempio l'inclinazione dei raggi solari rispetto al palo è di \(\color{blue}{\frac{\pi}{4}}\) radianti, allora
+                la lunghezza dell'ombra è
+                <div style="display: flex; flex-direction: row; justify-content: space-evenly; align-items: center;">
+                    <div style="width: 40%;">
+                        \[
+                            \begin{align*}
+                                \color{red}{L} \color{black}{} &= 3 \cdot tan\left(\color{blue}{\frac{\pi}{4}}\color{black}{}\right)
+                                \\
+                                &= 3 \cdot 1 
+                                \\
+                                &= \color{red}{3}
+                            \end{align*}
+                        \]
+                    </div>
+                    <img src="img/palo(2).png"  style="width: 30%; border: 0;">
+                </div>
+                
+                <br>
+                
+
+                
+                Un'inclinazione \(\color{blue}{\alpha} \color{black}{} = \color{blue}{\frac{\pi}{3}}\) produce un'ombra di lunghezza 
+                <div style="display: flex; flex-direction: row; justify-content: space-evenly; align-items: center;">
+                    <div style="width: 40%;">
+                        \[
+                            \begin{align*}
+                                \color{red}{L} \color{black}{} &= 3 \cdot tan\left(\color{blue}{\frac{\pi}{3}}\color{black}{}\right) 
+                                \\
+                                &= 3 \cdot \sqrt{3} 
+                                \\
+                                &\approx 5,19
+                            \end{align*}
+                        \]
+                    </div>
+                    <img src="img/palo(3).png"  style="width: 30%; border: 0;">
+                </div>
+                
+            </div>
+
+         </section>
+
+         <section class="exercise">
+            <div class="h3">
+                <span class="sub-par" id="exParagraphNumber"></span>
+                <h3>Esercizi</h3>
+            </div>
+            <br>
+
+            <p>
+                Consideriamo la funzione dell'esempio 2
+                \[
+                    \color{red}{y} \color{black}{} = 6 \cdot \color{blue}{x} \color{black}{} + 1
+                \]
+                dove \(\color{blue}{x}\) rappresenta i litri di sapone acquistato e  \(\color{red}{y}\) rappresenta l'importo dovuto dal cliente
+            </p>
+            
+            <br>
+
+            <h3 class="questionTitle">Domanda 1</h3>
+            <div class="questionBox">
+                <p class="question">
+                    Poniamo \(\color{blue}{}x \color{black}{} = \color{blue}{10}\). Seleziona tra le seguenti <b>tutte</b> le affermazioni vere.
+                </p>
+                <br>
+                <div class="option">
+                    <input type="checkbox" name="domanda1" class="checkboxButton" value="1" onclick="enableSubmit(1)">
+                    <div class="optionText">
+                        L'importo dovuto dal cliente è \(10\) &euro;
+                    </div>
+                </div>
+                <br>
+                <div class="option">
+                    <input type="checkbox" name="domanda1" class="checkboxButton" value="2" onclick="enableSubmit(1)">
+                    <div class="optionText">
+                        L'importo dovuto dal cliente è \(61\) &euro;
+                    </div>
+                </div>
+                <br>
+                <div class="option">
+                    <input type="checkbox" name="domanda1" class="checkboxButton" value="3" onclick="enableSubmit(1)">
+                    <div class="optionText">
+                        Il cliente ha acquistato \(10\) litri di sapone
+                    </div>
+                </div>
+                <br>
+                <div class="option">
+                    <input type="checkbox" name="domanda1" class="checkboxButton" value="4" onclick="enableSubmit(1)">
+                    <div class="optionText">
+                        Il cliente ha acquistato \(61\) litri di sapone
+                    </div>
+                </div>
+        
+                <div class="whyAnswerIsWrong"></div>
+                
+                <div class="numberOfTries">1/2 tentativi disponibili</div>
+        
+                <u class="showAnswer" onclick="showAnswer(1)">Mostra la risposta</u>
+        
+                <button type="button" class="submit" onclick="checkAnswer(1, `rispostaMultipla`, [2, 3], [], 3)" disabled>Invia risposta</button>
+        
+                <div class="answerContainer">
+                    
+                    <br>
+                    
+                    <p>
+                        Con \(\color{blue}{x}\) indichiamo la quantità di sapone acquistata dal cliente. Di conseguenza per calcolare
+                        l'importo che deve pagare usiamo la formula
+                        \[
+                            \begin{align*}
+                                \color{red}{y} \color{black}{} &= 6 \cdot \color{blue}{x} \color{black}{} + 1
+                                \\
+                                &= 6 \cdot \color{blue}{10}  \color{black}{} + 1
+                                \\
+                                &= 60 + 1
+                                \\
+                                &= \color{red}{61}
+                            \end{align*}
+                        \]
+                    </p>
+        
+                    <br>
+        
+                </div>
+                
+            </div>
+        
+            <br>
+            <br>
+            
+            <h3 class="questionTitle">Domanda 2</h3>
+            <div class="questionBox">
+                <p class="question">
+                    Ha senso assegnare ad \(\color{blue}{x}\) valori negativi?
+                </p>
+                <br>
+                <div class="option">
+                    <input type="radio" name="domanda2" class="radioButton" value="1" onclick="enableSubmit(2)">
+                    <div class="optionText">
+                        Si, perché è sempre possibile effettuare il calcolo 
+                        \[
+                            \color{red}{y} \color{black}{} = 6 \cdot \color{blue}{x} \color{black}{} + 1
+                        \]
+                        Ad esempio se \(\color{blue}{x} \color{black}{} = \color{blue}{-2}\), si ha \(\color{red}{y} \color{black}{} = \color{red}{-5}\).
+                    </div>
+                </div>
+                <br>
+                <div class="option">
+                    <input type="radio" name="domanda2" class="radioButton" value="2" onclick="enableSubmit(2)">
+                    <div class="optionText">
+                        No, perché \(\color{blue}{x}\) esprime la quantità di sapone acquistato, che quindi non può essere negativa.
+                    </div>
+                </div>
+                <br>
+                <div class="option">
+                    <input type="radio" name="domanda2" class="radioButton" value="3" onclick="enableSubmit(2)">
+                    <div class="optionText">
+                        No, perché il calcolo 
+                        \[
+                            \color{red}{y} \color{black}{} = 6 \cdot \color{blue}{x} \color{black}{} + 1
+                        \]
+                        non può essere effettuato per valori più piccoli di \(0\).
+                    </div>
+                </div>
+                <br>
+                <div class="option">
+                    <input type="radio" name="domanda2" class="radioButton" value="4" onclick="enableSubmit(2)">
+                    <div class="optionText">
+                        Non è possibile dare una riposta a questa domanda.
+                    </div>
+                </div>
+                
+                <div class="numberOfTries">1/2 tentativi disponibili</div>
+        
+                <u class="showAnswer" onclick="showAnswer(2)">Mostra la risposta</u>
+        
+                <button type="button" class="submit" onclick="checkAnswer(2, `rispostaUnica`, 2, undefined, 2)" disabled>Invia risposta</button>
+        
+                <div class="answerContainer">
+                    
+                    <br>
+                    
+                    <p>
+                        Ad esempio, considerare \(\color{blue}{x} \color{black}{} = \color{blue}{-2}\) vorrebbe dire che il cliente 
+                        sta acquistando \(\color{blue}{-2}\) litri di sapone, il che non ha senso!
+                        <br>
+                        La risposta corretta è la seconda.
+                    </p>
+        
+                    <br>
+        
+                </div>
+                
+            </div>
+            
+            <br>
+            <br>
+            <hr>
+            <br>
+            <br>
+            
+
+
+            <p>
+                Consideriamo la funzione dell'esempio 3
+                \[
+                    \color{red}{L} \color{black}{} = 3 \cdot tan\left(\color{blue}{\alpha}\color{black}{}\right) 
+                \]
+                dove \(\color{blue}{\alpha}\) rappresenta l'angolo di inclinazione dei raggi solari ed  
+                \(\color{red}{L}\) indica la lunghezza dell'ombra prodotta dal palo.
+            </p>
+            <img src="img/palo(1).png" alt="" style="width: 60%;">
+            <br>
+
+            <h3 class="questionTitle">Domanda 3</h3>
+            <div class="questionBox">
+                <p class="question">
+                    Poniamo l'angolo di inclinazione pari a \(0\). Seleziona tra le seguenti affermazioni l'unica vera:
+                </p>
+                <br>
+                <div class="option">
+                    <input type="radio" name="domanda3" class="radioButton" value="1" onclick="enableSubmit(3)">
+                    <div class="optionText">
+                        Analizzando la figura osserviamo che non è possibile che l'angolo di inclinazione dei raggi solari assuma valore \(0\) radianti.
+                    </div>
+                </div>
+                <br>
+                <div class="option">
+                    <input type="radio" name="domanda3" class="radioButton" value="2" onclick="enableSubmit(3)">
+                    <div class="optionText">
+                        Porre l'angolo di inclinazione pari a \(0\) equivale ad assegnare ad \(\color{red}{L}\) valore \(\color{red}{0}\). 
+                    </div>
+                </div>
+                <br>
+                <div class="option">
+                    <input type="radio" name="domanda3" class="radioButton" value="3" onclick="enableSubmit(3)">
+                    <div class="optionText">
+                        Porre l'angolo di inclinazione pari a \(0\) equivale ad assegnare ad \(\color{blue}{\alpha}\) valore \(\color{blue}{0}\). 
+                        Di conseguenza applicando la formula si ottiene \(\color{red}{L} \color{black}{} = \color{red}{0}\)
+                    </div>
+                </div>
+                <br>
+                <div class="option">
+                    <input type="radio" name="domanda3" class="radioButton" value="4" onclick="enableSubmit(3)">
+                    <div class="optionText">
+                        Nessuna delle opzioni precedenti è corretta.
+                    </div>
+                </div>
+                
+                <div class="numberOfTries">1/2 tentativi disponibili</div>
+        
+                <u class="showAnswer" onclick="showAnswer(3)">Mostra la risposta</u>
+        
+                <button type="button" class="submit" onclick="checkAnswer(3, `rispostaUnica`, 3, undefined, 2)" disabled>Invia risposta</button>
+        
+                <div class="answerContainer">
+                    
+                    <br>
+                    
+                    <p>
+                        Se l'angolo di inclinazione \(\color{blue}{\alpha}\) è \(0\), i raggi solari cadono paralleli 
+                        rispetto al terreno ed al palo. Questo significa che il palo non produce ombra, ovvero che la lunghezza
+                        dell'ombra è pari a \(0\).
+                        Applicando la formula con \(\color{blue}{\alpha} \color{black}{} = \color{blue}{0}\) troviamo che
+                        \[
+                            \begin{align*}
+                                \color{red}{L} \color{black}{} &= 3 \cdot tan\left(\color{blue}{\alpha}\color{black}{}\right) 
+                                \\
+                                &= 3 \cdot tan\left(\color{blue}{0}\color{black}{}\right) 
+                                \\
+                                &= 3 \cdot 0
+                                \\
+                                &= \color{red}{0}
+                            \end{align*}
+                        \]
+                    </p>
+        
+                    <br>
+        
+                </div>
+                
+            </div>
+        
+            <br>
+            <br>
+
+            <h3 class="questionTitle">Domanda 4</h3>
+            <div class="questionBox">
+                <p class="question">
+                    Consideriamo il caso in cui l'angolo \(\color{blue}{\alpha}\) assume valori sempre più vicini a \(\frac{\pi}{2}\) ma minori di \(\frac{\pi}{2}\).
+                    <br>
+                    Seleziona tra le seguenti tutte le affermazioni vere
+                </p>
+                <br>
+                <div class="option">
+                    <input type="checkbox" name="domanda4" class="checkboxButton" value="1" onclick="enableSubmit(4)">
+                    <div class="optionText">
+                        La lunghezza dell'ombra prodotta dal palo cresce sempre di più. 
+                    </div>
+                </div>
+                <br>
+                <div class="option">
+                    <input type="checkbox" name="domanda4" class="checkboxButton" value="2" onclick="enableSubmit(4)">
+                    <div class="optionText">
+                        La lunghezza dell'ombra prodotta dal palo si riduce sempre di più. 
+                    </div>
+                </div>
+                <br>
+                <div class="option">
+                    <input type="checkbox" name="domanda4" class="checkboxButton" value="3" onclick="enableSubmit(4)">
+                    <div class="optionText">
+                        Poiché la \(tan\left(\color{blue}{\alpha} \color{black}{}\right)\) tende ad \(+\infty\) per \(\color{blue}{\alpha}\) che tende a \(\frac{\pi}{2}\), applicando la formula vediamo che il valore di \(\color{red}{L}\) tende anch'esso a \(+\infty\)
+                    </div>
+                </div>
+                <br>
+                <div class="option">
+                    <input type="checkbox" name="domanda4" class="checkboxButton" value="4" onclick="enableSubmit(4)">
+                    <div class="optionText">
+                        Poiché la \(tan\left(\color{blue}{\alpha} \color{black}{}\right)\) tende ad \(0\) per \(\color{blue}{\alpha}\) che tende a \(\frac{\pi}{2}\),  applicando la formula vediamo che il valore di \(\color{red}{L}\) tende anch'esso a \(0\)
+                    </div>
+                </div>
+        
+                <div class="whyAnswerIsWrong"></div>
+                
+                <div class="numberOfTries">1/2 tentativi disponibili</div>
+        
+                <u class="showAnswer" onclick="showAnswer(4)">Mostra la risposta</u>
+        
+                <button type="button" class="submit" onclick="checkAnswer(4, `rispostaMultipla`, [1, 3], [], 3)" disabled>Invia risposta</button>
+        
+                <div class="answerContainer">
+                    
+                    <br>
+                    
+                    <p>
+                        Con \(\color{blue}{x}\) indichiamo la quantità di sapone acquistata dal cliente. Di conseguenza per calcolare
+                        l'importo che deve pagare usiamo la formula
+                        \[
+                            \begin{align*}
+                                \color{red}{y} \color{black}{} &= 6 \cdot \color{blue}{x} \color{black}{} + 1
+                                \\
+                                &= 6 \cdot \color{blue}{10}  \color{black}{} + 1
+                                \\
+                                &= 60 + 1
+                                \\
+                                &= \color{red}{61}
+                            \end{align*}
+                        \]
+                    </p>
+        
+                    <br>
+                </div>                
+            </div>    
+            
+        </section>
+    
+
+
+    <script>
+        
+    </script>
+    
+    
+    
+    
+    
+    
+    
+
+
+    <br>
+    <br>
+
+    <script src="../../../js/pageManagment.js"></script>
+    <script src="../../../js/exerciseManagment.js"></script>
+</body>

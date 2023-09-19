@@ -1,0 +1,1163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="https://www.geogebra.org/apps/deployggb.js"></script>
+    <link rel="stylesheet" href="../../../css/style.css">
+    <title id="titleTag"></title>
+</head>
+
+<body>
+        <br>
+        <div id="chapterNumber" style="display: none;">1</div>
+        <div id="paragraphTitle" style="display: none;">Rappresentazione grafica di una funzione</div>
+        
+        <div class="gray"> 
+            <div class="homeIconContainer">
+                <a href="../../indiceMateriale.html"><img class="homeIcon" src="../../../css/img/home.png"></a>
+            </div>
+            
+            <code><b id="bTagTitoloCapitolo"></b></code> 
+            <br>
+            <div class="select">
+                <div class="selected-option"><code><b id="bTagTitoloParagrafo"></b></code></div>
+                <div class="dropdown">
+                    <!-- Vengono inseriti i tag a sfruttando il file JSON -->
+                </div>
+            </div>
+        
+            
+            
+        </div>
+
+        <br>
+
+        <nav class="navigationBar">
+            <div onclick="changeParagraph(`previous`)" class="item prev">
+                <img class="icon" src="../../../css/img/leftArrow.png">
+            </div>
+            <div class="item explanationButton">
+                <div onclick="showExplanation()"><img class="icon" src="../../../css/img/presentation.png"></div>
+            </div>
+            <div class="item exerciseButton">
+                <div onclick="showExercise()"><img class="icon" src="../../../css/img/homework.png"></div>
+            </div>
+            <div onclick="changeParagraph(`next`)" class="item next">
+                <img class="icon" src="../../../css/img/rightArrow.png">
+            </div>
+        </nav>
+
+        <br>
+
+    
+
+        <section class="explanation">
+    
+            <div class="h3">
+                <span class="sub-par" id="paragraphCircledNumber"></span>
+                <h3 id="h3ParagraphTitle"></h3>
+            </div>
+            
+            <br>
+
+            <div>
+                L'obiettivo di questo paragrafo è imparare a fare una sorta di <b>"ritratto"</b> di una funzione: la sua rappresentazione grafica.
+                <br>
+                <br>
+                Cerco di spiegarmi attraverso una similitudine. Di seguito descrivo il volto di una persona:
+                <br>
+                <br>
+                <ul>
+                    <li>
+                        mento pronunciato
+                    </li>
+                    <br>
+                    <li>
+                        naso aquilino
+                    </li>
+                    <br>
+                    <li>
+                        fronte alta e spaziosa
+                    </li>
+                    <br>
+                    <li>
+                        occhi scuri e sguardo profondo
+                    </li>
+                    <br>
+                    <li>
+                        leggere rughe attorno alla bocca e agli occhi
+                    </li>
+                </ul>
+                <br>
+                Le informazioni riguardo al volto descritto sono elencate <b>in sequenza</b>. Fornendovi dettagli sempre più accurati,
+                la vostra mente li ricomporrà in <b>un'unica immagine</b>. 
+                <br>
+                <br>
+                <img id="voltoMisterioso" src="img/voltoMisterioso.png" alt="" onclick="mostraRitratto()">
+                <img id="profiloDante" src="img/Dante-profilo.jpeg" alt="" style="display: none;">
+                <br>
+                <br>
+                Consideriamo l'esempio del sapone alla spina che abbiamo analizzato nel paragrafo <b class="blue">1.1)</b>
+                <br>
+                Ricordiamo che
+                <br>
+                <br>
+                <ul>
+                    <li>
+                        \(\color{blue}{x}\) è la quantità  di sapone (in litri) acquistata dal cliente
+                    </li>
+                    <br>
+                    <li>
+                        \(\color{red}{y}\) il prezzo (in euro) che deve pagare per l'acquisto.
+                    </li>
+                    <br>
+                    <li>
+                        la relazione che lega le quantità \(\color{blue}{x}\) ed \(\color{red}{y}\) è
+                        \[
+                            \color{red}{y} \color{black}{}= 6\color{blue}{x} \color{black}{}+ 1
+                        \]
+                    </li>
+                </ul>
+                La legge \(f(\color{blue}{x}\color{black}{})= 6\color{blue}{x} \color{black}{}+ 1\) è quella "ricetta" che ci permette di calcolare il prezzo \(\color{red}{y}\) per ogni quantità di sapone \(\color{blue}{x}\) fissata.
+                <br>
+                <br>
+                Scriviamo alcuni esempi:
+                <br>
+                <br>
+                <ul>
+                    <li>
+                        se \(\color{blue}{x} \color{black}{}= \color{blue}{1}\), 
+                        <br>
+                        allora \(\color{red}{}y \color{black}{} = f(\color{blue}{}1\color{black}{}) = 6\cdot\color{blue}{}1\color{black}{} + 1 = \color{red}{}7\)
+                    </li>
+                    <br>
+                    <li>
+                        se \(\color{blue}{x} \color{black}{}= \color{blue}{1.5}\), 
+                        <br>
+                        allora \(\color{red}{}y \color{black}{} = f(\color{blue}{}1.5\color{black}{}) = 6\cdot\color{blue}{}1.5\color{black}{} + 1 = \color{red}{}10\)
+                    </li>
+                    <br>
+                    <li>
+                        se \(\color{blue}{x} \color{black}{}= \color{blue}{2}\), 
+                        <br>
+                        allora \(\color{red}{}y \color{black}{} = f(\color{blue}{}2\color{black}{}) = 6\cdot\color{blue}{}2\color{black}{} + 1 = \color{red}{}13\)
+                    </li>
+                    <br>
+                    <li>
+                        se \(\color{blue}{x} \color{black}{}= \color{blue}{4.1}\), 
+                        <br>
+                        allora \(\color{red}{}y \color{black}{} = f(\color{blue}{}4.1\color{black}{}) = 6\cdot\color{blue}{}4.1\color{black}{} + 1 = \color{red}{}25.6\)
+                    </li>
+                </ul>
+                <br>
+                Vedete? In questo elenco è come se stessimo descrivendo "il volto" della funzione, tratto per tratto.
+                <br>
+                Sarebbe bello avere un ritratto riassuntivo di tutte queste informazioni.
+                <br>
+                <br>
+                Sfruttiamo una vecchia conoscenza: gli <b>assi cartesiani</b>.
+                <br>
+                Disegnamo nel sistema di assi tutti i punti che hanno 
+                <br>
+                <br>
+                <ul>
+                    <li>
+                        come coodinata \(x\), la quantità di sapone acquistato
+                    </li>
+                    <li>
+                        come coodinata \(y\), il corrispondente prezzo dovuto dal cliente.
+                    </li>
+                </ul>
+                <br>
+                
+                <div class="grayBorder">
+                    <div class="gray">
+                        Disegnate almeno \(5\) punti della funzione. 
+                        <br>
+                        Per farlo inserite un valore della \(\color{blue}{}x\) a piacere  nell'apposito campo. 
+                        <br>
+                        Osservate le coordinate del punto che viene disegnato.
+                    </div>
+                    <br>
+                    <div class="geogebra-container">
+                        <div id="geogebra1"></div>
+                    </div>
+                    <br>
+                    <div style="display: flex; flex-direction: row; justify-content: space-evenly; align-items: flex-start;">
+                        <div>
+                            \(\color{blue}{x}\color{black}{} = \)
+                            <input type="text" name="xInput" id="xInput" size="3" style="color: blue; text-align: left;">
+                        </div>
+                        <div id="stepByStep">
+                            \(
+                                \begin{align*}
+                                    \color{red}{y} \color{black}{} &= f(\color{blue}{x}\color{black}{}) 
+                                    \\  
+                                    &= 6 \cdot \color{blue}{x} \color{black}{} + 1 
+                                \end{align*}
+                            \)
+                        </div>
+                    </div>
+                    <br>
+                    <div style="display: flex; flex-direction: row; justify-content: space-evenly; justify-content: center;">
+                        <button onclick="disegnaPunto()">Disegna punto</button>
+                        <button id="disegnaRettaButton" onclick="disegnaRetta()" disabled>Disegna <u>tutti</u> i punti</button>
+                    </div>
+                </div>
+                <br>
+
+                Più sono i punti che disegnamo, più emerge quale sia il volto della funzione.
+                <br>
+                Se li disegnamo <u>tutti</u> otteniamo il <b>grafico della funzione</b>, che in questo caso è una retta.
+                <br>
+                Riassumendo:
+                <br>
+                <br>
+                <div class="grayBorder">
+                    Il <b>grafico</b> di una funzione \(f\) è l'insieme di tutti i punti della forma \(\left(x\,;\,\,f(x)\right)\)
+                </div>
+                
+                
+                 
+
+            </div>
+
+         </section>
+
+         <section class="exercise">
+            <div class="h3">
+                <span class="sub-par" id="exParagraphNumber"></span>
+                <h3>Esercizi</h3>
+            </div>
+        
+            <br>
+            <br>
+        
+            <h3 class="questionTitle">Domanda 1</h3>
+        
+            <div class="questionBox">
+                <p class="question">
+        
+                    Consideriamo la funzione 
+                    \[
+                        y = 2x^2 + 3
+                    \]
+                    Stabilire quali tra i seguenti punti <b>appartiene</b> al grafico della funzione.
+                    <br>
+                    Seleziona tra le seguenti tutte le affermazioni vere
+                </p>
+                <br>
+                
+                <div class="option">
+                    <input type="checkbox" name="domanda1" class="checkboxButton" value="1" onclick="enableSubmit(1)">
+                    <div class="optionText">
+                        \(\left(0\,;\,\,3\right)\)
+                    </div>
+                </div>
+                <br>
+                
+                <div class="option">
+                    <input type="checkbox" name="domanda1" class="checkboxButton" value="2" onclick="enableSubmit(1)">
+                    <div class="optionText">
+                        \(\left(1\,;\,\,4\right)\)
+                    </div>
+                </div>
+                <br>
+                
+                <div class="option">
+                    <input type="checkbox" name="domanda1" class="checkboxButton" value="3" onclick="enableSubmit(1)">
+                    <div class="optionText">
+                        \(\left(-1\,;\,\,5\right)\)
+                    </div>
+                </div>
+                <br>
+                
+                <div class="option">
+                    <input type="checkbox" name="domanda1" class="checkboxButton" value="4" onclick="enableSubmit(1)">
+                    <div class="optionText">
+                        \(\left(2.5\,;\,\,15.5\right)\)
+                    </div>
+                </div>
+                <br>
+                
+                <div class="option">
+                    <input type="checkbox" name="domanda1" class="checkboxButton" value="5" onclick="enableSubmit(1)">
+                    <div class="optionText">
+                        \(\left(5\,;\,\,52\right)\)
+                    </div>
+                </div>
+                <br>
+                
+                <div class="option">
+                    <input type="checkbox" name="domanda1" class="checkboxButton" value="6" onclick="enableSubmit(1)">
+                    <div class="optionText">
+                        \(\left(\dfrac{1}{2}\,;\,\,\dfrac{7}{2}\right)\)
+                    </div>
+                </div>
+                <br>
+                
+                <div class="option">
+                    <input type="checkbox" name="domanda1" class="checkboxButton" value="7" onclick="enableSubmit(1)">
+                    <div class="optionText">
+                        \(\left(4\,;\,\,30\right)\)
+                    </div>
+                </div>   
+                <div class="whyAnswerIsWrong"></div>
+                <div class="numberOfTries">1/2 tentativi disponibili</div>
+        
+                <u class="showAnswer" onclick="showAnswer(1)">Mostra la risposta</u>
+        
+                <button type="button" class="submit" onclick="checkAnswer(1, 'rispostaMultipla', [1,3,4,6,], [], 3)" disabled>Invia risposta</button>
+        
+                <div class="answerContainer">
+                    
+                    <br>    
+                    <ul>
+                        <li>
+                            \(\left(\color{blue}{}0\color{black}{}\,;\,\,\color{red}{}3\color{black}{}\right)\) appartiene al grafico della funzione. Infatti
+                            \[
+                                \begin{align*}
+                                    \color{red}{}y\color{black}{} &= f(\color{blue}{0}\color{black}{})
+                                    \\
+                                    &= 2 \cdot \color{blue}{0}\color{black}{}^2 + 3 
+                                    \\
+                                    &= 2 \cdot 0 +3 
+                                    \\
+                                    &= 0 + 3 
+                                    \\
+                                    &= \color{red}{}3
+                                \end{align*}
+                            \]
+                        </li>
+                        <br>
+                        <li>
+                            \(\left(\color{blue}{}1\color{black}{}\,;\,\,\color{red}{}4\color{black}{}\right)\) <b>non</b> appartiene al grafico della funzione, perché \(f(\color{blue}{1}\color{black}{}) \neq \color{red}{4}\). Infatti
+                            \[
+                                \begin{align*}
+                                    \color{red}{}y\color{black}{} &=f(\color{blue}{1}\color{black}{})
+                                    \\
+                                    &= 2 \cdot \color{blue}{1}\color{black}{}^2 + 3 
+                                    \\
+                                    &= 2 \cdot 1 +3 
+                                    \\
+                                    &= 2 + 3 
+                                    \\
+                                    &= \color{red}{}5
+                                \end{align*}
+                            \]
+                        </li>
+                        <br>
+                        <li>
+                            \(\left(\color{blue}{}-1\color{black}{}\,;\,\,\color{red}{}5\color{black}{}\right)\) appartiene al grafico della funzione. Infatti
+                            \[
+                                \begin{align*}
+                                    \color{red}{}y\color{black}{} &= f(\color{blue}{-1}\color{black}{})
+                                    \\
+                                    &= 2 \cdot \color{blue}{\left(-1\right)}\color{black}{}^2 + 3 
+                                    \\
+                                    &= 2 \cdot 1 +3 
+                                    \\
+                                    &= 2 + 3 
+                                    \\
+                                    &= \color{red}{}5
+                                \end{align*}
+                            \]
+                        </li>
+                        <br>
+                        <li>
+                            \(\left(\color{blue}{}2.5\color{black}{}\,;\,\,\color{red}{}15.5\color{black}{}\right)\) appartiene al grafico della funzione. Infatti
+                            \[
+                                \begin{align*}
+                                    \color{red}{}y\color{black}{} &= f(\color{blue}{2.5}\color{black}{})
+                                    \\
+                                    &=2 \cdot \color{blue}{2.5}\color{black}{}^2 + 3 
+                                    \\
+                                    &= 2 \cdot 6.25 +3 
+                                    \\
+                                    &= 12.5 + 3 
+                                    \\
+                                    &= \color{red}{}15.5
+                                \end{align*}
+                            \]
+                        </li>
+                        <br>
+                        <li>
+                            \(\left(\color{blue}{}5\color{black}{}\,;\,\,\color{red}{}52\color{black}{}\right)\) <b>non</b> appartiene al grafico della funzione, perché \(f(\color{blue}{5}\color{black}{}) \neq \color{red}{52}\). Infatti
+                            \[
+                                \begin{align*}
+                                    \color{red}{}y\color{black}{} &= f(\color{blue}{5}\color{black}{})
+                                    \\
+                                    &=2 \cdot \color{blue}{5}\color{black}{}^2 + 3 
+                                    \\
+                                    &= 2 \cdot 25 +3 
+                                    \\
+                                    &= 50 + 3 
+                                    \\
+                                    &= \color{red}{}53
+                                \end{align*}
+                            \]
+                        </li>
+                        <br>
+                        <li>
+                            \(\left(\color{blue}{}\dfrac{1}{2}\color{black}{}\,;\,\,\color{red}{}\dfrac{7}{2}\color{black}{}\right)\) appartiene al grafico della funzione. Infatti
+                            \[
+                                \begin{align*}
+                                    \color{red}{}y\color{black}{} &= f(\color{blue}{\dfrac{1}{2}}\color{black}{})
+                                    \\
+                                    &=2 \cdot \color{blue}{\left(\dfrac{1}{2}\right)}\color{black}{}^2 + 3 
+                                    \\
+                                    &= 2 \cdot \dfrac{1}{4} +3 
+                                    \\
+                                    &= \dfrac{1}{2} + 3 
+                                    \\
+                                    &= \dfrac{1 + 2\cdot 3}{2}
+                                    \\
+                                    &= \color{red}{}\dfrac{7}{2}
+                                \end{align*}
+                            \]
+                        </li>
+                    </ul>
+                    <br>
+        
+                </div>
+            
+            </div>
+                
+            
+            <br>
+            <br>
+        
+            <h3 class="questionTitle">Domanda 2</h3>
+        
+            <div class="questionBox">
+                <p class="question">
+        
+                    Consideriamo funzione
+                    \[
+                        f(x) = 2^x - 4
+                    \]
+                    Osserviamo i punti rappresentati sul piano cartesiano.
+                    <br>
+                    <br>
+                    <img src="img/ex(2)(1).png" alt="">
+                    <br>
+                    Selezionare quale tra le seguenti affermazioni è vera.
+                </p>
+                <br>
+                
+                <div class="option">
+                    <input type="radio" name="domanda2" class="radioButton" value="1" onclick="enableSubmit(2)">   
+                    <div class="optionText">
+                        Il punto \(C\) appartiene al grafico della funzione.
+
+                    </div>
+                </div>
+                <br>
+                
+                <div class="option">
+                    <input type="radio" name="domanda2" class="radioButton" value="2" onclick="enableSubmit(2)">   
+                    <div class="optionText">
+                        Il punto \(D\) appartiene al grafico della funzione
+                    </div>
+                </div>
+                <br>
+                
+                <div class="option">
+                    <input type="radio" name="domanda2" class="radioButton" value="3" onclick="enableSubmit(2)">   
+                    <div class="optionText">
+                        I punti \(A\) e \(B\) appartengono al grafico della funzione.
+                    </div>
+                </div>
+                <br>
+                
+                <div class="option">
+                    <input type="radio" name="domanda2" class="radioButton" value="4" onclick="enableSubmit(2)">   
+                    <div class="optionText">
+                        Il punto \(E\) non appartiene al grafico della funzione
+                    </div>
+                </div>
+                <br>
+                
+                <div class="option">
+                    <input type="radio" name="domanda2" class="radioButton" value="5" onclick="enableSubmit(2)">   
+                    <div class="optionText">
+                        Nessuna delle precedenti affermazioni è vera
+                    </div>
+                </div>   
+                <div class="whyAnswerIsWrong"></div>
+                <div class="numberOfTries">1/2 tentativi disponibili</div>
+        
+                <u class="showAnswer" onclick="showAnswer(2)">Mostra la risposta</u>
+        
+                <button type="button" class="submit" onclick="checkAnswer(2, 'rispostaUnica', [3], [], 2)" disabled>Invia risposta</button>
+        
+                <div class="answerContainer">
+                    
+                    <br>
+                    La riposta corretta è 
+                    <br>
+                    <br>
+                    <div class="grayBorder">
+                        I punti \(A\) e \(B\) appartengono al grafico della funzione.
+                    </div> 
+                    <br>
+                    Infatti
+                    <br>
+                    <br>
+                    <ul>
+                        <li>
+                            \(A\left(\color{blue}{}0\color{black}{}\,;\,\,\color{red}{}-3\color{black}{}\right)\) appartiene al grafico della funzione. Infatti
+                            \[
+                                \begin{align*}
+                                    \color{red}{}y\color{black}{} &= f(\color{blue}{0}\color{black}{})
+                                    \\
+                                    &= 2^{\color{blue}{0}} -4
+                                    \\
+                                    &= 1 - 4 
+                                    \\
+                                    &= \color{red}{}-3
+                                \end{align*}
+                            \]
+                        </li>
+                        <br>
+                        <li>
+                            \(B\left(\color{blue}{}2\color{black}{}\,;\,\,\color{red}{}0\color{black}{}\right)\) appartiene al grafico della funzione. Infatti
+                            \[
+                                \begin{align*}
+                                    \color{red}{}y\color{black}{} &= f(\color{blue}{2}\color{black}{})
+                                    \\
+                                    &= 2^{\color{blue}{2}} -4
+                                    \\
+                                    &= 4 - 4 
+                                    \\
+                                    &= \color{red}{}0
+                                \end{align*}
+                            \]
+                        </li>
+                        <br>
+                        <li>
+                            \(C\left(\color{blue}{}1\color{black}{}\,;\,\,\color{red}{}-1\color{black}{}\right)\) <b>non</b> appartiene al grafico della funzione. Infatti
+                            \[
+                                \begin{align*}
+                                    \color{red}{}y\color{black}{} &= f(\color{blue}{1}\color{black}{})
+                                    \\
+                                    &= 2^{\color{blue}{1}} -4
+                                    \\
+                                    &= 2 - 4 
+                                    \\
+                                    &= \color{red}{}-2
+                                \end{align*}
+                            \]
+                        </li>
+                        <br>
+                        <li>
+                            \(D\left(\color{blue}{}3\color{black}{}\,;\,\,\color{red}{}1\color{black}{}\right)\) <b>non</b> appartiene al grafico della funzione. Infatti
+                            \[
+                                \begin{align*}
+                                    \color{red}{}y\color{black}{} &= f(\color{blue}{3}\color{black}{})
+                                    \\
+                                    &= 2^{\color{blue}{3}} -4
+                                    \\
+                                    &= 8 - 4 
+                                    \\
+                                    &= \color{red}{} 4
+                                \end{align*}
+                            \]
+                            Di conseguenza il punto \(E\left(\color{blue}{}3\color{black}{}\,;\,\,\color{red}{}4\color{black}{}\right)\) appartiene al grafico.
+                        </li>
+                    </ul>
+                    <br>
+        
+                </div>
+            
+            </div>
+
+            
+            <br>
+            <br>
+        
+            <h3 class="questionTitle">Domanda 3</h3>
+        
+            <div class="questionBox">
+                <p class="question">
+        
+                    Nella figura che segue è riportato il grafico di una funzione \(f\).
+                    <br>
+                    <br>
+                    <img src="img/ex(3)(4).png">
+                    <br>
+                    Selezionare tra le seguenti tutte le affermazioni vere.
+                </p>
+                <br>
+                
+                <div class="option">
+                    <input type="checkbox" name="domanda3" class="checkboxButton" value="1" onclick="enableSubmit(3)">
+                    <div class="optionText">
+                        \(f(-4) = 1\)
+                    </div>
+                </div>
+                <br>
+                
+                <div class="option">
+                    <input type="checkbox" name="domanda3" class="checkboxButton" value="2" onclick="enableSubmit(3)">
+                    <div class="optionText">
+                        \(f(1) = -4\)
+                    </div>
+                </div>
+                <br>
+                
+                <div class="option">
+                    <input type="checkbox" name="domanda3" class="checkboxButton" value="3" onclick="enableSubmit(3)">
+                    <div class="optionText">
+                        \(f(-1) = -4\)
+                    </div>
+                </div>
+                <br>
+                
+                <div class="option">
+                    <input type="checkbox" name="domanda3" class="checkboxButton" value="4" onclick="enableSubmit(3)">
+                    <div class="optionText">
+                        \(f(-3) = 0\)
+                    </div>
+                </div>
+                <br>
+                
+                <div class="option">
+                    <input type="checkbox" name="domanda3" class="checkboxButton" value="5" onclick="enableSubmit(3)">
+                    <div class="optionText">
+                        \(f(0) = -3\)
+                    </div>
+                </div>
+                <br>
+                
+                <div class="option">
+                    <input type="checkbox" name="domanda3" class="checkboxButton" value="6" onclick="enableSubmit(3)">
+                    <div class="optionText">
+                        \(f(7) = 5\)
+                    </div>
+                </div>   
+                <div class="whyAnswerIsWrong"></div>
+                <div class="numberOfTries">1/2 tentativi disponibili</div>
+        
+                <u class="showAnswer" onclick="showAnswer(3)">Mostra la risposta</u>
+        
+                <button type="button" class="submit" onclick="checkAnswer(3, 'rispostaMultipla', [1,3,5,6,], [], 3)" disabled>Invia risposta</button>
+        
+                <div class="answerContainer">
+                    
+                    <b>Soluzione</b>
+                    <br>    
+                    <div>
+                        <div class="grayBorder">
+                            \(f(\color{blue}{}-4\color{black}{}) = \color{red}{}1\). Infatti
+                            <br>
+                            <br>
+                            <img src="img/ex(3)(5).png" alt="">
+                        </div>
+                        <br>
+                        <div class="grayBorder">
+                            \(f(\color{blue}{}-1\color{black}{}) = \color{red}{}-4\). Infatti
+                            <br>
+                            <br>
+                            <img src="img/ex(3)(6).png" alt="">
+                        </div>
+                        <br>
+                        <div class="grayBorder">
+                            \(f(\color{blue}{}0\color{black}{}) = \color{red}{}-3\). Infatti
+                            <br>
+                            <br>
+                            <img src="img/ex(3)(7).png" alt="">
+                        </div>
+                        <br>
+                        <div class="grayBorder">
+                            \(f(\color{blue}{}7\color{black}{}) = \color{red}{}5\). Infatti
+                            <br>
+                            <br>
+                            <img src="img/ex(3)(8).png" alt="">
+                        </div>
+                    </div>
+                    <br>
+        
+                </div>
+            
+            </div>
+
+            
+            <br>
+            <br>
+        
+            <h3 class="questionTitle">Domanda 4</h3>
+        
+            <div class="questionBox">
+                <p class="question">
+        
+                    Nell'immagine che segue è riportato il grafico di una funzione \(f\)
+                    <br>
+                    <br>
+                    <img src="img/ex(3)(4).png">
+                    <br>
+                    <br>
+                    Seleziona tra le seguenti tutte le affermazioni vere
+                </p>
+                <br>
+                
+                <div class="option">
+                    <input type="checkbox" name="domanda4" class="checkboxButton" value="1" onclick="enableSubmit(4)">
+                    <div class="optionText">
+                        \(f(8) \lt 0\)
+                    </div>
+                </div>
+                <br>
+                
+                <div class="option">
+                    <input type="checkbox" name="domanda4" class="checkboxButton" value="2" onclick="enableSubmit(4)">
+                    <div class="optionText">
+                        \(f(3)\) è un numero compreso tra \(1\) e \(2\)
+                    </div>
+                </div>
+                <br>
+                
+                <div class="option">
+                    <input type="checkbox" name="domanda4" class="checkboxButton" value="3" onclick="enableSubmit(4)">
+                    <div class="optionText">
+                        \(f(-2)\) è negativo
+                    </div>
+                </div>
+                <br>
+                
+                <div class="option">
+                    <input type="checkbox" name="domanda4" class="checkboxButton" value="4" onclick="enableSubmit(4)">
+                    <div class="optionText">
+                        \(f(x) \geq 0\) se \(5 \leq x \leq 9\)
+                        <br>
+                        (ovvero la funzione assume valori positivi se il valore di \(x\) è compreso tra \(5\) e \(9\))
+                    </div>
+                </div>
+                <br>
+                
+                <div class="option">
+                    <input type="checkbox" name="domanda4" class="checkboxButton" value="5" onclick="enableSubmit(4)">
+                    <div class="optionText">
+                        \(f(-2) \cdot f(2) \gt 0\)
+                    </div>
+                </div>
+                <br>
+                
+                <div class="option">
+                    <input type="checkbox" name="domanda4" class="checkboxButton" value="6" onclick="enableSubmit(4)">
+                    <div class="optionText">
+                        Nessuna delle affermazioni precedenti è vera.
+                    </div>
+                </div>   
+                <div class="whyAnswerIsWrong"></div>
+                <div class="numberOfTries">1/2 tentativi disponibili</div>
+        
+                <u class="showAnswer" onclick="showAnswer(4)">Mostra la risposta</u>
+        
+                <button type="button" class="submit" onclick="checkAnswer(4, 'rispostaMultipla', [2,3,4,], [], 3)" disabled>Invia risposta</button>
+        
+                <div class="answerContainer">
+                    
+                    <br>    
+                    <div>
+                        <div class="grayBorder">
+                            \(f(\color{blue}{}8\color{black}{}) \lt 0\) è <b>falso</b>
+                            <br>
+                            Infatti l'ordinata del punto \((\color{blue}{8}\color{black}{}\,,\,\,\color{red}{f(8)}\color{black}{} )\)
+                            è positiva.
+                            <br>
+                            <br>
+                            <img src="img/ex(3)(9).png" alt="">
+                        </div>
+                        <br>
+                        <div class="grayBorder">
+                            &Eacute; <b>vero</b> che 
+                            <br>
+                            <br>
+                            <div class="grayBorder">
+                                \(f(\color{blue}{}3\color{black}{}) \) è un numero compreso tra \(\color{green}{}1\) e \(\color{orange}{}2\).
+                            </div>
+                            <br>
+                            Infatti l'ordinata del punto \((\color{blue}{3}\color{black}{}\,,\,\,\color{red}{f(3)}\color{black}{} )\)
+                            è un numero poco più grande di \(1\) (dal grafico non riusciamo a dire <u>esattamente</u> quanto vale)
+                            <br>
+                            <br>
+                            <img src="img/ex(3)(10).png" alt="">
+                        </div>
+                        <br>
+                        <div class="grayBorder">
+                            &Eacute; <b>vero</b> che 
+                            <br>
+                            <br>
+                            <div class="grayBorder">
+                                \(f(\color{blue}{}-2\color{black}{})\) è negativo.
+                            </div>
+                            <br>
+                            Infatti l'ordinata del punto \((\color{blue}{-2}\color{black}{}\,,\,\,\color{red}{f(-2)}\color{black}{} )\)
+                            è un numero negativo (compreso tra \(-3\) e \(-2\)). In altre parole il punto \((\color{blue}{-2}\color{black}{}\,,\,\,\color{red}{f(-2)}\color{black}{} )\) si trova <b>sotto</b> l'asse delle \(x\).
+                            <br>
+                            <br>
+                            <img src="img/ex(3)(11).png" alt="">
+                        </div>
+                        <br>
+                        <div class="grayBorder">
+                            &Eacute; <b>vero</b> che 
+                            <br>
+                            <br>
+                            <div class="grayBorder">
+                                \(\color{red}{}f(x)\color{black}{} \geq 0\) se \(5 \leq \color{blue}{}x\color{black}{} \leq 9\)
+                            </div>
+                            <br>
+                            Infatti tutti i punti che hanno coordinata \(x\) compresa tra \(5\) e \(9\) (sono quelli evidenziati in verde nella figura) si trovano <b>sopra</b> l'asse delle \(x\) o giacciono proprio su di esso.
+                            <br>
+                            <br>
+                            <img src="img/ex(3)(12).png" alt="">
+                        </div>
+                        <br>
+                        <div class="grayBorder">
+                            <div class="grayBorder">
+                                \(f(-2) \cdot f(2) \gt 0\)
+                            </div>
+                            <br>
+                            è <b>falso</b>.
+                            <br>
+                            <br>
+                            Infatti \(f(-2)\) è negativo, mentre \(f(2)\) è positivo. Il prodotto tra una numero negativo ed uno positivo è negativo (regola dei segni "\(-\) per \(+\) uguale \(-\)")
+                            <br>
+                            <br>
+                            <img src="img/ex(3)(13).png" alt="">
+                        </div>
+
+                    </div>
+                    <br>
+        
+                </div>
+            
+            </div>
+
+            
+        <br>
+        <br>
+    
+        <h3 class="questionTitle">Domanda 5</h3>
+    
+        <div class="questionBox">
+            <p class="question">
+    
+                Considerati i seguenti grafici, selezionare tutti quelli che <b>non</b> possono rappresentare la funzione 
+                    \[
+                        y = 3^x
+                    \]                
+            </p>
+            <br>
+            
+            <div class="option">
+                <input type="checkbox" name="domanda5" class="checkboxButton" value="1" onclick="enableSubmit(5)">
+                <div class="optionText">
+                    <img src="img/ex(3)(1).png">
+                </div>
+            </div>
+            <br>
+            
+            <div class="option">
+                <input type="checkbox" name="domanda5" class="checkboxButton" value="2" onclick="enableSubmit(5)">
+                <div class="optionText">
+                    <img src="img/ex(3)(2).png">
+                </div>
+            </div>
+            <br>
+            
+            <div class="option">
+                <input type="checkbox" name="domanda5" class="checkboxButton" value="3" onclick="enableSubmit(5)">
+                <div class="optionText">
+                    <img src="img/ex(3)(3).png">
+                </div>
+            </div>   
+            <div class="whyAnswerIsWrong"></div>
+            <div class="numberOfTries">1/2 tentativi disponibili</div>
+    
+            <u class="showAnswer" onclick="showAnswer(5)">Mostra la risposta</u>
+    
+            <button type="button" class="submit" onclick="checkAnswer(5, 'rispostaMultipla', [1,2,3,], [], 3)" disabled>Invia risposta</button>
+    
+            <div class="answerContainer">
+                
+                <br>    
+                <p>
+                    Osserviamo che la funzione \(y = 3^x\) assume valori positivi per qualsiasi scelta di \(x\). 
+                    <br>
+                    Ciò significa che il grafico della funzione sarà sempre al di sopra dell'asse delle \(x\).
+                    <br>
+                    <br>
+                    Di conseguenza, il grafico 
+
+                    <br>
+                    <br>
+                    <img src="img/ex(3)(14).png" alt="">
+                    <br>
+                    non puà rappresentare la funzione, perché i punti evidenziati in verde hanno coordinata \(y\) negativa. 
+                    <br>
+                    <br>
+                    Neanche il grafico
+                    <br>
+                    <br>
+                    <img src="img/ex(3)(15).png" alt="">
+                    <br>
+                    può rappresentare la funzione, in quanto il punto evidenziato in verde ha coodinata \(y\) uguale  \(0\).
+                    <br>
+                    <br>
+                    Il terzo grafico,
+                    <br>
+                    <br>
+                    <img src="img/ex(3)(16).png" alt="">
+                    <br>
+                    assume tutti valori positivi, quindi <u>potrebbe</u> rappresentare la funzione. Tuttavia, esaminando 
+                    il punto evidenziato in verde, osserviamo che la sua ordinata, \(y = 4\) non corrisponde al valore che la funzione 
+                    \(y = 3^x\) assume se \(x = 2\). Infatti \(y = 3^2 = 9\).
+                </p>
+                <br>
+    
+            </div>
+        
+        </div>
+
+        
+        <br>
+        <br>
+    
+        <h3 class="questionTitle">Domanda 6</h3>
+    
+        <div class="questionBox">
+            <p class="question">
+                La funzione \(f\) ha il seguente grafico
+                <br>
+                <br>
+                <div class="grayBorder">
+                    <div class="geogebra-container">
+                        <div id="geogebra2"></div>
+                    </div>
+                    <div id="valoriFunzione2">
+                        \[
+                            f(\color{blue}{}1\color{black}{}) = \color{red}{}1.73
+                        \]
+                    </div>
+                    <br>
+                    <span class="gray">
+                        (Questo grafico è interattivo: provate a trascinate il punto arancione che trovate sull'asse delle \(x\))
+                    </span>
+                </div>
+                <br>
+                Selezionare tra le seguenti tutte le affermazioni vere.
+            </p>
+            <br>
+            
+            <div class="option">
+                <input type="checkbox" name="domanda6" class="checkboxButton" value="1" onclick="enableSubmit(6)">
+                <div class="optionText">
+                    \(f(\color{blue}{-4}\color{black}{}) = \color{red}{3}\)
+                </div>
+            </div>
+            <br>
+            
+            <div class="option">
+                <input type="checkbox" name="domanda6" class="checkboxButton" value="2" onclick="enableSubmit(6)">
+                <div class="optionText">
+                    \(f(\color{blue}{-8}\color{black}{}) = \color{red}{0}\)
+                </div>
+            </div>
+            <br>
+            
+            <div class="option">
+                <input type="checkbox" name="domanda6" class="checkboxButton" value="3" onclick="enableSubmit(6)">
+                <div class="optionText">
+                    \(f(\color{blue}{2}\color{black}{}) = \color{red}{1}\)
+                </div>
+            </div>
+            <br>
+            
+            <div class="option">
+                <input type="checkbox" name="domanda6" class="checkboxButton" value="4" onclick="enableSubmit(6)">
+                <div class="optionText">
+                    \(f(\color{blue}{x}\color{black}{}) = \color{red}{0}\) per ogni valore di \(\color{blue}{}\) compreso tra \(\color{blue}{-1}\,\) e \(\,\color{blue}{0}\)
+                </div>
+            </div>
+            <br>
+            
+            <div class="option">
+                <input type="checkbox" name="domanda6" class="checkboxButton" value="5" onclick="enableSubmit(6)">
+                <div class="optionText">
+                    Il massimo valore assunto dalla funzione è \(3\).
+                </div>
+            </div>
+            <br>
+            
+            <div class="option">
+                <input type="checkbox" name="domanda6" class="checkboxButton" value="6" onclick="enableSubmit(6)">
+                <div class="optionText">
+                    La funzione non ammette massimo, perché i valori che assume da \(5\) in poi sono sempre più grandi.
+                </div>
+            </div>   
+            <div class="whyAnswerIsWrong"></div>
+            <div class="numberOfTries">1/2 tentativi disponibili</div>
+    
+            <u class="showAnswer" onclick="showAnswer(6)">Mostra la risposta</u>
+    
+            <button type="button" class="submit" onclick="checkAnswer(6, 'rispostaMultipla', [1,2,4,6,], [], 4)" disabled>Invia risposta</button>
+    
+            <div class="answerContainer">
+                
+                <br>
+                <b>Soluzione:</b>
+                <br>
+                Usate il grafico interattivo per verificare ciascuna affermazione.
+                <br>
+    
+            </div>
+        
+        </div>
+                
+
+            
+            
+            
+            
+        </section>
+    
+
+
+    <script>
+
+        let numeroPuntiDisegnati = 0;
+        function mostraRitratto() {
+            document.querySelector(`#voltoMisterioso`).style.display = "none";
+            document.querySelector(`#profiloDante`).style.display = "block"
+        }
+
+        function disegnaPunto() {
+            let a = document.querySelector("#xInput").value;
+            
+
+            gg1.setValue("a", a);
+            let b = ggbApplet.getValue("b");
+            gg1.evalCommand(`A_{${a}}=(${a}, ${b})`);
+            gg1.setPointSize("10")
+            gg1.setColor(`A_{${a}}`,0, 0, 0)
+
+            gg1.evalCommand(`oriz = Segment((0,0), (${a}, 0))`);
+            gg1.setLineThickness(`oriz`, 9);
+            gg1.setColor(`oriz`, 0, 0, 255)
+
+            gg1.evalCommand(`vert = Segment((0,0), (0, ${b}))`);
+            gg1.setLineThickness(`vert`, 9);
+            gg1.setColor(`vert`, 255, 0, 0)
+
+            gg1.evalCommand(`grayOriz = Segment((0,${b}), (${a}, ${b}))`);
+            gg1.setLineThickness(`grayOriz`, 5);
+            gg1.setLineStyle(`grayOriz}`, 3);
+            gg1.setColor(`grayOriz`, 150, 150, 150)
+
+            gg1.evalCommand(`grayVert = Segment((${a},0), (${a}, ${b}))`);
+            gg1.setLineThickness(`grayVert`, 5);
+            gg1.setLineStyle(`grayVert`, 3);
+            gg1.setColor(`grayVert_{${a}}`, 150, 150, 150)
+
+            let stepByStep = 
+            `\\(
+                \\begin{align*}
+                    \\color{red}{y} \\color{black}{} &= f(\\color{blue}{${a}}\\color{black}{}) 
+                    \\\\
+                    &= 6 \\cdot \\color{blue}{${a}} \\color{black}{} + 1 
+                    \\\\
+                    &= \\color{red}{}${6* a +1}
+                \\end{align*}
+            \\)`
+
+            let stepByStepElement = document.querySelector("#stepByStep");
+            stepByStepElement.innerHTML = stepByStep;
+
+            MathJax.typesetClear([stepByStepElement]);
+            MathJax.typesetPromise([stepByStepElement]).then(() => {}); 
+
+            numeroPuntiDisegnati++;
+
+            if(numeroPuntiDisegnati >= 5) {
+                document.querySelector("#disegnaRettaButton").disabled = false;
+            }
+        }
+
+        function disegnaRetta() {
+            gg1.setVisible("f", true);
+
+        }
+
+        var ggbApp1 = new GGBApplet(
+            {
+                "appName": "classic", 
+                "id": "gg1",
+                "showToolBar": false, 
+                "showAlgebraInput": false, 
+                "showMenuBar": false, 
+                "enableShiftDragZoom": false,
+                "scaleContainerClass":"geogebra-container",
+                "filename":"img/disegnoGraficoFunzione.ggb"
+            }, 
+            true
+        );
+
+        let ggbApp2 = new GGBApplet({
+        appletOnLoad(api) {
+            api.registerObjectUpdateListener("A","stampaValori2");
+        },
+        "appName": "classic", 
+        "id": "gg2",
+        "scaleContainerClass":"geogebra-container",
+        "showToolBar": false, 
+        "showAlgebraInput": false, 
+        "showMenuBar": false, 
+        "enableShiftDragZoom": false,
+        "filename":"img/grafico(2).ggb"
+        },
+        true);
+
+        window.addEventListener("load", function() { 
+            ggbApp1.inject('geogebra1');
+            ggbApp2.inject('geogebra2');
+        });
+
+        function stampaValori2() {
+
+            let x = gg2.getValue("x(A)");
+            x = Math.floor(x*100)/100;
+            let y = gg2.getValue("f(x(A))");
+            y = Math.floor(y*100)/100;
+            
+            let valoriFunzione = document.getElementById("valoriFunzione2");
+
+            valoriFunzione.innerHTML = 
+            `\\[
+                f(\\color{blue}{}${x}\\color{black}{}) = \\color{red}{}${y}
+            \\]`
+            MathJax.typesetClear([valoriFunzione]);
+            MathJax.typesetPromise([valoriFunzione]).then(() => {});
+        }
+
+    </script>
+    
+    
+    
+    
+    
+    
+    
+
+
+    <br>
+    <br>
+
+    <script src="../../../js/pageManagment.js"></script>
+    <script src="../../../js/exerciseManagment.js"></script>
+</body> 
