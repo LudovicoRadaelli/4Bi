@@ -1,0 +1,1265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="https://www.geogebra.org/apps/deployggb.js"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="stylesheet" href="../../../css/style.css">
+    <title id="titleTag"></title>
+</head>
+
+<body>
+        <br>
+        <div id="chapterNumber" style="display: none;">1</div>
+        <div id="paragraphTitle" style="display: none;">Segno di una funzione</div>
+        
+        <div class="gray"> 
+            <div class="homeIconContainer">
+                <a href="../../indiceMateriale.html"><img class="homeIcon" src="../../../css/img/home.png"></a>
+            </div>
+            
+            <code><b id="bTagTitoloCapitolo"></b></code> 
+            <br>
+            <div class="select">
+                <div class="selected-option"><code><b id="bTagTitoloParagrafo"></b></code></div>
+                <div class="dropdown">
+                    <!-- Vengono inseriti i tag a sfruttando il file JSON -->
+                </div>
+            </div>
+        
+            
+            
+        </div>
+
+        <br>
+
+        <nav class="navigationBar">
+            <div onclick="changeParagraph(`previous`)" class="item prev">
+                <img class="icon" src="../../../css/img/leftArrow.png">
+            </div>
+            <div class="item explanationButton">
+                <div onclick="showExplanation()"><img class="icon" src="../../../css/img/presentation.png"></div>
+            </div>
+            <div class="item exerciseButton">
+                <div onclick="showExercise()"><img class="icon" src="../../../css/img/homework.png"></div>
+            </div>
+            <div onclick="changeParagraph(`next`)" class="item next">
+                <img class="icon" src="../../../css/img/rightArrow.png">
+            </div>
+        </nav>
+
+        <br>
+
+    
+
+        <section class="explanation">
+    
+            <div class="h3">
+                <span class="sub-par" id="paragraphCircledNumber"></span>
+                <h3 id="h3ParagraphTitle"></h3>
+            </div>
+            
+            <br>
+
+            <div>
+                <h3 class="blue">Introduzione</h3>
+                <br>
+                Nei quattro paragrafi precedenti è stato illustrato il concetto di dominio di una funzione,
+                ovvero l'insieme di valori per i quali è definita. 
+                <br>
+                <br>
+                L'obiettivo di questo paragrafo è imparare a svolgere lo studio del <b>segno</b> di una funzione al variare del valore di \(x\).
+                <br>
+                <br>
+                <div class="grayBorder">
+                    Trascinando il punto <span style="color: orangered"></span> nel seguente grafico interattivo è possibile visualizzare 
+                    i valori assunti dalla funzione al variare della \(x\).
+                    <br>
+                    <br>
+                    <div class="geogebra-container">
+                        <div id="geogebra1"></div>
+                    </div>
+                    <div id="valoriFunzione1">
+                        \[
+                            f(\color{blue}{}-8\color{black}{}) = \color{red}{}2
+                        \]
+                    </div>
+
+                    <br>
+                    Provate a rispondere a queste tre domande: 
+                    <br>
+                    <br>
+                    <ul>
+                        <li>
+                            Per quali valori di \(x\) la funzione assume segno <b>positivo</b>? 
+                            <br>
+                            Ovvero, per quali \(x\) si ha \(f(x) \boldsymbol{\gt} 0\)?
+                        </li>
+                        <br>
+                        <li>
+                            Per quali valori di \(x\) la funzione assume segno <b>negativo</b>? 
+                            <br>
+                            Ovvero, per quali \(x\) si ha \(f(x) \boldsymbol{\lt} 0\)?
+                        </li>
+                        <br>
+                        <li>
+                            <nobr>Per quali valori di \(x\) la funzione vale \(\boldsymbol{0}\)?</nobr>
+                            <br>
+                            Ovvero, per quali \(x\) si ha \(f(x) \boldsymbol{=} 0\)?
+                        </li>
+                    </ul>
+                </div>
+
+                <br>
+                <br>
+                <hr>
+                <br>
+                <br>
+
+                <h3 class="blue">Segno di una funzione al variare di \(x\)</h3>
+                <br>
+                <h3 class="yellow">Esempio 1</h3>
+                <div class="esempi-container">
+                    Consideriamo la funzione 
+                    \[
+                        f(x) = \dfrac{1 -x}{2 +x}
+                    \]
+                    <u><b>Dominio</b></u>
+                    <br>
+                    Per individuare il dominio è sufficiente "mettere in sicurezza" l'unica operazione pericolosa che compare
+                    nella definizione di \(f\), la frazione.
+                    <br>
+                    <nobr>Il suo denominatore deve essere diverso da \(0\):</nobr>
+                    \[
+                        2 + x \neq 0 \,\,\,\Longrightarrow\,\,\, x \neq -2
+                    \]
+                    Di conseguenza il dominio di \(f\) è 
+                    \[ 
+                        D = \left(-\infty\,;\,\,-2\right) \cup \left(-2\,;\,\,+\infty\right)
+                    \]
+                    <br>
+                    <u><b>Studio del segno</b></u>
+                    <br>
+                    Vogliamo determinare per quali valori della \(x\) la funzione
+                    <br>
+                    <br>
+                    <ul>
+                        <li>
+                            assume segno <b>positivo</b>
+                        </li>
+                        <li>
+                            assume segno <b>negativo</b>
+                        </li>
+                        <li>
+                            vale \(\boldsymbol{0}\)
+                        </li>
+                    </ul>
+                    <br>
+                    Iniziamo dalla prima domanda. Chiediamoci perciò per quali valori di \(x\) si ha \(f(x) \gt 0\), ovvero:
+                    \[
+                        \dfrac{1 -x}{2 +x} \gt 0
+                    \]
+                    Analizziamo come varia il segno del numeratore al variare della \(x\).
+                    \[
+                        \begin{align*}
+                            1 -x \gt 0 \,\,\,&\Longrightarrow\,\,\, -x \gt -1
+                            \\\\
+                            &\Longrightarrow x \lt 1
+                        \end{align*}
+                    \]
+                    Analizziamo il segno del denominatore.
+                    \[
+                        2 + x \gt 0 \,\,\,\Longrightarrow\,\,\, x \gt -2  
+                    \]
+                    Inseriamo le informazioni ottenute nel grafico dei segni:
+                    <br>
+                    <br>
+                    <img src="img/segno(1).png" style="border: 0;">
+                    <br>
+                    Da questo grafico leggiamo come varia il segno di \(f\) al variare del valore assunto dalla \(x\). 
+                    Possiamo quindi rispondere alle tre domande iniziali:
+                    <br>
+                    <br>
+                    <ul>
+                        <li>
+                            la funzione è <b>positiva</b> se \(x \in \left(-2\,;\,\,1\right)\)
+                        </li>
+                        <br>
+                        <li>
+                            la funzione è <b>negativa</b> se \(x \in \left(-\infty\,;\,\,-2\right) \cup \left(1\,;\,\,+\infty\right)\)
+                        </li>
+                        <br>
+                        <li>
+                            la funzione vale \(\boldsymbol{0}\) se \(x = 1\)
+                        </li>
+                    </ul>
+                    <br>
+                    <hr>
+                    <br>
+                    Osserviamo un fatto.
+                    <br>
+                    <br>
+                    <ul>
+                        <li>
+                            Se la funzione è <b>positiva</b>, il suo grafico si trova <b>sopra</b> l'asse delle \(x\).
+                        </li>
+                        <br>
+                        <li>
+                            Se la funzione è <b>negativa</b>, il suo grafico si trova <b>sotto</b> l'asse delle \(x\).
+                        </li>
+                        <br>
+                        <li>
+                            Se la funzione vale \(\boldsymbol{0}\), il suo grafico  <b>interseca l'asse</b> \(\boldsymbol{x}\).
+                        </li>
+                    </ul>
+                    <br>
+                    (Per convincervi, riguardate il grafico interattivo all'inizio de paragrafo).
+                    <br>
+                    <br>
+                    Questo ci permette di cancellare delle zone del piano cartesiano che sicuramente non sono attraversate dal grafico di \(f\)
+                    <br>
+                    <br>
+                    <img src="img/graficoSegno(1).png" alt="">
+                </div>
+
+                <br>
+                <br>
+
+                <h3 class="yellow">Esempio 2</h3>
+                <div class="esempi-container">
+                    Consideriamo la funzione 
+                    \[
+                        g(x) = ln\left(\dfrac{2}{x}\right)
+                    \]
+                    <u><b>Dominio</b></u>
+                    <br>
+                    Nella definizione di \(g\) intervengono due operazioni pericolose, il logaritmo e la frazione.
+                    <br>
+                    <ul>
+                        <li>
+                            chiediamo che l'argomento del logaritmo \(ln\left(\frac{2}{x}\right)\) sia positivo:
+                            \[
+                                \dfrac{2}{x} \gt 0
+                            \]
+                            siccome al numeratore abbiamo un numero positivo, \(2\), la frazione risulterà positiva
+                            se il denominatore è maggiore di \(0\). 
+                            \[
+                                \dfrac{2}{x} \gt 0 \,\,\,\Longleftrightarrow\,\,\, x \gt 0
+                            \]
+                            Il logaritmo è definito per 
+                            \[
+                                x \in \left(0\,;\,\,+\infty\right)
+                            \]
+                        </li>
+                        <br>
+                        <li>
+                            chiediamo che il denominatore della frazione \(\frac{2}{x}\) sia diverso da \(0\):
+                            \[
+                                x \neq 0
+                            \]
+                            La frazione è definita per 
+                            \[ 
+                                x \in \left(-\infty\,;\,\,0\right) \cup \left(0\,;\,\,+\infty\right)
+                            \]
+                        </li>
+                        Prendendo l'interserzione tra gli intervalli di definizione del logaritmo e della frazione otteniamo
+                        il dominio di \(f\)
+                        \[
+                            D = \left(0\,;\,\,+\infty\right)
+                        \]
+                    </ul>
+                    ⚠️⚠️
+                    <br>
+                    Siccome la funzione è definita solo per valori di \(x\) positivi, nello studio del segno che segue
+                    cancelleremo la zona della retta reale corrispondente all'intervallo \(\big(-\infty\,;\,\,0\big]\)
+                    <br>
+                    <br>
+                    <u><b>Segno della funzione</b></u>
+                    <br>
+                    Vogliamo determinare per quali valori della \(x\) la funzione
+                    <br>
+                    <br>
+                    <ul>
+                        <li>
+                            assume segno <b>positivo</b>
+                        </li>
+                        <li>
+                            assume segno <b>negativo</b>
+                        </li>
+                        <li>
+                            vale \(\boldsymbol{0}\)
+                        </li>
+                    </ul>
+                    <br>
+                    Iniziamo dalla prima domanda. Chiediamoci perciò per quali valori di \(x\) si ha \(g(x) \gt 0\), ovvero:
+                    \[
+                        ln\left(\dfrac{2}{x}\right) \gt 0
+                    \]
+                    usiamo il membro sinistro e destro della disequazione come esponenti da assegnare ad \(e\)
+                    \[
+                        \begin{align*}
+                            e^{ln\left(\frac{2}{x}\right)} \gt e^{0}  \,\,\,&\Longrightarrow\,\,\, \dfrac{2}{x} \gt 1
+                            \\\\
+                            &\Longrightarrow\,\,\, \dfrac{2}{x} - 1 \gt 0 
+                            \\\\
+                            &\Longrightarrow\,\,\, \dfrac{2 - x}{x} \gt 0 
+                        \end{align*}
+                    \]
+                    Analizziamo il segno del numeratore:
+                    \[
+                        \begin{align*} 
+                            2 -x \gt 0 \,\,\,&\Longrightarrow\,\,\, -x \gt -2   
+                            \\\\
+                            x \lt 2
+                        \end{align*}
+                    \]
+                    Analizziamo il segno del denominatore:
+                    \[
+                        x \gt 0
+                    \]
+                    Disegnamo il grafico dei segni
+                    <br>
+                    <img src="img/graficoSegno(2).png" style="border: 0;">
+                    <br>
+                    Da questo grafico leggiamo come varia il segno di \(g\) al variare del valore assunto dalla \(x\). 
+                    Possiamo quindi rispondere alle tre domande iniziali:
+                    <br>
+                    <br>
+                    <ul>
+                        <li>
+                            la funzione è <b>positiva</b> se \(x \in \left(0\,;\,\,2\right)\)
+                        </li>
+                        <br>
+                        <li>
+                            la funzione è <b>negativa</b> se \(x \in \left(2\,;\,\,+\infty\right)\)
+                        </li>
+                        <br>
+                        <li>
+                            la funzione vale \(\boldsymbol{0}\) se \(x = 2\)
+                        </li>
+                    </ul>
+                    <br>
+                    <br>
+                    <u><b>Grafico</b></u>
+                    <br>
+                    Siccome il dominio è \(D = \left(0\,;\,\,+\infty\right)\), il grafico di \(g\) non attraversa la zona del piano cartesiano
+                    corrispondente all'intervallo \(\big(-\infty\,;\,\,0\big]\). La cancelliamo:
+                    <br>
+                    <br>
+                    <img src="img/graficoDominio(1).png" style="border: 0;">
+                    <br>
+                    Sfruttiamo anche le informazioni sul segno di \(g\) per localizzare ulteriormente il grafico
+                    <br>
+                    <br>
+                    <ul>
+                        <li>
+                            \(g\) è <b>positiva</b> se \(x \in \left(0\,;\,\,2\right)\), quindi in corrispondenza di quest'intervallo
+                            la funzione passa <b>sopra</b> l'asse delle \(x\).
+                        </li>
+                        <br>
+                        <li>
+                            \(g\) è <b>negativa</b> se \(x \in \left(2\,;\,\,+\infty\right)\), quindi in corrispondenza di quest'intervallo
+                            la funzione passa <b>sotto</b> l'asse delle \(x\).
+                        </li>
+                        <br>
+                        <li>
+                            la funzione vale \(\boldsymbol{0}\) se \(x = 2\), quindi segnamo un pallino pieno in corrispondenza del 
+                            punto \(\left(2\,;\,\,0\right)\)
+                        </li>
+                    </ul>
+                    <br>
+                    <img src="img/graficoSegno(3).png" style="border: 0;">
+                </div>
+            
+                
+            </div>
+
+         </section>
+
+         <section class="exercise">
+            <div class="h3">
+                <span class="sub-par" id="exParagraphNumber"></span>
+                <h3>Esercizi</h3>
+            </div>
+            <br>
+
+            <!-- Esercizi -->
+            
+            
+            <br>
+            <br>
+        
+            <h3 class="questionTitle">Domanda 1</h3>
+        
+            <div class="questionBox">
+                <p class="question">
+        
+                    Di seguito è riportato il grafico della funzione \(f\).
+                    <br>
+                    <br>
+                    <img src="img/esercizi(1).png" style="border: 0">
+                    <br>
+                    Selezionare tra le seguenti tutte le affermazioni vere.
+                </p>
+                <br>
+                
+                <div class="option">
+                    <input type="checkbox" name="domanda1" class="checkboxButton" value="1" onclick="enableSubmit(1)">
+                    <div class="optionText">
+                        \(f(-8) \gt 0\)
+                    </div>
+                </div>
+                <br>
+                
+                <div class="option">
+                    <input type="checkbox" name="domanda1" class="checkboxButton" value="2" onclick="enableSubmit(1)">
+                    <div class="optionText">
+                        \(f(x) \gt 0\) per tutti i valori e soli i valori \(x \in \left(-7\,;\,\,-4\right) \cup \left(1\,;\,\,5\right)\)
+                    </div>
+                </div>
+                <br>
+                
+                <div class="option">
+                    <input type="checkbox" name="domanda1" class="checkboxButton" value="3" onclick="enableSubmit(1)">
+                    <div class="optionText">
+                        La funzione vale \(0\) solamente se \(x = -7\), \(x = -4\) oppure \(x = 1\)
+                    </div>
+                </div>
+                <br>
+                
+                <div class="option">
+                    <input type="checkbox" name="domanda1" class="checkboxButton" value="4" onclick="enableSubmit(1)">
+                    <div class="optionText">
+                        Presi due valori 
+                        
+                        \[
+                            a \in \left(-7\,;\,\,-4\right)
+                        \] 
+                        \[
+                            b \in \left(1\,;\,\,5\right)
+                        \]
+                        si ha
+                        \[
+                        f(a) \cdot f(b) \gt 0 
+                        \] 
+                    </div>
+                </div>   
+                <div class="whyAnswerIsWrong"></div>
+                <div class="numberOfTries">1/2 tentativi disponibili</div>
+        
+                <u class="showAnswer" onclick="showAnswer(1)">Mostra la risposta</u>
+        
+                <button type="button" class="submit" onclick="checkAnswer(1, 'rispostaMultipla', [1,4,], [], 3)" disabled>Invia risposta</button>
+        
+                <div class="answerContainer">
+                    
+                    <br>
+                    <b>Soluzione:</b>
+                    <br>
+                    <ul>
+                        <li>
+                            \(f(-8) \gt 0\) perché in corrisponenza di \(x = -8\) il grafico si trova sopra l'asse \(x\).
+                            <br>
+                            <br>
+                            <img src="img/esercizi(2).png" style="border: 0;">
+                        </li>
+                        <br>
+                        <li>
+                            &Eacute; vero esattamente il contrario:
+                            <br>
+                            <br>
+                            \(f(x) \boldsymbol{\lt} 0\) per tutti i valori e soli i valori \(x \in \left(-7\,;\,\,-4\right) \cup \left(1\,;\,\,5\right)\)
+                            <br>
+                            <br>
+                            Infatti in corrispondenza di tali intervalli il grafico di \(g\) si trova sotto l'asse delle \(x\).
+                        </li>
+                        <br>
+                        <li>
+                            &Eacute; falso, la funzione vale \(0\) anche se \(x = 5\)
+                        </li>
+                        <br>
+                        <li>
+                            Dal grafico vediamo che  
+                            <br>
+                            <ul>
+                                <li>
+                                    se \(a \in \left(-7\,;\,\,-4\right)\) 
+                                    <br>
+                                    allora \(f(a) \lt 0\).
+                                </li>
+                                <br>
+                                <li>
+                                    Se \(b \in \left(1\,;\,\,5\right)\) 
+                                    <br>
+                                    allora \(f(b) \lt 0\)
+                                </li>
+                            </ul>
+                            <br>
+                            
+                            Quindi 
+                            \[
+                                \underset{\color{gray}{-}}{\color{gray}{}\underbrace{\color{black}{}f(a)}} \cdot \underset{\color{gray}{-}}{\color{gray}{}\underbrace{\color{black}{}f(b)}} = +
+                            \]
+                        </li>
+                    </ul>
+                    <br>
+        
+                </div>
+            
+            </div>
+
+        
+            <br>
+            <br>
+        
+            <h3 class="questionTitle">Domanda 2</h3>
+        
+            <div class="questionBox">
+                <p class="question">
+        
+                    Consideriamo la funzione 
+                    \[
+                    p(x) = \dfrac{e^x + 1}{5x -\sqrt{2}}
+                    \]
+                    Selezionare tra le seguenti tutte le affermazioni vere.
+                </p>
+                <br>
+                
+                <div class="option">
+                    <input type="checkbox" name="domanda2" class="checkboxButton" value="1" onclick="enableSubmit(2)">
+                    <div class="optionText">
+                        La funzione è definita per valori per \(x \neq \dfrac{\sqrt{2}}{5}\)
+                    </div>
+                </div>
+                <br>
+                
+                <div class="option">
+                    <input type="checkbox" name="domanda2" class="checkboxButton" value="2" onclick="enableSubmit(2)">
+                    <div class="optionText">
+                        Il dominio di \(p\) è 
+                        \[
+                        D = \left(-\infty\,;\,\,\dfrac{\sqrt{2}}{5}\right) \cup \left(\dfrac{\sqrt{2}}{5}\,;\,\,\infty\right)
+                        \]
+                    </div>
+                </div>
+                <br>
+                
+                <div class="option">
+                    <input type="checkbox" name="domanda2" class="checkboxButton" value="3" onclick="enableSubmit(2)">
+                    <div class="optionText">
+                        La funzione assume valori positivi in tutti i punti del dominio.
+                    </div>
+                </div>
+                <br>
+                
+                <div class="option">
+                    <input type="checkbox" name="domanda2" class="checkboxButton" value="4" onclick="enableSubmit(2)">
+                    <div class="optionText">
+                        La funzione assume valori negativi in tutti i punti del dominio.
+                    </div>
+                </div>
+                <br>
+                
+                <div class="option">
+                    <input type="checkbox" name="domanda2" class="checkboxButton" value="5" onclick="enableSubmit(2)">
+                    <div class="optionText">
+                        \(f(x) \gt 0\) se \(x \in \left(-\infty\,;\,\,\dfrac{\sqrt{2}}{5}\right)\)
+                        <br>
+                        <br>
+                        \(f(x) \lt 0\) se \(x \in \left(\dfrac{\sqrt{2}}{5}\,;\,\,+\infty\right)\)
+                    </div>
+                </div>
+                <br>
+                
+                <div class="option">
+                    <input type="checkbox" name="domanda2" class="checkboxButton" value="6" onclick="enableSubmit(2)">
+                    <div class="optionText">
+                        \(f(x) \gt 0\) se \(x \in \left(\dfrac{\sqrt{2}}{5}\,;\,\,+\infty\right)\)
+                        <br>
+                        <br>
+                        \(f(x) \lt 0\) se \(x \in \left(-\infty\,;\,\,\dfrac{\sqrt{2}}{5}\right)\)
+                    </div>
+                </div>   
+                <div class="whyAnswerIsWrong"></div>
+                <div class="numberOfTries">1/2 tentativi disponibili</div>
+        
+                <u class="showAnswer" onclick="showAnswer(2)">Mostra la risposta</u>
+        
+                <button type="button" class="submit" onclick="checkAnswer(2, 'rispostaMultipla', [1,2,6,], [], 3)" disabled>Invia risposta</button>
+        
+                <div class="answerContainer">
+                    
+                    <br>
+                    <b>Soluzione:</b>
+                    <br>
+                    <b><u>Dominio</u></b>
+                    <br>
+                    Nella definizione di \(p\) è presente una radice quadrata, ma non costituisce una operazione pericolosa,
+                    perché il suo argomento non è variabile (\(\sqrt{2}\) è un'operazione definita).
+                    L'unica operazione pericolosa è la frazione \(\frac{e^x + 1}{5x -\sqrt{2}}\), perché essendo il suo denominatore
+                    varibile, potrebbe azzerarsi per qualche valore di \(x\).
+                    <br>
+                    <br>
+                    Chiediamo che \(5x -\sqrt{2} \neq 0\).
+                    \[
+                        \begin{align*}
+                            5x -\sqrt{2} \neq 0 \,\,\,&\Longrightarrow\,\,\, 5x \neq \sqrt{2}
+                            \\\\
+                            &\Longrightarrow\,\,\, x \neq \dfrac{\sqrt{2}}{5}
+                        \end{align*}
+                    \]
+                    Dunque \(p\) è definita per \(x \neq \dfrac{\sqrt{2}}{5}\), ovvero 
+                    \[
+                        D = \left(-\infty\,;\,\,\dfrac{\sqrt{2}}{5}\right) \cup \left(\dfrac{\sqrt{2}}{5}\,;\,\,\infty\right)
+                    \]
+                    (La prima e la seconda opzione sono due modi equivalenti di esprimere la stessa affermazione.)
+                    <br>
+                    <br>
+                    <u><b>Segno della funzione</b></u>
+                    <br>
+                    <br>
+                    Ci chiediamo per quali valori di \(x\) si ha
+                    <br>
+                    <br>
+                    <ul>
+                        <li>
+                            \(p\) <b>positiva</b> 
+                        </li>
+                        <br>
+                        <li>
+                            \(p\) <b>negativa</b> 
+                        </li>
+                        <br>
+                        <li>
+                            \(p\) <b>nulla</b>
+                        </li>
+                    </ul>
+                    <br>
+                    Rispondiamo alla prima domanda. Troviamo i valori \(x\) tali che \(p(x) \gt 0\)
+                    \[
+                        \dfrac{e^x + 1}{5x -\sqrt{2}}
+                    \]
+                    Notiamo che la quantità al numeratore è positiva per qualsiasi valore di \(x\). Infatti stiamo sommando ad \(1\)  
+                    un numero positivo, il risultato è sicuramente positivo:
+                    \[
+                        \underset{\color{gray}{}+}{\color{gray}{}\underbrace{\color{black}{}e^x}} +1 = +
+                    \]
+                    Di conseguenaza
+                    \[
+                        \dfrac{e^x + 1}{5x -\sqrt{2}} \gt 0 \,\,\,\Longleftrightarrow\,\,\,5x -\sqrt{2} \gt
+                    \]
+                    <br>
+                    <br>
+                    Si ha
+                    \[
+                        \begin(align*)
+                            5x -\sqrt{2} \gt 0 &\Longrightarrow 5x \gt  \sqrt{2} 
+                            &\Longrightarrow x \lg \dfrac{\sqrt{2}}{5}\ 
+                        \end(align*)
+                        Dunque la funzione 
+                    
+                    \]
+                </div>
+            
+            </div>
+
+            
+            <br>
+            <br>
+        
+            <h3 class="questionTitle">Domanda 3</h3>
+        
+            <div class="questionBox">
+                <p class="question">
+        
+                    Consideriamo la funzione
+                    \[
+                    f(x) = \dfrac{\sqrt{x - 3}}{x}
+                    \]
+                    Selezionare tra le seguenti l'unica opzione che rappresenta correttamente il dominio e segno di \(f\).                
+                </p>
+                <br>
+                
+                <div class="option">
+                    <input type="radio" name="domanda3" class="radioButton" value="1" onclick="enableSubmit(3)">   
+                    <div class="optionText">
+                        <img src="img/esercizi(4).png">
+                    </div>
+                </div>
+                <br>
+                
+                <div class="option">
+                    <input type="radio" name="domanda3" class="radioButton" value="2" onclick="enableSubmit(3)">   
+                    <div class="optionText">
+                        <img src="img/esercizi(5).png">
+                    </div>
+                </div>
+                <br>
+                
+                <div class="option">
+                    <input type="radio" name="domanda3" class="radioButton" value="3" onclick="enableSubmit(3)">   
+                    <div class="optionText">
+                        <img src="img/esercizi(6).png">
+                    </div>
+                </div>
+                <br>
+                
+                <div class="option">
+                    <input type="radio" name="domanda3" class="radioButton" value="4" onclick="enableSubmit(3)">   
+                    <div class="optionText">
+                        <img src="img/esercizi(7).png">
+                    </div>
+                </div>
+                <br>
+                
+                <div class="option">
+                    <input type="radio" name="domanda3" class="radioButton" value="5" onclick="enableSubmit(3)">   
+                    <div class="optionText">
+                        Nessuna delle precedenti.
+                    </div>
+                </div>   
+                <div class="whyAnswerIsWrong"></div>
+                <div class="numberOfTries">1/2 tentativi disponibili</div>
+        
+                <u class="showAnswer" onclick="showAnswer(3)">Mostra la risposta</u>
+        
+                <button type="button" class="submit" onclick="checkAnswer(3, 'rispostaUnica', [4], [], 3)" disabled>Invia risposta</button>
+        
+                <div class="answerContainer">
+                    <br>
+                    <b>Soluzione:</b>
+                    <br>
+                    <b><u>Dominio</u></b>
+                    <br>
+                    Nella definizione della funzione sono presenti due operazioni pericolose, la radice e la frazione.
+                    <br>
+                    <br>
+                    <ul>
+                        <li>
+                            Chiediamo che l'argomento di \(\sqrt{x -3}\) sia maggiore o uguale di \(0\):
+                            \[
+                                x- 3 \geq 0 \,\,\,\Longrightarrow\,\,\, x \geq 3
+                            \]
+                            Dunque la radice \(\sqrt{x - 3}\) è definita per 
+                            \[
+                                x \in \Big[3\,;\,\,+\infty\Big)
+                            \]
+                        </li>                        
+                        <li>
+                            Chiediamo che il denominatore di \(\dfrac{\sqrt{x -3}}{x}\) sia diverso da \(0\):
+                            \[
+                                x \neq 0
+                            \]
+                            Dunque la frazione \(\dfrac{\sqrt{x - 3}}{x}\) è definita per 
+                            \[
+                                x \in \left(-\infty\,;\,\,0\right) \cup \left(0\,;\,\,+\infty\right)
+                            \]
+                        </li>
+                    </ul>
+                    Perché la funzione sia definita entrambe le operazioni lo devono essere, quindi il dominio si ottiene
+                    intersecando (ovvero prendendo i valori in comune tra) i due intervalli appena individuati:
+                    \[
+                        D = \Big[3\,;\,\,+\infty\Big)
+                    \]
+                    <br>
+                    <u><b>Segno della funzione</b></u>
+                    <br>
+                    Vogliamo capire per quali valori della \(x\) si ha
+                    <br>
+                    <br>
+                    <ul>
+                        <li>
+                            \(f\)  <b>positiva</b>
+                        </li>
+                        <br>
+                        <li>
+                            \(f\)  <b>negativa</b>
+                        </li>
+                        <br>
+                        <li>
+                            \(f\)  uguale a \(\boldsymbol{0}\)
+                        </li>
+                    </ul>
+                    <br>
+                    Rispondiamo alla prima domanda.
+                    <br>
+                    Chiamoci per quali valori di \(x\) si ha \(f(x) \gt 0\), ossia 
+                    \[
+                        \dfrac{\sqrt{x - 3}}{x} \gt 0
+                    \]
+                    Osserviamo che il numeratore <u>è sempre maggiore o uguale di \(0\)</u>, in quanto è il risultato di una 
+                    radice quadrata. In particolare in numeratore vale \(0\) se \(x = 3\)
+                    <br>
+                    <br>
+                    <img src="img/esercizi(8).png" style="border:0">
+                    <br>
+                    Aggiungiamo al grafico dei segni quello del denominatore e deduciamo quello della funzione \(f\).
+                    <br>
+                    <br>
+                    <img src="img/esercizi(9).png" style="border:0">
+                    <br>
+                    Di conseguenza
+                    <br>
+                    <br>
+                    <ul>
+                        <li>
+                            \(f(x) \gt 0\,\,\) per \(\,\,x \in \left(3\,;\,\,+\infty\right)\)
+                        </li>
+                        <br>
+                        <li>
+                            \(f(x)\,\,\) non è <b>negativa</b> per alcun valore di \(x\)
+                        </li>
+                        <br>
+                        <li>
+                            \(f(x) = 0\,\,\) se \(\,\,x = 3\)
+                        </li>
+                    </ul>
+                    <br>
+                    Il grafico che rappresenta queste informazioni è quello contenuto nella quarta opzione.
+                    
+
+                    <br>
+        
+                </div>
+            
+            </div>
+            
+            
+            <br>
+            <br>
+        
+            <h3 class="questionTitle">Domanda 4</h3>
+        
+            <div class="questionBox">
+                <p class="question">
+        
+                    Consideriamo la funzione
+                    \[
+                    s(x) = ln\left(x^2 + 1\right)
+                    \]
+                    Selezionare tra le seguenti tutte le opzioni corrette.
+                </p>
+                <br>
+                
+                <div class="option">
+                    <input type="checkbox" name="domanda4" class="checkboxButton" value="1" onclick="enableSubmit(4)">
+                    <div class="optionText">
+                        La funzione \(s\) è definita per tutti i valori \(x \in \mathbb{R}\) 
+                        <br>
+                        <br>
+                        <span class="gray">
+                        Ricordate che con il simbolo \(\mathbb{R}\) si indica l'insieme dei numeri reali, ovvero l'intervallo \(\left(-\infty\,;\,\,+\infty\right)\).
+                        </span>
+
+                    </div>
+                </div>
+                <br>
+                
+                <div class="option">
+                    <input type="checkbox" name="domanda4" class="checkboxButton" value="2" onclick="enableSubmit(4)">
+                    <div class="optionText">
+                        La funzione \(s\) è definita per tutti i valori \(x \in \left(-\infty\,;\,\,-1\right) \cup \left(1\,;\,\,+\infty\right)\) 
+
+                    </div>
+                </div>
+                <br>
+                
+                <div class="option">
+                    <input type="checkbox" name="domanda4" class="checkboxButton" value="3" onclick="enableSubmit(4)">
+                    <div class="optionText">
+                        La funzione \(s\) è definita per tutti i valori \(x \in \left(-1\,;\,\,1\right)\) 
+                    </div>
+                </div>
+                <br>
+                
+                <div class="option">
+                    <input type="checkbox" name="domanda4" class="checkboxButton" value="4" onclick="enableSubmit(4)">
+                    <div class="optionText">
+                        Si ha \(s(x) \gt 0\) per ogni \(x \in D\)
+                    </div>
+                </div>
+                <br>
+                
+                <div class="option">
+                    <input type="checkbox" name="domanda4" class="checkboxButton" value="5" onclick="enableSubmit(4)">
+                    <div class="optionText">
+                        Si ha \(s(x) \geq 0\) per ogni \(x \in D\), con \(s(x) = 0\) per \(x = 0\)
+                    </div>
+                </div>   
+                <div class="whyAnswerIsWrong"></div>
+                <div class="numberOfTries">1/2 tentativi disponibili</div>
+        
+                <u class="showAnswer" onclick="showAnswer(4)">Mostra la risposta</u>
+        
+                <button type="button" class="submit" onclick="checkAnswer(4, 'rispostaMultipla', [1,5,], [], 3)" disabled>Invia risposta</button>
+        
+                <div class="answerContainer">
+                    
+                    <br>
+                    <b>Soluzione:</b>
+                    <br>
+                    <b><u>Dominio</u></b>
+                    <br>
+                    L'unica operazione pericolosa che compare nella definizione della funzione \(s\) è il logaritmo \(ln\left(x^2 + 1\right)\).
+                    <br>
+                    Chiediamo che il suo argomento sia maggiore di \(0\):
+                    \[
+                        x^2 + 1 \gt 0
+                    \]
+                    Anziché risolvere questa disequazione di secondo grado attravaerso il metodo della parabola, ragioniamo
+                    come segue.
+                    <br>
+                    A causa dell'esponente \(2\), \(x^2\) è un numero sicuramente maggiore o uguale a \(0\).
+                    <br>
+                    Se sommiamo ad \(1\) un numero maggiore o uguale a \(0\) otteniamo un numero positivo:
+                    \[
+                        \underset{\color{red}{+}\color{gray}{}\text{ oppure } \color{black}{}0}{\underbrace{\color{black}{}x^2}} + 1 = \color{red}{+}
+                    \]
+                    Di conseguenza l'argomento del logaritmo è positivo per ogni \(x \in \mathbb{R}\) ed il dominio della funzione
+                    è \(D = \mathbb{R}\)
+                    <br>
+                    <br>
+                    <b><u>Segno della funzione</u></b>
+                    <br>
+                    Vogliamo determinare per quali valori della \(x\) si ha
+                    <br>
+                    <br>
+                    <ul>
+                        <li>
+                            \(s(x)  \gt 0\)
+                        </li>
+                        <br>
+                        <li>
+                            \(s(x)  \lt 0\)
+                        </li>
+                        <br>
+                        <li>
+                            \(s(x) = 0\)
+                        </li>
+                    </ul>
+                    <br>
+                    Rispondiamo alla prima domanda.
+                    <br>
+                    Risolviamo la disequazione \(s(x) \gt 0\):
+                    \[
+                        \begin{align*} 
+                            ln\left(x^2 +1 \right) \gt 0 \,\,\,&\Longrightarrow\,\,\,e^{ln\left(x^2 +1 \right)} \gt e^{0}
+                            \\\\
+                            &\Longrightarrow\,\,\,x^2 +1 \gt 1
+                            \\\\
+                            &\Longrightarrow\,\,\,x^2 \gt 0
+                        \end{align*}
+                    \]
+                    \(x^2 \gt 0\) per tutti i valori \(x \in \mathbb{R}\), tranne che per \(0\) (infatti  \(0^2 = 0\)).
+                    <br>
+                    <br>
+                    Questo significa che 
+                    <br>
+                    <br>
+                    <div style="text-align: center;">
+                        \(ln\left(x^2 +1 \right) \gt 0 \,\,\) se \(\,\,x \neq 0\)
+                    </div>  
+                    <br>
+                    Se \(x = 0\) si ha \(ln\left(0^2 +1 \right) = ln(1) = 0\)
+                    <br>
+                    <br>
+                    Concludiamo che l'ultima opzione è quella corretta.
+                </div>
+                
+            </div>
+
+            <br>
+            <br>
+        
+            <h3 class="questionTitle">Domanda 5</h3>
+        
+            <div class="questionBox">
+                <p class="question">
+        
+                    Consideriamo la funzione 
+                    \[
+                    h(x) = tan\left(x - \dfrac{\pi}{3}\right) \cdot \sqrt{x - \dfrac{\pi}{6}}
+                    \]
+                    Selezionare tra le seguenti tutte le opzioni corrette
+
+                </p>
+                <br>
+                
+                <div class="option">
+                    <input type="checkbox" name="domanda5" class="checkboxButton" value="1" onclick="enableSubmit(5)">
+                    <div class="optionText">
+                        Siccome la tangente è un'operazione pericolosa chiediamo che l'argomento di \(tan\left(x - \frac{\pi}{3}\right)\) sia diverso da \(\pi + k\cdot\pi\) con \(k \in \mathbb{Z}\):
+                        \[
+                        \begin{align*}
+                        x -\dfrac{\pi}{3} &\neq \pi + k\cdot\pi
+                        \\\\
+                        x &\neq \dfrac{\pi}{3} + \pi + k\cdot\pi   
+                        \\\\
+                        x &\neq \dfrac{\pi + 3\pi}{3} + k\cdot\pi   
+                        \\\\
+                        x &\neq \dfrac{4}{3}\pi + k\cdot\pi   
+                        \end{align*}
+                        \]
+                    </div>
+                </div>
+                <br>
+                
+                <div class="option">
+                    <input type="checkbox" name="domanda5" class="checkboxButton" value="2" onclick="enableSubmit(5)">
+                    <div class="optionText">
+                        Siccome la tangente è un'operazione pericolosa chiediamo che l'argomento di \(tan\left(x - \frac{\pi}{3}\right)\) sia diverso da \(\frac{\pi}{2} + k\cdot\pi\) con \(k \in \mathbb{Z}\):
+                        \[
+                        \begin{align*}
+                        x -\dfrac{\pi}{3} &\neq \dfrac{\pi}{2} + k\cdot\pi
+                        \\\\
+                        x &\neq \dfrac{\pi}{3} + \dfrac{\pi}{2} + k\cdot\pi   
+                        \\\\
+                        x &\neq \dfrac{2\pi + 3\pi}{6} + k\cdot\pi   
+                        \\\\
+                        x &\neq \dfrac{5}{6}\pi + k\cdot\pi   
+                        \end{align*}
+                        \]
+
+                    </div>
+                </div>
+                <br>
+                
+                <div class="option">
+                    <input type="checkbox" name="domanda5" class="checkboxButton" value="3" onclick="enableSubmit(5)">
+                    <div class="optionText">
+                        Siccome la radice quadrata è un'operazione pericolosa chiediamo che l'argomento di \(\sqrt{x - \frac{\pi}{6}}\) sia maggiore o uguale di \(0\)
+                        \[
+                        \begin{align*}
+                            x - \dfrac{\pi}{6} \geq 0
+                            \\\\
+                            x \geq \dfrac{\pi}{6}
+                        \end{align*}
+                        \]
+                    </div>
+                </div>
+                <br>
+                
+                <div class="option">
+                    <input type="checkbox" name="domanda5" class="checkboxButton" value="4" onclick="enableSubmit(5)">
+                    <div class="optionText">
+                        Siccome la radice quadrata è un'operazione pericolosa chiediamo che l'argomento di \(\sqrt{x - \frac{\pi}{6}}\) sia maggiore di \(0\)
+                        \[
+                        \begin{align*}
+                            x - \dfrac{\pi}{6} \gt 0
+                            \\\\
+                            x \gt \dfrac{\pi}{6}
+                        \end{align*}
+                        \]
+                    </div>
+                </div>   
+                <div class="whyAnswerIsWrong"></div>
+                <div class="numberOfTries">1/2 tentativi disponibili</div>
+        
+                <u class="showAnswer" onclick="showAnswer(5)">Mostra la risposta</u>
+        
+                <button type="button" class="submit" onclick="checkAnswer(5, 'rispostaMultipla', [2,3,], [], 3)" disabled>Invia risposta</button>
+        
+                <div class="answerContainer">
+                    
+                    <br>
+                    <b>Soluzione:</b>
+                    <br>
+                    La seconda opzione è corretta: la tangente non è definita se il suo argomento è \(\dfrac{\pi}{2}\) o un qualsiasi numero ottenuto sommando "mezzi giri", ovvero \(k\cdot\pi\), con \(k \in\mathbb{Z}\).
+                    <br>
+                    <br>
+                    La terza opzione è corretta: la radice quadrata è definita se il suo argomento è maggiore <b>o uguale</b> di \(0\) (infatti la \(\sqrt{0} = 0)\).
+                    <br>
+        
+                </div>
+            
+            </div>
+
+            
+            <br>
+            <br>
+        
+            <h3 class="questionTitle">Domanda 6</h3>
+        
+            <div class="questionBox">
+                <p class="question">
+        
+                    Consideriamo la funzione dell'esercizio precedente
+                    \[
+                        h(x) = tan\left(x - \dfrac{\pi}{3}\right) \cdot \sqrt{x - \dfrac{\pi}{6}}
+                    \]
+                    Selezionare tra le seguenti tutte le opzioni corrette
+                </p>
+                <br>
+                
+                <div class="option">
+                    <input type="checkbox" name="domanda6" class="checkboxButton" value="1" onclick="enableSubmit(6)">
+                    <div class="optionText">
+                        Il fattore \(\sqrt{x - \frac{\pi}{6}}\) che compare nella definizione della funzione \(h\) è minore
+                        o uguale di \(0\) per qualsiasi valore di \(0\), perché il risultato di una radice quadrata non è mai positivo. 
+                        <br>
+                        <br>
+                        In particolare \(\sqrt{x - \frac{\pi}{6}}\) vale \(0\) se \(x = \dfrac{\pi}{6}\)
+
+                    </div>
+                </div>
+                <br>
+                
+                <div class="option">
+                    <input type="checkbox" name="domanda6" class="checkboxButton" value="2" onclick="enableSubmit(6)">
+                    <div class="optionText">
+                        Il fattore \(\sqrt{x - \frac{\pi}{6}}\) che compare nella definizione della funzione \(h\) è maggiore
+                        o uguale di \(0\) per qualsiasi valore di \(0\), perché il risultato di una radice quadrata non è mai negativo.
+                        <br>
+                        <br>
+                        In particolare \(\sqrt{x - \frac{\pi}{6}}\) vale \(0\) se \(x = \dfrac{\pi}{6}\)
+                    </div>
+                </div>
+                <br>
+                
+                <div class="option">
+                    <input type="checkbox" name="domanda6" class="checkboxButton" value="3" onclick="enableSubmit(6)">
+                    <div class="optionText">
+                        Si ha che
+                        <br>
+                        <br>
+                        <div class="formula" style="text-align: center">
+                        \(h(x) \geq 0\) se e solo se \(tan\left(x - \dfrac{\pi}{3}\right) \gt 0\)
+                        </div>
+                    </div>
+                </div>
+                <br>
+                
+                <div class="option">
+                    <input type="checkbox" name="domanda6" class="checkboxButton" value="4" onclick="enableSubmit(6)">
+                    <div class="optionText">
+                        Si ha che
+                        <br>
+                        <br>
+                        <div class="formula" style="text-align: center">
+                        \(h(x) \geq 0\) se e solo se \(tan\left(x - \dfrac{\pi}{3}\right) \lt 0\)
+                        </div>
+                    </div>
+                </div>   
+                <div class="whyAnswerIsWrong"></div>
+                <div class="numberOfTries">1/2 tentativi disponibili</div>
+        
+                <u class="showAnswer" onclick="showAnswer(6)">Mostra la risposta</u>
+        
+                <button type="button" class="submit" onclick="checkAnswer(6, 'rispostaMultipla', [2,3,], [], 3)" disabled>Invia risposta</button>
+        
+                <div class="answerContainer">
+                    
+                    <br>
+                    <b>Soluzione:</b>
+                    Prima di tutto osserviamo che la funzione \(h\)  definita dal prodotto di due fattori
+                    \[
+                        h(x) = \underset{\color{gray}{}\text{1° fattore}}{\color{gray}{}\underbrace{\color{black}{}tan\left(x - \dfrac{\pi}{3}\right)}} \cdot 
+                        \underset{\color{gray}{}\text{2° fattore}}{\color{gray}{}\underbrace{\color{black}{}\sqrt{x - \dfrac{\pi}{6}}}}
+                    \]
+                    Il segno di \(h\) dunque dipende dal segno dei due fattori.
+                    <br>
+                    <br>
+                    Il risultato di una radice quadrata è sempre maggiore o uguale di \(0\), quindi la seconda affermazione è corretta.
+                    <br>
+                    <br>
+                    In virtù di ciò, il 2° fattore di \(h\) è sicuramente maggiore o uguale di \(0\).
+                    <br>
+                    Dunque, se il 1° fattore è positivo si ha 
+                    \[
+                        \underset{\color{red}{+} \color{gray}{}\text{ oppure } \color{black}{0}}{\color{gray}{}\underbrace{\color{black}{}h(x)}} = 
+                        \underset{\color{red}{}+}{\color{gray}{}\underbrace{\color{black}{}tan\left(x - \dfrac{\pi}{3}\right)}} \cdot 
+                        \underset{\color{gray}{}\color{red}{}+ \color{gray}{}\text{ oppure } \color{black}{}0}{\color{gray}{}\underbrace{\color{black}{}\sqrt{x - \dfrac{\pi}{6}}}} =
+                        
+                    \]
+                    Perciò la terza opzione è corretta.
+                    <br>
+        
+                </div>
+            
+            </div>
+
+            <br>
+            <br>
+
+            <h3 class="questionTitle">Domanda 7</h3>
+
+            <div class="questionBox">
+                Data la funzione 
+                \[
+                    h(x) = tan\left(x - \dfrac{\pi}{3}\right) \cdot \sqrt{x - \dfrac{\pi}{6}}
+                \]
+                rappresentare graficamente il dominio ed il segno della funzione.
+                <br>
+                <br>
+                (Sfruttate le informazioni ottenute nei due esercizi precedenti)
+                <u class="showAnswer" onclick="showAnswer(7)" style="visibility: visible;">Mostra la risposta</u>
+        
+                <div class="answerContainer">
+                    
+                    <br>
+                    <b>Soluzione:</b>
+                    <br>
+                    <img src="img/esercizi(3).png" alt="">
+
+                </div>
+            </div>
+        </section>
+    
+
+
+    <script>
+        let ggbApp1 = new GGBApplet({
+        appletOnLoad(api) {
+            api.registerObjectUpdateListener("B","stampaValori1");
+        },
+        "appName": "classic", 
+        "id": "gg1",
+        "scaleContainerClass":"geogebra-container",
+        "showToolBar": false, 
+        "showAlgebraInput": false, 
+        "showMenuBar": false, 
+        "enableShiftDragZoom": false,
+        "filename":"img/grafico(1).ggb"
+        },
+        true);
+
+        window.addEventListener("load", function() { 
+            ggbApp1.inject('geogebra1');
+        });
+        
+        function stampaValori1() {
+
+        let x = gg1.getValue("x(B)");
+        x = Math.floor(x*100)/100;
+        let y;
+        gg1.evalCommand(`a = round(f(${x})*100)/100`);
+        y = gg1.getValue(`a`);
+        let valoriFunzione = document.getElementById("valoriFunzione1");
+
+        valoriFunzione.innerHTML = 
+        `\\[
+            f(\\color{blue}{}${x}\\color{black}{}) = \\color{red}{}${y}
+        \\]`
+        MathJax.typesetClear([valoriFunzione]);
+        MathJax.typesetPromise([valoriFunzione]).then(() => {});
+
+        }
+    </script>
+    
+    
+    
+    
+    
+    
+    
+
+
+    <br>
+    <br>
+
+    <script src="../../../js/pageManagment.js"></script>
+    <script src="../../../js/exerciseManagment.js"></script>
+</body>
