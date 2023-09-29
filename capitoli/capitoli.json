@@ -21,6 +21,18 @@
                 "nomeCartella": "1-3graficoFunzione"
             }
         ]
+        },
+
+        {
+            "numero": 2,
+            "titolo": "Logaritmi",
+            "nomeCartella": "2logaritmi",
+            "paragrafo": [
+                {
+                    "titolo": "Definizione del logaritmo",
+                    "nomeCartella": "definizioneLogaritmo"
+                }        
+            ]
         }
     ],
 
@@ -29,6 +41,26 @@
         "numero": 1,
         "titolo": "Le funzioni",
         "paragrafo": [
+            {
+                "titolo": "Proprietà del logaritmo",
+                "nomeCartella": "proprietaLogaritmo"
+            },
+            {
+                "titolo": "Equazioni logaritmiche per passaggio agli argomenti",
+                "nomeCartella": "equazioniLogaritmichePassaggioArgomenti"
+            },
+            {
+                "titolo": "Equazioni logaritmiche per sostituzione",
+                "nomeCartella": "equazioniLogaritmicheSostituzione"
+            },
+            {
+                "titolo": "Grafico di una funzione logaritmica",
+                "nomeCartella": "graficoFunzioneLogaritmica"
+            },
+            {
+                "titolo": "Traslazione del grafico di una funzione logaritmica",
+                "nomeCartella": "traslazioniGraficoFunzioneLogaritmica"
+            },
             {
                 "numero": "1.4",
                 "titolo": "Altri esempi di funzione",
