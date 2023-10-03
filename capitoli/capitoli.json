@@ -25,12 +25,12 @@
 
         {
             "numero": 2,
-            "titolo": "Logaritmi",
-            "nomeCartella": "2logaritmi",
+            "titolo": "Esponenziali",
+            "nomeCartella": "2esponenziali",
             "paragrafo": [
                 {
-                    "titolo": "Definizione del logaritmo",
-                    "nomeCartella": "definizioneLogaritmo"
+                    "titolo": "Potenze con esponente negativo, razionale e reale",
+                    "nomeCartella": "potenzeEsponenteNegativoRazionaleReale"
                 }        
             ]
         }
@@ -41,6 +41,10 @@
         "numero": 1,
         "titolo": "Le funzioni",
         "paragrafo": [
+            {
+                "titolo": "Definizione del logaritmo",
+                "nomeCartella": "definizioneLogaritmo"
+            }, 
             {
                 "titolo": "Proprietà del logaritmo",
                 "nomeCartella": "proprietaLogaritmo"
