@@ -31,6 +31,10 @@
                 {
                     "titolo": "Potenze con esponente negativo, razionale e reale",
                     "nomeCartella": "potenzeEsponenteNegativoRazionaleReale"
+                },
+                {
+                    "titolo": "Proprietà delle potenze",
+                    "nomeCartella": "proprietaPotenze"
                 }        
             ]
         }
