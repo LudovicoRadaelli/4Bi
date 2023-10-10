@@ -35,7 +35,11 @@
                 {
                     "titolo": "Proprietà delle potenze",
                     "nomeCartella": "proprietaPotenze"
-                }        
+                },
+                {
+                    "titolo": "Equazioni esponenziali della tipologia `passaggio agli esponenti`",
+                    "nomeCartella": "equazioniEsponenzialiPassaggioAgliEsponenti"
+                }           
             ]
         }
     ],
