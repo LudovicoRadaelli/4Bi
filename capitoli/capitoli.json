@@ -39,7 +39,13 @@
                 {
                     "titolo": "Equazioni esponenziali della tipologia `passaggio agli esponenti`",
                     "nomeCartella": "equazioniEsponenzialiPassaggioAgliEsponenti"
-                }           
+                },
+                {
+                    "titolo": "Equazioni esponenziali della tipologia `per sostituzione`",
+                    "nomeCartella": "equazioniEsponenzialiPerSotituzione"
+                }    
+
+                       
             ]
         }
     ],
