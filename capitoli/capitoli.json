@@ -50,6 +50,7 @@
         {
             "numero": 3,
             "titolo": "Logaritmi",
+            "nomeCartella": "3logaritmi",
             "paragrafo": [
                 {
                     "titolo": "Definizione del logaritmo",
