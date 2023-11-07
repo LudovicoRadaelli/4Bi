@@ -22,7 +22,6 @@
             }
         ]
         },
-
         {
             "numero": 2,
             "titolo": "Esponenziali",
@@ -46,6 +45,16 @@
                 }    
 
                        
+            ]
+        },
+        {
+            "numero": 3,
+            "titolo": "Logaritmi",
+            "paragrafo": [
+                {
+                    "titolo": "Definizione del logaritmo",
+                    "nomeCartella": "definizioneLogaritmo"
+                }
             ]
         }
     ],
