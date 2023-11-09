@@ -55,6 +55,22 @@
                 {
                     "titolo": "Definizione del logaritmo",
                     "nomeCartella": "definizioneLogaritmo"
+                },
+                {
+                    "titolo": "Definizione del logaritmo",
+                    "nomeCartella": "definizioneLogaritmo"
+                }, 
+                {
+                    "titolo": "Proprietà del logaritmo",
+                    "nomeCartella": "proprietaLogaritmo"
+                },
+                {
+                    "titolo": "Equazioni logaritmiche per passaggio agli argomenti",
+                    "nomeCartella": "equazioniLogaritmichePassaggioArgomenti"
+                },
+                {
+                    "titolo": "Equazioni logaritmiche per sostituzione",
+                    "nomeCartella": "equazioniLogaritmicheSostituzione"
                 }
             ]
         }
@@ -65,22 +81,6 @@
         "numero": 1,
         "titolo": "Le funzioni",
         "paragrafo": [
-            {
-                "titolo": "Definizione del logaritmo",
-                "nomeCartella": "definizioneLogaritmo"
-            }, 
-            {
-                "titolo": "Proprietà del logaritmo",
-                "nomeCartella": "proprietaLogaritmo"
-            },
-            {
-                "titolo": "Equazioni logaritmiche per passaggio agli argomenti",
-                "nomeCartella": "equazioniLogaritmichePassaggioArgomenti"
-            },
-            {
-                "titolo": "Equazioni logaritmiche per sostituzione",
-                "nomeCartella": "equazioniLogaritmicheSostituzione"
-            },
             {
                 "titolo": "Grafico di una funzione logaritmica",
                 "nomeCartella": "graficoFunzioneLogaritmica"
