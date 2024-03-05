@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="https://www.geogebra.org/apps/deployggb.js"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js"></script> 
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>Compiti per casa</title>
+</head>
+<body>
+    <h1>Compiti per casa</h1>
+    
+    <br>
+    
+    <!-- ARGOMENTI SVOLTI -->
+    <!-- <section id="argomenti">
+        <h3 class="blue">Argomenti svolti</h3>
+        <div class="grayBorder">            
+
+            <br>
+
+            <div style="text-align: left;">
+                <b>2) Bliblibli blablabla</b>
+            </div>
+            <div class="gray">
+                [Par. 12.2, 12.3, pag. da 668 a 676]
+                <br>
+                <a class="gray" href="../../../3/goniometria/index.html">dispense</a>
+            </div>
+        </div>
+
+    </section>
+
+    <br>
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br> -->
+
+
+    <!-- ESERCIZI -->
+
+    <!-- <h3 class="green">Esercizio 0</h3>
+    <br>
+    <p>
+        Studiare i paragrafi 
+        <br>
+        <br>
+        <ul>
+            <li>
+                <b class="blue">Segno di una funzione</b> (<a href="../../capitoli/2funzioni/1-9segnoFunzione/index.html">link</a>)
+            </li>
+        </ul>
+        <br>
+        Svolgere gli esercizi a risposta multipla relativi (li trovate cliccando sull'icona <img style="display: inline;" class="icon" src="../../css/img/homework.png"> presente in alto a destra del paragrafo)
+    </p>
+
+    <br>    
+    <br> 
+    
+    
+    <hr>
+    <br>
+    <br>
+    -->
+
+    <h3 class="yellow">Interpolazione lineare</h3>
+    <div class="esempi-container">
+        Vogliamo costruire una funzione \(x = f(t)\) sull'intervallo \([0\,,\,\,1]\) tale che
+        \[
+            \begin{cases}
+                f(0) = 3 
+                \\\\
+                f(1) = 7 
+            \end{cases}
+        \]
+        Per \(t = 0\) la funzione assume il valore iniziale \(3\).
+        <br>
+        Per \(t = 1\) la funzione assume il valore finale \(7\)
+        <br>
+        <br>
+        Possiamo cercare \(f\) in modo che sia un polinomio di primo grado, quindi della forma
+        \[
+            f(t) = at + b \quad con\,\,\,a,b\,\in\mathbb{R}
+        \]
+        Imponiamo le condizioni 
+        \[
+            \begin{cases}
+                f(0) = 3 
+                \\\\
+                f(1) = 7 
+            \end{cases}
+
+            \,\,\Longrightarrow\,\,
+
+            \begin{cases}
+                a \cdot 0 + b = 3
+                \\\\
+                a \cdot 1 + b = 7
+            \end{cases}
+        \]
+        \[
+            \,\,\Longrightarrow\,\,
+
+            \begin{cases}
+                b = 3
+                \\\\
+                a + 3 = 7
+            \end{cases}
+            
+            \,\,\Longrightarrow\,\,
+
+            \begin{cases}
+                b = 3
+                \\\\
+                a = 7 - 3 = 4
+            \end{cases}
+        \]
+        Dunque la funzione \(f\) che soddisfa le condizioni iniziali ha forma 
+        \[
+            f(t) = 4t + 3
+        \]
+        <br>
+        <div class="geogebra-container">
+            <div id="geogebra1"></div>
+        </div>
+        <br>
+        <br>        
+        <div class="gray">
+            Nel file Geogebra è rappresentata la posizione del valore \(f(t)\) al variare di \(t\) tra \(0\) ed \(1\).
+            Premete il tasto "Inizia" per avviare l'animazione. 
+            Potete modificare da tastiera il valore iniziale e finale.
+        </div>
+    </div>
+
+    <br>
+    <br>
+
+    Osserviamo che in generale se 
+    \[
+        \begin{cases}
+            f(0) = a 
+            \\\\
+            f(1) = b
+        \end{cases}
+    \]
+
+    il polinomio assume forma 
+    
+    \[
+        f(t) = (b - a)t + a
+    \]
+    <br>
+    <br>
+        
+    <script>
+        var ggbApp1 = new GGBApplet(
+            {
+                "appName": "classic", 
+                "id": "gg1",
+                "showToolBar": false, 
+                "showAlgebraInput": false, 
+                "showMenuBar": false, 
+                "enableShiftDragZoom": false,
+                "scaleContainerClass":"geogebra-container",
+                "filename":"img/interpolazioneLineare1d.ggb"
+            }, 
+            true
+        );
+
+        window.addEventListener("load", function() { 
+            ggbApp1.inject('geogebra1');			
+        });
+    </script>
+
+</body>
