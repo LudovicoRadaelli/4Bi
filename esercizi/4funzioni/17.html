@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="https://www.geogebra.org/apps/deployggb.js"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js"></script> 
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>Compiti per casa</title>
+</head>
+<body>
+    <h1>Compiti per casa</h1>
+    
+    <br>
+    
+    <div class="gray">
+        ⚠️⚠️ Dopo aver studiato la parte introduttiva svolgete i tre esercizi che trovate di seguito. Saranno il trampolino di lancio
+        per la prossima lezione.
+    </div>
+    
+    <br>
+
+    <h3 class="yellow">Interpolazione lineare - 2D</h3>
+    <div class="esempi-container">
+        Consideriamo due punti sul piano cartesiano, il punto iniziale \(I(2\,;\,\,1)\) ed il punto finale \(F(8\,;\,\,3)\)
+        <br>
+        <br>
+        <img src="img/interpolazioneLineare2d(1).png" style="width: 70%;">  
+        <br>
+        <br>
+        Usando il risultato ottenuto nell'episodio precedente, sappiamo il polinomio di primo grado
+        \[
+            x(t) = 6t + 2
+        \]
+        è tale che 
+        \[
+            \begin{cases}
+                x(0) = 2
+                \\\\
+                x(1) = 8
+            \end{cases}
+        \]
+        <br>
+        <div class="geogebra-container">
+            <div id="geogebra1"></div>
+        </div>
+        <br>
+        <br>  
+        In maniera analoga possiamo individuare il polinomio 
+        \[
+            y(t) = 2t + 1
+        \]
+        tale che 
+        \[
+            \begin{cases}
+                y(0) = 1
+                \\\\
+                y(1) = 3
+            \end{cases}
+        \]
+        <br>
+        <div class="geogebra-container">
+            <div id="geogebra2"></div>
+        </div>
+        <br>
+        <br>  
+        Consideriamo un punto \(C\) che abbia come coordinata \(x\) il polinomio \(x(t)\) e come coordinata \(y\) il polinomio 
+        \(y(t)\)
+        \[
+            C\left(6t + 2\,;\,\,2t + 1\right)
+        \]
+        La posizione di \(C\) chiaramente dipende dal parametro \(t\). 
+        <br>
+        <br>
+        <ul>
+            <li>
+                Al tempo \(t = 0\) il punto \(C\) si trova nella posizione del punto \(I\).    
+            </li>
+            <br>
+            <li>                
+                Al tempo \(t = 1\) si trova nella posizione del punto \(F\).        
+            </li>
+            <br>
+            <li>
+                In corrispondenza di tutti i valori \(t \in (0\,,\,\,1)\) il punto assume posizione lungo il segmento che 
+                congiunge \(I\) ed \(F\)
+            </li>
+        </ul>
+        <br>
+        <br>
+        <div class="geogebra-container">
+            <div id="geogebra3"></div>
+        </div>
+        <br>
+        <br>
+        <hr>
+        <br>
+        <br>
+
+        In generale abbiamo il seguente risultato.
+        <br>
+        <br>
+        <b>Interpolazione lineare - 2D</b>
+        <div class="grayBorder">
+            Dati due punti 
+            \[
+                I\left(x_{_I}\,;\,\,y_{_I}\right) \qquad F\left(x_{_F}\,;\,\,y_{_F}\right)
+            \]
+            il punto 
+            \[
+                C(t) = \Big((x_{_F} - x_{_I})t + x_{_I}\,;\,\,(y_{_F} - y_{_I})t + y_{_I}\Big)
+            \]
+            è tale che 
+            \[
+                \begin{cases}
+                    C(0) = I
+                    \\\\
+                    C(1) = F
+                \end{cases}
+            \]
+            Definiamo il punto \(C(t)\) <b>interpolazione</b> dei punti \(A\) e \(B\).
+        </div>
+    </div>
+
+    <br>
+    <br>    
+    <br>
+
+    <h3 class="green">Esercizio 1</h3>
+    <br>
+    <div>
+        Determinare l'interpolazione \(P(t)\) dei punti 
+        \[
+            A(2\,;\,\,3) \qquad B(4\,;\,\,7)
+        \]
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio 2</h3>
+    <br>
+    <div>
+        Determinare l'interpolazione \(Q(t)\) dei punti 
+        \[
+            B(4\,;\,\,7) \qquad C(10\,;\,\,3)
+        \]
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio 3</h3>
+    <br>
+    <div>
+        Determinare l'interpolazione \(S(t)\) dei punti 
+        \[
+            P\big(2t+ 2\,;\,\,4t + 3\big) \qquad  Q\big(6t + 4\,;\,\,-4t + 7\big)
+        \]
+    </div>
+
+    <div class="gray">
+        <b>Suggerimento</b>
+        <br>
+        Non lasciamoci impressionare dalla presenza del parametro \(t\) nei punti da interpolare.
+        <br>
+        Abbiamo una formula, usiamola pedissequamente.
+    </div>
+    
+    <br>
+    <br>
+    
+        
+   
+    <script>
+        var ggbApp1 = new GGBApplet(
+            {
+                "appName": "classic", 
+                "id": "gg1",
+                "showToolBar": false, 
+                "showAlgebraInput": false, 
+                "showMenuBar": false, 
+                "enableShiftDragZoom": false,
+                "scaleContainerClass":"geogebra-container",
+                "filename":"img/interpolazioneLineare2d(1).ggb"
+            }, 
+            true
+        );
+
+        var ggbApp2 = new GGBApplet(
+            {
+                "appName": "classic", 
+                "id": "gg2",
+                "showToolBar": false, 
+                "showAlgebraInput": false, 
+                "showMenuBar": false, 
+                "enableShiftDragZoom": false,
+                "scaleContainerClass":"geogebra-container",
+                "filename":"img/interpolazioneLineare2d(2).ggb"
+            }, 
+            true
+        );
+
+        var ggbApp3 = new GGBApplet(
+            {
+                "appName": "classic", 
+                "id": "gg3",
+                "showToolBar": false, 
+                "showAlgebraInput": false, 
+                "showMenuBar": false, 
+                "enableShiftDragZoom": false,
+                "scaleContainerClass":"geogebra-container",
+                "filename":"img/interpolazioneLineare2d(3).ggb"
+            }, 
+            true
+        );
+
+        window.addEventListener("load", function() { 
+            ggbApp1.inject('geogebra1');			
+            ggbApp2.inject('geogebra2');			
+            ggbApp3.inject('geogebra3');			
+        });
+    </script>
+
+</body>
