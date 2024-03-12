@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="https://www.geogebra.org/apps/deployggb.js"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js"></script> 
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>Compiti per casa</title>
+</head>
+<body>
+    <h1>Compiti per casa</h1>
+    
+    <br>
+    
+    <div class="gray">
+        ⚠️⚠️ Dopo aver studiato la parte introduttiva svolgete i tre esercizi che trovate di seguito. Saranno il trampolino di lancio
+        per la prossima lezione.
+    </div>
+    
+    <br>
+
+    <h3 class="yellow">Le curve di monsieur Bézier </h3>
+    <div class="esempi-container">
+        Sfruttando l'interpolazione lineare di punti l'ingegnere francese Bézier negli anni '60 individuò la descrizione 
+        matematica di un tipo di curve estremamente versatile, che oggi - in suo onore - vengono chiamate curve di Bézier. 
+        <br>
+        <br>
+        <div class="grayBorder gray">
+            Provate a "modellare" la curva rossa in modo che aderisca ad un tratto di quella in grigio.
+            <br>
+            <br>
+            <div class="geogebra-container">
+                <div id="geogebra1"></div>
+            </div>
+            <br>
+            <br>
+            <iframe style="width: 100%;" src="https://www.youtube.com/embed/Gk8iL0ru8Ek?si=CST2iAHWZdkVoA9I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <br>C
+            <br>
+            Come vedete i punti \(A\) e \(D\) sono punti appartenenti alla curva rossa. Gli altri due punti \(B\) e \(C\) sono punti 
+            di controllo, che permettono di modellare la curva a piacimento. 
+        </div>
+        <br>
+        <br>
+        Vediamo come una curva di Bezier nasca dalla ripetuta interpolazione di coppie di punti.
+        <br>
+        <br>
+        Prendiamo quattro punti 
+        \[
+            \begin{align*}
+                A(x_{_A}\,;\,\,y_{_A}) &\qquad B(x_{_B}\,;\,\,y_{_B})
+                \\\\
+                C(x_{_C}\,;\,\,y_{_C}) &\qquad D(x_{_D}\,;\,\,y_{_D})
+
+            \end{align*}
+        \]
+        nel piano cartesiano.
+        <br>
+        Interpoado \(A\) e \(B\) otteniamo il punto 
+        \[
+            P\Big((x_{_B} - x_{_A})t + x_{_A}\,;\,\,(y_{_B} - y_{_A})t + y_{_A}\Big)
+        \]
+        che possiamo brevemente indicare con questa scrittura:
+        \[
+            P = (B - A)t + A
+        \]
+        Interpolando \(B\) e \(C\) otteniamo il punto
+        \[
+            Q = (C - B)t + B
+        \]
+        Interpolando \(C\) e \(D\) otteniamo il punto
+        \[
+            S = (D - C)t + C
+        \]
+        <div class="geogebra-container">
+            <div id="geogebra2"></div>
+        </div>
+        <br>
+        <br>
+        A questo punto interpoliamo i punti \(P\) e \(Q\), ottenendo così
+        \[
+            T = (Q - P)t + P
+        \]
+        ed interpoliamo  anche i punti \(Q\) ed \(S\), ottenendo 
+        \[
+            U = (S - Q)t + Q
+        \]
+        <div class="geogebra-container">
+            <div id="geogebra3"></div>
+        </div>
+        <br>
+        <br>
+        Ultimissimo passo, interpoliamo i punti \(U\) e \(T\) ottenendo così il punto
+        \[
+            Z = (U - T)t + T
+        \]
+        Se lasciamo traccia delle posizioni che assume \(Z\) al variare del parametro \(t \in [0\,,\,\,1]\) vediamo 
+        nascere una curva di Bezier di terzo grado 
+        <br>
+        <br>
+        <div class="geogebra-container">
+            <div id="geogebra4"></div>
+        </div>
+        <br>
+        <br>
+
+
+
+        
+        
+        
+        
+        <br>
+        <br>
+        
+    
+    <br>
+    <br>
+    
+        
+   
+    <script>
+        var ggbApp1 = new GGBApplet(
+            {
+                "appName": "classic", 
+                "id": "gg1",
+                "showToolBar": false, 
+                "showAlgebraInput": false, 
+                "showMenuBar": false, 
+                "enableShiftDragZoom": false,
+                "scaleContainerClass":"geogebra-container",
+                "filename":"img/approssimazioneTramiteBezier.ggb"
+            }, 
+            true
+        );
+
+        var ggbApp2 = new GGBApplet(
+            {
+                "appName": "classic", 
+                "id": "gg2",
+                "showToolBar": false, 
+                "showAlgebraInput": false, 
+                "showMenuBar": false, 
+                "enableShiftDragZoom": false,
+                "scaleContainerClass":"geogebra-container",
+                "filename":"img/costruzioneBezier(1).ggb"
+            }, 
+            true
+        );
+
+        var ggbApp3 = new GGBApplet(
+            {
+                "appName": "classic", 
+                "id": "gg3",
+                "showToolBar": false, 
+                "showAlgebraInput": false, 
+                "showMenuBar": false, 
+                "enableShiftDragZoom": false,
+                "scaleContainerClass":"geogebra-container",
+                "filename":"img/costruzioneBezier(2).ggb"
+            }, 
+            true
+        );
+
+        var ggbApp4 = new GGBApplet(
+            {
+                "appName": "classic", 
+                "id": "gg4",
+                "showToolBar": false, 
+                "showAlgebraInput": false, 
+                "showMenuBar": false, 
+                "enableShiftDragZoom": false,
+                "scaleContainerClass":"geogebra-container",
+                "filename":"img/costruzioneBezier(3).ggb"
+            }, 
+            true
+        );
+
+        
+
+        window.addEventListener("load", function() { 
+            ggbApp1.inject('geogebra1');	
+            ggbApp2.inject('geogebra2');	
+            ggbApp3.inject('geogebra3');
+            ggbApp4.inject('geogebra4');  
+        });
+    </script>
+
+</body>
