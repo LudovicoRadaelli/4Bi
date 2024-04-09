@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js"></script> 
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>Compiti per casa</title>
+</head>
+<body>
+    <h1>Compiti per casa</h1>
+    
+    <br>
+
+    <!-- ESERCIZI -->
+
+    <div class="yellow">Introduzione ai limiti</div>    
+    <div class="esempi-container">
+        Fin dalle elementari ci è stato insegnato in maniera categorica che 
+        <br>
+        <br>
+        <div style="width: fit-content; margin: auto;">
+            <b>NON SI PU&Oacute; DIVIDERE PER ZERO</b>
+        </div>
+        <br>
+        Effettivamente è vero: non è possibile.
+        <br>
+         Ma ...perché? 
+        <br>
+        Vediamo nel seguente video la spiegazione.
+        <br>
+        <br>
+        <iframe style="width: 100%;" src="https://www.youtube.com/embed/BRRolKTlF6Q?si=vYZGxa9zlK9Wx2c-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <br>
+        <br>
+        Ora che siamo convinti della bontà della regola, vogliamo comunque dividere per zero (le sfide impossibili esercitano sempre fascino).
+        <br>
+        Lo facciamo dividendo per numeri <u>diversi da zero</u> ma sempre più vicini a zero. Ad esempio
+        <br>
+        <br>
+
+        \(\dfrac{1}{0.1} = 10\)
+        <br>
+        <br>
+        \(\dfrac{1}{0.01} = 100\)
+        <br>
+        <br>
+        \(\dfrac{1}{0.001} = 1000\)
+        <br>
+        <br>
+        \(\dfrac{1}{0.0001} = 10000\)
+        <br>
+        <br>
+        \(\dfrac{1}{0.000000000000001} = 1000000000000000\)
+        <br>
+        <br>
+        Usando una notazione meno dispendiosa       
+        <br>
+        <br> 
+        \(\dfrac{1}{10^{-224}} = 10^{224}\)
+        <br>
+        <br>
+
+        Osserviamo che dividendo per valori sempre più vicini a \(0\) (da destra) il risultato che otteniamo è sempre più grande.
+        <br>
+        Siamo tentati di dire che continuando questo procedimento <b>al limite</b> otterremo una quantità infinita.        
+        In linguaggio matematico scriveremo 
+        \[
+            \lim_{x \to 0^{^+}} \dfrac{1}{x} = +\infty
+        \]
+        che si legge
+        <br>
+        <br>
+        <div style="width: fit-content; margin: auto;">
+            \[
+                \begin{align*}
+                    &Il\,\,\underset{\lim}{\underbrace{limite}} \,\,di\,\,\dfrac{1}{x}\,\,per\,\,x\,\,che\,\,\underset{\to}{\underbrace{tende}}
+                    \\\\
+                    &a\,\,\underset{0^{^+}}{\underbrace{0\,\,da\,\,destra}}\,\,è\,\,\underset{+\infty}{\underbrace{infinito}}
+                \end{align*}
+            \]
+        </div> 
+    </div>
+    
+    <br>
+    <br>    
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio guida</h3>
+    <br>
+    <div>
+        
+    <iframe style="width: 100%;" src="https://www.youtube.com/embed/zFBN4WzKVMs?si=CooZ9CEujR7eCuqj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+    <br>
+    <br>
+
+    <iframe style="width: 100%;" src="https://www.youtube.com/embed/lEbQIMlQ2_s?si=Bf6HVjqwJYHjZVom" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio 1</h3>
+    <br>
+    <p>
+        Data la funzione 
+        \[
+            f\left(x\right) = \dfrac{x -2}{\sqrt{x - 3}}
+        \]        
+    </p>
+    <br>
+    <ul>
+        <li>
+            Verificare che la funzione è definita se \(x \gt 3\).
+            <br>
+            In altre parole il dominio della funzione è 
+            \[
+                D = (3; +\infty)
+            \]
+        </li>
+        <br>
+        <li>
+            Mostrare quale valore tende ad assumere la funzione per valori della \(x\) sempre più vicini a \(3\) da destra.
+        </li>
+        <br>
+        <li>
+            Mostrare quale valore tende ad assumere la funzione per valori della \(x\) sempre più grandi.
+        </li>
+        <br>
+        <br>
+        <p>
+            Per svolgere gli ultimi due punti, compilate la seguente tabella
+        </p>
+        <br>
+        <br>
+        <div style="display: flex; flex-direction: row; justify-content: center; align-items: flex-start;">
+            <div style="display: flex; flex-direction: column; justify-content: flex-start; align-items: center;
+                        width: 10%;">
+                <div style="border: 0.01rem solid black; min-height: 3rem; min-width: 100%; text-align: center; vertical-align: middle;">
+                    \(x\)
+                </div>
+                <div style="border: 0.01rem solid black; min-height: 3rem; min-width: 100%;"></div>
+                <div style="border: 0.01rem solid black; min-height: 3rem; min-width: 100%;"></div>
+                <div style="border: 0.01rem solid black; min-height: 3rem; min-width: 100%;"></div>
+                <div style="border: 0.01rem solid black; min-height: 3rem; min-width: 100%;"></div>
+                <div style="border: 0.01rem solid black; min-height: 3rem; min-width: 100%;"></div>
+                <div style="border: 0.01rem solid black; min-height: 3rem; min-width: 100%;"></div>
+            </div>
+            <div style="display: flex; flex-direction: column; justify-content: flex-start; align-items: center;
+                        width: 20%;">
+                <div style="border: 0.01rem solid black; min-height: 3rem; min-width: 100%; text-align: center;">
+                    \(f(x)\)
+                </div>
+                <div style="border: 0.01rem solid black; min-height: 3rem; min-width: 100%;"></div>
+                <div style="border: 0.01rem solid black; min-height: 3rem; min-width: 100%;"></div>
+                <div style="border: 0.01rem solid black; min-height: 3rem; min-width: 100%;"></div>
+                <div style="border: 0.01rem solid black; min-height: 3rem; min-width: 100%;"></div>
+                <div style="border: 0.01rem solid black; min-height: 3rem; min-width: 100%;"></div>
+                <div style="border: 0.01rem solid black; min-height: 3rem; min-width: 100%;"></div>
+            </div>
+        </div>
+    </ul>
+
+    <br>
+    <br>
+
+
+</body>
