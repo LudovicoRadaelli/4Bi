@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js"></script> 
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>Compiti per casa</title>
+</head>
+<body>
+    <h1>Compiti per casa</h1>
+    
+    <br>
+
+    <!-- ESERCIZI -->
+
+    <h3 class="yellow">Studio di una funzione razionale</h3>    
+    <div class="esempi-container">        
+        Consideriamo la funzione 
+        \[
+            f(x) = \dfrac{x + 2}{x - 1}
+        \]
+        Sia al numeratore che al denominatore abbiamo dei polinomi. Funzioni di questo tipo vengono chiamate <b>razionali</b>.
+
+        <br>
+        La funzione \(f\) è definita se \(x - 1\neq 0\), ovvero se \(x \neq 1\).
+        <br>
+        Il dominio è
+        \[
+            D = (-\infty\,,\,\,1) \cup (1\,,\,\, +\infty)
+        \]
+        Analizziamo il comportamento della funzione in corrispondenza degli <b>estremi del dominio</b>, che sono \(-\infty\), \(1\) e \(+\infty\).
+
+        <br>
+        <br>
+
+        Proviamo a svolgere il limite per \(x \to 1\) senza curarci se la tendenza sia da sinistra o da destra.
+        
+        <br>
+        <br>
+
+        <div class="slide-container grayBorder">
+            <div class="slide1">
+                <div class="formula" style="width: fit-content;">
+                    \[
+                        \lim_{x \to 1} \dfrac{x + 2}{x - 1} =
+                    \]
+                </div>
+                <span class="gray">
+                
+                </span>
+            </div>
+            <div class="slide1">
+                <div class="formula" style="width: fit-content;">
+                    \[
+                        \lim_{x \to 1} \dfrac{x + 2}{x - 1} =
+                    \]
+                </div>
+                <span class="gray">
+                    Sostituiamo \(1\) al posto di ogni \(x\) che compare nella legge della funzione.
+                </span>
+            </div>
+            <div class="slide1">
+                <div class="formula" style="width: fit-content;">
+                    \[
+                        \lim_{x \to \color{red}{}{1}} \dfrac{x + 2}{x - 1} =
+                    \]
+                </div>
+                <span class="gray">
+                    Sostituiamo \(1\) al posto di ogni \(x\) che compare nella legge della funzione.
+                </span>
+            </div>
+            <div class="slide1">
+                <div class="formula" style="width: fit-content;">
+                    \[
+                        \lim_{x \to 1} \dfrac{\color{red}{}x\color{black}{} + 2}{\color{red}{}x\color{black}{} - 1} =
+                    \]
+                </div>
+                <span class="gray">
+                    Sostituiamo \(1\) al posto di ogni \(x\) che compare nella legge della funzione.
+                </span>
+            </div>
+            <div class="slide1">
+                <div class="formula" style="width: fit-content;">
+                    \[
+                        \lim_{x \to 1} \dfrac{x + 2}{x - 1} = \dfrac{\color{red}{}1\color{black}{} + 2}{\color{red}{}1\color{black}{} - 1} =
+                    \]
+                </div>
+                <span class="gray">
+                    Sostituiamo \(1\) al posto di ogni \(x\) che compare nella legge della funzione.
+                </span>
+            </div>
+            <div class="slide1">
+                <div class="formula" style="width: fit-content;">
+                    \[
+                        \lim_{x \to 1} \dfrac{x + 2}{x - 1} = \dfrac{1 + 2}{1 - 1} = \dfrac{3}{0}
+                    \]
+                </div>
+                <span class="gray">
+                    
+                </span>
+            </div>      
+            <div class="slide1">
+                <div class="formula" style="width: fit-content;">
+                    \[
+                        \lim_{x \to 1} \dfrac{x + 2}{x - 1} = \dfrac{1 + 2}{1 - 1} = \dfrac{3}{0}
+                    \]
+                </div>
+                <span class="gray">
+                    La frazione \(\dfrac{3}{0}\) va letta come 
+                    <br>
+                    <br>                    
+                    <div style="width: fit-content; margin: auto; text-align: center;">
+                        <i>\(3\) diviso una quantità molto vicina a \(0\)</i>
+                    </div>                    
+                </span>
+            </div>            
+        </div>
+        <div style="display: flex; flex-direction:row; justify-content: space-evenly; align-items: center;">
+            <button id="previousSlide-button1" onclick="previousSlide(1)">Indietro</button>
+            <button id="nextSlide-button1" onclick="nextSlide(1)">Avanti</button>
+        </div>
+
+        <br>
+        <br>
+
+
+        Il risultato è infito (\(\infty\)), ma... con quale segno? 
+        <br>
+        Se la quantità al denominatore fosse un numero vicino a \(0\) <u>da destra</u>, la frazione avrebbe segno <u>positivo</u> e potremmo 
+        scrivere 
+        \[
+            \dfrac{3}{0^{^+}}  = +\infty
+        \]
+        Se la quantità al denominatore fosse un numero vicino a \(0\) <u>da sinistra</u>, la frazione avrebbe segno <u>negativo</u> e potremmo 
+        scrivere 
+        \[
+            \dfrac{3}{0^{^-}}  = -\infty
+        \]
+        <br>
+        <br>
+        <br>
+        
+        Di seguito analizziamo i casi \(x \to 1^{^+}\,\,\) e \(\,\,x \to 1^{^-}\). 
+        <br>
+        I passaggi saranno esattamente gli stessi di quelli appena visti. Solamente al denominatore, che viene \(0\) 
+        utilizzeremo l'informazione che \(x\) tende a \(1\) da destra o sinitra.
+        <br>
+        <br>
+
+        \(\boxed{\boldsymbol{x \to 1^{^+}}}\)
+        <br>
+        <br>
+        
+        <div id="slide-container2" class="slide-container grayBorder">
+            <div class="slide2">
+                <div class="formula" style="width: fit-content">
+                    \[
+                        \lim_{x \to 1^{^+}} \dfrac{x + 2}{x - 1}
+                    \]
+                </div>
+                <span class="gray">
+                
+                </span>
+            </div>
+            <div class="slide2">
+                <div class="formula" style="width: fit-content">
+                    \[
+                        \lim_{x \to 1^{^+}} \dfrac{x + 2}{x - 1}
+                    \]
+                </div>
+                <span class="gray">
+                    Sostituiamo \(1\) al posto di ogni \(x\) che compare nella legge della funzione.
+                    <br>
+                    Solo nel caso in cui il calcolo dia risultato \(0\) sostituiamo \(1^{^+}\)
+                </span>
+            </div>
+            <div class="slide2">
+                <div class="formula" style="width: fit-content">
+                    \[
+                        \lim_{x \to \color{red}{}{1^{^+}}} \dfrac{x + 2}{x - 1}
+                    \]
+                </div>
+                <span class="gray">
+                    Sostituiamo \(1\) al posto di ogni \(x\) che compare nella legge della funzione.
+                    <br>
+                    Solo nel caso in cui il calcolo dia risultato \(0\) sostituiamo \(1^{^+}\)
+                </span>
+            </div>
+            <div class="slide2">
+                <div class="formula" style="width: fit-content">
+                    \[
+                        \lim_{x \to 1^{^+}} \dfrac{\color{red}{}x\color{black}{} + 2}{\color{red}{}x\color{black}{} - 1}
+                    \]
+                </div>
+                <span class="gray">
+                    Sostituiamo \(1\) al posto di ogni \(x\) che compare nella legge della funzione.
+                    <br>
+                    Solo nel caso in cui il calcolo dia risultato \(0\) sostituiamo \(1^{^+}\)
+                </span>
+            </div>
+            <div class="slide2">
+                <div class="formula" style="width: fit-content">
+                    \[
+                        \lim_{x \to 1^{^+}} \dfrac{x + 2}{x - 1} = \dfrac{\color{red}{}1\color{black}{} + 2}{\color{red}{}1^{^+}\color{black}{} - 1}
+                    \]
+                </div>
+                <span class="gray">
+                    Sostituiamo \(1\) al posto di ogni \(x\) che compare nella legge della funzione.
+                    <br>
+                    Solo nel caso in cui il calcolo dia risultato \(0\) sostituiamo \(1^{^+}\)
+                </span>
+            </div>
+            <div class="slide2">
+                <div class="formula" style="width: fit-content">
+                    \[
+                        \lim_{x \to 1^{^+}} \dfrac{x + 2}{x - 1} = \dfrac{1 + 2}{1^{^+} - 1} 
+                    \]
+                </div>
+                <span class="gray">
+                    Al denominatore leggiamo 
+                    \[
+                        1^{^+} - 1
+                    \]
+                    ovvero
+                    <br>
+                    <br>
+                    <div style="width: fit-content; margin: auto; text-align: center;">
+                        <i>
+                            un numero leggermente più grande di \(1\) meno \(1\)
+                        </i>
+                    </div>
+                    Il risultato è <i>un numero leggermente più grande di  \(0\)</i>, ovvero \(0^{^+}\)
+                </span>
+            </div>
+            <div class="slide2">
+                <div class="formula" style="width: fit-content">
+                    \[
+                        \lim_{x \to 1^{^+}} \dfrac{x + 2}{x - 1} = \dfrac{1 + 2}{1^{^+} - 1}  = \dfrac{3}{0^{^+}}
+                    \]
+                </div>
+                <span class="gray">
+                    Al denominatore leggiamo 
+                    \[
+                        1^{^+} - 1
+                    \]
+                    ovvero
+                    <br>
+                    <br>
+                    <div style="width: fit-content; margin: auto; text-align: center;">
+                        <i>
+                            un numero leggermente più grande di \(1\) meno \(1\)
+                        </i>
+                    </div>
+                    Il risultato è <i>un numero leggermente più grande di  \(0\)</i>, ovvero \(0^{^+}\)
+                </span>
+            </div>        
+            <div class="slide2">
+                <div class="formula" style="width: fit-content">
+                    \[
+                        \lim_{x \to 1^{^+}} \dfrac{x + 2}{x - 1} = \dfrac{1 + 2}{1^{^+} - 1} = \dfrac{3}{0^{^+}} 
+                    \]
+                </div>
+                <span class="gray">
+                    Sia al numeratore che al denominatore abbiamo quantità positive, quindi la frazione ha segno \(+\)
+                </span>
+            </div>
+            <div class="slide2">
+                <div class="formula" style="width: fit-content">
+                    \[
+                        \lim_{x \to 1^{^+}} \dfrac{x + 2}{x - 1} = \dfrac{1 + 2}{1^{^+} - 1} = \dfrac{3}{0^{^+}} = + 
+                    \]
+                </div>
+                <span class="gray">
+                    Sia al numeratore che al denominatore abbiamo quantità positive, quindi la frazione ha segno \(+\)
+                </span>
+            </div>
+            <div class="slide2">
+                <div class="formula" style="width: fit-content">
+                    \[
+                        \lim_{x \to 1^{^+}} \dfrac{x + 2}{x - 1} = \dfrac{1 + 2}{1^{^+} - 1} = \dfrac{3}{0^{^+}} = + 
+                    \]
+                </div>
+                <span class="gray">
+                    Effettuando la divisione di \(3\) per un numero sempre più vicino a \(0\) otteniamo dei risultati sempre 
+                    più grandi, <b>al limite</b> infiniti.
+                </span>
+            </div>
+            <div class="slide2">
+                <div class="formula" style="width: fit-content">
+                    \[
+                        \lim_{x \to 1^{^+}} \dfrac{x + 2}{x - 1} = \dfrac{1 + 2}{1^{^+} - 1} = \dfrac{3}{0^{^+}} = +\infty
+                    \]
+                </div>
+                <span class="gray">
+                    Effettuando la divisione di \(3\) per un numero sempre più vicino a \(0\) otteniamo dei risultati sempre 
+                    più grandi, <b>al limite</b> infiniti.
+                </span>
+            </div>
+        </div>
+        <div style="display: flex; flex-direction:row; justify-content: space-evenly; align-items: center;">
+            <button id="previousSlide-button2" onclick="previousSlide(2)">Indietro</button>
+            <button id="nextSlide-button2" onclick="nextSlide(2)">Avanti</button>
+        </div> 
+
+        <br>
+        <br>
+
+
+        \(\boxed{\boldsymbol{x \to 1^{^-}}}\)
+        <br>
+        <br>
+        
+        <div id="slide-container3" class="slide-container grayBorder">
+            <div class="slide3">
+                <div class="formula" style="width: fit-content">
+                    \[
+                        \lim_{x \to 1^{^-}} \dfrac{x + 2}{x - 1}
+                    \]
+                </div>
+                <span class="gray">
+                
+                </span>
+            </div>
+            <div class="slide3">
+                <div class="formula" style="width: fit-content">
+                    \[
+                        \lim_{x \to 1^{^-}} \dfrac{x + 2}{x - 1}
+                    \]
+                </div>
+                <span class="gray">
+                    Sostituiamo \(1\) al posto di ogni \(x\) che compare nella legge della funzione.
+                    <br>
+                    Solo nel caso in cui il calcolo dia risultato \(0\) sostituiamo \(1^{^-}\)
+                </span>
+            </div>
+            <div class="slide3">
+                <div class="formula" style="width: fit-content">
+                    \[
+                        \lim_{x \to \color{red}{}{1^{^-}}} \dfrac{x + 2}{x - 1}
+                    \]
+                </div>
+                <span class="gray">
+                    Sostituiamo \(1\) al posto di ogni \(x\) che compare nella legge della funzione.
+                    <br>
+                    Solo nel caso in cui il calcolo dia risultato \(0\) sostituiamo \(1^{^-}\)
+                </span>
+            </div>
+            <div class="slide3">
+                <div class="formula" style="width: fit-content">
+                    \[
+                        \lim_{x \to 1^{^-}} \dfrac{\color{red}{}x\color{black}{} + 2}{\color{red}{}x\color{black}{} - 1}
+                    \]
+                </div>
+                <span class="gray">
+                    Sostituiamo \(1\) al posto di ogni \(x\) che compare nella legge della funzione.
+                    <br>
+                    Solo nel caso in cui il calcolo dia risultato \(0\) sostituiamo \(1^{^-}\)
+                </span>
+            </div>
+            <div class="slide3">
+                <div class="formula" style="width: fit-content">
+                    \[
+                        \lim_{x \to 1^{^-}} \dfrac{x + 2}{x - 1} = \dfrac{\color{red}{}1\color{black}{} + 2}{\color{red}{}1^{^-}\color{black}{} - 1}
+                    \]
+                </div>
+                <span class="gray">
+                    Sostituiamo \(1\) al posto di ogni \(x\) che compare nella legge della funzione.
+                    <br>
+                    Solo nel caso in cui il calcolo dia risultato \(0\) sostituiamo \(1^{^-}\)
+                </span>
+            </div>
+            <div class="slide3">
+                <div class="formula" style="width: fit-content">
+                    \[
+                        \lim_{x \to 1^{^-}} \dfrac{x + 2}{x - 1} = \dfrac{1 + 2}{1^{^-} - 1} 
+                    \]
+                </div>
+                <span class="gray">
+                    Al denominatore leggiamo 
+                    \[
+                        1^{^-} - 1
+                    \]
+                    ovvero
+                    <br>
+                    <br>
+                    <div style="width: fit-content; margin: auto; text-align: center;">
+                        <i>
+                            un numero leggermente più grande di \(1\) meno \(1\)
+                        </i>
+                    </div>
+                    Il risultato è <i>un numero leggermente più piccolo di  \(0\)</i>, ovvero \(0^{^+}\)
+                </span>
+            </div>
+            <div class="slide3">
+                <div class="formula" style="width: fit-content">
+                    \[
+                        \lim_{x \to 1^{^-}} \dfrac{x + 2}{x - 1} = \dfrac{1 + 2}{1^{^-} - 1}  = \dfrac{3}{0^{^-}}
+                    \]
+                </div>
+                <span class="gray">
+                    Al denominatore leggiamo 
+                    \[
+                        1^{^-} - 1
+                    \]
+                    ovvero
+                    <br>
+                    <br>
+                    <div style="width: fit-content; margin: auto; text-align: center;">
+                        <i>
+                            un numero leggermente più grande di \(1\) meno \(1\)
+                        </i>
+                    </div>
+                    Il risultato è <i>un numero leggermente più piccolo di  \(0\)</i>, ovvero \(0^{^-}\)
+                </span>
+            </div>        
+            <div class="slide3">
+                <div class="formula" style="width: fit-content">
+                    \[
+                        \lim_{x \to 1^{^-}} \dfrac{x + 2}{x - 1} = \dfrac{1 + 2}{1^{^-} - 1} = \dfrac{3}{0^{^-}} 
+                    \]
+                </div>
+                <span class="gray">
+                    Al numeratore abbiamo una quantità positiva, mentre il denominatore è negativo, quindi la frazione ha segno \(-\)
+                </span>
+            </div>
+            <div class="slide3">
+                <div class="formula" style="width: fit-content">
+                    \[
+                        \lim_{x \to 1^{^-}} \dfrac{x + 2}{x - 1} = \dfrac{1 + 2}{1^{^-} - 1} = \dfrac{3}{0^{^-}} = - 
+                    \]
+                </div>
+                <span class="gray">
+                    Al numeratore abbiamo una quantità positiva, mentre il denominatore è negativo, quindi la frazione ha segno \(-\)
+                </span>
+            </div>
+            <div class="slide3">
+                <div class="formula" style="width: fit-content">
+                    \[
+                        \lim_{x \to 1^{^-}} \dfrac{x + 2}{x - 1} = \dfrac{1 + 2}{1^{^-} - 1} = \dfrac{3}{0^{^-}} = - 
+                    \]
+                </div>
+                <span class="gray">
+                    Effettuando la divisione di \(3\) per un numero sempre più vicino a \(0\) otteniamo dei risultati sempre 
+                    più grandi, <b>al limite</b> infiniti.
+                </span>
+            </div>
+            <div class="slide3">
+                <div class="formula" style="width: fit-content">
+                    \[
+                        \lim_{x \to 1^{^-}} \dfrac{x + 2}{x - 1} = \dfrac{1 + 2}{1^{^-} - 1} = \dfrac{3}{0^{^-}} = -\infty
+                    \]
+                </div>
+                <span class="gray">
+                    Effettuando la divisione di \(3\) per un numero sempre più vicino a \(0\) otteniamo dei risultati sempre 
+                    più grandi, <b>al limite</b> infiniti.
+                </span>
+            </div>
+        </div>
+        <div style="display: flex; flex-direction:row; justify-content: space-evenly; align-items: center;">
+            <button id="previousSlide-button3" onclick="previousSlide(3)">Indietro</button>
+            <button id="nextSlide-button3" onclick="nextSlide(3)">Avanti</button>
+        </div> 
+
+        <br>
+        <br>
+
+        Passiamo al calcolo del limite per \(x \to +\infty\,\,\) e \(\,\,x \to -\infty\)
+
+        <br>
+        <br>
+
+        \(\boxed{\boldsymbol{x \to +\infty}}\)
+        <br>
+        <br>
+        <div id="slide-container4" class="slide-container grayBorder">
+            <div class="slide4">
+                <div class="formula" style="width: fit-content">
+                    \[
+                        \lim_{x \to +\infty} \dfrac{x + 2}{x - 1} 
+                    \]
+                </div>
+            </div>
+            <div class="slide4">
+                <div class="formula" style="width: fit-content">
+                    \[
+                        \lim_{x \to +\infty} \dfrac{x + 2}{x - 1} 
+                    \]
+                </div>
+                <span class="gray">
+                    La quantità \(x\) assume valori sempre più grandi.
+                    <br>
+                    Immaginiamo ad esempio che sia un miliardo di miliardi. 
+                </span>
+            </div>
+            <div class="slide4">
+                <div class="formula" style="width: fit-content">
+                    \[
+                        \lim_{x \to +\infty} \dfrac{x + 2}{x - 1} 
+                    \]
+                </div>
+                <span class="gray">
+                    La quantità \(x\) assume valori sempre più grandi.
+                    <br>
+                    Immaginiamo ad esempio che sia un miliardo di miliardi. 
+                    <br>
+                    Se ad un miliardo di miliardi aggiungiamo \(2\) ...beh, sostanzialmente non gli abbiamo aggiunto 
+                    praticamente nulla. 
+                    <br>
+                    Potremmo dire che \(2\) è <b>trascurabile</b> rispetto alla quantità un miliardo 
+                    di miliardi.                    
+                </span>
+            </div>
+            <div class="slide4">
+                <div class="formula" style="width: fit-content">
+                    \[
+                        \lim_{x \to +\infty} \dfrac{x + 2}{x - 1} 
+                    \]
+                </div>
+                <span class="gray">
+                    La quantità \(x\) assume valori sempre più grandi.
+                    <br>
+                    Immaginiamo ad esempio che sia un miliardo di miliardi. 
+                    <br>
+                    Se ad un miliardo di miliardi aggiungiamo \(2\) ...beh, sostanzialmente non gli abbiamo aggiunto 
+                    praticamente nulla. 
+                    <br>
+                    Potremmo dire che \(2\) è <b>trascurabile</b> rispetto alla quantità un miliardo 
+                    di miliardi.
+                    <br>
+                    Quindi per valori estremamente grandi di \(x\) ci sentiamo autorizzati a "confondere" le quantità \(x + 2\) ed \(x\).
+                    In simboli
+                    \[
+                        x + 2 \approx x
+                    \]
+                </span>
+            </div>
+            <div class="slide4">
+                <div class="formula" style="width: fit-content">
+                    \[
+                        \lim_{x \to +\infty} \dfrac{\color{red}{}x\color{black}{} + 2}{x - 1} 
+                    \]
+                </div>
+                <span class="gray">
+                    La quantità \(x\) assume valori sempre più grandi.
+                    <br>
+                    Immaginiamo ad esempio che sia un miliardo di miliardi. 
+                    <br>
+                    Se ad un miliardo di miliardi aggiungiamo \(2\) ...beh, sostanzialmente non gli abbiamo aggiunto 
+                    praticamente nulla. 
+                    <br>
+                    Potremmo dire che \(2\) è <b>trascurabile</b> rispetto alla quantità un miliardo 
+                    di miliardi.
+                    <br>
+                    Quindi per valori estremamente grandi di \(x\) ci sentiamo autorizzati a "confondere" le quantità \(x + 2\) ed \(x\).
+                    In simboli
+                    \[
+                        x + 2 \approx x
+                    \]
+                </span>
+            </div>
+            <div class="slide4">
+                <div class="formula" style="width: fit-content">
+                    \[
+                        \lim_{x \to +\infty} \dfrac{x + 2}{x - 1} = \lim_{x \to +\infty} \dfrac{\color{red}{}x\color{black}{}}{}
+                    \]
+                </div>
+                <span class="gray">
+                    La quantità \(x\) assume valori sempre più grandi.
+                    <br>
+                    Immaginiamo ad esempio che sia un miliardo di miliardi. 
+                    <br>
+                    Se ad un miliardo di miliardi aggiungiamo \(2\) ...beh, sostanzialmente non gli abbiamo aggiunto 
+                    praticamente nulla. 
+                    <br>
+                    Potremmo dire che \(2\) è <b>trascurabile</b> rispetto alla quantità un miliardo 
+                    di miliardi.
+                    <br>
+                    Quindi per valori estremamente grandi di \(x\) ci sentiamo autorizzati a "confondere" le quantità \(x + 2\) ed \(x\).
+                    In simboli
+                    \[
+                        x + 2 \approx x
+                    \]
+                </span>
+            </div>
+            <div class="slide4">
+                <div class="formula" style="width: fit-content">
+                    \[
+                        \lim_{x \to +\infty} \dfrac{x + 2}{x - 1} = \lim_{x \to +\infty} \dfrac{x}{}
+                    \]
+                </div>
+                <span class="gray">
+                    Lo stesso discorso lo possiamo fare al denominatore.
+                    <br>
+                    Per valori estremamente grandi della \(x\), la quantità \(x - 1\) può essere legittimamente confusa con
+                    \(x\).
+                    <br>
+                    (Se in banca abbiamo un miliardo di miliardi e paghiamo \(1\)&euro; di caffè... il nostro conto è rimasto praticamente 
+                    lo stesso!)
+                </span>
+            </div>
+            <div class="slide4">
+                <div class="formula" style="width: fit-content">
+                    \[
+                        \lim_{x \to +\infty} \dfrac{x + 2}{\color{red}{}x - 1} = \lim_{x \to +\infty} \dfrac{x}{}
+                    \]
+                </div>
+                <span class="gray">
+                    Lo stesso discorso lo possiamo fare al denominatore.
+                    <br>
+                    Per valori estremamente grandi della \(x\), la quantità \(x - 1\) può essere legittimamente confusa con
+                    \(x\).
+                    <br>
+                    (Se in banca abbiamo un miliardo di miliardi e paghiamo \(1\)&euro; di caffè... il nostro conto è rimasto praticamente 
+                    lo stesso!)
+                </span>
+            </div>
+            <div class="slide4">
+                <div class="formula" style="width: fit-content">
+                    \[
+                        \lim_{x \to +\infty} \dfrac{x + 2}{x - 1} = \lim_{x \to +\infty} \dfrac{x}{\color{red}{}x}
+                    \]
+                </div>
+                <span class="gray">
+                    Lo stesso discorso lo possiamo fare al denominatore.
+                    <br>
+                    Per valori estremamente grandi della \(x\), la quantità \(x - 1\) può essere legittimamente confusa con
+                    \(x\).
+                    <br>
+                    (Se in banca abbiamo un miliardo di miliardi e paghiamo \(1\)&euro; di caffè... il nostro conto è rimasto praticamente 
+                    lo stesso!)
+                </span>
+            </div>
+            <div class="slide4">
+                <div class="formula" style="width: fit-content">
+                    \[
+                        \lim_{x \to +\infty} \dfrac{x + 2}{x - 1} = \lim_{x \to +\infty} \dfrac{x}{x}
+                    \]
+                </div>                
+            </div>
+            <div class="slide4">
+                <div class="formula" style="width: fit-content">
+                    \[
+                        \lim_{x \to +\infty} \dfrac{x + 2}{x - 1} = \lim_{x \to +\infty} \dfrac{\cancel{x}}{\cancel{x}}
+                    \]
+                </div>    
+            </div>
+            <div class="slide4">
+                <div class="formula" style="width: fit-content">
+                    \[
+                        \lim_{x \to +\infty} \dfrac{x + 2}{x - 1} = \lim_{x \to +\infty} \dfrac{\cancel{x}}{\cancel{x}} = 1
+                    \]
+                </div>    
+            </div>
+        </div>
+        <div style="display: flex; flex-direction:row; justify-content: space-evenly; align-items: center;">
+            <button id="previousSlide-button4" onclick="previousSlide(4)">Indietro</button>
+            <button id="nextSlide-button4" onclick="nextSlide(4)">Avanti</button>
+        </div> 
+        
+        <br>
+        <br>
+
+        Questo significa che più il valore della \(x\) aumenta più la funzione \(f\) assume valori vicini ad \(1\).
+
+        <br>
+        <br>
+
+        Il conto per \(x \to -\infty\) è del tutto analogo.
+
+        <br>
+        <br>
+
+        \(\boxed{\boldsymbol{x \to -\infty}}\)
+        <br>
+        <br>
+        \[
+            \lim_{x \to -\infty} \dfrac{x + 2}{x - 1} = \lim_{x \to -\infty} \dfrac{x}{x} = 1
+        \]
+        Riassumiamo graficamente il comportamento della funzione in corrispondenza degli estremi del dominio
+        <br>
+        <br>
+        <img src="img/2(1).png" alt="">
+    </div>
+    
+    <br>
+    <br>    
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio 1</h3>
+    <br>
+    <div>
+        Dopo aver determinato il dominio della funzione 
+        \[
+            f(x) = \dfrac{x + 5}{x - 2}
+        \]
+        determinare il comportamento in corrispondenza degli estremi del dominio.
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio 2</h3>
+    <br>
+    <div>
+        Dopo aver determinato il dominio della funzione 
+        \[
+            f(x) = \dfrac{x^2 + 1}{x + 20}
+        \]
+        determinare il comportamento in corrispondenza degli estremi del dominio.
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+    
+
+    <h3 class="green">Esercizio 3</h3>
+    <br>
+    <div>
+        Dopo aver determinato il dominio della funzione 
+        \[
+            f(x) = \dfrac{x}{x^2 - 1}
+        \]
+        determinare il comportamento in corrispondenza degli estremi del dominio.
+    </div>
+    
+    <br>
+    <br>
+
+    <script src="../../js/hintAndSlide.js"></script>
+
+</body>
