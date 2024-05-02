@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js"></script> 
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>Compiti per casa</title>
+</head>
+<body>
+    <h1>Compiti per casa</h1>
+    
+    <br>
+
+    <!-- ESERCIZI -->
+
+    
+    <h3 class="green">Esercizio 1</h3>
+    <br>
+    <div>
+        Dopo aver determinato il dominio della funzione 
+        \[
+            f(x) = 3\,ln(x^2 - 4)
+        \]
+        determinare il comportamento in corrispondenza degli estremi del dominio.
+    </div>
+
+    <br>
+    <br>
+
+    <b class="gray">Suggerimento</b>
+    <br>
+    <div class="gray">
+        Per svolgere quest'esercizio è indispensabile ricordare due limiti, che conosciamo 
+        dal grafico del logaritmo.
+        <br>
+        Il primo è
+        \[
+            {\color{blue}{}\lim_{x \to 0^{+}} ln(x) = -\infty }
+        \]
+        In termini pratici, se nel calcolo di un limite incontriamo \(ln(0^{+})\) il risultato è \(-\infty\).
+        <br>
+        <br>
+        <b><i>Esempio</i></b>
+        <br>
+        <div class="grayBorder">
+            <div class="formula">
+                \[
+                    \lim_{x \to 2^{+}} ln(x - 2) = ln(2^{+} - 2) = ln(0^{+}) = -\infty
+                \]
+            </div>
+        </div>
+        
+        <br>
+        <br>
+        
+        Il secondo limite da ricordare è
+        \[
+            {\color{blue}{}\lim_{x \to +\infty} ln(x) = +\infty}
+        \]
+        Se nel calcolo di un limite incontriamo \(ln(+\infty)\) il risultato è \(+\infty\).
+        <br>
+        <br>
+        <b><i>Esempio</i></b>
+        <br>
+        <div class="grayBorder">
+            <div class="formula">
+                \[
+                    \lim_{x \to +\infty} ln\left(3x^2 + x + 1\right) = 
+                    \lim_{x \to +\infty}ln\left(3x^2\right) = 
+                    \lim_{x \to +\infty}ln\left(+\infty\right) = +\infty
+                \]
+            </div>
+        </div>
+
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio 2</h3>
+    <br>
+    <div>
+        Dopo aver determinato il dominio della funzione 
+        \[
+            f(x) = e^{\frac{2x - 1}{x - 1}}
+        \]
+        determinare il comportamento in corrispondenza degli estremi del dominio.
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+    
+
+    
+    <br>
+    <br>
+
+    <script src="../../js/hintAndSlide.js"></script>
+
+</body>
