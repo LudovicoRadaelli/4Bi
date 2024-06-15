@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js"></script> 
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Compiti per casa</title>
+</head>
+<style>
+    #esempiSelector-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    select {
+        display: block;
+        padding: auto; 
+        margin-right: 1rem;
+    }
+
+    #ex-button {
+        margin-left: 1rem;
+        margin-right: 0;
+    }
+
+</style>
+<body>
+    <h1>Programma recupero</h1>
+    
+    <br>    
+
+    <h2 class="green">Funzioni</h2>    
+    <div class="grayBorder">
+        <ul>
+            <li>
+                Introduzione del concetto di funzione attraverso esempi tratti dal reale
+            </li>
+            <br>
+            <li>
+                Rappresentazione grafica di una funzione sul grafico cartesiano
+            </li>
+            <br>
+            <li>
+                Notazione insiemistica per gli insiemi: intervalli ed unione di intervalli.
+            </li>
+            <br>
+            <li>
+                Dominio di una funzione
+            </li>
+            <br>
+            <li>
+                Segno di una una funzione
+            </li>
+            <br>
+            <br>
+            <br>
+            <b>Link per il ripasso</b>
+            <br>
+            <br>
+            <div id="esempiSelector-container">
+                <select id="ex1">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                  </select>
+                  <button id="ex1-button" onclick="vai(1)">Seleziona esercizio</button>
+            </div>
+    
+        </ul>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <h2 class="green">Limiti</h2>    
+    <div class="grayBorder">
+        <ul>
+            <li>
+                Introduzione euristica al concetto di limite
+            </li>
+            <br>
+            <li>
+                Stima del limite tramite tabella dei valori assunti dalla funzione
+            </li>
+            <br>
+            <li>
+                Stima del limite a partire dal grafico di una funzione
+    
+    
+    
+            </li>
+            <br>
+            <li>
+                Calcolo dei limiti tramite sostituzione            
+            </li>
+            <br>
+            <li>
+                Discussione di limiti del tipo \(\dfrac{L}{0}\), con \(L \neq 0\)
+            </li>
+            <br>
+            <li>
+                Determinazione di forme indeterminate del tipo \(\dfrac{\infty}{\infty}\): gerarchia degli infiniti
+            </li>
+            <br>
+            <br>            
+            <br>
+            <b>Link per il ripasso</b>
+            <br>
+            <br>
+            <div id="esempiSelector-container">
+                <select id="ex2">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>                
+                  </select>
+                  <button id="ex2-button" onclick="vai(2)">Seleziona esercizio</button>
+            </div>
+    
+        </ul>
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+
+
+<script>
+    function vai(n) {
+        let ex = document.getElementById(`ex${n}`).options;
+        let i = document.getElementById(`ex${n}`).selectedIndex;
+        console.log(`ex${n}[i]: ${ex[i].index}`)
+        
+        if(n === 1) {        
+            if(i < 3) {
+                document.location.href=`https://ludovicoradaelli.github.io/4Bi/esercizi/1funzioni/${ex[i].index + 1}.html`;
+            } else {
+                document.location.href=`https://ludovicoradaelli.github.io/4Bi/esercizi/4funzioni/${ex[i].index + 1 - 3}.html`;
+            }
+        }
+
+        if(n === 2) {                 
+            document.location.href=`https://ludovicoradaelli.github.io/4Bi/esercizi/5limiti/${ex[i].index + 1}.html`;            
+        }
+}
+</script>
+
+
+
+    
+</body>
