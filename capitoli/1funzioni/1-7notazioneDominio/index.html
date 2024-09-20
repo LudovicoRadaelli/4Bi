@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="https://www.geogebra.org/apps/deployggb.js"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="stylesheet" href="../../../css/style.css">
+    <title id="titleTag"></title>
+</head>
+
+<body>
+        <br>
+        <div id="chapterNumber" style="display: none;">1</div>
+        <div id="paragraphTitle" style="display: none;">Notazione per il dominio</div>
+        
+        <div class="gray"> 
+            <div class="homeIconContainer">
+                <a href="../../indiceMateriale.html"><img class="homeIcon" src="../../../css/img/home.png"></a>
+            </div>
+            
+            <code><b id="bTagTitoloCapitolo"></b></code> 
+            <br>
+            <div class="select">
+                <div class="selected-option"><code><b id="bTagTitoloParagrafo"></b></code></div>
+                <div class="dropdown">
+                    <!-- Vengono inseriti i tag a sfruttando il file JSON -->
+                </div>
+            </div>
+        
+            
+            
+        </div>
+
+        <br>
+
+        <nav class="navigationBar">
+            <div onclick="changeParagraph(`previous`)" class="item prev">
+                <img class="icon" src="../../../css/img/leftArrow.png">
+            </div>
+            <div class="item explanationButton">
+                <div onclick="showExplanation()"><img class="icon" src="../../../css/img/presentation.png"></div>
+            </div>
+            <div class="item exerciseButton">
+                <div onclick="showExercise()"><img class="icon" src="../../../css/img/homework.png"></div>
+            </div>
+            <div onclick="changeParagraph(`next`)" class="item next">
+                <img class="icon" src="../../../css/img/rightArrow.png">
+            </div>
+        </nav>
+
+        <br>
+
+    
+
+        <section class="explanation">
+    
+            <div class="h3">
+                <span class="sub-par" id="paragraphCircledNumber"></span>
+                <h3 id="h3ParagraphTitle"></h3>
+            </div>
+            
+            <br>
+
+            <div>
+                <h3 class="blue">Introduzione</h3>
+                <br>
+                Negli esempi che abbiamo visto fino a questo momento il dominio è stato sempre espresso a parole.
+                <br>
+                <br>
+                <h3 class="yellow">Esempio</h3>                
+                <div class="esempi-container">
+                    Consideriamo la funzione 
+                    \[
+                        f(x) = \dfrac{\sqrt{2 - x}}{x}
+                    \]
+                    Il suo dominio (provate ad individuarlo!) è costitutito da
+                    <br>
+                    <br>
+                    <div class="grayBorder" style="width: 90%; margin: auto;">
+                        <i>l'insieme dei valori minori o uguali di \(2\) ma diversi da \(0\)</i>
+                    </div>
+                    <br>
+                    Possiamo dire la stessa cosa in un altro modo equivalente:
+                    <br>
+                    <br>
+                    <div class="grayBorder" style="width: 90%; margin: auto;">
+                        <i>Il dominio di \(f\) è l'insieme dei valori 
+                        <div style="text-align: center;">
+                            \(x \lt 0\,\,\) oppure \(\,\,0 \lt x \leq 2\)</i>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                L'obiettivo di questo paragrafo è introdurre una scrittura simbolica semplice ed efficace per indicare il dominio di una funzione.
+            </div>
+
+            <br>
+            <br>
+            <hr>
+            <br>
+            <br>
+
+            <h3 class="blue">Intervalli</h3>
+            <br>
+            Diamo la seguente definizione:
+            <br>
+            <br>
+            <div class="grayBorder">
+                Si definisce <b>intervallo</b> l'insieme dei numeri reali compresi tra due estremi.
+                <br>
+                Tali estremi possono essere compresi o meno nell'insieme.
+            </div>
+            <br>
+            Vediamo alcuni esempi di intervalli.
+            <br>
+            <br>
+
+            <h3 class="yellow">Esempio 1</h3>
+            <div class="esempi-container">
+                Consideriamo l'intervallo \(D\) formato da tutti i valori compresi tra \(2\) e \(5\), estremi <u>inclusi</u>. 
+                <br>
+                <br>
+                Possiamo rappresentare l'insieme \(D\) sulla retta reale evidenziando tutta la zona delimitata dai numeri \(2\) e \(5\).
+                <br>
+                Per convenzione, disegnamo dei pallini <u>pieni</u> in corrispondenza di questi due numeri, perché fanno parte dell'intervallo.
+                <br>
+                <br>
+                <img src="img/intervallo(1).png">
+                <br>
+                L'insieme \(D\) viene indicato attraverso la seguente scrittura simbolica
+                \[
+                    D = \left[2\,;\,\,5\right]
+                \]
+                Quando vengono usate le parentesi <u>quadrate</u>, si vuole indicare che gli estremi fanno parte dell'intervallo.
+            </div>
+            <br>
+            <br>
+
+            <h3 class="yellow">Esempio 2</h3>
+            <div class="esempi-container">
+                Consideriamo l'intervallo \(E\) formato da tutti i valori compresi tra \(-3\) e \(1\), estremi <u>esclusi</u>. 
+                <br>
+                <br>
+                Possiamo rappresentare l'insieme \(E\) sulla retta reale evidenziando tutta la zona delimitata dai numeri \(-3\) e \(1\).
+                <br>
+                Per convenzione, disegnamo dei pallini <u>vuoti</u> in corrispondenza di questi due numeri, perché non fanno parte dell'intervallo.
+                <br>
+                <br>
+                <img src="img/intervallo(2).png">
+                <br>
+                L'insieme \(E\) viene indicato attraverso la seguente scrittura simbolica
+                \[
+                    E = \left(2\,;\,\,5\right)
+                \]
+                Quando vengono usate le parentesi <u>tonde</u>, si vuole indicare che gli estremi non fanno parte dell'intervallo.
+            </div>
+            <br>
+            <br>
+
+            <h3 class="yellow">Esempio 3</h3>
+            <div class="esempi-container">
+                Consideriamo l'intervallo \(F\) formato da tutti i valori compresi tra \(-\dfrac{5}{2}\) e \(0\), con \(-\dfrac{5}{2}\) <u>incluso</u> e \(0\) <u>escluso</u>. 
+                <br>
+                <br>
+                Possiamo rappresentare l'insieme \(F\) sulla retta reale evidenziando tutta la zona delimitata dai numeri \(-\dfrac{5}{2}\) e \(0\).
+                <br>
+                Disegnamo 
+                <br>
+                <br>
+                <ul>
+                    <li>
+                        un pallino <u>pieno</u> in corrispondenza di \(\dfrac{5}{2}\), perché fa parte dell'intervallo, 
+                    </li>
+                    <br>
+                    <li>
+                        un pallino <u>vuoto</u> in corrispondenza di \(0\), perché non fa parte dell'intervallo, 
+                    </li>
+                </ul>
+                <br>
+                <br>
+                <img src="img/intervallo(3).png">
+                <br>
+                L'insieme \(F\) viene indicato attraverso la seguente scrittura simbolica
+                \[
+                    F = \Big[-\dfrac{5}{2}\,;\,\,0\Big)
+                \]
+                In questo caso 
+                <br>
+                <br>
+                <ul>
+                    <li>
+                        usiamo la partentesi quadra per l'estremo \(\dfrac{5}{2}\) perché fa parte dell'intervallo, 
+                    </li>
+                    <br>
+                    <li>
+                        usiamo la partentesi tonda per l'estremo \(0\) perché non fa parte dell'intervallo, 
+                    </li>
+                </ul>
+            </div>
+            <br>
+            <br>
+
+            <h3 class="yellow">Esempio 4</h3>
+            <div class="esempi-container">
+                Consideriamo l'intervallo \(G\) formato da tutti i valori compresi tra \(\frac{1}{3}\) e \(\frac{1}{2}\), con \(\frac{1}{3}\) <u>escluso</u> e \(\frac{1}{2}\) <u>incluso</u>. 
+                <br>
+                <br>
+                Possiamo rappresentare l'insieme \(G\) sulla retta reale evidenziando tutta la zona delimitata dai numeri \(\frac{1}{3}\) e \(\frac{1}{2}\).
+                <br>
+                Disegnamo 
+                <br>
+                <br>
+                <ul>
+                    <li>
+                        un pallino <u>vuoto</u> in corrispondenza di \(\frac{1}{3}\), perché non fa parte dell'intervallo, 
+                    </li>
+                    <br>
+                    <li>
+                        un pallino <u>pieno</u> in corrispondenza di \(\frac{1}{2}\), perché non fa parte dell'intervallo, 
+                    </li>
+                </ul>
+                <br>
+                <br>
+                <img src="img/intervallo(4).png">
+                <br>
+                L'insieme \(F\) viene indicato attraverso la seguente scrittura simbolica
+                \[
+                    F = \Big(\dfrac{1}{3}\,;\,\,\dfrac{1}{2}\Big]
+                \]
+                In questo caso 
+                <br>
+                <br>
+                <ul>
+                    <li>
+                        usiamo la partentesi tonda per l'estremo \(\frac{1}{3}\) perché non fa parte dell'intervallo, 
+                    </li>
+                    <br>
+                    <li>
+                        usiamo la partentesi quadra per l'estremo \(\frac{1}{2}\) perché fa parte dell'intervallo, 
+                    </li>
+                </ul>
+            </div>
+            <br>
+            <br>
+
+            <h3 class="yellow">Esempio 5</h3>
+            <div class="esempi-container">
+                Consideriamo l'intervallo \(H\) formato da tutti i valori più piccoli o uguali di \(5\). 
+                <br>
+                <br>
+                Possiamo rappresentare l'insieme \(H\) sulla retta reale evidenziando tutta la zona precedente \(5\).
+                <br>
+                <br>
+                <img src="img/intervallo(5).png">
+                <br>
+                L'insieme \(H\) viene indicato attraverso la seguente scrittura simbolica
+                \[
+                    H = \Big(-\infty\,;\,\,5\Big]
+                \]
+                Il simbolo "\(-\infty\)" viene impiegato per indicare che non c'è un limite inferiore.
+            </div>
+            <br>
+            <br>
+
+            <h3 class="yellow">Generatore automatico di esempi</h3>
+            <div id="generatoreEsempi" class="esempi-container">
+                Consideriamo l'intervallo formato da <span id="estremi">tutti i valori compresi tra \(-2\) e 
+                \(3\)</span><span id="inclusioneEstremi">, estremi inclusi</span>.
+                <br>
+                <br>
+                La sua <b>rappresentazione grafica</b> è 
+                <br>
+                <br>
+                <div class="geogebra-container">
+                    <div id="geogebra1"></div>
+                </div>
+                <br>
+                La sua <b>scrittura simbolica</b> è 
+                <div id="scritturaSimbolica">
+                    \[
+                        D = \Big[-2\,;\,\,3\Big]
+                    \]
+                </div>
+                <br>
+                <button id="generaEsempio-button" onclick="generaEsempio()">Genera un alto esempio</button>
+            </div>
+
+            <br>
+            <br>
+            <hr>
+            <br>
+            <br>
+
+            <h3 class="blue">Scrivere il dominio tramite intervalli</h3>
+            <br>
+            <br>
+            <h3 class="yellow">Esempio 1</h3>
+            <div class="esempi-container">
+                Consideriamo una funzione \(f\) il cui dominio \(D\) sia costituito da tutti i valori
+                <br>
+                <br>
+                <div style="text-align: center;">
+                    \(x \geq 2\,\,\) diversi da \(5\)
+                </div>
+                <br>
+                Graficamente possiamo rappresentare questo insieme evidenziando tutta la zona della retta reale successiva
+                a \(2\) e disegnando un pallino vuoto in corrispondenza di \(5\), ad indicare che tale valore non appartiene 
+                all'insieme.
+                <br>
+                <br>
+                <img src="img/dominio(1).png" alt="">
+                <br>
+                Scriviamo il dominio \(D\) come <b>unione</b> di due intevalli:
+                \[
+                    D = \Big[2\,;\,\,5\Big) \cup \Big(2\,;\,\,+\infty\Big)
+                \]
+                Il simbolo "\(\cup\)" significa "unione" ed indica che i valori che costituiscono l'insieme \(D\) sono 
+                tutti quelli che appratengono a \(\Big[2\,;\,\,5\Big)\) <u>oppure</u> a \(\Big(5\,;\,\,+\infty\Big)\).
+                <br>
+                Notate che così scrivendo il valore \(5\) non è incluso nell'insieme \(D\).
+            </div>
+
+            <br>
+            <br>
+            <h3 class="yellow">Esempio 2</h3>
+            <div class="esempi-container">
+                Consideriamo una funzione \(f\) il cui dominio \(D\) sia costituito da tutti i valori
+                <br>
+                <br>
+                <div style="text-align: center;">
+                    \( -8 \lt x \leq -\dfrac{6}{5}\,\,\) oppure \( 0 \leq x \lt 2\)
+                </div>
+                <br>
+                Graficamente possiamo rappresentare questo insieme evidenziando tutta la zona della retta reale compresa tra 
+                \(-8\) e \(-\dfrac{6}{5}\) e quella compresa tra \(0\) e \(2\), disegnando pallini vuoti in corrispondenza di 
+                \(-8\) e \(2\), ad indicare che tali valori non apparengono all'insieme \(D\).
+                <br>
+                <br>
+                <img src="img/dominio(2).png" alt="">
+                <br>
+                Scriviamo il dominio \(D\) come <b>unione</b> di due intevalli:
+                \[
+                    D = \Big(-8\,;\,\,-\dfrac{6}{5}\Big) \cup \Big[0\,;\,\,2\Big)
+                \]
+            </div>
+
+            <br>
+            <br>
+            <h3 class="yellow">Esempio 3</h3>
+            <div class="esempi-container">
+                Consideriamo la funzione 
+                \[
+                    f(x) = ln(-x +7) + \sqrt{x -2}
+                \]
+                Determiniamo il suo dominio.
+                <br>
+                Nella definizione di \(f\) sono presenti due operazioni pericolose:
+                <br>
+                <br>
+                <ul>
+                    <li>
+                        il logaritmo
+                        \[
+                            f(x) = \color{red}{}ln(\color{black}{}-x +7\color{red}{})\color{black}{} + \sqrt{x -2}
+                        \]
+                        Perché sia definito poniamo il suo argomento maggiore di \(0\):
+                        \[
+                            \begin{align*}
+                                \color{red}{}-x +7 \color{black}{} \gt 0 &\Longrightarrow -x \gt -7
+                                \\\\
+                                &\Longrightarrow x \lt 7
+                            \end{align*}
+                        \]
+                        Quindi l'operazione \(ln(-x +7)\) è definita se \(x\) assume valori nell'intervallo 
+                        \[
+                            \color{blue}{}A \color{black}{} :=  \color{blue}{}\Big(-\infty\,;\,\,7\Big)
+                        \]
+                    </li>
+                    <li>
+                        la radice quadrata: 
+                        \[
+                            f(x) = ln(-x -7) + \color{red}{}\sqrt{\color{black}{}x -2\color{red}{}}\color{black}{}
+                        \]
+                        Perché sia definita poniamo il suo argomento maggiore o uguale di \(0\):
+                        \[
+                            \color{red}{}x - 2 \color{black}{} \geq 0 \Longrightarrow x \geq 2
+                        \]
+                        Quindi l'operazione \(\sqrt{x -2}\) è definita se \(x\) assume valori nell'intervallo 
+                        \[
+                        \color{rgb(0,153,255)}{}B\color{black}{} := \color{rgb(0,153,255)}{}\Big[2\,;\,\,+\infty\Big)
+                        \]
+                    </li>
+                </ul>
+                Perché la funzione sia definita \(x\) deve appartenere <u>sia</u> all'intervallo \(\color{blue}{}A\), <u>sia</u> all'intervallo \(\color{rgb(0,153,255)}{}B\).
+                <br>
+                In altre parole il dominio è l'<b>intersezione</b> tra \(\color{blue}{}A\) e \(\color{rgb(0,153,255)}{}B\), ovvero l'insieme dei valori in comune
+                tra \(\color{blue}{}A\) e \(\color{rgb(0,153,255)}{}B\).
+                \[
+                    D = \Big[2\,;\,\,7\Big)
+                \]
+                <img src="img/dominio(3).png" alt="">
+            </div>
+
+
+
+         </section>
+
+        <section class="exercise">
+            <div class="h3">
+                <span class="sub-par" id="exParagraphNumber"></span>
+                <h3>Esercizi</h3>
+            </div>
+            <br>
+
+            <!-- Esercizi -->
+
+            
+
+            <h3 class="questionTitle">Domanda 1</h3>
+
+            <div class="questionBox">
+                <p class="question">
+
+                    Stabilire quali tra le seguenti scritture indica l'intervallo in figura
+                    <br>
+                    <br>
+                    <img src="img/dominio(4).png" style="border: 0">                
+                    </p>
+                    <br>
+                    
+                    <div class="option">
+                        <input type="radio" name="domanda1" class="radioButton" value="1" onclick="enableSubmit(1)">   
+                        <div class="optionText">
+                            \(\Big(-\dfrac{7}{2}\,;\,\,3\Big]\)
+                        </div>
+                    </div>
+                    <br>
+                    
+                    <div class="option">
+                        <input type="radio" name="domanda1" class="radioButton" value="2" onclick="enableSubmit(1)">   
+                        <div class="optionText">
+                            \(\Big(-\dfrac{2}{7}\,;\,\,3\Big]\)
+                        </div>
+                    </div>
+                    <br>
+                    
+                    <div class="option">
+                        <input type="radio" name="domanda1" class="radioButton" value="3" onclick="enableSubmit(1)">   
+                        <div class="optionText">
+                            \(\Big(-\dfrac{7}{2}\,;\,\,3\Big)\)
+                        </div>
+                    </div>
+                    <br>
+                    
+                    <div class="option">
+                        <input type="radio" name="domanda1" class="radioButton" value="4" onclick="enableSubmit(1)">   
+                        <div class="optionText">
+                            \(\Big(-\dfrac{2}{7}\,;\,\,3\Big)\)
+                        </div>
+                    </div>
+                    <br>
+                    
+                    <div class="option">
+                        <input type="radio" name="domanda1" class="radioButton" value="5" onclick="enableSubmit(1)">   
+                        <div class="optionText">
+                            Nessuna delle precedenti.
+                        </div>
+                    </div>   
+                    <div class="whyAnswerIsWrong"></div>
+                    <div class="numberOfTries">1/2 tentativi disponibili</div>
+            
+                    <u class="showAnswer" onclick="showAnswer(1)">Mostra la risposta</u>
+            
+                    <button type="button" class="submit" onclick="checkAnswer(1, 'rispostaUnica', [1], [], 2)" disabled>Invia risposta</button>
+            
+                    <div class="answerContainer">
+                        <br>
+                        <b>Soluzione:</b>
+                        <br>
+                        L'estremo sinistro dell'intervallo è \(-\dfrac{7}{2} = -3.5\) e non ne fa parte, in quanto 
+                        indicato dal pallino vuoto.
+                        <br>
+                        L'estremo destro destro è \(3\) ed è compreso, poiché indicato dal pallino pieno.
+                        <br>
+                        Di conseguenza l'intervallo rappresentato in figura è
+                        \[
+                            \Big(-\dfrac{7}{2}\,;\,\,3\Big]
+                        \]
+
+                        <br>
+            
+                    </div>
+                            
+                </div>
+
+            
+                <br>
+                <br>
+            
+                <h3 class="questionTitle">Domanda 2</h3>
+            
+                <div class="questionBox">
+                    <p class="question">
+            
+                        Tra le seguenti, selezionare tutte opzioni che rappresentano lo stesso intervallo
+                    </p>
+                    <br>
+                    
+                    <div class="option">
+                        <input type="checkbox" name="domanda2" class="checkboxButton" value="1" onclick="enableSubmit(2)">
+                        <div class="optionText">
+                            L'insieme dei valori 
+                            <div style="text-align: center">
+                            \(x \lt -2\,\) oppure \(0 \leq x \lt 3\)
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    
+                    <div class="option">
+                        <input type="checkbox" name="domanda2" class="checkboxButton" value="2" onclick="enableSubmit(2)">
+                        <div class="optionText">
+                            L'insieme dei valori 
+                            <div style="text-align: center">
+                            \(x \leq -2\,\) oppure \(0 \leq x \leq 3\)
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    
+                    <div class="option">
+                        <input type="checkbox" name="domanda2" class="checkboxButton" value="3" onclick="enableSubmit(2)">
+                        <div class="optionText">
+                            <img src="img/dominio(5).png">
+                        </div>
+                    </div>
+                    <br>
+                    
+                    <div class="option">
+                        <input type="checkbox" name="domanda2" class="checkboxButton" value="4" onclick="enableSubmit(2)">
+                        <div class="optionText">
+                            <img src="img/dominio(6).png">
+                        </div>
+                    </div>
+                    <br>
+                    
+                    <div class="option">
+                        <input type="checkbox" name="domanda2" class="checkboxButton" value="5" onclick="enableSubmit(2)">
+                        <div class="optionText">
+                            \(\Big(-\infty\,;\,\,-2\Big] \cup \Big[0\,;\,\,3\Big)\)
+                        </div>
+                    </div>
+                    <br>
+                    
+                    <div class="option">
+                        <input type="checkbox" name="domanda2" class="checkboxButton" value="6" onclick="enableSubmit(2)">
+                        <div class="optionText">
+                            \(\Big(-\infty\,;\,\,-2\Big) \cup \Big[0\,;\,\,3\Big)\)
+                        </div>
+                    </div>   
+                    <div class="whyAnswerIsWrong"></div>
+                    <div class="numberOfTries">1/2 tentativi disponibili</div>
+            
+                    <u class="showAnswer" onclick="showAnswer(2)">Mostra la risposta</u>
+            
+                    <button type="button" class="submit" onclick="checkAnswer(2, 'rispostaMultipla', [1,3,6,], [], 4)" disabled>Invia risposta</button>
+            
+                    <div class="answerContainer">
+                        
+                        <br>
+                        <b>Soluzione:</b>
+                        <br>
+                        La prima, terza e sesta opzione rappresentano lo stesso intervallo rispettivamente tramite 
+                        <br>
+                        <br>
+                        <i>liguaggio testuale</i>
+                        <br>
+                        <div class="grayBorder">
+                            L'insieme dei valori 
+                            <div style="text-align: center">
+                            \(x \lt -2\,\) oppure \(0 \leq x \lt 3\)
+                            </div>
+                        </div>
+
+                        <br>
+                        <br>
+                        <i>liguaggio grafico</i>
+                        <br>
+                        <img  class="grayBorder" src="img/dominio(5).png" alt="">
+
+                        <br>
+                        <br>
+
+                        <i>liguaggio simbolico</i>
+                        <br>
+                        <div class="grayBorder">
+                            \(\Big(-\infty\,;\,\,-2\Big) \cup \Big[0\,;\,\,3\Big)\)
+                        </div>
+                        <br>
+            
+                    </div>
+                
+                </div>
+
+                
+                <br>
+                <br>
+            
+                <h3 class="questionTitle">Domanda 3</h3>
+            
+                <div class="questionBox">
+                    <p class="question">
+            
+                        Stabilire quali tra i seguenti insiemi è l'unione degli intervalli
+                        <div style="text-align: center">
+                        \(A:= \Big(-2 \,;\,\,7\Big)\,\,\) e \(\,\,B:= \Big(-1 \,;\,\,9\Big)\)
+                        </div>                
+                    </p>
+                    <br>
+                    
+                    <div class="option">
+                        <input type="radio" name="domanda3" class="radioButton" value="1" onclick="enableSubmit(3)">   
+                        <div class="optionText">
+                            \(A \cup B = \Big(-2 \,;\,\,7\Big)\)
+
+                        </div>
+                    </div>
+                    <br>
+                    
+                    <div class="option">
+                        <input type="radio" name="domanda3" class="radioButton" value="2" onclick="enableSubmit(3)">   
+                        <div class="optionText">
+                            \(A \cup B = \Big(-1 \,;\,\,9\Big)\)
+
+                        </div>
+                    </div>
+                    <br>
+                    
+                    <div class="option">
+                        <input type="radio" name="domanda3" class="radioButton" value="3" onclick="enableSubmit(3)">   
+                        <div class="optionText">
+                            \(A \cup B = \Big(-2 \,;\,\,-1\Big)\)
+                        </div>
+                    </div>
+                    <br>
+                    
+                    <div class="option">
+                        <input type="radio" name="domanda3" class="radioButton" value="4" onclick="enableSubmit(3)">   
+                        <div class="optionText">
+                            Nessuno dei precedenti insiemi.
+                        </div>
+                    </div>   
+                    <div class="whyAnswerIsWrong"></div>
+                    <div class="numberOfTries">1/2 tentativi disponibili</div>
+            
+                    <u class="showAnswer" onclick="showAnswer(3)">Mostra la risposta</u>
+            
+                    <button type="button" class="submit" onclick="checkAnswer(3, 'rispostaUnica', [4], [], 2)" disabled>Invia risposta</button>
+            
+                    <div class="answerContainer">
+                        <br>
+                        <b>Soluzione:</b>
+                        <br>
+                        Nessuno degli insiemi indicati nelle prime quattro opzioni rappresenta \(A \cup B\).
+                        <br>
+                        <br>
+                        Rappresentiamo graficamente \(\color{blue}{}A\) e \(\color{rgb(0,153,255)}{B}\) per avere più chiara la situazione
+                        <br>
+                        <br>
+                        <img src="img/dominio(7).png">
+                        <br>
+                        Prendendo tutti gli elementi contenuti in \(\color{blue}{}A\) ed in \(\color{rgb(0,153,255)}{B}\) otteniamo l'intervallo
+                        \[
+                            \color{blue}{}A\color{black}{}\cup \color{rgb(0,153, 255)}{}B\color{black}{} = \Big(-2 \,;\,\,9\Big)
+                        \]
+            
+                    </div>
+                
+                </div>
+
+                
+                <br>
+                <br>
+            
+                <h3 class="questionTitle">Domanda 4</h3>
+            
+                <div class="questionBox">
+                    <p class="question">
+            
+                        Dati gli insiemi
+                        \[
+                        A = \Big(-2\,;\,\,0\Big] \cup \Big[3\,;\,\,+\infty\Big) 
+                        \]
+                        \[
+                        B = \Big(-\infty\,;\,\,-1\Big] \cup \Big[\dfrac{1}{2}\,;\,\,+\infty\Big)
+                        \]
+                        stabilire quali tra le seguenti opzioni rappresenta l'intersezione \(A \cap B\), ovvero l'insieme 
+                        costituito da tutti gli elementi che appartengono <u>sia</u> ad \(A\), <u>sia</u> a \(B\).
+                    </p>
+                    <br>
+                    
+                    <div class="option">
+                        <input type="radio" name="domanda4" class="radioButton" value="1" onclick="enableSubmit(4)">   
+                        <div class="optionText">
+                            Gli insiemi \(A\) e \(B\) non hanno elementi in comune.
+                            <br>
+                            In questo caso si dice che \(A \cap B\) è l'insieme vuoto e si rappresenta simbolicamente in questo modo
+                            \[
+                            A \cap B = \emptyset
+                            \]
+                        </div>
+                    </div>
+                    <br>
+                    
+                    <div class="option">
+                        <input type="radio" name="domanda4" class="radioButton" value="2" onclick="enableSubmit(4)">   
+                        <div class="optionText">
+                            \(\Big(-2\,;\,\,0\Big] \cup \Big[3\,;\,\,+\infty\Big)\)
+                        </div>
+                    </div>
+                    <br>
+                    
+                    <div class="option">
+                        <input type="radio" name="domanda4" class="radioButton" value="3" onclick="enableSubmit(4)">   
+                        <div class="optionText">
+                            \(\Big(-\infty\,;\,\,-2\Big] \cup \Big[3\,;\,\,+\infty\Big)\)
+                        </div>
+                    </div>
+                    <br>
+                    
+                    <div class="option">
+                        <input type="radio" name="domanda4" class="radioButton" value="4" onclick="enableSubmit(4)">   
+                        <div class="optionText">
+                            \(\Big(-2\,;\,\,-1\Big] \cup \Big[3\,;\,\,+\infty\Big) \)
+                        </div>
+                    </div>
+                    <br>
+                    
+                    <div class="option">
+                        <input type="radio" name="domanda4" class="radioButton" value="5" onclick="enableSubmit(4)">   
+                        <div class="optionText">
+                            \(\Big(-\infty\,;\,\,-1\Big] \cup \Big[3\,;\,\,+\infty\Big) \)
+                        </div>
+                    </div>   
+                    <div class="whyAnswerIsWrong"></div>
+                    <div class="numberOfTries">1/2 tentativi disponibili</div>
+            
+                    <u class="showAnswer" onclick="showAnswer(4)">Mostra la risposta</u>
+            
+                    <button type="button" class="submit" onclick="checkAnswer(4, 'rispostaUnica', [4], [], 3)" disabled>Invia risposta</button>
+            
+                    <div class="answerContainer">
+                        <br>
+                        <b>Soluzione:</b>
+                        <br>
+                        Rappresentiamo graficamente l'insieme \(\color{blue}{}A\) e \(\color{rgb(0, 153, 255)}{}B\)
+                        <br>
+                        <br>
+                        <img src="img/dominio(8).png" style="border: 0;">
+                        <br>
+                        Prendendo le parti in comune (quelle sovrapposte, per intenderci) otteniamo il seguente insieme
+                        <br>
+                        <br>
+                        <img src="img/dominio(9).png" style="border: 0;">
+                        <br>
+                        che in linguaggio simbolico si scrive 
+                        \[
+                            \Big(-2\,;\,\,-1\Big] \cup \Big[3\,;\,\,+\infty\Big)
+                        \]
+            
+                    </div>
+                
+                </div>
+                
+            </section>
+    
+
+
+    <script>
+        var ggbApp1 = new GGBApplet(
+            {
+                "appName": "classic", 
+                "id": "gg1",
+                "showToolBar": false, 
+                "showAlgebraInput": false, 
+                "showMenuBar": false, 
+                "enableShiftDragZoom": false,
+                "scaleContainerClass":"geogebra-container",
+                "filename":"img/intervallo.ggb"
+            }, 
+            true
+        );
+
+        window.addEventListener("load", function() { 
+            ggbApp1.inject('geogebra1');
+        });
+
+        function generaEsempio() {
+            
+            let typeList = ["limited", "limited", "limited", "limited", "leftUnlimited", "rightUnlimited"]
+            let type = typeList[Math.floor(Math.random()*6)];
+
+            if(type === "limited") {
+                let a = Math.floor(-10 + Math.random()*20); 
+                let b = Math.floor(a + 1 + Math.random()*(9 - a)); 
+                
+                let included = [true, false]
+                let aIsIncluded = included[Math.floor(Math.random()*2)];
+                let bIsIncluded = included[Math.floor(Math.random()*2)];
+
+                document.getElementById("estremi").innerHTML =
+                `tutti i valori compresi tra \\(${a}\\) e \\(${b}\\)`
+                
+                gg1.setValue("a", `${a}`);
+                gg1.setValue("b", `${b}`);
+
+                if(aIsIncluded && bIsIncluded) {
+
+                    document.getElementById("inclusioneEstremi").innerHTML = ", estremi inclusi";
+                    gg1.setColor("A", 0, 0, 255);
+                    gg1.setColor("B", 0, 0, 255);
+                    document.getElementById("scritturaSimbolica").innerHTML = 
+                    `\\[
+                        D = \\Big[${a}\\,;\\,\\,${b}\\Big]
+                    \\]`
+                } else if(!aIsIncluded && !bIsIncluded) {
+                    document.getElementById("inclusioneEstremi").innerHTML = ", estremi esclusi";
+                    gg1.setColor("A", 255, 255, 255);
+                    gg1.setColor("B", 255, 255, 255);
+                    document.getElementById("scritturaSimbolica").innerHTML = 
+                    `\\[
+                        D = \\Big(${a}\\,;\\,\\,${b}\\Big)
+                    \\]`
+                } else if(aIsIncluded && !bIsIncluded) {
+                    document.getElementById("inclusioneEstremi").innerHTML = `, con \\(${a}\\) incluso e \\(${b}\\) escluso`;
+                    gg1.setColor("A", 0, 0, 255);
+                    gg1.setColor("B", 255, 255, 255);
+                    document.getElementById("scritturaSimbolica").innerHTML = 
+                    `\\[
+                        D = \\Big[${a}\\,;\\,\\,${b}\\Big)
+                    \\]`
+                } else if(!aIsIncluded && bIsIncluded) {
+                    document.getElementById("inclusioneEstremi").innerHTML = `, con \\(${a}\\) escluso e \\(${b}\\) incluso`;
+                    gg1.setColor("A", 255, 255, 255);
+                    gg1.setColor("B", 0, 0, 255);
+                    document.getElementById("scritturaSimbolica").innerHTML = 
+                    `\\[
+                        D = \\Big(${a}\\,;\\,\\,${b}\\Big]
+                    \\]`
+                }
+
+                MathJax.typesetClear([document.getElementById("generatoreEsempi")]);
+                MathJax.typesetPromise([document.getElementById("generatoreEsempi")]).then(() => {});                
+            } else if(type === "leftUnlimited") {
+                let a = -12;
+                let b =  Math.floor(-7 + Math.random()*20);
+                
+                let included = [true, false]
+                let bIsIncluded = included[Math.floor(Math.random()*2)];
+                
+                gg1.setValue("a", `${a}`);
+                gg1.setValue("b", `${b}`);
+
+                document.getElementById("inclusioneEstremi").innerHTML = ``;
+
+                if(bIsIncluded) {
+                    document.getElementById("estremi").innerHTML =
+                    `tutti i valori minori o uguali di \\(${b}\\)`
+                    gg1.setColor("B", 0, 0, 255);
+                    document.getElementById("scritturaSimbolica").innerHTML = 
+                    `\\[
+                        D = \\Big(-\\infty\\,;\\,\\,${b}\\Big]
+                    \\]`
+                } else if(!bIsIncluded) {
+                    document.getElementById("estremi").innerHTML =
+                    `tutti i valori minori di \\(${b}\\)`
+                    gg1.setColor("B", 255, 255, 255);
+                    document.getElementById("scritturaSimbolica").innerHTML = 
+                    `\\[
+                        D = \\Big(-\\infty\\,;\\,\\,${b}\\Big)
+                    \\]`
+                }
+                
+                MathJax.typesetClear([document.getElementById("generatoreEsempi")]);
+                MathJax.typesetPromise([document.getElementById("generatoreEsempi")]).then(() => {}); 
+
+            } else if(type === "rightUnlimited") {
+                let a = Math.floor(-8 + Math.random()*20);
+                let b =  12;
+                
+                let included = [true, false]
+                let aIsIncluded = included[Math.floor(Math.random()*2)];
+                
+                gg1.setValue("a", `${a}`);
+                gg1.setValue("b", `${b}`);
+
+                document.getElementById("inclusioneEstremi").innerHTML = ``;
+
+                if(aIsIncluded) {
+                    document.getElementById("estremi").innerHTML =
+                    `tutti i valori maggiori o uguali di \\(${a}\\)`
+                    gg1.setColor("A", 0, 0, 255);
+                    document.getElementById("scritturaSimbolica").innerHTML = 
+                    `\\[
+                        D = \\Big[${a}\\,;\\,\\,+\\infty\\Big)
+                    \\]`
+                } else if(!aIsIncluded) {
+                    document.getElementById("estremi").innerHTML =
+                    `tutti i valori maggiori di \\(${a}\\)`
+                    gg1.setColor("A", 255, 255, 255);
+                    document.getElementById("scritturaSimbolica").innerHTML = 
+                    `\\[
+                        D = \\Big(${a}\\,;\\,\\,+\\infty\\Big)
+                    \\]`
+                }
+
+                MathJax.typesetClear([document.getElementById("generatoreEsempi")]);
+                MathJax.typesetPromise([document.getElementById("generatoreEsempi")]).then(() => {}); 
+            }
+        }   
+    </script>
+    
+    
+    
+    
+    
+    
+    
+
+
+    <br>
+    <br>
+
+    <script src="../../../js/pageManagment.js"></script>
+    <script src="../../../js/exerciseManagment.js"></script>
+</body>
