@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="https://www.geogebra.org/apps/deployggb.js"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="stylesheet" href="../../../css/style.css">
+    <title id="titleTag"></title>
+</head>
+
+<body>
+        <br>
+        <div id="chapterNumber" style="display: none;">1</div>
+        <div id="paragraphTitle" style="display: none;">Altri esempi di funzione</div>
+        
+        <div class="gray"> 
+            <div class="homeIconContainer">
+                <a href="../../indiceMateriale.html"><img class="homeIcon" src="../../../css/img/home.png"></a>
+            </div>
+            
+            <code><b id="bTagTitoloCapitolo"></b></code> 
+            <br>
+            <div class="select">
+                <div class="selected-option"><code><b id="bTagTitoloParagrafo"></b></code></div>
+                <div class="dropdown">
+                    <!-- Vengono inseriti i tag a sfruttando il file JSON -->
+                </div>
+            </div>
+        
+            
+            
+        </div>
+
+        <br>
+
+        <nav class="navigationBar">
+            <div onclick="changeParagraph(`previous`)" class="item prev">
+                <img class="icon" src="../../../css/img/leftArrow.png">
+            </div>
+            <div class="item explanationButton">
+                <div onclick="showExplanation()"><img class="icon" src="../../../css/img/presentation.png"></div>
+            </div>
+            <div class="item exerciseButton">
+                <div onclick="showExercise()"><img class="icon" src="../../../css/img/homework.png"></div>
+            </div>
+            <div onclick="changeParagraph(`next`)" class="item next">
+                <img class="icon" src="../../../css/img/rightArrow.png">
+            </div>
+        </nav>
+
+        <br>
+
+    
+
+        <section class="explanation">
+    
+            <div class="h3">
+                <span class="sub-par" id="paragraphCircledNumber"></span>
+                <h3 id="h3ParagraphTitle"></h3>
+            </div>
+            
+            <br>
+
+            <div>
+                Tutti gli esempi di funzione che abbiamo visto nel paragrafo <b class="blue">1.1</b> nascono dall'osservazione 
+                di un qualche fenomeno reale nel quale individuiamo
+                <br>
+                <br>
+                <ul>
+                    <li>
+                        una <b>variabile indipendente</b>, indicata solitamente con la lettera \(x\)
+                    </li>
+                    <br>
+                    <li>
+                        una <b>variabile</b>, indicata solitamente con la lettera \(y\), <b>dipendente</b> dalla varibile \(x\)
+                    </li>
+                    <br>
+                    <li>
+                        una <b>funzione</b> \(f\) che ci dice in che modo la variabile \(y\) dipende dalla variabile \(x\)
+                        \[
+                            y = f(x)
+                        \]
+                    </li>
+                </ul>
+                
+                
+                In questo paragrafo esamineremo delle funzioni inventate di sana pianta. Non è escluso che esista un qualche 
+                fenomeno descritto da esse, semplicemente non ne saremo interessati.
+                <br>
+                <br>
+                Prima di vedere gli esempi veri e propri, chiediamoci: in che modo possiamo creare una funzione?
+                <br>
+                La risposta è semplice: usando tutte le <b>operazioni</b> studiate fino ad ora. 
+                <br>
+                Rispolveriamole:
+                <br>
+                <br>
+                <ul>
+                    <li>
+                        Le quattro operazioni: somma, sottrazione, moltiplicazione, divisione
+                    </li>
+                    <br>
+                    <li>
+                        radice quadrata (\(\sqrt{\color{transparent}{a}}\)), cubica (\(\sqrt[3]{\color{transparent}{a}}\)) ed in generale radice \(n-\)esima (\(\sqrt[n]{\color{transparent}{a}}\))
+                    </li>
+                    <br>
+                    <li>
+                        elevamento a potenza
+                    </li>
+                    <br>
+                    <li>
+                        logaritmo in base \(b\) 
+                    </li>
+                    <br>
+                    <li>
+                        seno, coseno, tangente
+                    </li>
+                    <br>
+                    <li>
+                        valore assoluto (o modulo)
+                    </li>
+                </ul>
+                <br>            
+                <h3 class="yellow">Esempio</h3>
+                <div class="esempi-container">
+                    Consideriamo la funzione 
+                    \[
+                        f(\color{blue}{x}\color{black}{}) = \dfrac{2 + \color{blue}{x}\color{black}{}}{\color{blue}{x}\color{black}{}^2}
+                    \]
+                    Come possiamo vedere questa funzione associa ad ogni \(\color{blue}{x}\) un'unico valore ottenuto eseguendo una serie di 
+                    calcoli a partire da \(\color{blue}{x}\).
+                    <br>
+                    <br>
+                    Vediamo alcuni esempi:
+                    <br>
+                    <br>
+                    <ul>
+                        <li>
+                            se \(\color{blue}{x}\color{black}{} = \color{blue}{}1\) si ottiene
+                            \[
+                                    f(\color{blue}{1}\color{black}{}) 
+                                    = \dfrac{2 + \color{blue}{1}\color{black}{}}{\color{blue}{1}\color{black}{}^2}
+                                    = \dfrac{3}{1}
+                                    = \color{red}{}3
+                            \]
+                        </li>
+                        <br>
+                        <li>
+                            se \(\color{blue}{x}\color{black}{} = \color{blue}{}-3\) si ottiene
+                            \[
+                                    f(\color{blue}{-3}\color{black}{}) 
+                                    = \dfrac{2 + \color{blue}{(-3)}\color{black}{}}{\color{blue}{(-3)}\color{black}{}^2}
+                                    = \dfrac{-1}{9}
+                                    = \color{red}{}-\dfrac{1}{9}
+                            \]
+                        </li>
+                        <br>
+                        <li>
+                            se \(\color{blue}{x}\color{black}{} = \color{blue}{}\dfrac{1}{10}\) si ottiene
+                            \[
+                                    \begin{align*}
+                                        f\left(\color{blue}{\dfrac{1}{10}}\color{black}{}\right) 
+                                        &= \dfrac{2 + \color{blue}{\frac{1}{10}}\color{black}{}}{\color{blue}{\left(\frac{1}{10}\right)}\color{black}{}^2}
+                                        = \dfrac{\frac{20 + 1}{10}}{\frac{1}{100}} =
+                                        \\\\
+                                        &= \dfrac{\frac{21}{10}}{\frac{1}{100}}
+                                        = \dfrac{21}{10} \,:\, \dfrac{1}{100} =
+                                        \\\\
+                                        &=  \dfrac{21}{10} \,\cdot\, \dfrac{100}{1} 
+                                        = \dfrac{2100}{10} =
+                                        \\\\
+                                        &= \color{red}{} 210
+                                    \end{align*}
+                            \]
+                        </li>
+                        <br>
+                    </ul>
+                </div>
+
+                <br>
+
+                <h3 class="yellow">Esempio</h3>
+                <div class="esempi-container">
+                    Consideriamo la funzione
+                    \[
+                        g(\color{blue}{}x\color{black}{}) = \left|cos(\color{blue}{}x\color{black}{}) + 1\right|
+                    \]
+                    <div class="grayBorder">
+                        <b>Osservazione</b>
+                        Abbiamo chiamato la funzione \(g\) anziché \(f\). Avremmo potuto chiamarla \(f\) o \(h\) oppure indicarla con un simbolo qualsiasi, \(\#\) ad esempio.
+                        <br>
+                        &Eacute; bene abituarci al fatto che possono essere usati nomi <b>arbitrari</b> per le funzioni.
+                    
+                    </div>
+                    <br>
+
+                    Ricordiamo che l'operazione <b><i>valore assoluto</i></b> (anche chiamata <b><i>modulo</i></b>) legge il valore dentro alle barre e, se non lo è già, lo volge al positivo.
+                    <br>
+                    Ad esempio:
+                    \[
+                        \left|3\right| = 3 \qquad \left|-5\right| = 5 \qquad \left|-\dfrac{1}{2}\right| = \dfrac{1}{2} 
+                    \]
+                    Vediamo qualche esempio di valore che assume la funzione al variare della \(x\).
+                    <br>
+                    <br>
+                    <ul>
+                        <li>
+                            per \(\color{blue}{x}\color{black}{} = \color{blue}{\dfrac{\pi}{2}}\) si ha 
+                            <br>
+                            \[
+                                \begin{align*}
+                                    g\left(\color{blue}{}\dfrac{\pi}{2}\color{black}{}\right) &= \left|cos\left(\color{blue}{}\dfrac{\pi}{2}\color{black}{}\right) + 1\right| = 
+                                    \\\\
+                                    &= \left|0 + 1\right| = \left|1\right| = \color{red}{1}
+                                \end{align*}
+                            \]
+                        </li>
+                        <br>
+                        <li>
+                            per \(\color{blue}{x}\color{black}{} = \color{blue}{\pi}\) si ha 
+                            <br>
+                            \[
+                                \begin{align*}
+                                    g\left(\color{blue}{}\pi\color{black}{}\right) &= \left|cos\left(\color{blue}{}\pi\color{black}{}\right) + 1\right| = 
+                                    \\\\
+                                    &= \left|-1 + 1\right| = \left|0\right| = \color{red}{0}
+                                \end{align*}
+                            \]
+                        </li>
+                        <br>
+                        <li>
+                            per \(\color{blue}{x}\color{black}{} = \color{blue}{\dfrac{\pi}{3}}\) si ha 
+                            <br>
+                            \[
+                                \begin{align*}
+                                    g\left(\color{blue}{}\dfrac{\pi}{3}\color{black}{}\right) &= \left|cos\left(\color{blue}{}\dfrac{\pi}{3}\color{black}{}\right) + 1\right| = 
+                                    \\\\
+                                    &= \left|\dfrac{1}{2} + 1\right| = \left|\dfrac{1 + 2}{2}\right| = 
+                                    \\\\
+                                    &= \left|\dfrac{3}{2}\right| =  \color{red}{\dfrac{3}{2}}
+                                \end{align*}
+                            \]
+                        </li>
+                        <br>
+                        <li>
+                            per \(\color{blue}{x}\color{black}{} = \color{blue}{\dfrac{5}{4}\pi}\) si ha 
+                            <br>
+                            \[
+                                \begin{align*}
+                                    g\left(\color{blue}{}\dfrac{5}{4}\pi\color{black}{}\right) &= \left|cos\left(\color{blue}{}\dfrac{5}{4}\pi\color{black}{}\right) + 1\right| = 
+                                    \\\\
+                                    &= \left|-\dfrac{\sqrt{2}}{2} + 1\right| =
+                                    \\\\
+                                    &= \left|\dfrac{-\sqrt{2} + 2}{2}\right| = 
+                                    \\\\
+                                    &=  \color{red}{\dfrac{-\sqrt{2} + 2}{2}}
+                                \end{align*}
+                            \]
+                            Nell'ultimo passaggio la quantità sotto il modulo è positiva, perché 
+                            \[
+                                -\sqrt{2} +2 \approx -1.41 + 2 = 0.59 \gt 0
+                            \]
+                        </li>
+                    </ul>
+                </div>
+                
+                <br>
+
+                <h3 class="yellow">Esempio</h3>
+                <div class="esempi-container">
+                    Consideriamo la funzione 
+                    \[
+                        p(\color{blue}{x}\color{black}{}) = log_{_2}\left(\color{blue}{x}\color{black}{} + 1\right) + \color{blue}{x}\color{black}{}^2
+                    \]
+                    Anche in questo caso l'unico valore che associo a ciascun \(\color{blue}{}x\) è il risultato del calcolo
+                    \(log_{_2}\left(\color{blue}{x}\color{black}{} + 1\right) + \color{blue}{x}\color{black}{}^2\).
+                    <br>
+                    Vediamo qualche esempio:
+                    <br>
+                    <br>
+                    <ul>
+                        <li>
+                            se \(\color{blue}{x}\color{black}{} = \color{blue}{1}\) si ha
+                            \[
+                                \begin{align*}
+                                    p(\color{blue}{1}\color{black}{}) &= log_{_2}\left(\color{blue}{1}\color{black}{} + 1\right) + \color{blue}{1}\color{black}{}^2 =
+                                    \\\\
+                                    &= log_{_2}\left(2\right) + 1 = 
+                                    \\\\
+                                    &= 1 + 1 = \color{red}{2}
+
+                                \end{align*}
+                            \]
+                        </li>
+                        <br>
+                        <li>
+                            se \(\color{blue}{x}\color{black}{} = \color{blue}{3}\) si ha
+                            \[
+                                \begin{align*}
+                                    p(\color{blue}{3}\color{black}{}) &= log_{_2}\left(\color{blue}{3}\color{black}{} + 1\right) + \color{blue}{3}\color{black}{}^2 =
+                                    \\\\
+                                    &= log_{_2}\left(4\right) + 9 = 
+                                    \\\\
+                                    &= 2 + 9 = \color{red}{11}
+
+                                \end{align*}
+                            \]
+                        </li>
+                        <br>
+                        <li>
+                            se \(\color{blue}{x}\color{black}{} = \color{blue}{-\dfrac{1}{2}}\) si ha
+                            \[
+                                \begin{align*}
+                                    p(\color{blue}{-\dfrac{1}{2}}\color{black}{}) &= log_{_2}\left(\color{blue}{-\dfrac{1}{2}}\color{black}{} + 1\right) + \color{blue}{\left(-\dfrac{1}{2}\right)}\color{black}{}^{^2} =
+                                    \\\\
+                                    &= log_{_2}\left(\dfrac{-1 + 2}{2}\right) + \dfrac{1}{4} = 
+                                    \\\\
+                                    &= log_{_2}\left(\dfrac{1}{2}\right) + \dfrac{1}{4} = 
+                                    \\\\
+                                    &= -1 + \dfrac{1}{4} = \dfrac{-4 + 1}{4} = \color{red}{-\dfrac{3}{4}}
+
+                                \end{align*}
+                            \]
+                        </li>
+                        <br>
+                        <li>
+                            se \(\color{blue}{x}\color{black}{} = \color{blue}{-1}\) si ha
+                            \[
+                                \begin{align*}
+                                    p(\color{blue}{-1}\color{black}{}) &= log_{_2}\left(\color{blue}{-1}\color{black}{} + 1\right) + \color{blue}{\left(-1\right)}\color{black}{}^{^2} =
+                                    \\\\
+                                    &= \underset{\text{IMPOSSIBILE!}}{\color{gray}{\underbrace{\color{black}{}log_{2}(0)}}} + 1 
+                                \end{align*}
+                            \]
+                            Sappiamo che l'operazione logaritmo è definita solo per valori maggiori di \(0\). 
+                            <br>
+                            Quindi la funzione \(p\) al valore \(\color{blue}{-1}\) non associa alcun valore. 
+                            \[
+                                p(\color{blue}{-1}\color{black}{}) = \color{red}{?}
+                            \]
+                            In questi casi si dice che 
+                            <br>
+                            <br>
+                            <div class="grayBorder">
+                                la funzione \(p\) <b>non è definita</b> per \(\color{blue}{x}\color{black}{} = \color{blue}{-1}\)
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <br>
+
+                <h3 class="yellow">Inventa la tua funzione</h3>
+                <div class="esempi-container">
+                    <div class="grayBorder">
+                        <div class="geogebra-container">
+                            <div id="geogebra1"></div>
+                        </div>
+                    </div>
+                    <br>
+                    <ul>
+                        <li>
+                            Nel primo campo che trovate nel riquadro potete inserire la definizione della funzione \(f\).
+                        </li>
+                        <br>
+                        <li>
+                            Il secondo campo presente nel riquadro vi consente di assegnare un valore alla variabile \(x\). 
+                            Geogebra calcolerà in automatico il corrispettivo valore \(f(x)\) assunto dalla variabile \(y\).
+                        </li>
+                    </ul>
+                    <br>
+                    <hr>
+                    <br>
+                    <span class="gray">
+                        Nel video che trovate di seguito viene mostrato qualche esempio di utilizzo del generatore di funzioni.
+                    </span>
+                    <br>
+                    <br>
+                    <video src="img/esempioCreaFunzione.mp4" controls></video>
+                </div>
+
+                
+                
+
+
+            </div>
+
+         </section>
+
+         <section class="exercise">
+            <div class="h3">
+                <span class="sub-par" id="exParagraphNumber"></span>
+                <h3>Esercizi</h3>
+            </div>
+            <br>
+        
+            <h3 class="questionTitle">Domanda 1</h3>
+        
+            <div class="questionBox">
+                <p class="question">
+        
+                    Consideriamo la funzione 
+                    \[
+                    f(x) = \dfrac{2 + x}{1 + x}
+                    \]
+                    Selezionare tra le seguenti tutte le affermazioni corrette.
+                </p>
+                <br>
+                
+                <div class="option">
+                    <input type="checkbox" name="domanda1" class="checkboxButton" value="1" onclick="enableSubmit(1)">
+                    <div class="optionText">
+                        \(f(0) = 2\)
+                    </div>
+                </div>
+                <br>
+                
+                <div class="option">
+                    <input type="checkbox" name="domanda1" class="checkboxButton" value="2" onclick="enableSubmit(1)">
+                    <div class="optionText">
+                        La funzione \(f\) non è definita per \(x = 0\)
+                    </div>
+                </div>
+                <br>
+                
+                <div class="option">
+                    <input type="checkbox" name="domanda1" class="checkboxButton" value="3" onclick="enableSubmit(1)">
+                    <div class="optionText">
+                        \(f(-1) = 1\)
+                    </div>
+                </div>
+                <br>
+                
+                <div class="option">
+                    <input type="checkbox" name="domanda1" class="checkboxButton" value="4" onclick="enableSubmit(1)">
+                    <div class="optionText">
+                        La funzione \(f\) non è definita per \(x = -1\)
+                    </div>
+                </div>
+                <br>
+                
+                <div class="option">
+                    <input type="checkbox" name="domanda1" class="checkboxButton" value="5" onclick="enableSubmit(1)">
+                    <div class="optionText">
+                        \(f\left(\dfrac{1}{2}\right) = \dfrac{5}{3}\)
+                    </div>
+                </div>
+                <br>
+                
+                <div class="option">
+                    <input type="checkbox" name="domanda1" class="checkboxButton" value="6" onclick="enableSubmit(1)">
+                    <div class="optionText">
+                        Nessuna delle precedenti affermazioni è vera.
+                    </div>
+                </div>   
+                <div class="whyAnswerIsWrong"></div>
+                <div class="numberOfTries">1/2 tentativi disponibili</div>
+        
+                <u class="showAnswer" onclick="showAnswer(1)">Mostra la risposta</u>
+        
+                <button type="button" class="submit" onclick="checkAnswer(1, 'rispostaMultipla', [1,4,5,], [], 3)" disabled>Invia risposta</button>
+        
+                <div class="answerContainer">
+                    
+                    <br>    
+                    <ul>
+                        <li>
+                            <div class="grayBorder">
+                                \(f\left(\color{blue}{0}\color{black}{}\right) = \color{red}{2}\)
+                            </div>
+                            <br>
+                            <br>
+                            Infatti se \(\color{blue}{x}\color{black}{} = \color{blue}{0}\), allora
+                            \[
+                                \begin{align*}
+                                    f\left(\color{blue}{0}\color{black}{}\right) =& \dfrac{2 + \color{blue}{0}\color{black}{}}{1 + \color{blue}{0}\color{black}{}} =
+                                    \\\\
+                                    &= \dfrac{2}{1} = \color{red}{}2
+                                \end{align*}
+                            \]
+                        </li>
+                        <br>
+                        <li>
+                            <div class="grayBorder">
+                                La funzione \(f\) non è definita per \(x = -1\)
+                            </div>
+                            <br>
+                            <br>
+                            Infatti se \(\color{blue}{x}\color{black}{} = \color{blue}{-1}\), allora
+                            \[
+                                \begin{align*}
+                                    f\left(\color{blue}{-1}\color{black}{}\right) =& \dfrac{2 + \color{blue}{(-1)}\color{black}{}}{1 + \color{blue}{(-1)}\color{black}{}} =
+                                    \\\\
+                                    &= \underset{\text{IMPOSSIBILE}}{\color{gray}{\underbrace{\color{black}{\dfrac{1}{0}}}}}
+                                \end{align*}
+                            \]
+                            L'ultimo passaggio è impossibile, in quanto non ha senso dividere per \(0\).
+                        </li>
+                        <br>
+                        <li>
+                            <div class="grayBorder">
+                                \(f\left(\color{blue}{\dfrac{1}{2}}\color{black}{}\right) = \color{red}{\dfrac{5}{3}}\)
+                            </div>
+                            <br>
+                            <br>
+                            Infatti se \(\color{blue}{x}\color{black}{} = \color{blue}{\dfrac{1}{2}}\), allora
+                            \[
+                                \begin{align*}
+                                    f\left(\color{blue}{\dfrac{1}{2}}\color{black}{}\right) =& \dfrac{2 + \color{blue}{\frac{1}{2}}\color{black}{}}{1 + \color{blue}{\frac{1}{2}}\color{black}{}} =
+                                    \\\\
+                                    &= \dfrac{\frac{4 +1}{2}}{\frac{1 + 2}{2}} = \dfrac{\frac{5}{2}}{\frac{3}{2}} = 
+                                    \\\\
+                                    &= \dfrac{5}{2} \cdot \dfrac{2}{3} = \color{red}{\dfrac{5}{3}}
+                                \end{align*}
+                            \]
+                        </li>
+                        
+                    </ul>
+                    <br>
+        
+                </div>
+            
+            </div>
+
+            
+            <br>
+            <br>
+        
+            <h3 class="questionTitle">Domanda 2</h3>
+        
+            <div class="questionBox">
+                <p class="question">
+        
+                    Consideriamo la funzione
+                    \[
+                    h(x) = ln\left(x + 1\right)
+                    \]
+                    Stabilire quale tra le seguenti affermazioni è corretta.
+                    <br>
+                    Seleziona tra le seguenti tutte le affermazioni vere
+                </p>
+                <br>
+                
+                <div class="option">
+                    <input type="radio" name="domanda2" class="radioButton" value="1" onclick="enableSubmit(2)">   
+                    <div class="optionText">
+                        Esiste un unico valore per cui la funzione non è definita, \(x = -1\)
+                    </div>
+                </div>
+                <br>
+                
+                <div class="option">
+                    <input type="radio" name="domanda2" class="radioButton" value="2" onclick="enableSubmit(2)">   
+                    <div class="optionText">
+                        Esistono infiniti valori di \(x\) per i quali la funzione non è definita, tutti quelli compresi tra \(1\) e \(10\)
+                    </div>
+                </div>
+                <br>
+                
+                <div class="option">
+                    <input type="radio" name="domanda2" class="radioButton" value="3" onclick="enableSubmit(2)">   
+                    <div class="optionText">
+                        Esistono infiniti valori di \(x\) per i quali la funzione non è definita, tutti quelli compresi tra \(-10\) e \(-1\).
+                    </div>
+                </div>
+                <br>
+                
+                <div class="option">
+                    <input type="radio" name="domanda2" class="radioButton" value="4" onclick="enableSubmit(2)">   
+                    <div class="optionText">
+                        Nessuna delle precedenti affermazioni è vera.
+                    </div>
+                </div>   
+                <div class="whyAnswerIsWrong"></div>
+                <div class="numberOfTries">1/2 tentativi disponibili</div>
+        
+                <u class="showAnswer" onclick="showAnswer(2)">Mostra la risposta</u>
+        
+                <button type="button" class="submit" onclick="checkAnswer(2, 'rispostaUnica', [4], [], 2)" disabled>Invia risposta</button>
+        
+                <div class="answerContainer">
+                    
+                    <br>    
+                    <p>
+                        L'opzione corretta è 
+
+                        <br>
+                        <br>
+                        <div class="grayBorder">
+                            Nessuna delle precedenti affermazioni è vera.
+                        </div>
+                        <br>
+
+                        Infatti, esistono infiniti valori di \(x\) per i quali la funzione non è definita; sono tutti quelli minori di \(-1\).
+                        <br>
+                        <br>
+                        L'argomento del logaritmo che compare nella funzione \(h\) è \(\color{blue}{}x +1\). 
+                        \[
+                            h(x) = log(\color{blue}{x + 1}\color{black}{})
+                        \]
+                        Sappiamo che è possibile calcolare il logaritmo solamente di numeri 
+                        <b>maggiori di \(\boldsymbol{0}\)</b>.
+                        <br>
+                        Di conseguenza perché la funzione sia definita, deve essere vero che
+                        \[
+                            \color{blue}{x + 1}\color{black}{} \boldsymbol{\gt 0}
+                        \]
+                        ovvero 
+                        \[
+                            x \gt -1
+                        \]
+                        Concludiamo che la funzione non è definita per tutti gli altri valori, ovvero per \(x \lt -1\)
+
+                    </p>
+                    <br>
+        
+                </div>
+        
+            </div>
+
+            
+            <br>
+            <br>
+        
+            <h3 class="questionTitle">Domanda 3</h3>
+        
+            <div class="questionBox">
+                <p class="question">
+        
+                    Seleziona tra le seguenti funzioni tutte quelle che assumono valore \(1\) per \(x = 3\)
+                </p>
+                <br>
+                
+                <div class="option">
+                    <input type="checkbox" name="domanda3" class="checkboxButton" value="1" onclick="enableSubmit(3)">
+                    <div class="optionText">
+                        \(f(x) = \dfrac{\left|x - 4\right| + 5}{2x}\)
+                    </div>
+                </div>
+                <br>
+                
+                <div class="option">
+                    <input type="checkbox" name="domanda3" class="checkboxButton" value="2" onclick="enableSubmit(3)">
+                    <div class="optionText">
+                        \(g(x) = cos\left(\pi x\right) + \dfrac{2}{x -4}\)
+                    </div>
+                </div>
+                <br>
+                
+                <div class="option">
+                    <input type="checkbox" name="domanda3" class="checkboxButton" value="3" onclick="enableSubmit(3)">
+                    <div class="optionText">
+                        \(h(x) = 2^{x + 1} - 19\)
+                    </div>
+                </div>
+                <br>
+                
+                <div class="option">
+                    <input type="checkbox" name="domanda3" class="checkboxButton" value="4" onclick="enableSubmit(3)">
+                    <div class="optionText">
+                        \(p(x) = 3x^2 + \dfrac{3}{x} -27\)
+                    </div>
+                </div>
+                <br>
+                
+                <div class="option">
+                    <input type="checkbox" name="domanda3" class="checkboxButton" value="5" onclick="enableSubmit(3)">
+                    <div class="optionText">
+                        Nessuna delle precedenti funzioni assume valore \(1\) per \(x = 3\).
+                    </div>
+                </div>   
+                <div class="whyAnswerIsWrong"></div>
+                <div class="numberOfTries">1/2 tentativi disponibili</div>
+        
+                <u class="showAnswer" onclick="showAnswer(3)">Mostra la risposta</u>
+        
+                <button type="button" class="submit" onclick="checkAnswer(3, 'rispostaMultipla', [1,4,], [], 3)" disabled>Invia risposta</button>
+        
+                <div class="answerContainer">
+                    
+                    <br>    
+                    <ul>
+                        <li>
+                            \(f(3) = 1\), Infatti
+                            \[
+                                \begin{align*}
+                                    f(\color{blue}{3}\color{black}{}) &= \dfrac{\left|\color{blue}{3}\color{black}{} - 4\right| + 5}{2\cdot \color{blue}{3}\color{black}{}}
+                                    \\\\
+                                    &= \dfrac{\left|-1\right| + 5}{6} = \dfrac{1 + 5}{6} =
+                                    \\\\
+                                    &= \dfrac{6}{6} = \color{red}{}1
+                                \end{align*}
+                            \]
+                        </li>
+                        <br>
+                        <li>
+                            \(g(3) \neq 1\), Infatti
+                            \[
+                                \begin{align*}
+                                    g(\color{blue}{3}\color{black}{}) &= cos\left(\pi \color{blue}{3}\color{black}{}\right) + \dfrac{2}{\color{blue}{3}\color{black}{} -4}
+                                    \\\\
+                                    &= -1 + \dfrac{2}{-1} = -1 - 2 = \color{red}{-3}
+                                \end{align*}
+                            \]
+                        </li>
+                        <br>
+                        <li>
+                            \(h(3) \neq 1 \), infatti
+                            \[
+                                \begin{align*}
+                                    h(\color{blue}{3}\color{black}{}) &= 2^{\color{blue}{3}\color{black}{} + 1} - 19 =
+                                    \\\\
+                                    &= 2^4 - 19 = 
+                                    \\\\
+                                    &= 16 - 19 = \color{red}{-3}
+                                \end{align*}
+                            \]
+                        </li>
+                        <br>
+                        <li>
+                            \(p(3) = 1\), Infatti
+                            \[
+                                \begin{align*}
+                                    p(\color{blue}{3}\color{black}{}) &= 3\cdot \color{blue}{3}\color{black}{}^2 + \dfrac{3}{\color{blue}{3}\color{black}{}} -27 = 
+                                    \\\\
+                                    &= 3 \cdot 9 + 1 - 27 =
+                                    \\\\
+                                    &= 27 + 1 -27 = \color{red}{}1
+                                \end{align*}
+                            \]
+                        </li>
+                    </ul>
+                    <br>
+                    
+                </div>
+            
+            </div>
+            
+            <br>
+            <br>
+
+            <h3 class="questionTitle">Domanda 4</h3>
+        
+            <div class="questionBox">
+                Inventare sette funzioni che assumano valore \(10\) per \(x = -1\).
+                <br>
+                Qual è la più semplice che vi viene in mente?
+                <br>
+                Riuscite ad inventarne una usando le operazioni seno, potenza, frazione e valore assoluto?
+            </div>
+
+            <br>
+            <br>
+
+            <h3 class="questionTitle">Domanda 5</h3>
+        
+            <div class="questionBox">
+                Inventare una funzione che non sia definita per valori di \(x\) maggiori di \(7\).
+            </div>
+        </section>
+    
+
+
+    <script>
+        
+        var ggbApp1 = new GGBApplet(
+        {
+            "appName": "classic", 
+            "id": "gg1",
+            "height": 10,
+            "showToolBar": false, 
+            "showAlgebraInput": false, 
+            "showMenuBar": false, 
+            "enableShiftDragZoom": false,
+            "scaleContainerClass":"geogebra-container",
+            "filename":"img/createYourFunction.ggb"
+        }, 
+        true
+        );
+
+        window.addEventListener("load", function() { 
+            ggbApp1.inject('geogebra1');
+        });
+
+
+    </script>
+    
+    
+    
+    
+    
+    
+    
+
+
+    <br>
+    <br>
+
+    <script src="../../../js/pageManagment.js"></script>
+    <script src="../../../js/exerciseManagment.js"></script>
+</body>
