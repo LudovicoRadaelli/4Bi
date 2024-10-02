@@ -34,17 +34,7 @@
                 {
                     "titolo": "Proprietà delle potenze",
                     "nomeCartella": "proprietaPotenze"
-                },
-                {
-                    "titolo": "Equazioni esponenziali della tipologia `passaggio agli esponenti`",
-                    "nomeCartella": "equazioniEsponenzialiPassaggioAgliEsponenti"
-                },
-                {
-                    "titolo": "Equazioni esponenziali della tipologia `per sostituzione`",
-                    "nomeCartella": "equazioniEsponenzialiPerSotituzione"
-                }    
-
-                       
+                }       
             ]
         },
         {
@@ -80,7 +70,15 @@
         {
         "numero": 1,
         "titolo": "Le funzioni",
-        "paragrafo": [
+        "paragrafo": [            
+            {
+                "titolo": "Equazioni esponenziali della tipologia `passaggio agli esponenti`",
+                "nomeCartella": "equazioniEsponenzialiPassaggioAgliEsponenti"
+            },
+            {
+                "titolo": "Equazioni esponenziali della tipologia `per sostituzione`",
+                "nomeCartella": "equazioniEsponenzialiPerSotituzione"
+            },
             {
                 "titolo": "Grafico di una funzione logaritmica",
                 "nomeCartella": "graficoFunzioneLogaritmica"
