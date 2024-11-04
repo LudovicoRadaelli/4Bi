@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js"></script> 
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>Compiti per casa</title>
+</head>
+<body>
+    <h1>Compiti per casa</h1>
+    
+    <br>
+    
+    <h3 class="green">Esercizio -1</h3>
+    <div class="gray" style="font-size: 0.9rem;">(non è un errore, questo esercizio è preliminare all'Esercizio 0)</div>
+    <br>
+    <div>
+        Consideriamo la funzione 
+        \[
+            f(\color{blue}{}x\color{black}{}) = 2^{\color{blue}{}x}
+        \]
+        Dopo aver letto la sfilza di esempi riportati di seguito, provate a completare 
+        l'esponente dell'ultima riga:
+        \[
+            f(\color{blue}{}1\color{black}{}) = 2^{\color{blue}{}1}  
+        \]
+        \[
+            f(\color{blue}{}2\color{black}{}) = 2^{\color{blue}{}2}  
+        \]
+        \[
+            f(\color{blue}{-4}\color{black}{}) = 2^{\color{blue}{}-4}  
+        \]
+        \[
+            f(\color{blue}{}7.256\color{black}{}) = 2^{\color{blue}{}7.256}  
+        \]
+        \[
+            f(\color{blue}{}\pi - 37\color{black}{}) = 2^{\color{blue}{}\pi - 37}  
+        \]
+        <div id="risposta1">
+            \[
+                f(\color{blue}{}x - 1\color{black}{}) = 2^{\color{blue}{}\cdots}  
+            \]
+        </div>
+        
+        <br>        
+        <button id="button1" onclick="mostraRisposta(1)">Mostra risposta</button>        
+        <br>
+        <br>
+
+        Consideriamo la funzione \(f(x) = 5^{x}\). Definiamo la funzione 
+        \[
+            g(x) = f(x + 3)
+        \]
+        Provate a scrivere esplicitamente la legge che definisce \(g\).
+        <br>      
+        <br>  
+        <button id="button2" onclick="mostraRisposta(2)">Mostra risposta</button>        
+        
+        <br>
+
+        <div id="risposta2" style="display: none;">
+            \[
+                g(x) = f(\color{blue}{}x + 3\color{black}{}) = 5^{\color{blue}{x + 3}}
+            \]
+        </div>        
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio 0</h3>
+    <br>
+    <div>
+        <span id="studiare" style="color: rgb(255, 0, 0)">Studiare</span> il paragrafo <b class="blue">traslazione orizzontale</b> disponibile a <a href="../../capitoli/1funzioni/1-10traslazioneGraficoFunzione/index.html">questo link</a>
+    </div>
+
+    <br>
+    <br>    
+
+    <script>
+        setInterval(rndColor, 1000)
+        function rndColor() {
+            let studiare = document.getElementById("studiare")
+            
+            let rnd1 = Math.random()*255;
+            let rnd2 = Math.random()*255;
+            let rnd3 = Math.random()*255;
+            
+            studiare.style.color = `rgb(${rnd1}, ${rnd2}, ${rnd3})`
+            
+            rnd1 = 255 - Math.random()*255;
+            rnd2 = 255 - Math.random()*255;
+            rnd3 = 255 - Math.random()*255;
+            
+            studiare.style.background = `rgb(${rnd1}, ${rnd2}, ${rnd3})`
+        }
+        function mostraRisposta(n) {
+            
+            let risposta = document.getElementById(`risposta${n}`);
+            let button = document.getElementById(`button${n}`);
+
+            button.disabled = "true"
+
+            if(n === 1) {
+                
+                risposta.innerHTML = `\\[
+                    f(\\color{blue}{}x - 1\\color{black}{}) = 2^{\\color{blue}{}x - 1}  
+                \\]`
+
+                MathJax.typesetClear([risposta]);
+                MathJax.typesetPromise([risposta]).then(() => {});
+            } else if(n === 2) {
+                
+                risposta.style.display = "block";
+
+            }
+
+
+        }
+    </script>
+    
+</body>
