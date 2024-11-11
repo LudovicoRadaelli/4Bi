@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js"></script> 
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>Compiti per casa</title>
+</head>
+<body>
+    <h1>Compiti per casa</h1>
+    
+    <br>
+
+    <h3 class="green">Esercizio 1</h3>
+    <br>
+    <div>
+        \[
+            \dfrac{25^{x + 1} \cdot \sqrt[3]{5^x}}{5^{x - 1}} \leq 1
+        \]
+    </div>
+
+    <div class="gray">
+        <b>Soluzione</b>\(\,\,\,x \leq -\dfrac{9}{4}\)        
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio 1</h3>
+    <br>
+    <div>
+        \[
+            2^{2x} -5\cdot 2^{x} + 4 \geq 0
+        \]
+    </div>
+
+    <div class="gray">
+        <b>Soluzione</b>\(\,\,\,x \leq 0\,\,\) oppure \(\,\,\,x\geq 2\)
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio 3</h3>
+    <br>
+    <div>
+        Rappresentare il grafico della funzione 
+        \[
+            f(x) = 5\cdot 2^{x - 2} + 1
+        \]
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+<h3 class="green">Esercizio 4</h3>
+    <br>
+    <div>
+        Rappresentare il grafico della funzione 
+        \[
+            f(x) = 2^{\left|x\right|}
+        \]
+    </div>
+
+
+    <br>
+    <br>    
+
+    <script>
+        setInterval(rndColor, 1000)
+        function rndColor() {
+            let studiare = document.getElementById("studiare")
+            
+            let rnd1 = Math.random()*255;
+            let rnd2 = Math.random()*255;
+            let rnd3 = Math.random()*255;
+            
+            studiare.style.color = `rgb(${rnd1}, ${rnd2}, ${rnd3})`
+            
+            rnd1 = 255 - Math.random()*255;
+            rnd2 = 255 - Math.random()*255;
+            rnd3 = 255 - Math.random()*255;
+            
+            studiare.style.background = `rgb(${rnd1}, ${rnd2}, ${rnd3})`
+        }
+        function mostraRisposta(n) {
+            
+            let risposta = document.getElementById(`risposta${n}`);
+            let button = document.getElementById(`button${n}`);
+
+            button.disabled = "true"
+
+            if(n === 1) {
+                
+                risposta.innerHTML = `\\[
+                    f(\\color{blue}{}x - 1\\color{black}{}) = 2^{\\color{blue}{}x - 1}  
+                \\]`
+
+                MathJax.typesetClear([risposta]);
+                MathJax.typesetPromise([risposta]).then(() => {});
+            } else if(n === 2) {
+                
+                risposta.style.display = "block";
+
+            }
+
+
+        }
+    </script>
+    
+</body>
