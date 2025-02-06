@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://www.geogebra.org/apps/deployggb.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js"></script> 
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>Compiti per casa</title>
+</head>
+<body>
+    <h1>Compiti per casa</h1>
+    
+    <br>
+    
+    <h3 class="yellow">Forma trigonometrica di un numero complesso</h3>
+    <div class="esempi-container">
+        Consideriamo un numero complesso
+        \[
+            z = x + y\,i
+        \]
+        Il numero \(z\) puà essere rappresentato sul piano di Argand-Gauss dal punto \(P\) di 
+        coordinate cartesiane \((x\,;\,\,y)\). Ricordiamo che le formule che permettono di passare dalle 
+        coordinate polari a quelle cartesiane sono 
+        \[
+            \begin{align*}
+                x &= r\,cos(\alpha)
+                \\\\
+                y &= r\,sin(\alpha)
+            \end{align*}
+        \]
+        Grazie ad esse possiamo rischivere il \(z\) come segue
+        \[
+        \begin{align*}
+                z 
+                &= x + y \, i = 
+                \\\\
+                &= r\,cos(\alpha) + r\,sin(\alpha) \, i = 
+                \\\\
+                &= r\,\left[cos(\alpha) + sin(\alpha) \, i\right] 
+            \end{align*}
+        \]
+        Quando scriviamo \(z\) nella forma \(x + y\,i\) stiamo mettendo in evidenza gli spostamenti 
+        orizzontale e verticale necessari per tracciare il \(P\) a partire dall'origine \(O\) del piano.
+        <br>
+        Quando \(z\) viene espresso nella forma equivalente \(r\,\left[cos(\alpha) + sin(\alpha) \, i\right]\) 
+        vengono messe in evidenza la distanza di \(P\) dall'origine \(O\) (il raggio) e l'angolo che
+        il segmento \(OP\) spazia in senso antiorario rispetto dall'asse \(x\).        
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <h3 class="yellow">Interpretazione geometrica della moltiplicazione di numeri complessi</h3>    
+    <div class="esempi-container">
+        Prendiamo due nuemeri complessi
+        \[
+            \begin{align*}
+                z = r\left[cos(\alpha) + sin(\alpha)\,i\right]
+                \\\\
+                w = R\left[cos(\beta) + sin(\beta)\,i\right]
+            \end{align*}
+        \]
+
+        Si ha che 
+        \[
+            z \cdot w = r \cdot R \left[cos(\alpha + \beta) + sin(\alpha + \beta)\,i\right]
+        \]
+        ovvero il prodotto tra \(z\) e \(w\) è un numero complesso che ha 
+        <br>
+        <br>
+        <ul>
+            <li>
+                raggio pari al prodotto dei raggi di \(z\)  e \(w\) 
+            </li>
+            <br>
+            <li>
+                angolo associato pari alla somma degli angoli associati a \(z\) e \(w\)
+            </li>
+        </ul>
+    </div>
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio 1</h3>
+    <br>
+    <div>
+        Dopo aver espresso i numeri 
+        \[
+            \begin{align*}
+                z = -1 - \sqrt{3}\,i 
+                \\\\
+                w = 2 - 2\,i
+            \end{align*}
+        \]
+        nella loro <b>forma trigonometrica</b> calcolarne il prodotto. Rappresentare \(z\), \(w\) e \(z \cdot w\) 
+        sul piano di Argand-Gauss
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio 2</h3>
+    <br>
+    <div>
+        Risolvere l'equazione 
+        \[
+            x^2 + x + 1 = 0
+        \]
+        in \(\mathbb{C}\).
+    </div>
+    
+    <br>
+    <br>
+
+    <div class="gray">
+        <b>Suggerimento:</b>
+        <br>
+        Questa equazione non ha soluzioni <b>reali</b>. Ma nei numeri complessi le radici negative 
+        non sono più un problema. Ad esempio 
+        \[
+            \begin{align*}
+                \sqrt{-5} &= \sqrt{-1 \cdot 5} =
+                \\\\
+                &= \sqrt{-1} \cdot \sqrt{5} =
+                \\\\
+                &= i \cdot \sqrt{5} =
+                \\\\
+                &= \sqrt{5}i
+            \end{align*}
+        \]
+        Infatti \(\,\,\,i = \sqrt{-1}\,\,\,\) <i><b>per definizione</b></i> (cit.)
+    </div>
+
+
+</body>
