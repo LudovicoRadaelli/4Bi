@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://www.geogebra.org/apps/deployggb.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js"></script> 
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>Compiti per casa</title>
+</head>
+<body>
+    <h1>Compiti per casa</h1>
+    
+    <br>
+    
+    <h3 class="yellow">Formula di De Moivre</h3>
+    <div class="esempi-container">
+        Consideriamo un numero complesso 
+        \[
+            z = r\,(cos(\alpha) + sin(\alpha)\,i)
+        \]
+        Si ha 
+        \[
+            z^{\color{red}{}n} = r^{\color{red}{}n} \,\, \Big((cos(\color{red}{}n\color{black}{}\alpha) + sin(\color{red}{}n\color{black}{}\alpha)\,i)\Big)
+        \]
+        
+        <br>
+
+        <b>Esempio</b>
+        <br>
+        Dato \(z = 2 + 2i\), calcolare \(z^6\).
+        <br>
+        Per applicare la formula di De Moivre il numero \(z\) deve essere scritto in forma trigonometrica.
+        Si ha
+        \[
+            \begin{align*}
+                &r = \sqrt{x^2 + y^2} = \sqrt{2^2 + 2^2} = \sqrt{8}
+                \\\\
+                &tan(\alpha) = \dfrac{2}{2} = 1
+            \end{align*}
+        \]
+        Gli angoli che hanno tangente \(1\) sono \(\frac{\pi}{4}\) e \(\frac{5}{4}\pi\). 
+        <br>
+        Tra di essi l'angolo associato
+        a \(z\) è \(\frac{\pi}{4}\), perché \(z\)  si trova nel primo quadrante del piano complesso.
+        Si dunque 
+        \[
+            z = \sqrt{8} \left(cos\left(\dfrac{\pi}{4}\right) + sin\left(\dfrac{\pi}{4}\right)\,i\right)
+        \]
+        Applichiamo la formula 
+        \[
+            \begin{align*}
+                z^{\color{red}{}6} 
+                &= \sqrt{8}^{\color{red}{}6} \left(cos\left(\color{red}{}6\color{black}{}\dfrac{\pi}{4}\right) + sin\left(\color{red}{}6\color{black}{}\,\dfrac{\pi}{4}\right)\,i\right)
+                \\\\
+                &= 8^3 \left(cos\left(\dfrac{3}{2}\pi\right) + sin\left(\dfrac{3}{2}\pi\right)\,i)\right)
+                \\\\
+                &= 512 \, \left(cos\left(\dfrac{3}{2}\pi\right) + sin\left(\dfrac{3}{2}\pi\right)\,i)\right)
+            \end{align*}
+        \]
+    </div>
+    
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio 1</h3>
+    <br>
+    <div>
+        Calcolare le seguenti potenze
+        <br>
+        <br>
+        <ul>
+            <li>
+                \(\left(-2\sqrt{3} + 2i\right)^4\)
+                <br>
+                <br>
+                <div class="gray">
+                    <b>Soluzione:</b> 
+                    \[
+                        \begin{align*}
+                            z^4 
+                            &= \,256\,\left(cos\left(-\dfrac{2}{3}\pi\right) + sin\left(-\dfrac{2}{3}\pi\right)\,i\right)
+                            \\\\
+                            &= \,-128 - 128\sqrt{3}\,i
+                        \end{align*}
+                    \]
+                </div>
+            </li>
+            <br>
+            <li>
+                \(\left(-4 -4\right)^3\)
+                <br>
+                <br>
+                <div class="gray">
+                    <b>Soluzione:</b> 
+                    \[
+                        \begin{align*}
+                            z^3 
+                            &= \,128\sqrt{2}\,\left(cos\left(-\dfrac{\pi}{4}\right) + sin\left(-\dfrac{\pi}{4}\right)\,i\right)
+                            \\\\
+                            &= \,+128 - 128\,i
+                        \end{align*}
+                    \]
+                </div>
+            </li>            
+            <br>
+            <li>
+                \(\left(2 + 3i\right)^6\)                
+            </li>            
+        </ul>
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio 2</h3>
+    <br>
+    <div>
+        Calcolare \(\sqrt{1 + i}\)
+    </div>
+    
+    <br>
+    <br>
+    <div class="gray">
+        <b>Suggerimento</b>
+        <br>
+        Le formule di De Moivre si applicano anche quando l'esponente non è un numero intero.
+        Quindi in questo caso basta ricordare che
+        \[
+            \sqrt{1 + i} = \sqrt{1 + i}
+        \]
+    </div>
+    
+    <br>
+    <br>
+
+    
+</body>
