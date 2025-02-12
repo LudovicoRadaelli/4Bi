@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://www.geogebra.org/apps/deployggb.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js"></script> 
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>Compiti per casa</title>
+</head>
+<body>
+    <h1>Compiti per casa</h1>
+    
+    <br>
+    
+    <div class="gray">
+        Di seguito trovate riassunte tutte le informazioni che abbiamo studiado riguardo i numeri complessi.
+    </div>
+
+    <br>    
+    <h3 class="yellow">Numeri complessi - recap</h3>
+    <div class="esempi-container">
+        L'<b class="blue">unità immaginaria</b> \(i\) è quel numero tale che 
+        \[
+            i^2 = -1
+        \]
+        <br>
+        L'insieme \(\mathbb{C}\) dei <b class="blue">numeri complessi</b> è formato da tutti gli elementi della forma
+        \[
+            x + y\,i 
+        \]
+        con \(x,\,y \in \mathbb{R}\).
+        <br>
+        <br>
+        Un numero complesso \(z\) può essere espresso in due forme equivalenti:
+        <br>
+        <br>
+        <ul>
+            <li>
+                la <b class="blue">forma cartesiana</b> 
+                \[
+                    z = x + y\,i
+                \] 
+                nella quale il numero viene 
+                individuato attraverso le sue coordinate cartesiane nel piano complesso
+                <br>
+                <br>
+                <img src="img/6(1).png" style="width: 60%; border: 0;">
+                <br>
+            </li>
+            <br>
+            <li>
+                la <b class="blue">forma trigonometrica</b> 
+                \[
+                    z = r\,\left(cos(\alpha) + sin(\alpha)\,i\right)
+                \] 
+                nella quale vengono messe in evidenza le sue coordinate polari nel piano complesso
+                <br>
+                <br>
+                <img src="img/6(2).png" style="width: 60%; border: 0;">
+                <br>
+            </li>
+        </ul>        
+        Le formule che permettono di passare dalla forma cartesiana a quella trigonometrica e viceversa sono le seguenti
+        <br>
+        <br>         
+        <div style="display: flex; flex-direction: row; justify-content: space-evenly; align-items: flex-start;">
+            <div style="width: 48%; margin-right: 2%;">
+                <b style="font-size: 1rem;">cartesiana \(\rightarrow\) trigonometrica</b>
+                \[
+                    \begin{cases}
+                        r = \sqrt{x^2 + y^2}
+                        \\\\
+                        tan(\alpha) = \dfrac{y}{x}
+                    \end{cases}
+                \]
+            </div>
+            <div style="width: 48%; margin-left:2% ;">
+                <b style="font-size: 1rem;">trigonometrica \(\rightarrow\) cartesiana</b>
+                \[
+                    \begin{cases}
+                        x = r\,cos(\alpha)
+                        \\\\
+                        y = r\,sin(\alpha)
+                    \end{cases}
+                \]
+            </div>
+        </div>
+        Queste formule sono ricavabili dalla seguente figura
+        <br>
+        <br>
+        <img src="img/6(3).png" style="width: 60%; border: 0;">
+        <br>
+        <br>
+        Per effettuare la <b class="blue">somma</b> di due numeri complessi \(z\) e \(w\) è
+        conveniente sfruttare la loro espressione cartesiana:
+        <div class="formula">
+            \[
+                \color{transparent}{}                                    
+                \begin{cases}
+                    \color{black}{}
+                    z = a + b\, i 
+                    \\\\
+                    \color{black}{}
+                    w = c + d\, i
+                \end{cases}
+                \color{black}{}
+                \,\,\,\Longrightarrow\,\,\,
+                z + w = (a + c) + (b + d)\,i
+            \]
+        </div>
+        Per effettuare il <b class="blue">prodotto</b> di due numeri complessi \(z\) e \(w\) abbiamo due formule, a seconda della
+        forma nella quale sono espressi:
+        <br>
+        <br>
+        <b style="font-size: 1rem;">Prodotto - forma cartesiana</b>
+        <div class="formula">
+            \[
+                \color{transparent}{}                                    
+                \begin{cases}
+                    \color{black}{}
+                    z = a + b\, i 
+                    \\\\
+                    \color{black}{}
+                    w = c + d\, i
+                \end{cases}
+                \color{black}{}
+                \,\,\,\Longrightarrow\,\,\,
+                z \cdot w = (ac - bd) + (ad + bc)\,i
+            \]
+        </div>
+        <b style="font-size: 1rem;">Prodotto - forma trigonometrica</b>
+        <div class="formula">
+            \[
+                \color{transparent}{}                                    
+                \begin{cases}
+                    \color{black}{}
+                    z = r\,\left(cos(\alpha) + sin(\alpha)\,i\right)
+                    \\\\
+                    \color{black}{}
+                    w = R\,\left(cos(\beta) + sin(\beta)\,i\right)
+                \end{cases}            
+            \]
+            \[
+            \Downarrow
+            \]
+            \[
+                z \cdot w = r\cdot R\,\,\,\left(cos(\alpha + \beta) + sin(\alpha + \beta)\,i\right)
+            \]
+        </div>
+        Da questa formula vediamo che moltiplicare \(z\) per \(w\) fa ruotare \(z\) di un angolo \(\beta\)  radianti e
+        dilata il suo raggio di un fattore \(R\)
+        <br>
+        <br>
+        Per effettuare la <b class="blue">divisione</b> tra due numeri complessi \(z\) e \(w\) usiamo  un procedimento 
+        analogo alla razionalizzazione
+        <div class="formula">            
+            \[
+                \begin{align*}
+                    \dfrac{z}{w} 
+                    &= \dfrac{a + b\,i}{c + d\,i}
+                    \\\\
+                    &= \dfrac{a + b\,i}{c + d\,i} \cdot \dfrac{c - d\,i}{c - d\,i}
+                    \\\\
+                    &= \dfrac{(ac + bd) + (bc - ad)\,i}{c^2 + d^2} 
+                \end{align*}
+            \]
+        </div>
+        Infine la <b>formula di De Moivre</b> può essere applicata per effettuare <b class="blue">potenze</b> e <b class="blue">radici</b>
+        <br>
+        <br>
+        <div class="formula">
+            \[
+                z = r\,(cos(\alpha) + sin(\alpha)\,i)
+            \]
+            \[
+                \Downarrow
+            \]
+            \[
+                z^{\color{red}{}n} = r^{\color{red}{}n} \,\, \Big((cos(\color{red}{}n\color{black}{}\alpha) + sin(\color{red}{}n\color{black}{}\alpha)\,i)\Big)
+            \]
+        </div>
+        
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio 1 - osservazioni preliminari</h3>
+    <br>
+    <div>
+        <b>Osservazione 1</b>
+        <br>        
+        Consideriamo un polinomio di primo grado della forma 
+        \[
+            P(x) = x - a
+        \]
+        Non vi stupirà sapere che questo polinomio si annulla per \(x = a\). 
+        <br>
+        <br>
+        <b class="gray">Esempio</b>             
+        <div class="grayBorder gray">
+            
+            Il polinomio 
+            \(P(x) = x - 2\) si annulla per \(x = 2\), infatti 
+            \[
+                P(\color{red}{2}\color{gray}{}) = \color{red}{}2\color{gray}{} - 2 = 0
+            \]
+        </div>
+        <br>
+        <br>
+        <b>Osservazione 2</b>
+        <br>
+        <br>
+        Se moltiplichiamo due polinomi di primo grado otteniamo un polinomio di secondo grado.
+        <br>
+        <br>
+        Se moltiplichiamo tre polinomi di primo grado otteniamo un polinomio di terzo grado.
+        <br>
+        <br>
+        Se moltiplichiamo quattro polinomi di primo grado otteniamo un polinomio di quarto grado.
+        <br>
+        <br>
+        ...
+        <br>
+        <br>
+        Se moltiplichiamo \(n\) polinomi di primo grado otteniamo un polinomio di grado \(n\).
+
+        <br>
+        <br>
+
+        <b class="gray">Esempi</b>
+        <div class="grayBorder gray">
+            \[
+                (2x - 3)(4x + 1) = 8x^2 - 10x - 3
+            \]
+            \(\,\)
+            \[
+                (2x - 1)(x + 2)(3x + 5) = 6x^3 + 19x^2 + 9x -10
+            \]
+            \(\,\)
+            \[
+                \begin{align*}
+                    &(3x - 2)\,(4x - 1)\,x\,(5x + 3)\,(4x + 3) =
+                    \\\\                   
+                    &240x^5 + 104x^4 -149x^3 -45x^2 + 18x
+                \end{align*}
+            \]
+        </div>
+
+        <br>
+        <b>Osservazione 3</b>
+        <br>
+        Quando moltiplichiamo polinomi di primo grado della forma \(x - a\) otteniamo un polinomio che 
+        si annulla negli stessi valori in cui si annullano i fattori.
+
+        <br>
+        <br>
+        <div class="gray">Esempio</div>
+        <br>
+        <div class="gray grayBorder">
+            I monomi  
+            \[
+                x - 4 \qquad x - 3 \qquad  x + 1 \qquad x + 3
+            \]
+            si 
+            annullano rispettivamente in 
+            \[
+                x = 4 \qquad x = 3 \qquad x = -1 \qquad x = -3 
+            \]
+            Se li moltiplichiamo tra loro otteniamo 
+            \[
+                \begin{align*}
+                &(x - 4)(x - 3)(x + 1)(x + 3) = 
+                \\\\
+                &x^4 - 3x^3 - 13x^2 +27x + 36
+                \end{align*}
+            \]
+            Questo polinomio di quarto grado si annulla ancora in
+            \[
+                x = 4 \qquad x = 3 \qquad x = -1 \qquad x = -3 
+            \]
+            (Vedere per credere: provate a sostituire uno di questi valori nel polinomio)
+
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio 1</h3>
+    <br>
+    <div>
+        Scrivere un polinomio di quinto grado che si annulli in
+        <div class="formula">
+            \[
+                x = -3 \qquad x = -2 \qquad x = -1 \qquad x = 3 \qquad x = 5
+            \]
+        </div>
+    </div>
+
+
+    
+    
+    
+    
+    
+    <br>
+    <br>
+
+    
+</body>
