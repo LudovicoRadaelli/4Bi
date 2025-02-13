@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://www.geogebra.org/apps/deployggb.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js"></script> 
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>Compiti per casa</title>
+</head>
+<body>
+    <h1>Compiti per casa</h1>
+    
+    <br>
+    
+    <div class="gray">
+        Di seguito trovate riassunte tutte le informazioni che abbiamo studiado riguardo i numeri complessi.
+    </div>
+
+    <br>    
+    <h3 class="yellow">Numeri complessi - recap</h3>
+    <div class="esempi-container">
+        L'<b class="blue">unità immaginaria</b> \(i\) è quel numero tale che 
+        \[
+            i^2 = -1
+        \]
+        <br>
+        L'insieme \(\mathbb{C}\) dei <b class="blue">numeri complessi</b> è formato da tutti gli elementi della forma
+        \[
+            x + y\,i 
+        \]
+        con \(x,\,y \in \mathbb{R}\).
+        <br>
+        <br>
+        Un numero complesso \(z\) può essere espresso in due forme equivalenti:
+        <br>
+        <br>
+        <ul>
+            <li>
+                la <b class="blue">forma cartesiana</b> 
+                \[
+                    z = x + y\,i
+                \] 
+                nella quale il numero viene 
+                individuato attraverso le sue coordinate cartesiane nel piano complesso
+                <br>
+                <br>
+                <img src="img/6(1).png" style="width: 60%; border: 0;">
+                <br>
+            </li>
+            <br>
+            <li>
+                la <b class="blue">forma trigonometrica</b> 
+                \[
+                    z = r\,\left(cos(\alpha) + sin(\alpha)\,i\right)
+                \] 
+                nella quale vengono messe in evidenza le sue coordinate polari nel piano complesso
+                <br>
+                <br>
+                <img src="img/6(2).png" style="width: 60%; border: 0;">
+                <br>
+            </li>
+        </ul>        
+        Le formule che permettono di passare dalla forma cartesiana a quella trigonometrica e viceversa sono le seguenti
+        <br>
+        <br>         
+        <div style="display: flex; flex-direction: row; justify-content: space-evenly; align-items: flex-start;">
+            <div style="width: 48%; margin-right: 2%;">
+                <b style="font-size: 1rem;">cartesiana \(\rightarrow\) trigonometrica</b>
+                \[
+                    \begin{cases}
+                        r = \sqrt{x^2 + y^2}
+                        \\\\
+                        tan(\alpha) = \dfrac{y}{x}
+                    \end{cases}
+                \]
+            </div>
+            <div style="width: 48%; margin-left:2% ;">
+                <b style="font-size: 1rem;">trigonometrica \(\rightarrow\) cartesiana</b>
+                \[
+                    \begin{cases}
+                        x = r\,cos(\alpha)
+                        \\\\
+                        y = r\,sin(\alpha)
+                    \end{cases}
+                \]
+            </div>
+        </div>
+        Queste formule sono ricavabili dalla seguente figura
+        <br>
+        <br>
+        <img src="img/6(3).png" style="width: 60%; border: 0;">
+        <br>
+        <br>
+        Per effettuare la <b class="blue">somma</b> di due numeri complessi \(z\) e \(w\) è
+        conveniente sfruttare la loro espressione cartesiana:
+        <div class="formula">
+            \[
+                \color{transparent}{}                                    
+                \begin{cases}
+                    \color{black}{}
+                    z = a + b\, i 
+                    \\\\
+                    \color{black}{}
+                    w = c + d\, i
+                \end{cases}
+                \color{black}{}
+                \,\,\,\Longrightarrow\,\,\,
+                z + w = (a + c) + (b + d)\,i
+            \]
+        </div>
+        Per effettuare il <b class="blue">prodotto</b> di due numeri complessi \(z\) e \(w\) abbiamo due formule, a seconda della
+        forma nella quale sono espressi:
+        <br>
+        <br>
+        <b style="font-size: 1rem;">Prodotto - forma cartesiana</b>
+        <div class="formula">
+            \[
+                \color{transparent}{}                                    
+                \begin{cases}
+                    \color{black}{}
+                    z = a + b\, i 
+                    \\\\
+                    \color{black}{}
+                    w = c + d\, i
+                \end{cases}
+                \color{black}{}
+                \,\,\,\Longrightarrow\,\,\,
+                z \cdot w = (ac - bd) + (ad + bc)\,i
+            \]
+        </div>
+        <b style="font-size: 1rem;">Prodotto - forma trigonometrica</b>
+        <div class="formula">
+            \[
+                \color{transparent}{}                                    
+                \begin{cases}
+                    \color{black}{}
+                    z = r\,\left(cos(\alpha) + sin(\alpha)\,i\right)
+                    \\\\
+                    \color{black}{}
+                    w = R\,\left(cos(\beta) + sin(\beta)\,i\right)
+                \end{cases}            
+            \]
+            \[
+            \Downarrow
+            \]
+            \[
+                z \cdot w = r\cdot R\,\,\,\left(cos(\alpha + \beta) + sin(\alpha + \beta)\,i\right)
+            \]
+        </div>
+        Da questa formula vediamo che moltiplicare \(z\) per \(w\) fa ruotare \(z\) di un angolo \(\beta\)  radianti e
+        dilata il suo raggio di un fattore \(R\)
+        <br>
+        <br>
+        Per effettuare la <b class="blue">divisione</b> tra due numeri complessi \(z\) e \(w\) usiamo  un procedimento 
+        analogo alla razionalizzazione
+        <div class="formula">            
+            \[
+                \begin{align*}
+                    \dfrac{z}{w} 
+                    &= \dfrac{a + b\,i}{c + d\,i}
+                    \\\\
+                    &= \dfrac{a + b\,i}{c + d\,i} \cdot \dfrac{c - d\,i}{c - d\,i}
+                    \\\\
+                    &= \dfrac{(ac + bd) + (bc - ad)\,i}{c^2 + d^2} 
+                \end{align*}
+            \]
+        </div>
+        Infine la <b>formula di De Moivre</b> può essere applicata per effettuare <b class="blue">potenze</b> e <b class="blue">radici</b>
+        <br>
+        <br>
+        <div class="formula">
+            \[
+                z = r\,(cos(\alpha) + sin(\alpha)\,i)
+            \]
+            \[
+                \Downarrow
+            \]
+            \[
+                z^{\color{red}{}n} = r^{\color{red}{}n} \,\, \Big((cos(\color{red}{}n\color{black}{}\alpha) + sin(\color{red}{}n\color{black}{}\alpha)\,i)\Big)
+            \]
+        </div>
+        
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    
+    <h3 class="green">Esercizio 1</h3>
+    <br>
+    <div>
+        In questo video dello youtuber Veritasium è raccontata la storia dei numeri complessi. Guardatelo, è fatto veramente bene!
+        <br>
+        <br>
+        <iframe style="width: 100%;" src="https://www.youtube.com/embed/cUzklzVXJwo?si=ffdM2GFyozPz1t5c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+        <br>
+        <br>
+
+        Chi volesse scendere in dettagli più tecnici riguardo alle equazioni di terzo grado può vedere 
+        questo video dello youtuber Mathologer (i contenuti che realizza sono tutti meravigliosi)
+        
+        <br>
+        <br>
+
+        <iframe style="width: 100%;" src="https://www.youtube.com/embed/N-KXStupwsc?si=5SiOVrjKxuLPOFjX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio 2</h3>
+    <br>
+    <div>
+        Consideriamo la successione ricorsiva 
+        \[
+            \begin{cases}
+                z_0 = 0
+                \\\\
+                z_n = z_{n - 1}^2 + \color{blue}{}\dfrac{1}{2} + \dfrac{1}{2}i
+            \end{cases}
+        \]
+        Scrivere i primi cinque termini della successione: \(\,z_{1}\), \(\,z_{2}\), \(\,z_{3}\), \(\,z_{4}\), \(\,z_{5}\)
+        <br>
+        <br>
+        <div class="gray">
+            <b>Suggerimento:</b>
+            <br>
+            Scrivete il termine blu in forma trigonometrica ed usate la formula di De Moivre.
+        </div>
+    </div>
+
+    
+    
+    
+    
+    <br>
+    <br>
+
+    
+</body>
