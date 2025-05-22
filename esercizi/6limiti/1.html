@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js"></script> 
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>Compiti per casa</title>
+</head>
+<body>
+    <h1>Compiti per casa</h1>
+    
+    <br>        
+
+    <h3 class="yellow">Definizione di limite</h3>
+    <div class="esempi-container">
+        Consideriamo la funzione 
+        \[
+            f(x) = \dfrac{1}{x^2}
+        \]        
+        Si ha che 
+        \[
+            \lim_{x \to 0} f(x) = +\infty
+        \]
+        Intuitivamente, se prendiamo una successione di valori \(x\) sempre più vicini a \(0\), il valore 
+        della  \(f(x)\) diventa sempre più grande. Vediamo un esempio numerico
+        <br>
+        <br>
+        <table style="width: fit-content; font-size: 0.9rem;">
+            <tr>
+                <th>
+                    \(\boldsymbol{x}\)
+                </th>
+                <th>
+                    \(\boldsymbol{f(x)}\)
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    \[\pm0.1\]
+                </td>
+                <td>
+                    \[\dfrac{1}{(\pm0.1)^2} = \dfrac{1}{0.01} = 100\]
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    \[\pm0.01\]
+                </td>
+                <td>
+                    \[\dfrac{1}{(\pm0.01)^2} = \dfrac{1}{0.0001} = 10^{^{.}}000\]
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    \[\pm0.001\]
+                </td>
+                <td>
+                    \[\dfrac{1}{(\pm0.001)^2} = \dfrac{1}{0.000001} = 1^{^{.}}000^{^{.}}000\]
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    \[\pm0.0001\]
+                </td>
+                <td>
+                    \[\dfrac{1}{(\pm0.0001)^2} = \dfrac{1}{0.00000001} = 100^{^.}000^{^.}000\]
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    \[\pm10^{-20}\]
+                </td>
+                <td>
+                    \[\dfrac{1}{(\pm10^{-20})^2} = \dfrac{1}{10^{40}} = 10^{40}\]
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    \[\cdots\]
+                </td>
+                <td>
+                    \[\cdots\]
+                </td>
+            </tr>
+        </table>
+        
+        <br>
+
+        Più in generale vorremmo definire in modo rigorso questo concetto cosa significa charset
+        \[
+            \lim_{x \to c} f(x) = +\infty
+        \]
+        La difficoltà sta nel fatto che dobbiamo parlare dell'infinito... senza mai nominarlo! 
+
+        <br>
+        <br>
+
+        Consideriamo la seguente funzione, di cui è assegnato il grafico.
+        
+        Usiamo la metafora della sfida. Uno sfidante ci assegna un valore che penseremo come <b>tetto massimo</b>.
+        
+        
+        <br>
+        <br>
+
+        <div class="slide-container grayBorder">
+            <div class="slide1">                
+                <img src="img/outputFinitoLimiteInfinito(1).png" alt="" style="border: 0;">
+                <br>
+                Consideriamo la seguente funzione, di cui è assegnato il grafico.
+            </div>
+            <div class="slide1">                                
+                <img src="img/outputFinitoLimiteInfinito(1).png" alt="" style="border: 0;">
+                <br>
+                Vi lancio una sfida: vi assegno un valore \(\color{red}{}M \color{black}{}\gt 0\) che penseremo come il <b>tetto massimo</b>. 
+            </div>
+            <div class="slide1">                
+                <img src="img/outputFinitoLimiteInfinito(2).png" alt="" style="border: 0;">
+                <br>
+                Vi lancio una sfida: vi assegno un valore \(\color{red}{}M \color{black}{} \gt 0\) che penseremo come il <b>tetto massimo</b>. 
+            </div>
+            <div class="slide1">                
+                <img src="img/outputFinitoLimiteInfinito(2).png" alt="" style="border: 0;">
+                <br>
+                Vi lancio una sfida: vi assegno un valore \(\color{red}{}M \color{black}{} \gt 0\) che penseremo come il <b>tetto massimo</b>. 
+                <br>
+                <br>
+                Trovate un intorno di \(c\), che indicheremo con \(\color{blue}{}I(c)\), tale che 
+                <br>
+                <br>
+                <div style="text-align: center;">
+                    \(f(x) \gt \color{red}{}M\)  per ogni \(x \in \color{blue}{}I(c)\) 
+                </div>
+                <br>
+                ovvero comunque scegliamo \(x \in \color{blue}{}I(c)\), il valore di \(f(x)\) supera 
+                il tetto massimo \(\color{red}{M}\).
+            </div>
+            <div class="slide1">                
+                <img src="img/outputFinitoLimiteInfinito(3).png" alt="" style="border: 0;">
+                <br>
+                Vi lancio una sfida: vi assegno un valore \(\color{red}{}M \color{black}{} \gt 0\) che penseremo come il <b>tetto massimo</b>. 
+                <br>
+                <br>
+                Trovate un intorno di \(c\), che indicheremo con \(\color{blue}{}I(c)\), tale che 
+                <br>
+                <br>
+                <div style="text-align: center;">
+                    \(f(x) \gt \color{red}{}M\)  per ogni \(x \in \color{blue}{}I(c)\) 
+                </div>
+                <br>
+                ovvero comunque scegliamo \(x \in \color{blue}{}I(c)\), il valore di \(f(x)\) supera 
+                il tetto massimo \(\color{red}{M}\).
+            </div>
+            <div class="slide1">                
+                <img src="img/outputFinitoLimiteInfinito(4).png" alt="" style="border: 0;">
+                <br>
+                Vi lancio una sfida: vi assegno un valore \(\color{red}{}M \color{black}{} \gt 0\) che penseremo come il <b>tetto massimo</b>. 
+                <br>
+                <br>
+                Trovate un intorno di \(c\), che indicheremo con \(\color{blue}{}I(c)\), tale che 
+                <br>
+                <br>
+                <div style="text-align: center;">
+                    \(f(x) \gt \color{red}{}M\)  per ogni \(x \in \color{blue}{}I(c)\) 
+                </div>
+                <br>
+                ovvero comunque scegliamo \(x \in \color{blue}{}I(c)\), il valore di \(f(x)\) supera 
+                il tetto massimo \(\color{red}{M}\).
+            </div>
+            <div class="slide1">                
+                <img src="img/outputFinitoLimiteInfinito(2).png" alt="" style="border: 0;">
+                <br>
+                Mi avete chiaramente battuto! Rilancio la sfida aumentando il valore del tetto massimo \(\color{red}{}M\).
+            </div>
+            <div class="slide1">                
+                <img src="img/outputFinitoLimiteInfinito(5).png" alt="" style="border: 0;">
+                <br>
+                Mi avete battuto! Rilancio la sfida aumentando il valore del tetto massimo \(\color{red}{}M\).
+            </div>
+            <div class="slide1">                
+                <img src="img/outputFinitoLimiteInfinito(5).png" alt="" style="border: 0;">
+                <br>
+                Mi avete battuto! Rilancio la sfida aumentando il valore del tetto massimo \(\color{red}{}M\).
+                <br>
+                <br>
+                Come prima, dovete trovate un intorno di \(\color{blue}{}I(c)\) tale che 
+                <br>
+                <br>
+                <div style="text-align: center;">
+                    \(f(x) \gt \color{red}{}M\)  per ogni \(x \in \color{blue}{}I(c)\) 
+                </div>                
+            </div>
+            <div class="slide1">                
+                <img src="img/outputFinitoLimiteInfinito(6).png" alt="" style="border: 0;">
+                <br>
+                Mi avete battuto! Rilancio la sfida aumentando il valore del tetto massimo \(\color{red}{}M\).
+                <br>
+                <br>
+                Come prima, dovete trovate un intorno di \(\color{blue}{}I(c)\) tale che 
+                <br>
+                <br>
+                <div style="text-align: center;">
+                    \(f(x) \gt \color{red}{}M\)  per ogni \(x \in \color{blue}{}I(c)\) 
+                </div>                
+            </div>
+            <div class="slide1">                
+                <img src="img/outputFinitoLimiteInfinito(5).png" alt="" style="border: 0;">
+                <br>
+                Mi avete battuto ancora! Rilancio di nuovo aumentando ulteriormente il valore del tetto massimo \(\color{red}{}M\).                
+            </div>
+            <div class="slide1">                
+                <img src="img/outputFinitoLimiteInfinito(7).png" alt="" style="border: 0;">
+                <br>
+                Mi avete battuto ancora! Rilancio di nuovo aumentando ulteriormente il valore del tetto massimo \(\color{red}{}M\).                
+            </div>
+            <div class="slide1">                
+                <img src="img/outputFinitoLimiteInfinito(7).png" alt="" style="border: 0;">
+                <br>
+                Capite bene che questa storia può andare avanti ...<b>all'infinito</b>. 
+            </div>
+            <div class="slide1">                
+                <img src="img/outputFinitoLimiteInfinito(7).png" alt="" style="border: 0;">
+                <br>
+                Capite bene che questa storia può andare avanti ...<b>all'infinito</b>. 
+                <br>
+                Eccolo qua, con il sistema della sfida siamo riusciti ad implicare il concetto di infinito senza mai nominarlo.
+            </div>
+            <div class="slide1">                
+                <img src="img/outputFinitoLimiteInfinito(7).png" alt="" style="border: 0;">
+                <br>
+                Riassumiamo.
+                <br>                
+                Per qualsiasi scelta del tetto massimo \(\color{red}{}M\color{black}{} \gt 0\) voi riuscite 
+                a trovare un intorno \(\color{blue}{}I(c)\) tale che
+                <br>
+                <br>
+                <div style="text-align: center;">
+                    \(f(x) \gt \color{red}{}M\)  per ogni \(x \in \color{blue}{}I(c)\) 
+                </div>    
+            </div>
+        
+        </div>
+        <div style="display: flex; flex-direction:row; justify-content: space-evenly; align-items: center;">
+            <button id="previousSlide-button1" onclick="previousSlide(1)">Indietro</button>
+            <button id="nextSlide-button1" onclick="nextSlide(1)">Avanti</button>
+        </div>  
+
+        <br>
+        
+
+        Abbiamo così la seguente definizione:
+        
+
+        <br>
+        <br>
+
+        <div class="grayBackground">
+            \[
+                \lim_{x \to c} f(x) = +\infty
+            \]
+            <div style="text-align: center;">
+                se e solo se 
+            </div>
+            <br>
+            Per ogni \(\color{red}{}M \color{black}{} \gt 0\) esiste un intorno \(\color{blue}{}I(c)\) tale che 
+            <br>
+            <br>
+            <div style="text-align: center;">
+                \(f(x) \gt \color{red}{}M\,\,\) per ogni \(x \in \color{blue}{}I(c)\)
+            </div>
+
+        </div>
+    </div>
+
+
+    <br>
+    <br>
+    
+    <script src="../../js/hintAndSlide.js"></script>
+</body>
