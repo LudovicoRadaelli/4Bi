@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js">
+    </script>
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>Compiti per casa</title>
+</head>
+
+<body>
+    <h1>Compiti per casa</h1>
+
+    <br>
+
+
+    <h3 class="green">Esercizio</h3>
+    <br>
+    <div>
+        Consideriamo la funzione
+        \[
+        f(x) = \sqrt{\dfrac{2x - 4}{-5x + 1}}
+        \]
+        Individuare il <b>dominio</b> della funzione \(f\)
+        <br>
+        (ovvero individuare tutti i valori della \(x\) per i quali la funzione è <b>definita</b>)
+        <br>
+        <br>
+        <button id="hintbKKnnUwUVZ-button" onclick="showHint(`bKKnnUwUVZ`)">Soluzione</button>
+        <div id="hintbKKnnUwUVZ" class="hint gray" style="display: none;">
+            <b>Soluzione:</b>
+            <br>
+            La funzione è definita per
+            \[
+            \dfrac{1}{5} \lt x \leq 2
+            \]
+            quindi il suo dominio è l'insieme
+            \[
+            D = \Big(\dfrac{1}{5}\,,\,\,2\Big]
+            \]
+        </div>
+    </div>
+
+    <br>
+    <hr>
+    <br>
+    <br>
+
+
+    <h3 class="green">Esercizio</h3>
+    <br>
+    <div>
+        Consideriamo la funzione
+        \[
+        f(x) = \dfrac{x + 2}{3x + 1}
+        \]
+        Individuare per quali valori della \(x\) si ha
+        \[
+        \dfrac{1}{1 + f(x)} \gt 0
+        \]
+    </div>
+
+    <br>
+
+    <button id="hintwGhzjyA(1)-button" onclick="showHint(`wGhzjyA(1)`)">Soluzione</button>
+    <div id="hintwGhzjyA(1)" class="hint gray" style="display: none;">
+        <b>Soluzione:</b>
+        <br>
+        Si ha
+        \[
+        \begin{align*}
+        \dfrac{1}{1 + f(x)}
+        &amp;= \dfrac{1}{1 + \frac{x + 2}{3x + 1}} =
+        \\\\
+        &amp;= \dfrac{3x + 1}{4x + 3}
+        \end{align*}
+        \]
+        Il suo segno è positivo se
+        \[
+        x \in \left(-\infty\,,\,\,-\dfrac{3}{4}\right) \cup \left(-\dfrac{1}{3}\,,\,\,+\infty\right)
+        \]
+    </div>
+
+    <br>
+
+    <button id="hintwGhzjyA(2)-button" onclick="showHint(`wGhzjyA(2)`)">Svolgimento</button>
+    <div id="hintwGhzjyA(2)" class="hint gray" style="display: none;">
+        <b>Svolgimento</b>
+        <br>
+        <iframe style="width: 100%;" src="https://www.youtube.com/embed/g6OriUcnE_g?si=DkC72Xe4kEFEoYns"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+
+    <h3 class="green">Esercizio</h3>
+    <br>
+    <div>
+        Consideriamo la funzione \(f\) avente il seguente grafico.
+        <br>
+        <br>
+        <img src="img/ghIEnhJdch(1).png" alt="">
+        <br>
+        <ol type="A" style="font-weight: bold;">
+            <li>
+                <span style="font-weight: normal;">
+                    Quanto vale \(f(-1)\)?
+                    <br>
+                    <br>
+                    <button id="hintghIEnhJ(1)-button" onclick="showHint(`ghIEnhJ(1)`)">Soluzione</button>
+                    <div id="hintghIEnhJ(1)" class="hint gray" style="display: none;">
+                        <b>Soluzione:</b> \(f(-1) = 0\)
+                    </div>
+                </span>
+            </li>
+            <br>
+            <li>
+                <span style="font-weight: normal;">
+                    Qual è la variazione della funzione da \(x = 3\) a \(x = 5\)
+                    <br>
+                    <br>
+                    <button id="hintghIEnhJ(2)-button" onclick="showHint(`ghIEnhJ(2)`)">Soluzione</button>
+                    <div id="hintghIEnhJ(2)" class="hint gray" style="display: none;">
+                        <b>Soluzione:</b> la variazione è di \(-2\).
+                    </div>
+                </span>
+            </li>
+            <br>
+            <li>
+                <span style="font-weight: normal;">
+                    Per quale valore della \(x\) la funzione assume valore \(-2\)?
+                    <br>
+                    <br>
+                    <button id="hintghIEnhJ(3)-button" onclick="showHint(`ghIEnhJ(3)`)">Soluzione</button>
+                    <div id="hintghIEnhJ(3)" class="hint gray" style="display: none;">
+                        <b>Soluzione:</b> \(\,\, x = 1\)
+                    </div>
+                </span>
+            </li>
+            <br>
+            <li>
+                <span style="font-weight: normal;">
+                    É vero che \(f(x) &gt; 1\,\,\) per ogni \(x\) maggiore di \(2\)?
+                    <br>
+                    <br>
+                    <button id="hintghIEnhJ(4)-button" onclick="showHint(`ghIEnhJ(4)`)">Soluzione</button>
+                    <div id="hintghIEnhJ(4)" class="hint gray" style="display: none;">
+                        <b>Soluzione:</b> sì, perché in corrispondenza di tali valori della \(x\) il grafico della
+                        funzione
+                        \(f\)
+                        sta sopra la retta \(y = 1\)
+                    </div>
+                </span>
+            </li>
+            <br>
+            <li>
+                <span style="font-weight: normal;">
+                    É vero che la funzione assume valori negativi per ogni \(x\) minore di \(-1\)?
+                    <br>
+                    <br>
+                    <button id="hintghIEnhJ(5)-button" onclick="showHint(`ghIEnhJ(5)`)">Soluzione</button>
+                    <div id="hintghIEnhJ(5)" class="hint gray" style="display: none;">
+                        <b>Soluzione:</b> no, è vero l'opposto. Per \(x \lt -1\) il grafico della funzione si trova
+                        sotto l'asse
+                        delle \(x\).
+                    </div>
+                </span>
+            </li>
+        </ol>
+    </div>
+
+    <br>
+    <br>
+
+    <script src="../../js/hintAndSlide.js"></script>
+
+</body>
