@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js">
+    </script>
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>Compiti per casa</title>
+</head>
+
+<body>
+    <h1>Compiti per casa</h1>
+
+    <br>
+
+    <h3 class="yellow">Proprietà delle potenze</h3>
+    <div class="esempi-container">
+        <h3 class="yellow" style="font-size: 1.3rem;">Potenze con <u>base</u> uguale</h3>
+        <br>
+        <b style="font-size: 1.25rem">Moltiplicazione</b>
+
+        <div class="grayBackground">
+            <ul>
+                <li>
+                    L'esponente del risultato è la <u>somma</u> degli esponenti.
+                </li>
+                <li>
+                    La base del risultato rimane uguale.
+                </li>
+            </ul>
+        </div>
+
+        <br>
+
+
+        <b class="gray">Esempi</b>
+        <div class="grayBorder">
+            <p id="esempio1">
+                \[
+                \color{red}{3}^{\color{blue}{4}} \color{black}{\,\,\cdot\,\,} \color{red}{3}^{\color{blue}{2}}
+                \color{black}{\,\,\,=\,\,\,} \color{red}{3}^{\color{blue}{6}}
+                \]
+            </p>
+
+            <br>
+
+            <button class="generaEsempio" id="generaEsempio1" onclick="generaEsempio(1)">Genera un altro
+                esempio</button>
+        </div>
+
+
+
+        <br>
+        <br>
+
+        <b style="font-size: 1.25rem">Divisione</b>
+
+        <div class="grayBackground">
+            <ul>
+                <li>
+                    L'esponente del risultato è la <u>differenza</u> degli esponenti
+                </li>
+                <li>
+                    La base del risultato rimane uguale.
+                </li>
+            </ul>
+        </div>
+
+        <br>
+
+        <h3 class="gray">Esempi</h3>
+        <div class="grayBorder">
+            <p id="esempio2">
+                \[
+                \color{red}{3}^{\color{blue}{7}} \color{black}{\,\,:\,\,} \color{red}{3}^{\color{blue}{3}}
+                \color{black}{\,\,\,=\,\,\,} \color{red}{3}^{\color{blue}{4}}
+                \]
+            </p>
+
+            <br>
+
+            <button class="generaEsempio" id="generaEsempio2" onclick="generaEsempio(2)">Genera un altro
+                esempio</button>
+        </div>
+
+
+        <br>
+        <br>
+        <hr>
+        <br>
+        <br>
+
+        <h3 class="yellow" style="font-size: 1.3rem;">Potenze con <u>esponente</u> uguale</h3>
+
+        <br>
+        <b style="font-size: 1.25rem">Moltiplicazione</b>
+        <div class="grayBackground">
+            <ul>
+                <li>
+                    La base del risultato è il <u>prodotto</u> delle basi
+                </li>
+                <li>
+                    L'esponente della base rimane uguale.
+                </li>
+            </ul>
+        </div>
+        <br>
+
+        <h3 class="gray">Esempi</h3>
+        <div class="grayBorder">
+            <p id="esempio3">
+                \[
+                \color{red}{3}^{\color{blue}{4}} \color{black}{\,\,\cdot\,\,} \color{red}{7}^{\color{blue}{4}}
+                \color{black}{\,\,\,=\,\,\,} \color{red}{21}^{\color{blue}{4}}
+                \]
+            </p>
+
+            <br>
+
+            <button class="generaEsempio" id="generaEsempio3" onclick="generaEsempio(3)">Genera un altro
+                esempio</button>
+        </div>
+
+
+        <br>
+
+        <b style="font-size: 1.25rem">Divisione</b>
+        <div class="grayBackground">
+            <ul>
+                <li>
+                    La base del risultato è la <u>divisione</u> delle basi
+                </li>
+                <li>
+                    L'esponente della base rimane uguale.
+                </li>
+            </ul>
+        </div>
+        <br>
+
+        <h3 class="gray">Esempi</h3>
+        <div class="grayBorder">
+            <p id="esempio4">
+                \[
+                \color{red}{10}^{\color{blue}{7}} \color{black}{\,\,:\,\,} \color{red}{5}^{\color{blue}{7}}
+                \color{black}{\,\,\,=\,\,\,} \color{red}{2}^{\color{blue}{7}}
+                \]
+            </p>
+
+            <br>
+
+            <button class="generaEsempio" id="generaEsempio4" onclick="generaEsempio(4)">Genera un altro
+                esempio</button>
+        </div>
+
+
+        <br>
+        <br>
+        <hr>
+        <br>
+        <br>
+
+
+        <h3 class="yellow" style="font-size: 1.3rem;">Potenza di potenza</h3>
+
+        <div class="grayBackground">
+            <ul>
+                <li>
+                    L'esponente del risultato è il prodotto degli esponenti.
+                </li>
+                <li>
+                    La base del risultato rimane uguale.
+                </li>
+            </ul>
+        </div>
+        <br>
+
+        <h3 class="gray">Esempi</h3>
+        <div class="grayBorder">
+            <p id="esempio5">
+                \[
+                \left(\color{red}{5}\color{black}{}^{\color{blue}{3}}\right)^{\color{blue}{2}} =
+                \color{red}{5}^{\color{blue}{6}}
+                \]
+            </p>
+
+            <br>
+
+            <button class="generaEsempio" id="generaEsempio4" onclick="generaEsempio(5)">Genera un altro
+                esempio</button>
+        </div>
+
+        <script>
+            function generaEsempio(n) {
+                if (n === 0) {
+                    let b = Math.floor(Math.random() * 12 + 2);
+                    let e = Math.floor(Math.random() * 12 + 1);
+
+                    let str = `${b}`
+
+                    for (let i = 0; i < e - 1; i++) {
+                        str += `\\cdot ${b} `
+                    }
+
+                    document.getElementById(`esempio${n}`).innerHTML =
+                        `\\[
+            ${b}^{\\color{red}{${e}}} = \\underset{\\color{red}{${e}}\\,\\,\\color{gray}{\\text{volte}}}{\\color{gray}{\\underbrace{\\color{black}{${str}}}}}
+        \\]`
+
+                    MathJax.typesetClear([document.getElementById("esempio0")]);
+                    MathJax.typesetPromise([document.getElementById("esempio0")]).then(() => {});
+                }
+
+
+                if (n === 1) {
+                    let b = Math.floor(Math.random() * 12 + 2);
+                    let e1 = Math.floor(Math.random() * 12 + 1);
+                    let e2 = Math.floor(Math.random() * 12 + 1);
+                    let eRes = e1 + e2;
+
+                    document.getElementById("esempio" + n).innerHTML =
+                        `\\[ \\color{red}{${b}}^{\\color{blue}{${e1}}} \\color{black}{\\,\\,\\cdot\\,\\,} \\color{red}{${b}}^{\\color{blue}{${e2}}} \\color{black}{\\,\\,\\,=\\,\\,\\,} \\color{red}{${b}}^{\\color{blue}{${eRes}}} \\]`;
+                    MathJax.typesetClear([document.getElementById("esempio1")]);
+                    MathJax.typesetPromise([document.getElementById("esempio1")]).then(() => {});
+
+                }
+
+                if (n === 2) {
+                    let b = Math.floor(Math.random() * 12 + 2);
+                    let e1 = Math.floor(Math.random() * 6 + 7);
+                    let e2 = e1 - Math.floor(Math.random() * 6);
+                    let eRes = e1 - e2;
+
+                    document.getElementById("esempio2").innerHTML =
+                        `\\[ \\color{red}{${b}}^{\\color{blue}{${e1}}} \\color{black}{\\,\\,:\\,\\,} \\color{red}{${b}}^{\\color{blue}{${e2}}} \\color{black}{\\,\\,\\,=\\,\\,\\,} \\color{red}{${b}}^{\\color{blue}{${eRes}}} \\]`;
+                    MathJax.typesetClear([document.getElementById("esempio" + n)]);
+                    MathJax.typesetPromise([document.getElementById("esempio" + n)]).then(() => {});
+                }
+
+                if (n === 3) {
+                    let b1 = Math.floor(Math.random() * 12 + 2);
+                    let b2 = Math.floor(Math.random() * 12 + 2);
+                    let e = Math.floor(Math.random() * 12 + 2);
+                    let bRes = b1 * b2;
+
+                    document.getElementById("esempio" + n).innerHTML =
+                        `\\[ \\color{red}{${b1}}^{\\color{blue}{${e}}} \\color{black}{\\,\\,\\cdot\\,\\,} \\color{red}{${b2}}^{\\color{blue}{${e}}} \\color{black}{\\,\\,\\,=\\,\\,\\,} \\color{red}{${bRes}}^{\\color{blue}{${e}}} \\]`;
+                    MathJax.typesetClear([document.getElementById("esempio" + n)]);
+                    MathJax.typesetPromise([document.getElementById("esempio" + n)]).then(() => {});
+                }
+
+                if (n === 4) {
+                    let b2 = Math.floor(Math.random() * 5 + 2);
+                    let b1 = b2 * Math.floor(Math.random() * 5 + 2);
+                    let e = Math.floor(Math.random() * 12 + 2);
+                    let bRes = Math.floor(b1 / b2);
+                    document.getElementById("esempio" + n).innerHTML =
+                        `\\[ \\color{red}{${b1}}^{\\color{blue}{${e}}} \\color{black}{\\,\\,:\\,\\,} \\color{red}{${b2}}^{\\color{blue}{${e}}} \\color{black}{\\,\\,\\,=\\,\\,\\,} \\color{red}{${bRes}}^{\\color{blue}{${e}}} \\]`;
+                    MathJax.typesetClear([document.getElementById("esempio" + n)]);
+                    MathJax.typesetPromise([document.getElementById("esempio" + n)]).then(() => {});
+                }
+
+                if (n === 5) {
+                    let e1 = Math.floor(Math.random() * 12 + 2);
+                    let e2 = Math.floor(Math.random() * 12 + 2);
+                    let b = Math.floor(Math.random() * 12 + 2);
+                    let eRes = Math.floor(e1 * e2);
+                    document.getElementById("esempio" + n).innerHTML =
+                        `\\[ 
+            \\left(\\color{red}{${b}}\\color{black}{}^{\\color{blue}{${e1}}}\\right)^{\\color{blue}{${e2}}} = \\color{red}{${b}}^{\\color{blue}{${eRes}}}    
+        \\]`;
+                    MathJax.typesetClear([document.getElementById("esempio" + n)]);
+                    MathJax.typesetPromise([document.getElementById("esempio" + n)]).then(() => {});
+                }
+
+
+
+
+            }
+        </script>
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <h3 class="yellow">Equazioni esponenziali per passaggio agli argomenti</h3>
+    <div class="esempi-container">
+        <style>
+            #risposta {
+                display: none;
+                text-align: center;
+            }
+        </style>
+
+        Sto pensando a due numeri, \(\color{red}{A}\) e \(\color{blue}{B}\).
+        <br>
+        L'unica informazione che vi fornisco è che
+        <br>
+        <br>
+        <div style="width: 90%; margin: auto; text-align: center;">
+            \(2^{^{\color{red}{A}}}\) è uguale a \(2^{^{\color{blue}{}B}}\)
+        </div>
+        <br>
+        Che cosa sapete dirmi sugli esponenti \(\color{red}{}A\) e \(\color{blue}{}B\)?
+
+
+        <br>
+        <br>
+        <button id="mostraRisposta" class="generaEsempio" onclick="mostraRisposta()">Mostra risposta</button>
+        <div id="risposta" style="text-align: center;">
+            \(\color{red}{}A\) deve essere esattamente uguale a \(\color{blue}{}B\).
+        </div>
+
+        <br>
+
+
+        Sfruttiamo questo semplice ragionamento per risolvere questa equazione:
+        \[
+        2^x \cdot 4 = 8 \cdot \sqrt{2}
+        \]
+
+        <iframe style="width: 100%; border: 0.01rem solid gray;"
+            src="https://www.youtube.com/embed/xqetpZIHVX8?si=SxSUL3oTRr-MkJxu" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+
+        <br>
+        <br>
+
+
+        Vediamo un esercizio della stessa tipologia, ma di difficoltà più elevata.
+
+        <br>
+        <br>
+
+        <iframe style="width: 100%; border: 0.01rem solid gray;"
+            src="https://www.youtube.com/embed/e5MDbpUqIV4?si=NbY9WdXkH3cbzqaD" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+
+        <script>
+            function mostraRisposta() {
+
+                document.getElementById("mostraRisposta").style.display = "none";
+                document.getElementById("risposta").style.display = "block";
+            }
+        </script>
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio</h3>
+    <br>
+    <div>
+        Risolvere l'equazione
+        \[
+        \dfrac{3^{2x - 3} \cdot 9}{3^{-x + 3}} = 1
+        \]
+
+        <div class="gray">
+            <b>Suggerimento</b>
+            <br>
+            Riscrivete il membro destro dell'equazione come potenza di \(3\).
+            \[
+            1 = 3^{\color{red}{?}}
+            \]
+        </div>
+
+        <button id="hintAAAAAAA(1)-button" onclick="showHint(`AAAAAAA(1)`)">Soluzione</button>
+        <div id="hintAAAAAAA(1)" class="hint gray" style="display: none;">
+            <b class="gray">Soluzione</b>
+            <br>
+            L'equazione ha soluzione \(x = \dfrac{4}{3}\)
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+
+    <h3 class="green">Esercizio</h3>
+    <br>
+    <div>
+        Risolvere l'equazione
+        \[
+        \dfrac{\left(2^{2x + 3}\right)^3}{2^{x - 1} \cdot 8^{3x - 1}} = \dfrac{1}{2^x}
+        \]
+
+        <div class="gray">
+            <b>Suggerimento</b>
+            <br>
+            Per sviluppare il termine al denominatore usate la regola "potenza di potenza":
+            \[
+                \left(2^{2x + 3}\right)^3 = 2^{\color{red}{?}}
+            \]
+            Stessa cosa per il secondo fattore al denominatore:
+            \[
+                8^{3x - 1} = \left(2^3\right)^{3x - 1} = 2^{\color{red}{?}}
+            \]
+            Per il termine al secondo membro invece potete sfruttare le potenze negative. Abbiamo 
+            visto che 
+            \[
+                2^{-5} = \dfrac{1}{2^5}
+            \]
+            Se leggiamo questa uguaglianza da destra a sinistra abbiamo che 
+            \[
+                \dfrac{1}{2^5} = 2^{-5}
+            \]
+            Mimando questo passaggio abbiamo che 
+            \[
+                \dfrac{1}{2^x} = 2^{\color{red}{}?}
+            \]
+        </div>
+
+        <button id="hintAAAAAAA(2)-button" onclick="showHint(`AAAAAAA(2)`)">Soluzione</button>
+        <div id="hintAAAAAAA(2)" class="hint gray" style="display: none;">
+            <b class="gray">Soluzione</b>
+            <br>
+            L'equazione ha soluzione \(x = \dfrac{13}{3}\)
+        </div>
+    </div>
+
+
+    <br>
+    <br>
+
+    <script src="../../js/hintAndSlide.js"></script>
+
+</body>
