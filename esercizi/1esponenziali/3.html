@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js">
+    </script>
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>Compiti per casa</title>
+</head>
+
+<body>
+    <h1>Compiti per casa</h1>
+
+    <br>
+
+    <h3 class="yellow">Potenze con esponente non intero</h3>
+    <div class="esempi-container">
+        <h3 class="yellow" style="font-size: 1.3rem;">Potenza con esponente \(a \in \mathbb{Z}\)</h3>
+        <div class="grayBorder">
+            <h3 class="gray">Esempi</h3>
+            <div class="grayBorder">
+                <p id="esempio1">
+                    \[
+                    \left( \frac{\color{#0F9D58}{2}}{\color{blue}{3}} \right)^{\color{red}{\boldsymbol{-}}\color{black}{5}} = \left(\frac{\color{blue}{3}}{\color{#0F9D58}{2}}\right)^{5}
+                    \]
+                </p>
+                <br>
+                <button class="generaEsempio" id="generaEsempio1" onclick="generaEsempio(1)">Genera un altro esempio</button>
+                <br>
+                <hr>
+                <br>
+                Possiamo vederla così: il meno dell'esponente agisce "ribaltando" numeratore e denominatore della frazione su cui agisce.
+            </div>
+        </div>
+
+
+        <br>
+        <br>
+        <hr>
+        <br>
+        <br>
+    
+        <h3 class="yellow" style="font-size: 1.3rem;">Potenza con esponente \(a \in \mathbb{Q}\)</h3>
+        <br>
+        <div class="grayBorder">
+            <h3 class="gray">Esempi</h3>
+            <div class="grayBorder">
+                <p id="esempio2">
+                    \[
+                        \sqrt[\color{blue}{2}]{3^{^{\color{red}{5}}}} = 3^{^\frac{\color{red}{5}}{\color{blue}{2}}}  
+                    \]
+                </p>
+                <br>
+                <button class="generaEsempio" id="generaEsempio2" onclick="generaEsempio(2)">Genera un altro esempio</button>
+            </div>
+            <br>
+            <p>
+                Possiamo riscrivere la radice di un numero come potenza frazionaria di quello stesso numero. 
+                <br>
+                L'<span style="color: blue">indice</span> di radice diventa il <span style="color: blue">denominatore</span> dell'esponente. L'<span style="color: red">esponente</span> de numero sotto radice diventa il <span style="color: red">numeratore</span> dell'esponente frazionario.
+            </p>
+        </div>
+
+        <script>
+            function generaEsempio(n) {
+                if(n === 0) {
+                    let b = Math.floor(Math.random()*12+2);
+                    let e = Math.floor(Math.random()*12+1);
+
+                    let str = `${b}`
+
+                    for(let i = 0; i < e -1; i++) {
+                        str += `\\cdot ${b} `
+                    }
+
+                    document.getElementById(`esempio${n}`).innerHTML = 
+                    `\\[
+                        ${b}^{\\color{red}{${e}}} = \\underset{\\color{red}{${e}}\\,\\,\\color{gray}{\\text{volte}}}{\\color{gray}{\\underbrace{\\color{black}{${str}}}}}
+                    \\]`
+
+                    MathJax.typesetClear([document.getElementById("esempio0")]);
+                    MathJax.typesetPromise([document.getElementById("esempio0")]).then(() => {});
+                }
+
+                if(n === 1) {
+
+                    let num = Math.floor(Math.random()*15 + 1);
+                    let den = Math.floor(Math.random()*7 + 1);
+                    let e = Math.floor(Math.random()*9 + 1);
+
+                    if(den !== 1) {
+                        document.getElementById("esempio"+n).innerHTML = 
+                        `\\[
+                            \\left( \\frac{\\color{#0F9D58}{${num}}}{\\color{blue}{${den}}} \\right)^{\\color{red}{\\boldsymbol{-}}\\color{black}{${e}}} = \\left(\\frac{\\color{blue}{${den}}}{\\color{#0F9D58}{${num}}}\\right)^{${e}}
+                        \\]`    
+                    } else {
+                        document.getElementById("esempio"+n).innerHTML = 
+                        `\\[
+                            \\color{#0F9D58}{${num}}^{\\color{red}{\\boldsymbol{-}}\\color{black}{${e}}} \\color{black}{} = \\left( \\frac{\\color{#0F9D58}{${num}}}{\\color{blue}{${den}}} \\right)^{\\color{red}{\\boldsymbol{-}}\\color{black}{${e}}} = \\left(\\frac{\\color{blue}{${den}}}{\\color{#0F9D58}{${num}}}\\right)^{${e}}
+                        \\]`
+                    }
+                    
+
+                    MathJax.typesetClear([document.getElementById("esempio"+n)]);
+                    MathJax.typesetPromise([document.getElementById("esempio"+n)]).then(() => {});
+                }
+
+                if(n === 2) {
+
+                    let num = Math.floor(Math.random()*15 + 1);
+                    let den = Math.floor(Math.random()*7 + 2);
+                    if(num === den) {
+                        den++;
+                    }
+                    let b = Math.floor(Math.random()*9 + 2);
+                    
+                    document.getElementById("esempio"+n).innerHTML = 
+                    `\\[
+                        \\sqrt[\\color{blue}{${den}}]{${b}^{^{\\color{red}{${num}}}}} = ${b}^{^{\\frac{\\color{red}{${num}}}{\\color{blue}{${den}}}}} 
+                    \\]`;    
+
+                    MathJax.typesetClear([document.getElementById("esempio"+n)]);
+                    MathJax.typesetPromise([document.getElementById("esempio"+n)]).then(() => {});
+                }
+}
+        </script>
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio</h3>
+    <br>
+    <div>
+        Risolvere l'equazione
+        \[
+            \dfrac{\sqrt[3]{7} \cdot 49^{^{2x - 3}}}{7^{^{9x - 2}}} = \dfrac{1}{49^{^{-5x + 2}}}
+        \]
+    </div>
+
+    <br>
+
+    <button id="hintAAAAAAAAAA-button" onclick="showHint(`AAAAAAAAAA`)">Soluzione</button>
+    <div id="hintAAAAAAAAAA" class="hint" style="display: none;">     
+        <b class="gray">Soluzione</b> 
+        <br>
+        La soluzione dell'equazione è \(x = \dfrac{1}{45}\)
+    </div>
+
+    <br>
+
+    <button id="hintAAAAAAA(2)-button" onclick="showHint(`AAAAAAA(2)`)">Soluzione</button>
+    <div id="hintAAAAAAA(2)" class="hint" style="display: none;">     
+        <b class="gray">Soluzione</b> 
+        <br>
+        <iframe style="width: 100%;" src="https://www.youtube.com/embed/dDR4CGopcFc?si=zCeJcqtOs4JgWdhs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio</h3>
+    <br>
+    <div>
+        Risolvere l'equazione
+        \[
+            1 = \dfrac{2^{9x - 7} \cdot 4^{10x - 6}}{\sqrt[3]{8}}
+        \]
+    </div>
+
+    <br>
+
+    <button id="hintAAAAAAA(3)-button" onclick="showHint(`AAAAAAA(3)`)">Soluzione</button>
+    <div id="hintAAAAAAA(3)" class="hint" style="display: none;">     
+        <b class="gray">Soluzione</b> 
+        <br>
+        La soluzione dell'equazione è \(x = \dfrac{1}{45}\)
+    </div>
+
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio</h3>
+    <br>
+    <div>
+        Individuare il dominio della funzione 
+        \[
+            f(x) = \dfrac{\sqrt{2^{^x} - \sqrt{8}}}{9x - 1}
+        \]
+    </div>
+
+    <br>
+
+    <button id="hintAAAAAAA(4)-button" onclick="showHint(`AAAAAAA(4)`)">Soluzione</button>
+    <div id="hintAAAAAAA(4)" class="hint gray" style="display: none;">     
+        <b class="gray">Soluzione</b> 
+        <br>
+        Il dominio della funzione è l'insieme
+        \[
+            D = \Big[\dfrac{3}{2}\,,\,\,+\infty\Big)
+        \]
+    </div>
+
+    <br>
+    <br>
+
+    <script src="../../js/hintAndSlide.js"></script>
+
+</body>
