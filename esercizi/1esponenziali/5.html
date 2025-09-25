@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js">
+    </script>
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>Compiti per casa</title>
+</head>
+
+<body>
+    <h1>Compiti per casa</h1>
+
+    <br>
+
+    <h3 class="yellow">Equazioni esponenziali per sostituzione</h3>
+    <div class="esempi-container">
+
+        Consideriamo la seguente equazione
+        \[
+        8 \color{red}{} + \color{black}{ 2^{x+1} = 2^{2x}}
+        \]
+        Se la confrontiamo con le equazioni della tipologia `passaggio agli esponenti` notiamo una differenza:
+        il termine \(8\) è <span style="color: red;">sommato</span> al termine \(2^{x +1}\).
+        <br>
+        In questo caso non è possibile utilizzare le proprietà delle potenze per giungere alla forma \(2^{\dots} =
+        2^{\dots}\).
+        <br>
+        Nei prossimi video vediamo come è possibile sfruttare la somiglianza di quest'equazione con una equazione di
+        secondo grado.
+        <br>
+        <br>
+        <iframe style="width: 100%; border: 0.01rem lightgray solid;"
+            src="https://www.youtube.com/embed/ix1TlRL-3ks?si=yNx2ZebdxpY8LWFS" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+        <br>
+        <br>
+
+        Risolviamo l'equazione che avevamo lasciato in sospeso
+        <br>
+        <br>
+        <iframe style="width: 100%;  border: 0.01rem lightgray solid;"
+            src="https://www.youtube.com/embed/9VItlVH0QrM?si=6sgV6pqIlnCGlPgy" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>    
+
+    <h3 class="green">Esercizio</h3>
+    <br>
+    <div>
+        Risolvere l'equazione
+        \[
+        4^x -5\,\cdot\,2^x -24 = 0
+        \]
+
+        <br>
+
+        <button id="hintAAAAAAA(1)-button" onclick="showHint(`AAAAAAA(1)`)">Soluzione</button>
+        <div id="hintAAAAAAA(1)" class="hint gray" style="display: none;">
+            <b class="gray">Soluzione</b>
+            <br>
+            La soluzione dell'equazione è \(x = 3\).
+        </div>
+
+        <br>
+        
+        <button id="hintAAAAAAA(2)-button" onclick="showHint(`AAAAAAA(2)`)">Svolgimento</button>
+        <div id="hintAAAAAAA(2)" class="hint gray" style="display: none;">     
+            <b class="gray">Svolgimento</b> 
+            <br>
+            <iframe style="width: 100%" src="https://www.youtube.com/embed/bmRkbXmV-2E?si=a2Z1Kxo-Vx9SCy1X" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio</h3>
+    <br>
+    <div>
+        Risolvere l'equazione
+        \[
+        25^x  + 25 = 26\cdot 5^x
+        \]
+
+        <br>
+
+        <button id="hintAAAAAAA(3)-button" onclick="showHint(`AAAAAAA(3)`)">Soluzione</button>
+        <div id="hintAAAAAAA(3)" class="hint gray" style="display: none;">
+            <b class="gray">Soluzione</b>
+            <br>
+            L'equazione è risolta per \(x = 0\) oppure \(x = 2\).
+        </div>
+
+        <br>
+        
+        <button id="hintAAAAAAA(4)-button" onclick="showHint(`AAAAAAA(4)`)">Svolgimento</button>
+        <div id="hintAAAAAAA(4)" class="hint gray" style="display: none;">     
+            <b class="gray">Svolgimento</b> 
+            <br>
+            <iframe style="width: 100%" src="https://www.youtube.com/embed/ptPTHWyM9lM?si=f2QEDmfHCoSAshqE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio</h3>
+    <br>
+    <div>
+        Risolvere l'equazione
+        \[
+        5^x + 5^{1-x} = 6
+        \]
+
+        <br>
+
+        <button id="hintAAAAAAA(5)-button" onclick="showHint(`AAAAAAA(5)`)">Soluzione</button>
+        <div id="hintAAAAAAA(5)" class="hint gray" style="display: none;">
+            <b class="gray">Soluzione</b>
+            <br>
+            L'equazione è risolta per \(x = 0\) oppure \(x = 1\).
+        </div>
+
+        <br>
+        
+        <button id="hintAAAAAAA(6)-button" onclick="showHint(`AAAAAAA(6)`)">Svolgimento</button>
+        <div id="hintAAAAAAA(6)" class="hint gray" style="display: none;">     
+            <b class="gray">Svolgimento</b> 
+            <br>
+            <iframe style="width: 100%" src="https://www.youtube.com/embed/kgjeYjsY_TY?si=qUtUJieGTdnAd452" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </div>    
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio</h3>
+    <br>
+    <div>
+        Risolvere l'equazione
+        \[
+        3^{x + 3} + 9^{x + 1} = 10
+        \]
+
+        <br>
+
+        <button id="hintAAAAAAA(7)-button" onclick="showHint(`AAAAAAA(7)`)">Soluzione</button>
+        <div id="hintAAAAAAA(7)" class="hint gray" style="display: none;">
+            <b class="gray">Soluzione</b>
+            <br>
+            L'equazione è risolta per \(x = -1\).
+        </div>
+
+        <br>
+        
+        <button id="hintAAAAAAA(8)-button" onclick="showHint(`AAAAAAA(8)`)">Svolgimento</button>
+        <div id="hintAAAAAAA(8)" class="hint gray" style="display: none;">     
+            <b class="gray">Svolgimento</b> 
+            <br>
+            <iframe style="width: 100%" src="https://www.youtube.com/embed/RK1M-naldyA?si=E48MIjqgteyEUMeP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </div>            
+
+    <br>
+    <br>
+
+    <script src="../../js/hintAndSlide.js"></script>
+
+</body>
