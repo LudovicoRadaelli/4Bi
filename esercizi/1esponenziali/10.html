@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js">
+    </script>
+    <script src="https://www.geogebra.org/apps/deployggb.js"></script>
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>Compiti per casa</title>
+</head>
+
+<body>
+    <h1>Compiti per casa</h1>
+
+    <br>
+
+
+    <h3 class="yellow">Traslazione del grafico di una funzione</h3>
+    <div class="esempi-container">
+        <b class="parTitle">Traslazione verticale</b>
+
+        <br>
+        <br>
+
+        Consideriamo una funzione \(f\)
+        \[
+        y = f(x)
+        \]
+        ed un valore \(\color{red}{}a \color{black}{} \in \mathbb{R}\).
+        <br>
+        <br>
+        Il grafico della funzione \(g\) definita come
+        \[
+        y = f(x) +\color{red}{a}
+        \]
+        si ottiene traslando <b>verticalmente</b> il grafico della funzione \(f\) di \(\color{red}{}a\) unità.
+        La traslazione è
+        <br>
+        <br>
+        <ul>
+            <li>
+                verso l'alto se \(\color{red}{}{}a\color{black}{} \gt 0\)
+            </li>
+            <br>
+            <li>
+                verso il basso se \(\color{red}{}{}a\color{black}{} \lt 0\)
+            </li>
+        </ul>
+
+        <br>
+        <br>
+
+        <div class="geogebra-container">
+            <div id="geogebraVihyKSMhZP1"></div>
+        </div>
+
+        <br>
+        <div class="gray">
+            \(\triangleright\) Usate lo slider rosso per cambiare il valore di \(a\).
+            <br>
+            <br>
+            \(\triangleright\) Il punto del grafico della funzione \(f\) evidenziato in nero può essere trascinato;
+            in rosso viene disegnato il corrispondente punto traslato appartenente al grafico
+            della funzione \(g\).
+        </div>
+
+
+        <br>
+        <br>
+
+        Nel seguente video vengono spiegate le ragioni di questo fenomeno.
+        <br>
+        <br>
+        <br>
+        <iframe style="width: 100%;" src="https://www.youtube.com/embed/gg9mgPh4aco?si=238iw6tSMVtxF5nf"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen="" loading="lazy"></iframe>
+
+
+
+        <br>
+        <br>
+        <br>
+        <hr>
+        <br>
+        <br>
+        <br>
+
+        <b class="parTitle">Traslazione orizzontale</b>
+
+        <br>
+        <br>
+
+
+        Consideriamo una funzione \(f\)
+        \[
+        y = f(x)
+        \]
+        ed un valore \(\color{red}{}a \color{black}{} \in \mathbb{R}\).
+        <br>
+        <br>
+        Il grafico della funzione \(g\) definita come
+        \[
+        y = f(x +\color{red}{a}\color{black}{})
+        \]
+        si ottiene traslando <b>orizzontalmente</b> il grafico della funzione \(f\) di \(\color{red}{}a\) unità.
+        La traslazione è
+        <br>
+        <br>
+        <ul>
+            <li>
+                verso sinistra se \(\color{red}{}{}a\color{black}{} \gt 0\)
+            </li>
+            <br>
+            <li>
+                verso destra se \(\color{red}{}{}a\color{black}{} \lt 0\)
+            </li>
+        </ul>
+
+        <br>
+        <br>
+
+        <div class="geogebra-container">
+            <div id="geogebraVihyKSMhZP2"></div>
+        </div>
+
+        <br>
+        <div class="gray">
+            \(\triangleright\) Usate lo slider rosso per cambiare il valore di \(a\).
+            <br>
+            <br>
+            \(\triangleright\) Il punto del grafico della funzione \(f\) evidenziato in nero può essere trascinato;
+            in rosso viene disegnato il corrispondente punto traslato appartenente al grafico
+            della funzione \(g\).
+        </div>
+
+
+        <br>
+        <br>
+
+        Nel seguente video vengono spiegate le ragioni di questo fenomeno.
+        <br>
+        <br>
+        <br>
+        <iframe style="width: 100%;" src="https://www.youtube.com/embed/lJs5_4iYpB8?si=NrC530bqujjPAB2P"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen="" loading="lazy"></iframe>
+        <br>
+        <br>
+        <iframe style="width: 100%;" src="https://www.youtube.com/embed/CxLyA_ObNgA?si=QFx9wEASQt4UyOqv"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen="" loading="lazy"></iframe>
+        <br>
+        <br>
+        <br>
+
+
+
+
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <script>
+        var ggbAppVihyKSMhZP1 = new GGBApplet({
+                "appName": "classic",
+                "id": "gg1",
+                "showToolBar": false,
+                "showAlgebraInput": false,
+                "showMenuBar": false,
+                "enableShiftDragZoom": false,
+                "scaleContainerClass": "geogebra-container",
+                "filename": "img/VihyKSMhZP(1).ggb"
+            },
+            true
+        );
+
+        var ggbAppVihyKSMhZP2 = new GGBApplet({
+                "appName": "classic",
+                "id": "ggVihyKSMhZP2",
+                "showToolBar": false,
+                "showAlgebraInput": false,
+                "showMenuBar": false,
+                "enableShiftDragZoom": false,
+                "scaleContainerClass": "geogebra-container",
+                "filename": "img/VihyKSMhZP(2).ggb"
+            },
+            true
+        );
+
+        window.addEventListener("load", function () {
+            ggbAppVihyKSMhZP1.inject('geogebraVihyKSMhZP1');
+            ggbAppVihyKSMhZP2.inject('geogebraVihyKSMhZP2');
+        });
+    </script>
+
+
+    <h3 class="green">Esercizio</h3>
+    <br>
+    <div>
+        Rappresentare il grafico della funzione
+        \[
+        f(x) = 3^{x} - 5
+        \]
+
+        <br>
+
+        <button id="hintAAAAAAA(1)-button" onclick="showHint(`AAAAAAA(1)`)">Svolgimento</button>
+        <div id="hintAAAAAAA(1)" class="hint gray" style="display: none;">
+            <b class="gray">Soluzione</b>
+            <br>
+            Il grafico della funzione è
+            <br>
+            <br>
+            <img src="img/10(2).png" style="width: 100%;">
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio</h3>
+    <br>
+    <div>
+        Rappresentare il grafico della funzione
+        \[
+        f(x) = 2^{x - 3}
+        \]
+
+        <br>
+
+        <button id="hintAAAAAAA(2)-button" onclick="showHint(`AAAAAAA(2)`)">Svolgimento</button>
+        <div id="hintAAAAAAA(2)" class="hint gray" style="display: none;">
+            <b class="gray">Soluzione</b>
+            <br>
+            Il grafico della funzione è
+            <br>
+            <br>
+            <img src="img/10(1).png" style="width: 100%;">
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio</h3>
+    <br>
+    <div>
+        Rappresentare il grafico della funzione
+        \[
+        f(x) = 4^{x - 3} - 2
+        \]
+
+        <br>
+
+        <button id="hintAAAAAAA(3)-button" onclick="showHint(`AAAAAAA(3)`)">Svolgimento</button>
+        <div id="hintAAAAAAA(3)" class="hint gray" style="display: none;">
+            <b class="gray">Soluzione</b>
+            <br>
+            Il grafico della funzione è
+            <br>
+            <br>
+            <img src="img/10(3).png" style="width: 100%;">
+        </div>
+    </div>
+
+    <br>
+    <br>
+
+    <script src="../../js/hintAndSlide.js"></script>
+
+</body>
