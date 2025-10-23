@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js">
+    </script>
+    <script src="https://www.geogebra.org/apps/deployggb.js"></script>
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>Compiti per casa</title>
+</head>
+
+<body>
+    <h1>Compiti per casa</h1>
+
+    <br>
+
+
+    <h3 class="yellow">Dilatazione del grafico di una funzione</h3>
+    <div class="esempi-container">
+        <b class="parTitle">Dilatazione verticale</b>
+
+        <br>
+        <br>
+
+        Consideriamo una funzione \(f\)
+        \[
+        y = f(x)
+        \]
+        Il grafico della funzione \(g\) definita come
+        <br>
+        <br>
+        <div style="text-align: center;">
+            \(y = m\,f(x)\,\,\,\) (con \(\,\,\,m \gt 1\))
+        </div>
+        <br>
+        si ottiene dilatando verticalmente il grafico di \(f\) di un fattore \(m\).
+
+
+        <br>
+        <br>
+
+        <div class="geogebra-container">
+            <div id="geogebraHKQPwancpo1"></div>
+        </div>
+
+        <br>
+        <div class="gray">
+            \(\triangleright\) Usate lo slider per variare il fattore di contrazione.
+            <br>
+            <br>
+            \(\triangleright\) Trascinando il rombo rosso sull'asse delle \(x\) potete stabilire il valore della \(x\).
+            <br>
+            Di conseguenza vengono rappresentati i corrispondenti punti dei grafici di \(f\) (in nero) e di \(g\) (in
+            rosso)
+        </div>
+
+
+        <br>
+        <br>
+
+        Nel seguente video vengono spiegate le ragioni di questo fenomeno.
+        <br>
+        <br>
+        <br>
+        <iframe style="width: 100%;" src="https://www.youtube.com/embed/d8_7rRpjCyU?si=dJu2-R-e-qZTGKgG"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen="" loading="lazy"></iframe>
+
+        <br>
+        <br>
+        <br>
+        <hr>
+        <br>
+        <br>
+        <br>
+
+        <b class="parTitle">Dilatazione orizzontale</b>
+
+        <br>
+        <br>
+
+        Consideriamo una funzione \(f\)
+        \[
+        y = f(x)
+        \]
+        Il grafico della funzione \(g\) definita come
+        <br>
+        <br>
+        <div style="text-align: center;">
+            \(y = f\left(\dfrac{x}{m}\right)\,\,\,\) (con \(\,\,\,m \gt 1\))
+        </div>
+        <br>
+        si ottiene dilatando orizzontalmente il grafico di \(f\) di un fattore \(m\).
+
+
+        <br>
+        <br>
+
+        <div class="geogebra-container">
+            <div id="geogebraHKQPwancpo2"></div>
+        </div>
+
+        <br>
+        <div class="gray">
+            \(\triangleright\) Usate lo slider per variare il fattore di contrazione.
+            <br>
+            <br>
+            \(\triangleright\) Trascinando il rombo rosso sull'asse delle \(x\) potete stabilire il valore della \(x\).
+            <br>
+            Di conseguenza vengono rappresentati i corrispondenti punti dei grafici di \(f\) (in nero) e di \(g\) (in
+            rosso)
+        </div>
+
+
+        <br>
+        <br>
+
+        Nel seguente video vengono spiegate le ragioni di questo fenomeno.
+        <br>
+        <br>
+        <br>
+        <iframe style="width: 100%;" src="https://www.youtube.com/embed/xEdqllDNWOA?si=CZIikaKfAiWvmt7a"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+    <script>
+        var ggbAppHKQPwancpo1 = new GGBApplet({
+                "appName": "classic",
+                "id": "ggHKQPwancpo1",
+                "showToolBar": false,
+                "showAlgebraInput": false,
+                "showMenuBar": false,
+                "enableShiftDragZoom": false,
+                "scaleContainerClass": "geogebra-container",
+                "filename": "img/HKQPwancpo(1).ggb"
+                //dilatazioneVerticaleGraficoFunzione
+            },
+            true
+        );
+
+        var ggbAppHKQPwancpo2 = new GGBApplet({
+                "appName": "classic",
+                "id": "ggHKQPwancpo2",
+                "showToolBar": false,
+                "showAlgebraInput": false,
+                "showMenuBar": false,
+                "enableShiftDragZoom": false,
+                "scaleContainerClass": "geogebra-container",
+                "filename": "img/HKQPwancpo(2).ggb"
+                //dilatazioneOrizzontaleGraficoFunzione
+            },
+            true
+        );
+
+        window.addEventListener("load", function () {
+            ggbAppHKQPwancpo1.inject('geogebraHKQPwancpo1');
+            ggbAppHKQPwancpo2.inject('geogebraHKQPwancpo2');
+        });
+    </script>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+
+
+    <h3 class="yellow">Contrazione del grafico di una funzione</h3>
+    <div class="esempi-container">
+
+        <b class="parTitle">Osservazioni sull'effetto della moltiplicazione e divisione</b>
+
+        <br>
+        <br>
+
+        <b>Moltiplicazione</b>
+        <div class="grayBorder">
+            Consideriamo due numeri <u>positivi</u> \(A\) ed \(\boldsymbol{m}\).
+            <br>
+            <br>
+            <ul>
+                <li>
+                    Moltiplicando la quantità iniziale \(A\) per un numero maggiore di \(1\), si ottiene un numero più
+                    grande
+                    di
+                    \(A\).
+                    <br>
+                    In simboli:
+                    <br>
+                    <br>
+
+                    <div style="text-align: center; width: 90%; margin: auto;">
+                        se \(\boldsymbol{m} \gt 1\), allora \(\,\,\boldsymbol{m} A \gt A\)
+                    </div>
+                </li>
+                <br>
+                <li>
+                    Moltiplicando la quantità iniziale \(A\) per un numero compreso tra \(0\) ed \(1\),
+                    si ottiene un numero minore di \(A\).
+                    <br>
+                    In simboli:
+                    <br>
+                    <br>
+                    <div style="text-align: center; width: 90%; margin: auto;">
+                        se \(0 \lt \boldsymbol{m} \lt 1\), allora \(\,\,\boldsymbol{m} A \lt A\)
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+        <br>
+        <br>
+        <b>Divisione</b>
+        <div class="grayBorder">
+            Consideriamo due numeri <u>positivi</u> \(A\) ed \(\boldsymbol{m}\).
+            <br>
+            <br>
+            <ul>
+                <li>
+                    Dividendo la quantità iniziale \(A\) per un numero maggiore di \(1\), si ottiene un numero più
+                    piccolo di
+                    \(A\).
+                    <br>
+                    In simboli:
+                    <br>
+                    <br>
+
+                    <div style="text-align: center; width: 90%; margin: auto;">
+                        se \(\boldsymbol{m} \gt 1\), allora \(\,\,\dfrac{A}{\boldsymbol{m}} \lt A\)
+                    </div>
+                </li>
+                <br>
+                <li>
+                    Dividendi la quantità iniziale \(A\) per un numero compreso tra \(0\) ed \(1\),
+                    si ottiene un numero maggiore di \(A\).
+                    <br>
+                    In simboli:
+                    <br>
+                    <br>
+                    <div style="text-align: center; width: 90%; margin: auto;">
+                        se \(0 \lt \boldsymbol{m} \lt 1\), allora \(\,\,\dfrac{A}{\boldsymbol{m}} \gt A\)
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+        <br>
+        <br>
+        <iframe style="width: 100%;" src="https://www.youtube.com/embed/h34G6aKoiIA?si=DPCP_dL0eFw34GxJ"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen="" loading="lazy"></iframe>
+
+
+        <br>
+        <br>
+        <hr>
+        <br>
+        <br>
+
+
+        <b class="parTitle">Contrazione verticale</b>
+
+        <br>
+        <br>
+
+
+        Consideriamo una funzione \(f\)
+        \[
+        y = f(x)
+        \]
+        Il grafico della funzione \(g\) definita come
+        <br>
+        <br>
+        <div style="text-align: center;">
+            \(y = \dfrac{f(x)}{m}\,\,\,\) (con \(\,\,\,m \gt 1\))
+        </div>
+        <br>
+        si ottiene contraendo verticalmente il grafico di \(f\) di un fattore \(m\).
+
+
+        <br>
+        <br>
+
+        <div class="geogebra-container">
+            <div id="geogebraInkgDTFCGv1"></div>
+        </div>
+
+        <br>
+        <div class="gray">
+            \(\triangleright\) Usate lo slider per variare il fattore di contrazione.
+            <br>
+            <br>
+            \(\triangleright\) Trascinando il rombo rosso sull'asse delle \(x\) potete stabilire il valore della \(x\).
+            <br>
+            Di conseguenza vengono rappresentati i corrispondenti punti dei grafici di \(f\) (in nero) e di \(g\) (in
+            rosso)
+        </div>
+
+
+        <br>
+        <br>
+
+        Nel seguente video vengono spiegate le ragioni di questo fenomeno.
+        <br>
+        <br>
+        <br>
+        <iframe style="width: 100%;" src="https://www.youtube.com/embed/SNU38nSGOQ0?si=72HSHezhVe2vGZuj"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen="" loading="lazy"></iframe>
+
+
+
+        <br>
+        <br>
+        <br>
+        <hr>
+        <br>
+        <br>
+        <br>
+
+        <b class="parTitle">Contrazione orizzontale</b>
+
+        <br>
+        <br>
+
+
+        Consideriamo una funzione \(f\)
+        \[
+        y = f(x)
+        \]
+        Il grafico della funzione \(g\) definita come
+        <br>
+        <br>
+        <div style="text-align: center;">
+            \(y = f(m\,x)\,\,\,\) (con \(\,\,\,m \gt 1\))
+        </div>
+        <br>
+        si ottiene contraendo orizzontalmente il grafico di \(f\) di un fattore \(m\).
+
+
+        <br>
+        <br>
+
+        <div class="geogebra-container">
+            <div id="geogebraInkgDTFCGv2"></div>
+        </div>
+
+        <br>
+        <div class="gray">
+            \(\triangleright\) Usate lo slider per variare il fattore di contrazione.
+            <br>
+            <br>
+            \(\triangleright\) Trascinando il rombo rosso sull'asse delle \(x\) potete stabilire il valore della \(x\).
+            <br>
+            Di conseguenza vengono rappresentati i corrispondenti punti dei grafici di \(f\) (in nero) e di \(g\) (in
+            rosso)
+        </div>
+
+
+        <br>
+        <br>
+
+        Nel seguente video vengono spiegate le ragioni di questo fenomeno.
+        <br>
+        <br>
+        <br>
+        <iframe style="width: 100%;" src="https://www.youtube.com/embed/2tZ6PoQ9two?si=MoHWIyqI5qqqPeI8"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+    <script>
+        var ggbAppInkgDTFCGv1 = new GGBApplet({
+                "appName": "classic",
+                "id": "ggInkgDTFCGv1",
+                "showToolBar": false,
+                "showAlgebraInput": false,
+                "showMenuBar": false,
+                "enableShiftDragZoom": false,
+                "scaleContainerClass": "geogebra-container",
+                "filename": "img/InkgDTFCGv(1).ggb"
+                //contrazioneVerticaleGraficoFunzione
+            },
+            true
+        );
+
+        var ggbAppInkgDTFCGv2 = new GGBApplet({
+                "appName": "classic",
+                "id": "ggInkgDTFCGv2",
+                "showToolBar": false,
+                "showAlgebraInput": false,
+                "showMenuBar": false,
+                "enableShiftDragZoom": false,
+                "scaleContainerClass": "geogebra-container",
+                "filename": "img/InkgDTFCGv(2).ggb"
+                //contrazioneOrizzontaleGraficoFunzione
+            },
+            true
+        );
+
+        window.addEventListener("load", function () {
+            ggbAppInkgDTFCGv1.inject('geogebraInkgDTFCGv1');
+            ggbAppInkgDTFCGv2.inject('geogebraInkgDTFCGv2');
+        });
+    </script>
+
+
+
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio</h3>
+    <br>
+    <div>
+        Rappresentare il grafico della funzione
+        \[
+        f(x) = 3 \cdot 2^{x}
+        \]
+
+        <br>
+
+        <button id="hintAAAAAAA(1)-button" onclick="showHint(`AAAAAAA(1)`)">Svolgimento</button>
+        <div id="hintAAAAAAA(1)" class="hint gray" style="display: none;">     
+            <b class="gray">Soluzione</b> 
+            <br>
+            <img src="img/13(1).png" alt="">
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio</h3>
+    <br>
+    <div>
+        Rappresentare il grafico della funzione
+        \[
+        f(x) =  \dfrac{3^{x}}{2}
+        \]
+
+        <br>
+
+        <button id="hintAAAAAAA(2)-button" onclick="showHint(`AAAAAAA(2)`)">Svolgimento</button>
+        <div id="hintAAAAAAA(2)" class="hint gray" style="display: none;">     
+            <b class="gray">Soluzione</b> 
+            <br>
+            <img src="img/13(2).png" alt="">
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio</h3>
+    <br>
+    <div>
+        Rappresentare il grafico della funzione
+        \[
+        f(x) =  3^{2x}
+        \]
+
+        <br>
+
+        <button id="hintAAAAAAA(3)-button" onclick="showHint(`AAAAAAA(3)`)">Svolgimento</button>
+        <div id="hintAAAAAAA(3)" class="hint gray" style="display: none;">     
+            <b class="gray">Soluzione</b> 
+            <br>
+            <img src="img/13(3).png" alt="">
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio</h3>
+    <br>
+    <div>
+        Rappresentare il grafico della funzione
+        \[
+        f(x) =  4^{\frac{x}{2}}
+        \]
+
+        <br>
+
+        <button id="hintAAAAAAA(4)-button" onclick="showHint(`AAAAAAA(4)`)">Svolgimento</button>
+        <div id="hintAAAAAAA(4)" class="hint gray" style="display: none;">     
+            <b class="gray">Soluzione</b> 
+            <br>
+            <img src="img/13(4).png" alt="">
+        </div>
+    </div>
+
+    <br>
+    <br>
+
+    <script src="../../js/hintAndSlide.js"></script>
+
+</body>
