@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js"></script> 
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>Compiti per casa</title>
+</head>
+<body>
+    <h1>Compiti per casa</h1>
+    
+    <br>
+
+    <h3 class="yellow">Equazioni logaritmiche per sostituzione</h3>
+    <div class="esempi-container">
+        
+        Prima di tutto impariamo a riconoscere equazioni logaritmiche di questa tipologia.
+        <br>
+        <br>
+        In esse i logaritmi che figurano hanno tutti <b>lo stesso argomento</b> e <b>sostituendo</b> ogni logaritmo con 
+        una lettera qualsiasi otteniamo una equazione che sappiamo risolvere.
+        <br>
+        <br>
+        Facciamo alcuni esempi:
+        <br>
+        <ul>
+            <li>
+                <div class="formula">
+                    \(
+                        log^2\left(x\right) + 3\,log\left(x\right) - 2 = 0
+                    \)
+                    <br>
+                    <br>
+                    infatti effettuando la sostituzione 
+                    \[
+                        \color{red}{}A\color{black}{} = \color{red}{}log\left(x\right)
+                    \] 
+                    otteniamo un'equazione di secondo grado
+                    \[
+                        \begin{align*}  
+                            \color{red}{}log\color{black}{}^2\color{red}{}\left(x\right)\color{black}{} + 3\,&\color{red}{}log\left(x\right)\color{black}{} - 2 = 0    
+                            \\\\
+                            &\Downarrow
+                            \\\\
+                            \color{red}{}A\color{black}{}^2 + &3\color{red}{}A\color{black}{} - 2 = 0    
+                        \end{align*}
+                    \]
+                </div> 
+            </li>
+            <br>
+            <li>
+                <div class="formula">
+                    \(
+                        \left(3\,log\left(x + 1\right) -1\right) \, \left(-2\,log\left(x + 1\right) +4\right) = 0
+                    \)
+                    <br>
+                    <br>
+                    infatti effettuando la sostituzione 
+                    \[
+                        \color{red}{}A\color{black}{} = \color{red}{}log\left(x + 1\right)
+                    \] 
+                    otteniamo l'equazione
+                    \[
+                        \begin{align*}  
+                            \left(3\,\color{red}{}log\left(x + 1\right)\color{black}{} -1\right) \,& \left(-2\,\color{red}{}log\left(x + 1\right)\color{black}{} +4\right) = 0
+                            \\\\
+                            &\Downarrow
+                            \\\\
+                            \left(3\color{red}{}A\color{black}{} -1\right) \,& \left(-2\color{red}{}A\color{black}{} +4\right) = 0
+                        \end{align*}
+                    \]
+                </div> 
+            </li>
+            <br>
+            <li>
+                <div class="formula">
+                    \(
+                        \dfrac{1}{log\left(3x^2 -2\right)} + 4\,log\left(3x^2 -2\right) = 0
+                    \)
+                    <br>
+                    <br>
+                    infatti effettuando la sostituzione 
+                    \[
+                        \color{red}{}A\color{black}{} = \color{red}{}log\left(3x^2 - 2\right)
+                    \] 
+                    otteniamo un'equazione di secondo grado
+                    \[
+                        \begin{align*}  
+                            \dfrac{1}{\color{red}{}log\left(3x^2 -2\right)\color{black}{}} + 4\,&\color{red}{}log\left(3x^2 -2\right)\color{black}{} = 0
+                            \\\\
+                            &\Downarrow
+                            \\\\
+                            \dfrac{1}{\color{red}{}A\color{black}{}} + 4&\color{red}{}A\color{black}{} = 0
+                        \end{align*}
+                    \]
+                </div> 
+            </li>
+        </ul>
+
+        <br>
+
+        Nel prossimo esempio vediamo la strategia da mettere in campo per risolvere un'equazione di questo tipo.
+        
+        <br>
+        <br>
+
+        <b class="gray">Esempio</b>
+        <br>
+        <div class="grayBorder">
+            <iframe style="width: 100%;" src="https://www.youtube.com/embed/6FS1f_eaXgk?si=L5KKuqakntoqgCdJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+
+        <br>
+        <br>
+
+        In generale possiamo dire che;
+        <br>
+
+        <div class="grayBackground">
+            <p>
+                Per risolvere un'equazione del tipo "sostituzione":
+            </p>
+            <br>
+            <ul>
+                <li>
+                    si effettuano le <b>condizioni di esistenza</b>;
+                </li>
+                <br>
+                <li>
+                    si effettua una <b>sostituzione</b> 
+                    \[
+                        \color{red}{}A\color{black}{} = \color{red}{}log\left(p(x)\right)
+                    \]
+                    e si risolve l'equazione ottenuta nell'incognita \(\color{red}{A}\)
+                </li>
+                <br>
+                <li>
+                    Per ogni soluzione 
+                    \[
+                        A = s
+                    \]
+                    risostituiamo \(\color{red}{A}\) con il \(\color{red}{}log\left(p(x)\right)\) e risolviamo l'equazione nell'incognita \(x\)
+                    \[
+                        \begin{align*}
+                            \color{red}{}A\color{black}{} &= s
+                            \\\\
+                            &\Downarrow
+                            \\\\
+                            \color{red}{}log\left(p(x)\right)\color{black}{} &= s
+                        \end{align*}
+                    \]
+
+
+                </li>
+            </ul>
+
+        </div>
+
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+    
+                
+
+    <h3 class="green">Esercizio</h3>
+    <br>
+    <div>
+        \[
+            10\,ln^2\left(x\right) + ln\left(x\right) - 2 = 0
+        \]
+
+        <br>
+
+        <button id="hintAAAAAAA(1)-button" onclick="showHint(`AAAAAAA(1)`)">Soluzione</button>
+        <div id="hintAAAAAAA(1)" class="hint gray" style="display: none;">     
+            <b>Soluzione:</b> 
+            <br>
+            \(x = \dfrac{1}{\sqrt{e}} \quad\) oppure \(\quad x = \sqrt[5]{e^2}\)
+        </div>
+    </div>        
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio</h3>
+    <br>
+    <div>
+        \[
+            3\,log_{3}^2\left(x - 2\right) -2\,log_{3}\left(x - 2\right) - 1 = 0
+        \] 
+
+        <br>
+
+        <button id="hintAAAAAAA(2)-button" onclick="showHint(`AAAAAAA(2)`)">Soluzione</button>
+        <div id="hintAAAAAAA(2)" class="hint gray" style="display: none;">     
+            <b>Soluzione:</b> 
+            <br>
+            \(x = 5\,\,\,\) oppure \(\,\,\,x = 2 + \dfrac{1}{\sqrt[3]{3}}\)
+        </div>
+    </div>
+
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio</h3>        
+    <br>
+    <div>
+        \[
+            ln\left(4x +1\right) + \dfrac{5}{ln\left(4x +1\right)} = 10
+        \]
+        
+        <br>
+
+        <button id="hintAAAAAAA(3)-button" onclick="showHint(`AAAAAAA(3)`)">Soluzione</button>
+        <div id="hintAAAAAAA(3)" class="hint gray" style="display: none;">     
+            <b>Soluzione:</b> \(\,\,\,x = \dfrac{1}{4}\left(e^{5 \pm 2\,\sqrt{5}} - 1\right)\)
+        </div>
+    </div>       
+    
+    <br>
+    <br>
+    
+</body>
