@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js">
+    </script>
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>Compiti per casa</title>
+</head>
+
+<body>
+    <h1>Compiti per casa</h1>
+
+    <br>
+
+    <h3 class="yellow">Limiti notevoli</h3>
+    <div class="esempi-container">
+        Nelle scorse lezioni abbiamo visto che per valori molto grandi della \(x\), ovvero per \(x \to +\infty\),
+        possiamo apporossimare un polinomio con il suo termine dominante. Ad esempio
+        \[
+        8x^2 - 3x^2 + 1 \approx 8x^2
+        \]
+        In questo paragrafo estenderemo questo discorso ad altre funzioni, considerando di volta
+        in volta i valori per i quali l'approssimazione è opportuna.
+
+        <br>
+        <br>
+
+        <b>Funzione seno</b>
+        <br>
+        Consideriamo la funzione 
+        \[
+            f(x) = sin(x)
+        \] 
+        per valori della \(x\) prossimi a \(0\), ovvero \(x \to 0\).
+        <br>
+        Nel seguente video è possibile vedere che più zoomiamo attorno a \(x = 0\) più il grafico di \(f(x) = sin(x)\)
+        è simile a quello della retta bisettrice di primo e terzo quadrante, \(g(x) = x\).
+        <br>
+        <br>
+        <iframe style="width: 100%; border: 0.01rem solid lightgray" src="https://www.youtube.com/embed/8TSWjRL_kqg?si=gLr_qBZDcU9GsWD6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <br>
+        <br>
+        Questo significa che per valori della \(x\) tendenti a \(0\) la funzione \(f(x) = sin(x)\) può essere
+        approssimata con la funzione \(g(x) = x\).
+        \[
+        sin(x) \approx x \qquad \text{per }\, x \to 0
+        \]
+        Questo implica che
+        \[
+        \lim_{x \to 0} \dfrac{sin(x)}{x} = 1
+        \]
+        Infatti per \(x \to 0\) il numeratore assomiglia sempre più ad \(x\) e quindi la frazione
+        assume valore sempre più vicino a \(1\).
+
+        <br>
+        <br>
+        <hr>
+        <br>
+        <br>
+
+        <b>Tangente</b>
+        <br>
+        Analogamente a prima si ha
+        \[
+        tan(x) \approx x \qquad \text{per}\,\, x \to 0
+        \]
+        ovvero per valori sempre più vicini a \(0\) la funzione assume valore sempre più simile ad \(x\).
+        <br>
+        <br>
+        Questo limite notevole si può dimostrare direttamente da quello prima illustrato. Infatti
+        \[
+        \begin{align*}
+        \lim_{x \to 0} \dfrac{tan(x)}{x}
+        &= \lim_{x \to 0} \dfrac{\frac{sin(x)}{cos(x)}}{x} =
+        \\\\
+        &= \lim_{x \to 0} \dfrac{sin(x)}{x \cdot cos(x)} =
+        \\\\
+        &= \lim_{x \to 0} {\dfrac{sin(x)}{x}}\,\dfrac{1}{cos(x)} =
+        \\\\
+        &= 1 \cdot 1 = 1
+        \end{align*}
+        \]
+
+        <iframe style="width: 100%; border: 0.01rem solid lightgray" src="https://www.youtube.com/embed/9ugNy7UvqeI?si=hyhrv_GfP2kgFLf6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        
+        
+        <br>
+        <br>
+        <hr>
+        <br>
+        <br>
+
+        <b>Coseno</b>
+        <br>
+        Il prossimo limite notevole riguarda la funzione coseno. Si ha
+        \[
+        \lim_{x \to 0} \dfrac{1 - cos(x)}{x^2} = \dfrac{1}{2}
+        \]
+        Cerchiamo di interpretare questa informazione direttamente in termini del coseno.
+        <br>
+        Il limite ci dice che per valori della \(x\) molto vicini a \(0\) si ha
+        \[
+        \dfrac{1 - cos(x)}{x^2} \approx \dfrac{1}{2}
+        \]
+        Isoliamo il coseno in questa quasi-equazione
+        
+        <br>
+        <br>        
+        
+        <div id="slide-containerBAAAAAA(1)" class="slide-container BAAAAAA(1) grayBorder">
+            <div class="slideBAAAAAA(1)">
+                \[
+                \dfrac{1 - cos(x)}{x^2} \approx \dfrac{1}{2}
+                \]
+            </div>
+            <div class="slideBAAAAAA(1)">
+                \[
+                \dfrac{1 - cos(x)}{\color{red}{}x^2} \approx \dfrac{1}{\color{blue}{}2}
+                \]
+            </div>
+            <div class="slideBAAAAAA(1)">
+                \[
+                \color{blue}{}2\color{black}{} \cdot (1 - cos(x)) \approx 1 \cdot \color{red}{}x^2
+                \]
+            </div>
+            <div class="slideBAAAAAA(1)">
+                \[
+                    2 - 2cos(x) \approx x^2 
+                \]
+            </div>
+            <div class="slideBAAAAAA(1)">
+                \[
+                    - 2cos(x) \approx x^2 - 2
+                \]
+            </div>
+            <div class="slideBAAAAAA(1)">
+                \[
+                    \dfrac{- 2cos(x)}{-2} \approx \dfrac{x^2 - 2}{-2}
+                \]
+            </div>
+            <div class="slideBAAAAAA(1)">
+                \[
+                    cos(x) \approx \dfrac{x^2 - 2}{-2}
+                \]
+            </div>
+            <div class="slideBAAAAAA(1)">
+                \[
+                    cos(x) \approx \dfrac{1}{-2}x^2 - \dfrac{2}{-2}
+                \]
+            </div>
+            <div class="slideBAAAAAA(1)">
+                \[
+                    cos(x) \approx -\dfrac{1}{2}x^2 + 1
+                \]
+            </div>
+            
+        </div>
+        <div style="display: flex; flex-direction:row; justify-content: space-evenly; align-items: center;">
+            <button id="previousSlide-buttonBAAAAAA(1)" onclick="previousSlide(`BAAAAAA(1)`)">Indietro</button>
+            <button onclick="toggleFullscreen('BAAAAAA(1)')">⛶</button>
+            <button id="nextSlide-buttonBAAAAAA(1)" onclick="nextSlide(`BAAAAAA(1)`)">Avanti</button>
+        </div>
+
+        <br>
+
+        Quindi si ha
+        \[
+
+            cos(x) \approx -\dfrac{1}{2}x^2 + 1 \qquad \text{per} \,\, x \to 0
+        \]
+
+        Ovvero la funzione \(f(x) = cos(x)\) per valori della \(x\) molto vicini a \(0\) 
+        si può approssimare con \(g(x) = -\dfrac{1}{2}x^2 + 1\), come anche confermato dal loro grafico.
+        
+        <br>
+        <br>
+        <iframe style="width: 100%; border: 0.01rem solid lightgray" src="https://www.youtube.com/embed/qoOW9hlIm5A?si=QrSbI4AVUKlwpjPp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>      
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+
+    <h3 class="green">Esercizio</h3>
+    <br>
+    <div>
+        \[
+        \lim_{x \to 0^{-}} e^{\frac{sin(x)}{1 - cos(x)}}
+        \]
+    </div>
+
+    <br>
+
+    <button id="hintghIEnhJdch-button" onclick="showHint(`ghIEnhJdch`)">Svolgimento</button>
+    <div id="hintghIEnhJdch" class="hint" style="display: none;">
+        <b class="gray">Svolgimento</b>
+        <iframe width="100%" src="https://www.youtube.com/embed/1B5_1g2X784?si=ucFTiOpas56tEPWP"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen=""></iframe>
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+
+    <h3 class="green">Esercizio</h3>
+    <br>
+    <div>
+        Svolgere il limite
+        \[
+        \lim_{x \to 0} \dfrac{tan(x) + 3\,sin(x)}{4x}
+        \]
+
+        <br>
+
+        <button id="hintAAAAAAA(1)-button" onclick="showHint(`AAAAAAA(1)`)">Soluzione</button>
+        <div id="hintAAAAAAA(1)" class="hint gray" style="display: none;">
+            <b class="gray">Soluzione</b>
+            <br>
+            \[
+            \lim_{x \to 0} \dfrac{tan(x) + 3\,sin(x)}{4x} = 1
+            \]
+        </div>
+
+        <br>
+
+        <button id="hintAAAAAAA(2)-button" onclick="showHint(`AAAAAAA(2)`)">Svolgimento</button>
+        <div id="hintAAAAAAA(2)" class="hint gray" style="display: none;">
+            <b class="gray">Svolgimento</b>
+            <br>
+            Per calcolare questo limite è necessario sfruttare la conoscenza del
+            <b>limite notevole</b>
+            <br>
+            <br>
+            <div class="grayBorder" style="width: 50%; margin: auto;">
+                \[
+                \lim_{x \to 0} \dfrac{sin(x)}{x} = 1
+                \]
+            </div>
+            <br>
+            <br>
+            Provando a risolverlo per sostituzione otteniamo
+            \[
+            \dfrac{tan(0) + 3\,sin(0)}{4\,\cdot\,0} = \dfrac{0 +3\,\cdot 0}{0} = \dfrac{0}{0}
+            \]
+            ovvero una forma indeterminata del tipo "\(\dfrac{0}{0}\)".
+            <br>
+            <br>
+            A differenza degli esercizi che abbiamo visto recentemente, non possiamo scomporre numeratore e denominatore
+            perché il numeratore non è un polinomio.
+            <br>
+            Sfruttiamo la conoscenza del limite notevole scritto nel riquadro sopra.
+            <br>
+            Distribuiamo la frazione sui due addendi del numeratore:
+            \[
+            \begin{align*}
+            &amp;\color{red}{}\dfrac{\color{gray}{}tan(x) + 3\,sin(x)}{4x} \color{gray}{} =
+            \\\\
+            = &amp;\color{red}{}\,\,\,\dfrac{\color{gray}{}tan(x)}{4x} \color{gray}{}+
+            \color{red}{}\dfrac{\color{gray}{}3sin(x)}{4x} \color{gray}{}\,\,= (*)
+            \end{align*}
+            \]
+            Ricordiamo la seconda legge fondamentale della goniometria
+            \[
+            \color{blue}{}tan(x) \color{gray}{}= \color{blue}{}\dfrac{sin(x)}{cos(x)}
+            \]
+            e continuiamo a scrivere la
+            \[
+            \begin{align*}
+            (*) = &amp;\,\,\,\dfrac{\color{blue}{}tan(x)}{4x} + \dfrac{3}{4x} \,\,\,=
+            \\\\
+            = &amp;\,\,\,\dfrac{\color{blue}{}\frac{sin(x)}{cos(x)}}{4x} + \dfrac{3sin(x)}{4x} \,\,\,= (*)
+            \end{align*}
+            \]
+            Ora riscriviamo il primo addendo, che è una frazione di fraizoni, trasformando la frazione in
+            moltiplicazione e
+            separiamo
+            il fattore \(\frac{3}{4}\)
+            \[
+            \begin{align*}
+            (*) = &amp;\,\,\,\color{red}{}\dfrac{\color{gray}{}\frac{sin(x)}{cos(x)}}{\color{red}{}4x} \color{gray}{}+
+            \dfrac{\color{blue}{}3\color{gray}{}sin(x)}{\color{blue}{}4\color{gray}{}x} \,\,\,=
+            \\\\
+            = &amp;\,\,\,\frac{sin(x)}{cos(x)}\,\,\color{red}{:}\,\,{\color{red}{}\dfrac{4x}{1}} \color{gray}{} +
+            \color{blue}{}\dfrac{3}{4}\color{gray}{}\dfrac{sin(x)}{x} \,\,\,=
+            \\\\
+            = &amp;\,\,\,\dfrac{sin(x)}{cos(x)}\,\,\color{red}{\cdot}\,\,{\color{red}{}\dfrac{1}{4x}} +
+            \color{gray}{}\dfrac{3}{4}\color{gray}{}\dfrac{sin(x)}{x} =
+            (*)
+            \end{align*}
+            \]
+            Ora riscriviamo i fattori del numeratore e denominatore in modo da mettere in evidenza il termine
+            \(\frac{sin(x)}{x}\)
+            \[
+            \begin{align*}
+            (*) =
+            &amp;\,\,\,\dfrac{\color{red}{}sin(x)}{\color{blue}{}cos(x)}\,\,\cdot\,\,{\dfrac{\color{blue}{}1}{\color{blue}{}4\color{red}{}x}}
+            + \color{gray}{}\dfrac{3}{4}\color{gray}{}\dfrac{sin(x)}{x} =
+            \\\\
+            =
+            &amp;\,\,\,\dfrac{\color{red}{}sin(x)}{\color{red}{}x}\,\,\cdot\,\,{\dfrac{\color{blue}{}1}{\color{blue}{}4cos(x)}}
+            + \color{gray}{}\dfrac{3}{4}\color{gray}{}\dfrac{sin(x)}{x} =
+            (*)
+            \end{align*}
+            \]
+            Abbiamo lentamnte lavorato la funzione in modo da mettere in evidenza la funzione \(\frac{sin(x)}{x}\)
+            in entrambi gli addendi.
+            Ora possiamo sfruttare il <b>prodotto notevole</b>
+            \[
+            \lim{x \to 0}\dfrac{sin(x)}{x} = 1
+            \]
+            per calcolare il limite iniziale
+            \[
+            \begin{align*}
+            (*) = \,\,\,
+            \underset{\color{gray}{}\longrightarrow
+            1}{\color{gray}{}\underbrace{\color{gray}{}\dfrac{sin(x)}{x}}}\,\,\underset{\color{gray}{}\longrightarrow
+            \frac{1}{4}}{\color{gray}{}\underbrace{\color{gray}{}\dfrac{1}{4cos(x)}}} \,\,\,+\,\,\,
+            \dfrac{3}{4}\,\underset{\color{gray}{}\longrightarrow
+            1}{\color{gray}{}\underbrace{\color{gray}{}\dfrac{sin(x)}{x}}}
+            \end{align*}
+            \]
+            Possiamo concludere che il
+            \[
+            \begin{align*}
+            &amp;\lim_{x \to 0} \dfrac{tan(x) + 3\,sin(x)}{4x} \,\,=
+            \\\\
+            &amp;\lim_{x \to 0} \left(\dfrac{sin(x)}{x}\,\dfrac{1}{4x} \,\,+\,\, \dfrac{3}{4}\,\dfrac{sin(x)}{x}\right)
+            \,\,=
+            \\\\
+            =&amp;\,\,1 \cdot \dfrac{1}{4} + \dfrac{3}{4} \cdot 1 \,\,=
+            \\\\
+            =&amp;\,\,\dfrac{1}{4} + \dfrac{3}{4} \,\,=
+            \\\\
+            =&amp;\,\,1
+            \end{align*}
+            \]
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio</h3>
+    <br>
+    <div>
+        \[
+        \lim_{x \to 0^{+}} \dfrac{\sqrt{1 - cos(x)}}{x}
+        \]
+    </div>
+
+    <br>
+
+    <button id="hintfjNxjyvAmo-button" onclick="showHint(`fjNxjyvAmo`)">Svolgimento</button>
+    <div id="hintfjNxjyvAmo" class="hint" style="display: none;">
+        <b class="gray">Svolgimento</b>
+        <br>
+        <iframe width="100%" src="https://www.youtube.com/embed/KDl1DU4rYNY?si=SNsEBAHA2dd0DERk"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen=""></iframe>
+        <br>
+        <br>
+        <div class="gray">
+            ⚠️Nel video mi sono confuso ed ho scritto che
+            \[
+            \lim_{x \to 0} \dfrac{1 - cos(x)}{x^2} = 1
+            \]
+            anziché
+            \[
+            \lim_{x \to 0} \dfrac{1 - cos(x)}{x^2} = \dfrac{1}{2}
+            \]
+            Correggendo questa svista otterrete il risultato corretto (scusate!).
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+
+    <h3 class="green">Esercizio</h3>
+    <br>
+    <div>
+        \[
+        \lim_{x \to +\infty} \dfrac{\sqrt{4x^2 - 3}}{x + 1}
+        \]
+    </div>
+
+    <br>
+
+    <div class="gray">
+        <button id="hintFiEgPppIEI-button" onclick="showHint(`FiEgPppIEI`)">Svolgimento</button>
+        <div id="hintFiEgPppIEI" class="hint" style="display: none;">
+            <b class="gray">Svolgimento</b>
+            <br>
+            <iframe style="width: 100%" src="https://www.youtube.com/embed/Gt8PnJ4Z0mA?si=OLgWzEyEb8y8iW-Z"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen="" loading="lazy"></iframe>
+            <br>
+            <br>
+            <iframe style="width: 100%" src="https://www.youtube.com/embed/cMlhZWGBxjw?si=A5yU_89lo8SRXT1p"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen="" loading="lazy"></iframe>
+        </div>
+
+
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+
+
+    <h3 class="green">Esercizio</h3>
+    <br>
+    <div>
+        \[
+        \lim_{x \to +\infty} \dfrac{x + \sqrt{x^2 + 8}}{2x + 1}
+        \]
+    </div>
+
+    <br>
+
+    <div class="gray">
+        <button id="hintsfyqnoejWL-button" onclick="showHint(`sfyqnoejWL`)">Svolgimento</button>
+        <div id="hintsfyqnoejWL" class="hint" style="display: none;">
+            <b class="gray">Svolgimento</b>
+            <br>
+            <iframe style="width: 100%" src="https://www.youtube.com/embed/iHg2ubXBRN8?si=ZcoUHLQu8hxFZ6wg"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen="" loading="lazy"></iframe>
+        </div>
+
+    </div>
+
+    <br>
+    <br>
+
+    <script src="../../js/hintAndSlide.js"></script>
+
+</body>
