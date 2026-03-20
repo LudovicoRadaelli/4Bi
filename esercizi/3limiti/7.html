@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js">
+    </script>
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>Compiti per casa</title>
+</head>
+
+<body>
+    <h1>Compiti per casa</h1>
+
+    <br>
+
+    <h3 class="yellow">Limiti notevoli</h3>
+    <div class="esempi-container">
+        Nelle scorse lezioni abbiamo visto che per valori molto grandi della \(x\), ovvero per \(x \to +\infty\),
+        possiamo apporossimare un polinomio con il suo termine dominante. Ad esempio
+        \[
+        8x^2 - 3x^2 + 1 \approx 8x^2
+        \]
+        In questo paragrafo estenderemo questo discorso ad altre funzioni, considerando di volta
+        in volta i valori per i quali l'approssimazione è opportuna.
+
+        <br>
+        <br>
+
+        <b>Funzione seno</b>
+        <br>
+        Consideriamo la funzione
+        \[
+        f(x) = sin(x)
+        \]
+        per valori della \(x\) prossimi a \(0\), ovvero \(x \to 0\).
+        <br>
+        Nel seguente video è possibile vedere che più zoomiamo attorno a \(x = 0\) più il grafico di \(f(x) = sin(x)\)
+        è simile a quello della retta bisettrice di primo e terzo quadrante, \(g(x) = x\).
+        <br>
+        <br>
+        <iframe style="width: 100%; border: 0.01rem solid lightgray"
+            src="https://www.youtube.com/embed/8TSWjRL_kqg?si=gLr_qBZDcU9GsWD6" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <br>
+        <br>
+        Questo significa che per valori della \(x\) tendenti a \(0\) la funzione \(f(x) = sin(x)\) può essere
+        approssimata con la funzione \(g(x) = x\).
+        \[
+        sin(x) \approx x \qquad \text{per }\, x \to 0
+        \]
+        Questo implica che
+        \[
+        \lim_{x \to 0} \dfrac{sin(x)}{x} = 1
+        \]
+        Infatti per \(x \to 0\) il numeratore assomiglia sempre più ad \(x\) e quindi la frazione
+        assume valore sempre più vicino a \(1\).
+
+        <br>
+        <br>
+        <hr>
+        <br>
+        <br>
+
+        <b>Tangente</b>
+        <br>
+        Analogamente a prima si ha
+        \[
+        tan(x) \approx x \qquad \text{per}\,\, x \to 0
+        \]
+        ovvero per valori sempre più vicini a \(0\) la funzione assume valore sempre più simile ad \(x\).
+        <br>
+        <br>
+        Questo limite notevole si può dimostrare direttamente da quello prima illustrato. Infatti
+        \[
+        \begin{align*}
+        \lim_{x \to 0} \dfrac{tan(x)}{x}
+        &= \lim_{x \to 0} \dfrac{\frac{sin(x)}{cos(x)}}{x} =
+        \\\\
+        &= \lim_{x \to 0} \dfrac{sin(x)}{x \cdot cos(x)} =
+        \\\\
+        &= \lim_{x \to 0} {\dfrac{sin(x)}{x}}\,\dfrac{1}{cos(x)} =
+        \\\\
+        &= 1 \cdot 1 = 1
+        \end{align*}
+        \]
+
+        <iframe style="width: 100%; border: 0.01rem solid lightgray"
+            src="https://www.youtube.com/embed/9ugNy7UvqeI?si=hyhrv_GfP2kgFLf6" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+        <br>
+        <br>
+        <hr>
+        <br>
+        <br>
+
+        <b>Coseno</b>
+        <br>
+        Il prossimo limite notevole riguarda la funzione coseno. Si ha
+        \[
+        \lim_{x \to 0} \dfrac{1 - cos(x)}{x^2} = \dfrac{1}{2}
+        \]
+        Cerchiamo di interpretare questa informazione direttamente in termini del coseno.
+        <br>
+        Il limite ci dice che per valori della \(x\) molto vicini a \(0\) si ha
+        \[
+        \dfrac{1 - cos(x)}{x^2} \approx \dfrac{1}{2}
+        \]
+        Isoliamo il coseno in questa quasi-equazione
+
+        <br>
+        <br>
+
+        <div id="slide-containerBAAAAAA(1)" class="slide-container BAAAAAA(1) grayBorder">
+            <div class="slideBAAAAAA(1)">
+                \[
+                \dfrac{1 - cos(x)}{x^2} \approx \dfrac{1}{2}
+                \]
+            </div>
+            <div class="slideBAAAAAA(1)">
+                \[
+                \dfrac{1 - cos(x)}{\color{red}{}x^2} \approx \dfrac{1}{\color{blue}{}2}
+                \]
+            </div>
+            <div class="slideBAAAAAA(1)">
+                \[
+                \color{blue}{}2\color{black}{} \cdot (1 - cos(x)) \approx 1 \cdot \color{red}{}x^2
+                \]
+            </div>
+            <div class="slideBAAAAAA(1)">
+                \[
+                2 - 2cos(x) \approx x^2
+                \]
+            </div>
+            <div class="slideBAAAAAA(1)">
+                \[
+                - 2cos(x) \approx x^2 - 2
+                \]
+            </div>
+            <div class="slideBAAAAAA(1)">
+                \[
+                \dfrac{- 2cos(x)}{-2} \approx \dfrac{x^2 - 2}{-2}
+                \]
+            </div>
+            <div class="slideBAAAAAA(1)">
+                \[
+                cos(x) \approx \dfrac{x^2 - 2}{-2}
+                \]
+            </div>
+            <div class="slideBAAAAAA(1)">
+                \[
+                cos(x) \approx \dfrac{1}{-2}x^2 - \dfrac{2}{-2}
+                \]
+            </div>
+            <div class="slideBAAAAAA(1)">
+                \[
+                cos(x) \approx -\dfrac{1}{2}x^2 + 1
+                \]
+            </div>
+
+        </div>
+        <div style="display: flex; flex-direction:row; justify-content: space-evenly; align-items: center;">
+            <button id="previousSlide-buttonBAAAAAA(1)" onclick="previousSlide(`BAAAAAA(1)`)">Indietro</button>
+            <button onclick="toggleFullscreen('BAAAAAA(1)')">⛶</button>
+            <button id="nextSlide-buttonBAAAAAA(1)" onclick="nextSlide(`BAAAAAA(1)`)">Avanti</button>
+        </div>
+
+        <br>
+
+        Quindi si ha
+        \[
+
+        cos(x) \approx -\dfrac{1}{2}x^2 + 1 \qquad \text{per} \,\, x \to 0
+        \]
+
+        Ovvero la funzione \(f(x) = cos(x)\) per valori della \(x\) molto vicini a \(0\)
+        si può approssimare con \(g(x) = -\dfrac{1}{2}x^2 + 1\), come anche confermato dal loro grafico.
+
+        <br>
+        <br>
+        <iframe style="width: 100%; border: 0.01rem solid lightgray"
+            src="https://www.youtube.com/embed/qoOW9hlIm5A?si=QrSbI4AVUKlwpjPp" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+
+
+    <h3 class="green">Esercizio</h3>
+    <br>
+    <div>
+        Discutere il limite
+        \[
+        \lim_{x \to +\infty}\left(\dfrac{x^6 + 3x^3 -x^2 + x - 1}{3x^{\color{red}{}\beta} + x^4 + 2}\right)
+        \]
+        al variare della scelta di \(\color{red}{}\beta\color{black}{} \)
+    </div>
+
+    <br>
+    <br>
+    <div class="gray">
+        <b>Suggerimento</b>
+        <br>
+        Sappiamo per certo qual è il termine dominate al denominatore.
+        <br>
+        Viceversa, il termine dominate al denominatore dipende dalla scelta del parametro \(\color{red}{}\beta\).
+        <br>
+        Discutere i casi che potrebbero verificarsi.
+    </div>
+
+    <br>
+    <br>
+    <div class="gray formula">
+        <b>Soluzione</b>
+        <br>
+        \[
+
+        \lim_{x \to +\infty}\left(\dfrac{x^6 + 3x^3 -x^2 + x - 1}{3x^{\color{red}{}\beta} + x^4 + 2}\right) \,\,=\,\,
+        \begin{cases}
+        +\infty &amp;\quad\text{se}\,\,\,\color{red}{\beta}\color{gray}{}\lt 6
+        \\\\
+        \dfrac{1}{3} &amp;\quad\text{se}\,\,\,\color{red}{\beta}\color{gray}{} = 6
+        \\\\
+        0 &amp;\quad\text{se}\,\,\,\color{red}{\beta}\color{gray}{} \gt 6
+        \end{cases}
+        \]
+    </div>
+    <div class="gray" style="font-size: 1rem;">Scorrete verso destra per visualizzare tutta la soluzione</div>
+
+    <br>
+    <br>
+
+    <button id="hintGJBIARVnlB-button" onclick="showHint(`GJBIARVnlB`)">Svolgimento</button>
+    <div id="hintGJBIARVnlB" class="hint" style="display: none;">
+
+        <b class="gray">Svolgimento</b>
+        <br>
+        <iframe style="width: 100%" src="https://www.youtube.com/embed/9FPFDruDh1A?si=MBjDOB4v6e4bAS2f"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen="" loading="lazy"></iframe>
+        <br>
+        <iframe style="width: 100%" src="https://www.youtube.com/embed/Uc9TJQYf4_A?si=hmSty3WBqX8gDPyA"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen="" loading="lazy"></iframe>
+
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+
+
+    <h3 class="green">Esercizio</h3>
+    <br>
+    <div>
+        Dopo aver verificato che il <b>dominio</b> della funzione
+        \[
+        f:\qquad y = \dfrac{x + 1}{ln(x)}
+        \]
+        è
+        \[
+        D = (\color{darkorange}{}0\,\color{black}{};\,\,\color{violet}{}1\color{black}{}) \cup
+        (\color{red}{}1\,\color{black}{};\,\,\color{green}{}+\infty)
+        \]
+        calcolare
+        <br>
+        <br>
+        <ul style="list-style: none;">
+            <li>
+                <b>a)</b> \[\lim_{x \to \color{orange}{}0^{+}} f(x)\]
+            </li>
+            <li>
+                <b>b)</b> \[\lim_{x \to \color{violet}{}1^{-}} f(x)\]
+            </li>
+            <li>
+                <b>c)</b> \[\lim_{x \to \color{red}{}1^{+}} f(x)\]
+            </li>
+            <li>
+                <b>d)</b> \[\lim_{x \to \color{green}{}+\infty} f(x)\]
+            </li>
+        </ul>
+        <br>
+        Notare: i valori ai quali tende la \(x\) nei quattro punti sopra scritti sono esattamente gli estremi degli
+        intervalli che costituiscono il dominio
+
+        <br>
+        <br>
+
+        <button id="hintlkNUQnkUkn-button" onclick="showHint(`lkNUQnkUkn`)">Soluzione</button>
+        <div id="hintlkNUQnkUkn" class="hint" style="display: none;">
+            <div class="gray">
+                <b>Soluzione:</b>
+                <br>
+                <br>
+                <ul class="gray formula" style="list-style: none;">
+                    <li><b>a)</b>\[\lim_{x \to \color{orange}{}0^{+}} f(x) = 0\]</li>
+                    <li><b>b)</b> \[\lim_{x \to \color{violet}{}1^{-}} f(x) = -\infty\]</li>
+                    <li><b>c)</b> \[\lim_{x \to \color{red}{}1^{+}} f(x) = +\infty\]</li>
+                    <li><b>d)</b> \[\lim_{x \to \color{green}{}+\infty} f(x) = +\infty\]</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+
+    <h3 class="green">Esercizio</h3>
+    <br>
+    <div>
+        \[
+        \lim_{x \to 0^{+}} \dfrac{1 - \sqrt{cos(x)}}{x}
+        \]
+    </div>
+
+    <br>
+
+    <button id="hintusHSHFTEKS-button" onclick="showHint(`usHSHFTEKS`)">Svolgimento</button>
+    <div id="hintusHSHFTEKS" class="hint" style="display: none;">
+        <b class="gray">Svolgimento</b>
+        <iframe width="100%" src="https://www.youtube.com/embed/gpNa0tIhP9Y?si=HE9lenEkFvmb2ny3"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen=""></iframe>
+    </div>
+
+
+    <br>
+    <br>
+
+    <script src="../../js/hintAndSlide.js"></script>
+
+</body>
