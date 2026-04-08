@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script language="javascript" type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js"></script>
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>Compiti per casa</title>
+</head>
+
+<body>
+    <h1>Compiti per casa</h1>
+
+    <br>
+
+    <!-- <h3 class="yellow">Studio degli estremi del dominio</h3>
+    <div class="esempi-container">
+        Consideriamo la funzione
+        \[
+        f(x) = \dfrac{ln(x)}{x - 1}
+        \]
+        Individuiamo il suo domino.
+        <br>
+        Le operazioni non ovunque definite presenti nella funzione
+        sono il logartimo e la frazione. Imponiamo le condizioni:
+        \[
+        \begin{cases}
+        x \gt 0
+        \\\\
+        x - 1 \neq 0
+        \end{cases}
+        \Rightarrow
+        \begin{cases}
+        x \gt 0
+        \\\\
+        x \neq 1
+        \end{cases}
+        \]
+        Di conseguenza il dominio di \(f\) è l'insieme
+        \[
+        D = (0\,,\,\,1) \cup (1\,,\,\,+\infty)
+        \]
+        Osserviamo che per i valori \(0\) ed \(1\) la funzione non è definita. Possiamo
+        però valutarla per valori vicinissimi ad essi ed osservare che comportamento assume la funzione di conseguenza.
+        Allo stesso modo, possiamo valutare \(f\) per input sempre più grandi e vedere come si comporta.
+        <br>
+        In termini più tecnici, siamo interessati al calcolo dei limiti
+        \[
+        \begin{align*}
+        \lim_{x \to 0^+} f(x) \qquad \lim_{x \to 1^-} f(x)
+        \\\\
+        \lim_{x \to 1^+} f(x) \qquad \lim_{x \to +\infty} f(x)
+        \end{align*}
+        \]
+        Chiameremo \(0\), \(1\) e \(+\infty\) gli <b>estremi del dominio</b>.
+        Calcoliamo quindi il comportamento della funzione negli estremi del dominio.
+        \[
+        \lim_{x \to 0^+} \, \dfrac{ln(x)}{x - 1} = \dfrac{ln(0^{+})}{0 - 1} = \dfrac{-\infty}{-1} = +\infty
+        \]
+        \[
+        \lim_{x \to 1^-} \, \dfrac{ln(x)}{x - 1} = \dfrac{ln(1^-)}{1^- - 1} = \dfrac{}{}
+        \]
+    </div> -->
+
+
+
+    <h3 class="green">Esercizio</h3>
+    <br>
+    <div>
+        Si consideri la funzione
+        \[
+        f:\qquad y = \sqrt{\dfrac{x + 1}{x - 2}}
+        \]
+        <ul>
+            <li>
+                Individuare il dominio \(D\) di \(f\);
+            </li>
+            <br>
+            <li>
+                analizzare il segno assunto dalla funzione al variare del valore assunto da \(x\) in \(D\);
+            </li>
+            <br>
+            <li>
+                studiare il comportamento di \(f\) in corrispondenza degli estremi del dominio,
+                individuando eventuali asintoti orizzontali, verticali o obliqui;
+            </li>
+            <br>
+            <li>
+                rappresentare le informazioni precedentemente ottenute in linguaggio grafico.
+            </li>
+        </ul>
+    </div>
+
+    <br>
+
+    <button id="hintvOdHcoJJSe-button" onclick="showHint(`vOdHcoJJSe`)">Soluzione</button>
+    <div id="hintvOdHcoJJSe" class="hint" style="display: none;">
+        <b class="gray">Soluzione</b>
+        <br>
+        <ul class="gray">
+            <li>
+                Il dominio di \(f\) è l'insimeme \(D = (-\infty\,;\,\,-1] \cup (2\,;\,\,+\infty) \)
+            </li>
+            <br>
+            <li>
+                La funzione assume valori positivi per ogni \(x \in D - {-1}\), mentre si annulla in \(x = -1\)
+            </li>
+            <br>
+            <li>
+                <div style="width: fit-content;">
+                    \[
+                    \lim_{x \to \pm\infty} f(x) = 1
+                    \]
+                    quindi la retta \(y = 1\) è asintoto orizzontale per la funzione. Inoltre
+                    \[
+                    \lim_{x \to 2^{+}} f(x) = +\infty
+                    \]
+                    quindi la retta \(y = 1\) è asintoto verticale per la funzione.
+                </div>
+            </li>
+            <br>
+            <li>
+                Disegnamo gli asintoti con una linea tratteggiata e cancelliamo le zone del piano per le quali il
+                grafico
+                della
+                funzione <b>non</b> passa
+                <br>
+                <br>
+                <img src="img/vOdHcoJJSe(1).png" style="width: 100%; margin: auto;">
+            </li>
+        </ul>
+    </div>
+
+
+
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+
+
+
+    <h3 class="green">Esercizio</h3>
+    <br>
+    <div>
+        \[
+        \lim_{x \to 0} \dfrac{sin^2(x)}{1 - cos(x)}
+        \]
+
+        <br>
+
+        <button id="hintAAAAAAA(1)-button" onclick="showHint(`AAAAAAA(1)`)">Soluzione</button>
+        <div id="hintAAAAAAA(1)" class="hint gray" style="display: none;">
+            <b class="gray">Soluzione</b>
+            <br>
+            \[
+            \lim_{x \to 0} \dfrac{sin^2(x)}{1 - cos(x)} = 2
+            \]
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio</h3>
+    <br>
+    <div>
+        \[
+        \lim_{x \to +\infty} \dfrac{5x^2 - \sqrt[3]{2x^7 - x - 1} + 2}{3x^3 + \sqrt[5]{4x^{14} + 2x^{10} - 3}}
+        \]
+
+        <br>
+
+        <button id="hintAAAAAAA(2)-button" onclick="showHint(`AAAAAAA(2)`)">Soluzione</button>
+        <div id="hintAAAAAAA(2)" class="hint gray" style="display: none;">
+            <b class="gray">Soluzione</b>
+            <br>
+            \[
+            \lim_{x \to +\infty} \dfrac{5x^2 - \sqrt[3]{2x^7 - x - 1} + 2}{3x^3 + \sqrt[5]{4x^{14} + 2x^{10} - 3}} = 0
+            \]
+        </div>
+    </div>
+
+
+
+
+    <br>
+
+
+    <br>
+    <br>
+
+    <script src="../../js/hintAndSlide.js"></script>
+</body>
