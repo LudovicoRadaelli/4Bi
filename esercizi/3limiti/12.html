@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script language="javascript" type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js"></script>
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>Compiti per casa</title>
+</head>
+
+<body>
+    <h1>Compiti per casa</h1>
+
+    <br>
+
+    <h3 class="green">Esercizio</h3>
+    <br>
+    <div>
+        Consideriamo la funzione 
+        \[
+            f(x) = ln\left(\dfrac{x^2 - 1}{x^2 - 4}\right)
+        \]
+        Individuarne il <b>dominio</b>, studiarne il <b>segno</b> al variare della \(x\) e studiarne il comportamento 
+        in corrispondenza degli <b>estremi del dominio</b>.
+
+        <br>
+        <br>
+
+        <button id="hintmoZuLwIIIk-button" onclick="showHint(`moZuLwIIIk`)">Soluzione</button>
+        <div id="hintmoZuLwIIIk" class="hint gray" style="display: none;">     
+            <b class="gray">Soluzione</b> 
+            <br>
+            Il <b>dominio</b> della funzione 
+            \[
+                D = (-\infty\,,\,\,-2) \cup [-1\,,\,\,1] \cup (2\,,\,\,+\infty)
+            \]
+            <br>
+            La funzione assume valore 
+            <br>
+            <br>
+            <ul>
+                <li>
+                    positivo per 
+                    \[
+                        x \in (-\infty\,,\,\,-2) \cup (-2\,,\,\,-1) \cup (1\,,\,\,+\infty)
+                    \]
+                </li>
+                <br>
+                <li>
+                    negativo per \(x \in (-1\,,\,\,1)\) 
+                </li>
+                <br>
+                <li>
+                    zero per \(x = -1\,\,\) oppure \(\,\,x = 1\)
+                </li>                
+            </ul>
+
+            <br>
+            <br>
+
+            Si ha che 
+            <br>
+            <br>
+            
+            <ul>
+                <li>
+                    \(\displaystyle \lim_{x \to \pm\infty} f(x) = 0\)
+                </li>
+                <br>
+                <li>
+                    \(\displaystyle \lim_{x \to \pm (-2)^{-}} f(x) = +\infty\)
+                </li>
+                <br>
+                <li>
+                    \(\displaystyle \lim_{x \to \pm 2^{+}} f(x) = +\infty\)
+                </li>                
+            </ul>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+    
+    
+    <br>
+    <br>
+
+    <script src="../../js/hintAndSlide.js"></script>
+</body>
