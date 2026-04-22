@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script language="javascript" type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js"></script>
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>Compiti per casa</title>
+</head>
+
+<body>
+    <h1>Compiti per casa</h1>
+
+    <br>
+
+    <h3 class="green">Esercizio</h3>
+    <br>
+    <div>
+        Consideriamo la funzione
+        \[
+        f(x) = ln(x - 5) - ln(x + 1)
+        \]
+        Individuarne il <b>dominio</b>, studiarne il <b>segno</b> al variare della \(x\) e studiarne il comportamento
+        in corrispondenza degli <b>estremi del dominio</b>.
+
+        <br>
+        <br>
+
+        <button id="hintizMycsDvhB-button" onclick="showHint(`izMycsDvhB`)">Soluzione</button>
+        <div id="hintizMycsDvhB" class="hint gray" style="display: none;">
+            <b class="gray">Soluzione</b>
+            <br>
+            Il <b>dominio</b> della funzione
+            \[
+            D = (5\,,\,\,+\infty)
+            \]
+            <br>
+            La funzione assume valore negativo per \(x \in D\)
+
+            <br>
+            <br>
+
+            Si ha che
+            <br>
+            <br>
+
+            <ul>
+                <li>
+                    \(\displaystyle \lim_{x \to 5^{^+}} f(x) = -\infty\)
+                </li>
+                <br>
+                <li>
+                    \(\displaystyle \lim_{x \to +\infty} f(x) = 0^{^-}\)
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio</h3>
+    <br>
+    <div>
+        Consideriamo la funzione
+        \[
+        f(x) = e^{\sqrt{\frac{2 - x}{-4x + 12}}}
+        \]
+        Individuarne il <b>dominio</b>, studiarne il <b>segno</b> al variare della \(x\) e studiarne il comportamento
+        in corrispondenza degli <b>estremi del dominio</b>.
+
+        <br>
+        <br>
+
+        <button id="hintMMufSniXbd-button" onclick="showHint(`MMufSniXbd`)">Soluzione</button>
+        <div id="hintMMufSniXbd" class="hint gray" style="display: none;">
+            <b class="gray">Soluzione</b>
+            <br>
+            Il <b>dominio</b> della funzione
+            \[
+            D = (-\infty\,,\,\,2] \cup (3\,,\,\,+\infty)
+            \]
+            <br>
+            La funzione assume valore per ogni \(x \in D\).
+            
+            <br>
+            <br>
+
+            Si ha che
+            <br>
+            <br>
+
+            <ul>
+                <li>
+                    \(\displaystyle \lim_{x \to \pm\infty} f(x) = e^{\sqrt{\frac{1}{4}}} = \sqrt{e} (\approx 1.64...)\)
+                </li>
+                <br>                
+                <li>
+                    \(\displaystyle \lim_{x \to  3^{^+}} f(x) = +\infty\)
+                </li>                
+            </ul>
+        </div>
+    </div>    
+
+    <br>
+    <br>
+
+    <script src="../../js/hintAndSlide.js"></script>
+</body>
+</html>
